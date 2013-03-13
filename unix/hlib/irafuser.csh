@@ -3,7 +3,6 @@
 # IRAF definitions for the UNIX/csh user.  The additional variables iraf$ and
 # home$ should be defined in the user's .login file.
 
-
 set old_method		= 0
 
 if ($old_method == 1) then
@@ -62,7 +61,6 @@ else		# old_method
 endif		# old_method
 
 
-
 setenv	hostid	unix
 setenv	host	${iraf}unix/
 setenv	hlib	${iraf}unix/hlib/
@@ -72,7 +70,7 @@ setenv	tmp	/tmp/
 # Default to GCC for compilation.
 setenv	CC	gcc
 setenv	F77	$hlib/f77.sh
-setenv	F2C	$hbin/f2c.e
+setenv	F2C	/usr/bin/f2c
 setenv	RANLIB	ranlib
 
 switch ($MACH)
@@ -122,7 +120,7 @@ case ipad:
     breaksw
 
 case linux64:
-    setenv HSI_CF "-g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -w -m64"
+    setenv HSI_CF "-g -O2 -I/usr/include -I${hlib}libc -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -w -m64 -DNOLIBCNAMES -DHOST_F2C -DHOST_CURL -DHOST_EXPAT"
     setenv HSI_XF "-g -Inolibc -w -/m64 -/Wunused"
     setenv HSI_FF "-g -m64 -DBLD_KERNEL"
     setenv HSI_LF "-m64 "
@@ -134,7 +132,7 @@ case linux64:
 
 case linux:
 case redhat:
-    setenv HSI_CF "-O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused"
+    setenv HSI_CF "-g -O2 -I/usr/include -I${hlib}libc -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused"
     setenv HSI_XF "-Inolibc -w -/Wunused -/m32"
     setenv HSI_FF "-O -DBLD_KERNEL -m32"
     setenv HSI_LF "-m32"
@@ -191,10 +189,10 @@ setenv XC_CFLAGS  "-I${HOME}/.iraf/"
 # The following determines whether or not the VOS is used for filename mapping.
 if (-f ${iraf}lib/libsys.a) then
 	setenv	HSI_LIBS\
-    "${hlib}libboot.a ${iraf}lib/libsys.a ${iraf}lib/libvops.a ${hlib}libos.a ${hbin}libf2c.a -lm"
+    "${hbin}libboot.a ${iraf}lib/libsys.a ${iraf}lib/libvops.a -lf2c ${hbin}libos.a"
 else
 	setenv	HSI_CF "$HSI_CF -DNOVOS"
-	setenv	HSI_LIBS "${hlib}libboot.a ${hlib}libos.a"
+	setenv	HSI_LIBS "${hbin}libboot.a ${hbin}libos.a"
 endif
 
 setenv HSI_LIBS "$HSI_LIBS $HSI_OSLIBS"

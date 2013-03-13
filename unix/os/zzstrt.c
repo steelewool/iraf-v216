@@ -103,7 +103,12 @@ void 	ready_ (void);
 
 extern int ZAWSET(), ZOPNTY(), ZZSETK();
 
-
+#ifdef HOST_F2C
+extern int MAIN__();
+int MAIN__() {
+  exit(0);
+}
+#endif
 
 /* ZZSTRT -- Initialize the IRAF kernel at process startup time.
  */

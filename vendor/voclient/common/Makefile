@@ -38,13 +38,13 @@ all::	expat cfitsio curl
 
 libs::
 	(/bin/csh -f mklibs)
-	(cd expat ; ./configure --prefix=${HERE}/../; \ make ; make installlib)
+	(cd expat ; ./configure --prefix=${HERE}/.. ; $(MAKE) ; $(MAKE) installlib)
 
 curl::
 	(/bin/csh -f mklibs)
 
 expat::
-	(cd expat ; ./configure --prefix=${HERE}/../; \ make ; make installlib)
+	(cd expat ; ./configure --prefix=${HERE}/.. ; $(MAKE) ; $(MAKE) installlib)
 
 cfitsio::
 	(cd cfitsio ; /bin/csh -f mklibs)
@@ -53,7 +53,7 @@ apps:
 
 install:
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make install); fi)
-	(cd expat ; make install)
+	#(cd expat ; make install)
 	(/bin/rm -rf ../man ../share)
 
 clean:
@@ -65,6 +65,15 @@ distclean:
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make distclean); fi)
 	(cd expat     	; make distclean)
 	#(cd cfitsio   	; make distclean)
+
+
+clean:
+	(cd curl  	; $(MAKE) clean)
+	(cd expat     	; $(MAKE) clean)
+
+distclean:
+	(cd curl  	; $(MAKE) distclean)
+	(cd expat     	; $(MAKE) distclean)
 
 
 

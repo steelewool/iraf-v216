@@ -15,7 +15,6 @@ BINDIR    	:= ../bin/
 LIBDIR    	:= ../lib/
 INCDIR    	:= ../include/
 
-
 # secondary dependencies
 
 LIBBASE		= lib$(NAME)
@@ -55,9 +54,11 @@ OBJS 		= votParse.o votParse_f77.o votParse_spp.o \
 		  votExpatCB.o votElement.o votAttr.o votStack.o votHandle.o
 INCS 		= votParse.h
 
+ifneq ($(NOVOS),1)
 SPP_SRCS	= votUtil_spp.x
 SPP_OBJS	= votUtil_spp.o
 SPP_INCS 	= votParse_spp.h
+endif
 
 INCS_PRIV	= votParseP.h
 LIBS		= lib$(NAME).a
@@ -112,8 +113,7 @@ lib: objs
 ###############################################################################
 
 votUtil_spp.o: votUtil_spp.x votParse_spp.h
-	(xc -c votUtil_spp.x)
-
+	(xc -c -w votUtil_spp.x)
 
 ###############################################################################
 #  SWIG Wrapper code generation

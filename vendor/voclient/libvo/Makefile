@@ -70,11 +70,14 @@ zztest: zztest.o $(OBJS)
 ####################################
 
 lib: objs $(INCS)
+	rm -f *.o
 	ar x ../lib/libsamp.a
 	ar x ../lib/libVOTable.a
 	ar x ../lib/libVOClient.a
 	ar x ../lib/libVOApps.a
+ifndef HOST_CURL
 	(if [ "$(PLATFORM)" != "Darwin" ]; then ar x ../lib/libcurl.a; fi)
+endif
 	chmod 644 *.o
 	ar rv libVO.a *.o
 	/bin/rm -f *.o __*
