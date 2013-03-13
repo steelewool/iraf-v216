@@ -51,6 +51,7 @@ libs:
 
 mylib:
 #	(cd common      ; ${MAKE} )
+	mkdir -p include lib
 	(cd libsamp     ; ${MAKE} .BASE lib ; cp *.h ../include ; cp *.a ../lib )
 	(cd libvoclient ; ${MAKE} install )
 	cp libsamp/cfitsio/*.h include
@@ -86,7 +87,9 @@ install:
 	/bin/rm -rf lib/*.dylib lib/*.la lib/*.so
 
 clean:
+ifndef HOST_CURL
 	(cd common      ; ${MAKE} clean)
+endif
 	(cd libvotable  ; ${MAKE} clean)
 	(cd libsamp     ; ${MAKE} clean)
 	(cd libvoclient ; ${MAKE} clean)
