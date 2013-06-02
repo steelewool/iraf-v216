@@ -10,7 +10,7 @@ setenv PLATFORM	`uname -s`
 setenv PLMACH	`uname -m`
 
 set	build_curl	= 0
-set	build_xmlrpc	= 1
+set	build_xmlrpc	= 0
 
 
 if ($PLATFORM == "Darwin") then
