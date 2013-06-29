@@ -43,7 +43,7 @@ else
     LIBCURL	= ../lib/libcurl.a
 endif
 LIBCFITSIO	= ../lib/libcfitsio.a
-        
+
 ifeq ($(PLATFORM),Darwin)
     ifeq ($(PLMACH),x86_64)
         CARCH   = -m64 -mmacosx-version-min=10.5
@@ -66,9 +66,19 @@ else
 endif
 
 #CLIBS           = $(LIBCURL) -lm -lpthread -lc
-CFLAGS          = -g -Wall $(CARCH) -D$(PLATFORM) $(CINCS) -L./ 
+CFLAGS          = -g -Wall -O2 $(CARCH) -D$(PLATFORM) $(CINCS) -L./ 
 
 
+
+
+
+# includes, flags and libraries
+CC 	    = gcc
+CINCS  	    = -I$(HERE) -I../ -I../include -L../ -L../lib/ -L../
+
+#F77 	    = g77
+F77 	    = gfortran
+#FFLAGS 	    = -g -Wall
 
 # list of source and include files
 
@@ -300,7 +310,7 @@ votopic: voApps.c votopic.o lib
 $(STATICLIB): $(C_SRCS:%.c=Static/%.o)
 	/usr/bin/ar rv $@ $?
 Static/%.o: %.c $(C_INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -g -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -g -c $< -o $@
 Static:
 	/bin/mkdir $@
 	chmod 777 $@
@@ -308,7 +318,7 @@ Static:
 $(SHAREDLIB): $(C_SRCS:%.c=Shared/%.o)
 	/usr/bin/ld -shared -o $@ $? -lc -ldl
 Shared/%.o: %.c $(C_INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
 Shared:
 	/bin/mkdir $@
 	chmod 777 $@
