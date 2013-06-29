@@ -46,7 +46,7 @@ else
 endif
 
 CLIBS		= -lm -lc -lcurl -lpthread
-CFLAGS 		= -g -Wall $(CARCH) -D$(PLATFORM) $(CINCS) -DIRAF -L./
+CFLAGS 		= $(CFLAGS) $(CARCH) -D$(PLATFORM) $(CINCS) -DIRAF -L./
 
 # list of source and include files
 SRCS 		= samp.c sampHub.c sampCommands.c sampHandlers.c \
