@@ -42,8 +42,8 @@ else
     CARCH	= 
 endif
 
-CFLAGS 		:= $(CFLAGS) -DHAVE_CFITSIO
-CLIBS		= -lm -lc -lpthread 				-lcfitsio
+CFLAGS 		:= $(CFLAGS) -DHAVE_CFITSIO `pkg-config --cflags cfitsio`
+CLIBS		= -lm -lc `pkg-config --libs cfitsio`
 
 
 
