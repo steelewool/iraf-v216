@@ -34,22 +34,18 @@
 
 # Initialize script variables.
 
-if [ ! -n "$iraf" ]; then
-    export iraf=$PWD
-fi
-if [ -e "$iraf/unix/hlib/util.sh" ]; then
-    source $iraf/unix/hlib/util.sh
-fi
-if [ -e "${iraf}/unix/hlib/irafarch.sh" ]; then
-  mach=`${iraf}/unix/hlib/irafarch.sh	`	# current platform architecture
-  hmach=`${iraf}/unix/hlib/irafarch.sh -hsi`	# current HSI architecture
-  if [ -z "$IRAFARCH" ]; then
-      IRAFARCH=$mach
-  fi
+# Find the full path to the repository, compensating for any form of redirects
+# the user might have used.  The 'install' script should always regenerate
+# this path in case the user has moved the folder (for instance, if the user
+# builds a new version of IRAF in a different folder)
+export iraf=$( cd -P $(dirname ${BASH_SOURCE[0]}) ; pwd -P )
 
-elif [ -e "./unix/hlib/irafarch.sh" ]; then
-  mach=`./unix/hlib/irafarch.sh	`	# current platform architecture
-  hmach=`./unix/hlib/irafarch.sh -hsi`	# current HSI architecture
+if [ -e "${iraf}unix/hlib/util.sh" ]; then
+    source ${iraf}unix/hlib/util.sh
+fi
+if [ -e "${iraf}unix/hlib/irafarch.sh" ]; then
+  mach=`${iraf}unix/hlib/irafarch.sh	`	# current platform architecture
+  hmach=`${iraf}unix/hlib/irafarch.sh -hsi`	# current HSI architecture
   if [ -z "$IRAFARCH" ]; then
       IRAFARCH=$mach
   fi
