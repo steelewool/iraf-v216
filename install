@@ -60,13 +60,6 @@ else
 fi
 
 
-if [ -e "${iraf}/.version" ]; then
-  VERSION=`cat ${iraf}/.version`
-else
-  VERSION="v2.16"
-fi
-
-
 debug=0					# debug output
 verbose=0				# verbose output
 defterm="xgterm"			# default terminal type
@@ -142,7 +135,7 @@ while [ -n "$1" ] ; do
 	exit 0
         ;;
     "-version"|"--version")                   	# print script version
-        echo "$VERSION"
+        echo "$IRAF_VERSION"
 	exit 0
         ;;
 
@@ -323,7 +316,7 @@ clear
 NEWLINE
 BOLD_ON; 
 ECHO "		===================================="
-ECHO "		       IRAF "$VERSION" Installation"
+ECHO "		       IRAF "$IRAF_VERSION" Installation"
 ECHO "		===================================="
 BOLD_OFF
 NEWLINE
