@@ -18,10 +18,10 @@
 # testprog targets. See also changes and comments in configure.in
 #
 
-prefix		= /d1/build.v216/iraf
-exec_prefix	= /d1/build.v216/iraf
+prefix		= /home/steele/git/iraf-v216/vendor/cfitsio
+exec_prefix	= /home/steele/git/iraf-v216/vendor/cfitsio
 DESTDIR		= 
-CFITSIO_LIB	= ${DESTDIR}/d1/build.v216/iraf/bin
+CFITSIO_LIB	= ${DESTDIR}${exec_prefix}/lib
 CFITSIO_INCLUDE	= ${DESTDIR}${prefix}/include
 INSTALL_DIRS	= ${prefix} ${CFITSIO_INCLUDE} ${CFITSIO_LIB} ${CFITSIO_LIB}/pkgconfig
 

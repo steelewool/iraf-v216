@@ -1,6 +1,6 @@
-prefix=/d1/build.v216/iraf
-exec_prefix=/d1/build.v216/iraf
-libdir=/d1/build.v216/iraf/bin
+prefix=/home/steele/git/iraf-v216/vendor/cfitsio
+exec_prefix=/home/steele/git/iraf-v216/vendor/cfitsio
+libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: cfitsio

@@ -12,6 +12,6 @@ int	npix
 int	i
 
 begin
-		do i = npix, 1, -1
+		do i = 1, npix
 			b[i] = a[i]
 end

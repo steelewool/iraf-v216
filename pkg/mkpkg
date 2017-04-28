@@ -5,6 +5,8 @@ $call update
 $ifeq (hostid, unix)  !(date)  $endif
 $exit
 
+$cp $iraf/old-bin.linux64/libreadline.a $iraf/bin.linux64/.
+
 update:
 	$call cl
 	$call ecl

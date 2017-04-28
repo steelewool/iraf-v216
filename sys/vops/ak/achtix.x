@@ -12,6 +12,6 @@ int	npix
 int	i
 
 begin
-		do i = npix, 1, -1
+		do i = 1, npix
 			b[i] = complex(real(a[i]),0.0)
 end

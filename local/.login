@@ -28,10 +28,10 @@ setenv TAPE 	     /dev/nrsa0
 setenv SHELL 	     /bin/csh
 
 # Uncomment for IRAF admin/prog definitions.
-#setenv IRAFARCH	    `/iraf/iraf/unix/hlib/irafarch.csh -actual`
+#setenv IRAFARCH	    `/home/steele/git/iraf-v216//unix/hlib/irafarch.csh -actual`
 
 # Setup the iraf environment.
-setenv iraf /iraf/iraf/
+setenv iraf /home/steele/git/iraf-v216//
 
 foreach f ($iraf/unix/hlib/irafuser.csh ~/.alias)
   if (-e $f) then

@@ -25,9 +25,9 @@ def=0
 defterm="xgterm"
 
 				# Paths edited by the install script.
-iraf="/iraf/iraf/" 		
-imdir="/iraf/imdir/"
-cachedir="/iraf/cache/"
+iraf="/home/steele/git/iraf-v216//" 		
+imdir="/home/steele/.iraf/imdir//"
+cachedir="/home/steele/.iraf/cache//"
 
 
 # ------------- (end of site dependent definitions) ------------------------

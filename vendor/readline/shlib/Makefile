@@ -31,7 +31,7 @@ RL_LIBRARY_NAME = readline
 srcdir = .
 VPATH = .:..
 topdir = ..
-BUILD_DIR = /iraf/iraf/vendor/readline
+BUILD_DIR = /home/steele/git/iraf-v216/vendor/readline
 
 INSTALL = /usr/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
@@ -48,7 +48,7 @@ LN = ln
 
 SHELL = /bin/sh
 
-host_os = darwin12.5.0
+host_os = linux-gnu
 
 prefix = /usr/local
 exec_prefix = ${prefix}
@@ -75,18 +75,18 @@ LOCAL_DEFS =
 # changes to bash-maintainers@gnu.org.
 #
 SHOBJ_CC = gcc
-SHOBJ_CFLAGS = -fno-common
+SHOBJ_CFLAGS = -fPIC
 SHOBJ_LD = ${CC}
 
-SHOBJ_LDFLAGS = -dynamic
+SHOBJ_LDFLAGS = -shared -Wl,-soname,$@
 SHOBJ_XLDFLAGS = 
 SHOBJ_LIBS = 
 
-SHLIB_XLDFLAGS =  -arch_only `/usr/bin/arch` -install_name $(libdir)/$@ -current_version $(SHLIB_MAJOR)$(SHLIB_MINOR) -compatibility_version $(SHLIB_MAJOR) -v
-SHLIB_LIBS = -lncurses
-SHLIB_LIBSUFF = dylib
+SHLIB_XLDFLAGS =  -Wl,-rpath,$(libdir) -Wl,-soname,`basename $@ $(SHLIB_MINOR)`
+SHLIB_LIBS = 
+SHLIB_LIBSUFF = so
 
-SHLIB_LIBVERSION = $(SHLIB_MAJOR)$(SHLIB_MINOR).$(SHLIB_LIBSUFF)
+SHLIB_LIBVERSION = $(SHLIB_LIBSUFF).$(SHLIB_MAJOR)$(SHLIB_MINOR)
 
 SHLIB_STATUS = supported
 

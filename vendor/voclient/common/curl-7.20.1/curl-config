@@ -21,8 +21,8 @@
 #
 ###########################################################################
 
-prefix=/iraf/iraf/vendor/voclient
-exec_prefix=/iraf/iraf/vendor/voclient
+prefix=/home/steele/git/iraf-v216/vendor/voclient
+exec_prefix=/home/steele/git/iraf-v216/vendor/voclient
 includedir=${prefix}/include
 
 usage()
@@ -65,7 +65,7 @@ while test $# -gt 0; do
 
     case "$1" in
     --ca)
-	echo ""
+	echo ""/etc/ssl/certs/ca-certificates.crt""
 	;;
 
     --cc)
@@ -136,18 +136,18 @@ while test $# -gt 0; do
 	   CURLLIBDIR=""
 	fi
 	if test "Xyes" = "Xyes"; then
-	  echo ${CURLLIBDIR}-lcurl -arch i386 -m32 -mmacosx-version-min=10.4  
+	  echo ${CURLLIBDIR}-lcurl   
 	else
-	  echo ${CURLLIBDIR}-lcurl -arch i386 -m32 -mmacosx-version-min=10.4 
+	  echo ${CURLLIBDIR}-lcurl  
 	fi
 	;;
 
     --static-libs)
-	echo ${exec_prefix}/lib/libcurl.a -arch i386 -m32 -mmacosx-version-min=10.4  
+	echo ${exec_prefix}/lib/libcurl.a   
 	;;
 
     --configure)
-      echo " '--prefix=/iraf/iraf/vendor/voclient/' '--exec-prefix=/iraf/iraf/vendor/voclient/' '--disable-shared' '' '--disable-ftp' '' '--disable-file' '' '--disable-ldap' '' '--disable-ldaps' '' '--disable-proxy' '' '--disable-dict' '' '--disable-telnet' '' '--disable-tftp' '' '--disable-manual' '' '--disable-ipv6' '' '--disable-ares' '' '--disable-sspi' '' '--disable-crypto-auth' '' '--without-krb4' '' '--without-ssl' '' '--without-zlib' '' '--without-libssh2' '' '--without-gnutls' '' '--without-nss' '' '--without-ca-path' '' '--without-libidn' 'build_alias=' 'host_alias=' 'target_alias=' 'CC=gcc' 'CFLAGS=-arch i386 -m32 -mmacosx-version-min=10.4' 'LDFLAGS=-arch i386 -m32 -mmacosx-version-min=10.4'"
+      echo " '--prefix=/home/steele/git/iraf-v216/vendor/voclient/' '--exec-prefix=/home/steele/git/iraf-v216/vendor/voclient/' '--disable-shared' '' '--disable-ftp' '' '--disable-file' '' '--disable-ldap' '' '--disable-ldaps' '' '--disable-proxy' '' '--disable-dict' '' '--disable-telnet' '' '--disable-tftp' '' '--disable-manual' '' '--disable-ipv6' '' '--disable-ares' '' '--disable-sspi' '' '--disable-crypto-auth' '' '--without-krb4' '' '--without-ssl' '' '--without-zlib' '' '--without-libssh2' '' '--without-gnutls' '' '--without-nss' '' '--without-ca-path' '' '--without-libidn' 'build_alias=' 'host_alias=' 'target_alias=' 'CC=gcc' 'CFLAGS=-O2'"
     ;;
 
     *)

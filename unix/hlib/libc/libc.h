@@ -322,8 +322,8 @@ extern void	c_xwhen (int exception, PFI new_handler, PFI *old_handler);
 
 /*
 */
-#include "/iraf/iraf/unix/bin/f2c.h"
-#include "/iraf/iraf/unix/hlib/libc/vosproto.h"
+#include "../../../unix/bin/f2c.h"
+#include "../../../unix/hlib/libc/vosproto.h"
 
 #define	D_libc
 #define	D_libc_proto
