@@ -42,7 +42,17 @@ ifeq ($(PLATFORM),Darwin)
 else
     LIBCURL	= ../lib/libcurl.a
 endif
+
+
+ifdef HOST_CURL
+LIBCURL = -lcurl
+endif
+
+ifdef HOST_CFITSIO
+LIBCFITSIO	= -lcfitsio
+else
 LIBCFITSIO	= ../lib/libcfitsio.a
+endif
 
 ifeq ($(PLATFORM),Darwin)
     ifeq ($(PLMACH),x86_64)
@@ -61,7 +71,7 @@ else
     CLIBS       =  $(LIBCURL) -lm -lc -lpthread -lrt
     CARCH       = 
     ifeq ($(PLMACH),x86_64)
-        LFLAGS	= -L/usr/lib64 $(LFLAGS)
+        LFLAGS	:= -L/usr/lib64 $(LFLAGS)
     endif
 endif
 
