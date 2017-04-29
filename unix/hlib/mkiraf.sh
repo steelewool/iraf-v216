@@ -25,7 +25,7 @@ def=0
 defterm="xgterm"
 
 				# Paths edited by the install script.
-iraf="/home/steele/git/iraf-v216//" 		
+iraf="/home/steele/git/iraf-v216/" 		
 imdir="/home/steele/.iraf/imdir//"
 cachedir="/home/steele/.iraf/cache//"
 

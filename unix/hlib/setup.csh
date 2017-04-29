@@ -2,7 +2,7 @@
 
 # Allow a previously defined $iraf to be used.
 if ( ! ( $?iraf )) then
-    setenv iraf	/home/steele/git/iraf-v216//
+    setenv iraf	/home/steele/git/iraf-v216/
 endif
 
 # Allow a previously defined $IRAFARCH to be used.
