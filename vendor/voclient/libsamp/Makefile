@@ -74,10 +74,11 @@ objs:	$(OBJS) $(INCS)
 
 clean:
 	/bin/rm -f *.o *.a *.e *.so .BASE $(APPS) __*
-	(cd examples ; make clean)
-	(cd libxrpc  ; make clean)
+	(cd examples ; $(MAKE) clean)
+	(cd libxrpc/xmlrpc-c ; ./configure )
+	(cd libxrpc  ; ./mkclean ; /bin/rm -rf Shared Static UnitTests/* *.o *.a *.e )
 	/bin/rm -rf libxrpc/lib/build/* libxrpc/lib/*.dylib
-	(cd cfitsio  ; make clean)
+#	(cd cfitsio  ; $(MAKE) clean)
 	/bin/rm -f SWIG* libvot* php_libvot.h
 	/bin/rm -f sampJava.[co]
 	/bin/rm -f sampPerl.[co]
@@ -105,7 +106,7 @@ zztest: zztest.o $(OBJS) lib
 ####################################
 
 .BASE:
-	(cd libxrpc ; ./mklibs ; make install)
+	(cd libxrpc ; ./mklibs ; $(MAKE) install)
 	#(cd cfitsio ; ./mklibs )
 	touch .BASE
 
@@ -123,31 +124,31 @@ wrap_code: tcl_wrap py_wrap perl_wrap java_wrap # php_wrap ruby_wrap mono_wrap
 
 tcl_wrap:  samp.i
 	(swig -tcl    -o sampTcl.c    samp.i     )
-	make tcl_lib
+	$(MAKE) tcl_lib
 
 py_wrap:  samp.i
 	(swig -python -o sampPython.c samp.i     )
-	make python_lib
+	$(MAKE) python_lib
 
 perl_wrap:  samp.i
 	(swig -perl   -o sampPerl.c   samp.i     )
-	make perl_lib
+	$(MAKE) perl_lib
 
 java_wrap:  samp.i
 	(swig -java   -o sampJava.c   samp.i     )
-	make java_lib
+	$(MAKE) java_lib
 
 php_wrap:  samp.i
 	(swig -php    -o sampPhp.c    samp.i     )
-	make php_lib
+	$(MAKE) php_lib
 
 ruby_wrap:  samp.i
 	(swig -ruby   -o sampRuby.c   samp.i     )
-	#make ruby_lib
+	#$(MAKE) ruby_lib
 
 mono_wrap:  samp.i
 	(swig -csharp -o sampCSharp.c samp.i     )
-	#make mono_lib
+	#$(MAKE) mono_lib
 
 
 
