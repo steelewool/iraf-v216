@@ -53,7 +53,9 @@ mylib:
 	mkdir -p libsamp/libxrpc/lib/build
 	(cd libsamp     ; ${MAKE} .BASE lib ; cp *.h ../include ; cp *.a ../lib )
 	(cd libvoclient ; ${MAKE} install )
+ifndef HOST_CFITSIO
 	cp libsamp/cfitsio/*.h include
+endif
 	(cd libvotable  ; ${MAKE} install)
 	(cd voapps      ; ${MAKE} lib ; cp *.a ../lib )
 	(rm -f *.o ; cd libvo       ; ${MAKE} HOST_CURL=1 lib)
