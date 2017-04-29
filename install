@@ -111,7 +111,7 @@ install_help() {
     ECHO "    -c, --cache <dir>         # set cache directory"
     ECHO "    -i, --imdir <dir>         # set image directory"
     ECHO "    -m, --mach <arch>         # set architecture"
-    ECHO "    -r, --root <dir>          # set iraf root directory"
+    ECHO "    -r, --root <dir>          # set iraf root directory (path to source code)"
     ECHO ""
     ECHO "    -C, --oldcache <dir>      # set old cache directory"
     ECHO "    -I, --oldimdir <dir>      # set old image directory"
@@ -174,13 +174,7 @@ while [ -n "$1" ] ; do
     "-r"|"-root"|"--root")                   	# set iraf root directory
 	p_iraf=$2 ; 	shift
 	if [ ! -n "$p_iraf" ]; then
-    	    export iraf=$p_iraf
-	fi
-	if [ -e "$iraf/unix/hlib/util.sh" ]; then
-	    source $iraf/unix/hlib/util.sh
-	fi
-	if [ -e "${iraf}/unix/hlib/irafarch.sh" ]; then
-	    mach=`${iraf}/unix/hlib/irafarch.sh`
+            export iraf=${p_iraf%/}
 	fi
         ;;
 
