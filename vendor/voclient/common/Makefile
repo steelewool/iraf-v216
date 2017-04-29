@@ -49,29 +49,35 @@ cfitsio::
 apps:
 
 install:
+ifndef HOST_CURL
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make install); fi)
-	#(cd expat ; make install)
+endif
+ifndef HOST_EXPAT
+	(cd expat ; make install)
+endif
 	(/bin/rm -rf ../man ../share)
 
 clean:
+ifndef HOST_CURL
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make clean); fi)
+endif
+ifndef HOST_EXPAT
 	(cd expat     	; make clean)
+endif
+ifndef HOST_CFITSIO
 	(cd cfitsio   	; make clean)
+endif
 
 distclean:
+ifndef HOST_CURL
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make distclean); fi)
+endif
+ifndef HOST_EXPAT
 	(cd expat     	; make distclean)
-	#(cd cfitsio   	; make distclean)
-
-
-clean:
-	(cd curl  	; $(MAKE) clean)
-	(cd expat     	; $(MAKE) clean)
-
-distclean:
-	(cd curl  	; $(MAKE) distclean)
-	(cd expat     	; $(MAKE) distclean)
-
+endif
+ifndef HOST_CFITSIO
+	(cd cfitsio   	; make distclean)
+endif
 
 
 ###############################################################################
