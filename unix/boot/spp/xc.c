@@ -72,7 +72,11 @@
 #define IRAFLIB3	"libvops.a"
 #define IRAFLIB4	"libos.a"
 #define IRAFLIB5	"libVO.a"
+#ifndef HOST_CFITSIO
 #define IRAFLIB6	"libcfitsio.a"
+#else
+#define IRAFLIB6	"-lcfitsio"
+#endif
 
 #ifdef LINUX
 char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
@@ -1256,7 +1260,16 @@ passflag:		    mkobject = YES;
 		arglist[nargs++] = mkfname (IRAFLIB6);
 	    }
 	}
-
+#ifdef HOST_CURL
+	arglist[nargs++] = "-lcurl";
+#endif
+#ifdef HOST_EXPAT
+	arglist[nargs++] = "-lexpat";
+#endif
+#ifdef HOST_XMLRPC
+	arglist[nargs++] = "-lxmlrpc_server_abyss";
+	arglist[nargs++] = "-lxmlrpc_client";
+#endif
 	/* Host libraries, searched after iraf libraries. */
 	for (i=0;  i < nhlibs;  i++)
 	    arglist[nargs++] = hlibs[i];
@@ -1401,6 +1414,7 @@ addflags (char *flag, char *arglist[], int *p_nargs)
 		    link_static = 1;
 	        } else if (strcmp (lflag, F_SHARED) == 0) {
 		    link_static = 0;
+#ifndef HOST_F2C
 #if defined(LINUX) || defined(BSD) || defined(X86) || defined(MACOSX)
 	        } else if ((strcmp (lflag, "-lf2c") == 0) || 
 	    	    (strcmp (lflag, "-lcompat") == 0)) {
@@ -1410,8 +1424,10 @@ addflags (char *flag, char *arglist[], int *p_nargs)
 		        arglist[nargs++] = mkfname (lflag);
 		        *p_nargs = nargs;
 		        return (1);
-	        }
 #endif
+#endif
+	        }
+
 #ifdef SOLARIS
 	        else if (strcmp (lflag, "-ldl") == 0) {
 		    /* This beastie has to be linked dynamic on Solaris, but
@@ -1576,9 +1592,9 @@ xtof (char *file)
 	}
 
 
-	/* Include a custom 64-bit iraf.h file.
+	/* Include a custom iraf.h file.
 	 */
-#if defined(LINUX64) || defined(MACH64)
+#if defined(LINUX64) || defined(MACH64) || defined(LINUX)
 	memset (iraf_h, 0, SZ_PATHNAME);
 
 	if (os_sysfile ("iraf.h", iraf_h, SZ_PATHNAME) <= 0)

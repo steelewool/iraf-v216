@@ -23,7 +23,7 @@ echo "done"
 
 echo -n "    Cleaning XMLRPC-C libs ...."
 foreach i (xmlrpc-c-1*)
-    (chdir $i ; make clean ; make distclean		>>& _spool )
+    (chdir $i ; ./configure ; make clean ; make distclean		>>& _spool )
 end
 echo "done"
 

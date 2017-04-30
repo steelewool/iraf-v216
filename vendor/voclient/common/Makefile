@@ -17,7 +17,6 @@ INCDIR    	:= ../include/
 
 
 # includes, flags and libraries
-CC 	  	= gcc
 CINCS  	  	= -I$(INCDIR) -I./
 ifeq ($(PLATFORM),Darwin)
     ifeq  ($(PLATFORM),x86_64)
@@ -31,20 +30,18 @@ else
     LIBS	= -lm -lc -lpthread
 endif
 
-CFLAGS 		= -g -Wall $(CARCH) -D$(PLATFORM) $(CINCS) -L./
-
 
 all::	expat cfitsio curl
 
 libs::
 	(/bin/csh -f mklibs)
-	(cd expat ; ./configure --prefix=${HERE}/../; \ make ; make installlib)
+	(cd expat ; ./configure --prefix=${HERE}/.. ; $(MAKE) ; $(MAKE) installlib)
 
 curl::
 	(/bin/csh -f mklibs)
 
 expat::
-	(cd expat ; ./configure --prefix=${HERE}/../; \ make ; make installlib)
+	(cd expat ; ./configure --prefix=${HERE}/.. ; $(MAKE) ; $(MAKE) installlib)
 
 cfitsio::
 	(cd cfitsio ; /bin/csh -f mklibs)
@@ -52,20 +49,35 @@ cfitsio::
 apps:
 
 install:
+ifndef HOST_CURL
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make install); fi)
+endif
+ifndef HOST_EXPAT
 	(cd expat ; make install)
+endif
 	(/bin/rm -rf ../man ../share)
 
 clean:
+ifndef HOST_CURL
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make clean); fi)
+endif
+ifndef HOST_EXPAT
 	(cd expat     	; make clean)
+endif
+ifndef HOST_CFITSIO
 	(cd cfitsio   	; make clean)
+endif
 
 distclean:
+ifndef HOST_CURL
 	(if [ "${PLATFORM}" != "Darwin" ]; then (cd curl ; make distclean); fi)
+endif
+ifndef HOST_EXPAT
 	(cd expat     	; make distclean)
-	#(cd cfitsio   	; make distclean)
-
+endif
+ifndef HOST_CFITSIO
+	(cd cfitsio   	; make distclean)
+endif
 
 
 ###############################################################################
@@ -75,7 +87,7 @@ distclean:
 $(STATICLIB): $(SRCS:%.c=Static/%.o)
 	/usr/bin/ar rv $@ $?
 Static/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -c $< -o $@
 Static:
 	/bin/mkdir $@
 	chmod 777 $@
@@ -83,7 +95,7 @@ Static:
 $(SHAREDLIB): $(SRCS:%.c=Shared/%.o)
 	/usr/bin/ld -shared -o $@ $? -lc -ldl
 Shared/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
 Shared:
 	/bin/mkdir $@
 	chmod 777 $@

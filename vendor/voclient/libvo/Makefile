@@ -24,14 +24,10 @@ SHAREDLIB 	= $(LIBDIR)/$(LIBBASE).so.$(VERSION)
 
 
 # includes, flags and libraries
-CC              = gcc
 CINCS           = -I$(INCDIR)  -I.
 
 CLIBS		= -lm -lc -lcurl -lpthread
 CARCH		= -m64 -mmacosx-version-min=10.5
-
-CFLAGS 		= -g -Wall $(CARCH) -D$(PLATFORM) $(CINCS) -L./
-
 
 
 # list of source and include files
@@ -70,11 +66,14 @@ zztest: zztest.o $(OBJS)
 ####################################
 
 lib: objs $(INCS)
+	rm -f *.o
 	ar x ../lib/libsamp.a
 	ar x ../lib/libVOTable.a
 	ar x ../lib/libVOClient.a
 	ar x ../lib/libVOApps.a
+ifndef HOST_CURL
 	(if [ "$(PLATFORM)" != "Darwin" ]; then ar x ../lib/libcurl.a; fi)
+endif
 	chmod 644 *.o
 	ar rv libVO.a *.o
 	/bin/rm -f *.o __*
@@ -89,7 +88,7 @@ lib: objs $(INCS)
 $(STATICLIB): $(SRCS:%.c=Static/%.o)
 	/usr/bin/ar r $@ $?
 Static/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -c $< -o $@
 Static:
 	/bin/mkdir $@
 	chmod 777 $@
@@ -97,7 +96,7 @@ Static:
 $(SHAREDLIB): $(SRCS:%.c=Shared/%.o)
 	/usr/bin/ld -shared -o $@ $? -lc -ldl
 Shared/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
 Shared:
 	/bin/mkdir $@
 	chmod 777 $@

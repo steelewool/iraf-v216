@@ -51,9 +51,7 @@ else
 endif
 
 #CFLAGS   = -O2 -DDEBUG -D$(PLATFORM)
-CFLAGS    = -g -Wall -D$(PLATFORM) $(CARCH)
-
-
+CFLAGS    = -g -O2 -Wall -D$(PLATFORM) $(CARCH)
 
 # list of source and include files
 

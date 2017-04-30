@@ -22,6 +22,8 @@
 #define import_xwhen
 #include <iraf.h>
 
+extern int (*rl_event_hook)(void);
+
 #include "config.h"			/* CL declarations		*/
 #include "clmodes.h"
 #include "operand.h"

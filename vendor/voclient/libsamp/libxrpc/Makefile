@@ -46,7 +46,6 @@ endif
 
 CFLAGS  = -O2 -Wall -g $(CINCS) $(CARCH)
 
-
 # list of source and include files
 
 SRCS  = xrClient.c xrServer.c xrMethod.c xrUtil.c xrStruct.c xrArray.c
@@ -99,7 +98,7 @@ xrpc: $(SRCS:%.c=%.o)
 	cp -p ./include/xmlrpc-c/*.hpp ../../include/xmlrpc-c
 
 %.o: %.c $(INCS)
-	/usr/bin/gcc -Wall $(CINCS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 
 #=======================
@@ -109,7 +108,7 @@ xrpc: $(SRCS:%.c=%.o)
 $(STATICLIB): $(SRCS:%.c=Static/%.o)
 	/usr/bin/ar rv $@ $?
 Static/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 Static:
 	/bin/mkdir $@
 	chmod 777 $@
@@ -117,7 +116,7 @@ Static:
 $(SHAREDLIB): $(SRCS:%.c=Shared/%.o)
 	/usr/bin/ld -shared -o $@ $? -lc -ldl
 Shared/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
+	$(CC) $(CFLAGS) -fpic -shared -c $< -o $@
 Shared:
 	/bin/mkdir $@
 	chmod 777 $@

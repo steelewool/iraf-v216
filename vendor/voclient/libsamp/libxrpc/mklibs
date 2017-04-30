@@ -3,14 +3,13 @@
 #set top = `(chdir .. ; pwd)`
 set top = `pwd`
 
-setenv CC 	"gcc"
 setenv CXX 	"g++"
 
 setenv PLATFORM	`uname -s`
 setenv PLMACH	`uname -m`
 
 set	build_curl	= 0
-set	build_xmlrpc	= 1
+set	build_xmlrpc	= 0
 
 
 if ($PLATFORM == "Darwin") then
@@ -88,7 +87,6 @@ endif
 
 
 
-setenv CC 	"gcc -g -ggdb -O0"
 setenv CXX 	"g++ -g -ggdb -O0"
 
 if ($build_xmlrpc == 1) then

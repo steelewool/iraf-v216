@@ -15,7 +15,6 @@ BINDIR    	:= ../bin/
 LIBDIR    	:= ../lib/
 INCDIR    	:= ../include/
 
-
 # secondary dependencies
 
 LIBBASE		= lib$(NAME)
@@ -43,8 +42,8 @@ else
     CARCH	= 
 endif
 
-CFLAGS 		= -g -Wall $(CARCH) -D$(PLATFORM) $(CINCS) -L./ -DHAVE_CFITSIO
-CLIBS		= -lm -lc -lpthread 				-lcfitsio
+CFLAGS 		:= $(CFLAGS) -DHAVE_CFITSIO `pkg-config --cflags cfitsio`
+CLIBS		= -lm -lc `pkg-config --libs cfitsio`
 
 
 
@@ -55,9 +54,11 @@ OBJS 		= votParse.o votParse_f77.o votParse_spp.o \
 		  votExpatCB.o votElement.o votAttr.o votStack.o votHandle.o
 INCS 		= votParse.h
 
+ifneq ($(NOVOS),1)
 SPP_SRCS	= votUtil_spp.x
 SPP_OBJS	= votUtil_spp.o
 SPP_INCS 	= votParse_spp.h
+endif
 
 INCS_PRIV	= votParseP.h
 LIBS		= lib$(NAME).a
@@ -99,7 +100,9 @@ apps:
 ####################################
 
 .BASE:
+ifndef HOST_EXPAT
 	(./mkbase $(HERE)/lib$(NAME).a)
+endif
 	touch .BASE
 
 lib: objs
@@ -112,8 +115,7 @@ lib: objs
 ###############################################################################
 
 votUtil_spp.o: votUtil_spp.x votParse_spp.h
-	(xc -c votUtil_spp.x)
-
+	(xc -c -w votUtil_spp.x)
 
 ###############################################################################
 #  SWIG Wrapper code generation
@@ -209,7 +211,7 @@ php_lib:   votParse.i
 $(STATICLIB): $(SRCS:%.c=Static/%.o)
 	/usr/bin/ar rv $@ $?
 Static/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -c $< -o $@
 Static/%.o: %.x $(SPP_INCS)
 	(xc -c $< -o $@)
 Static:
@@ -219,7 +221,7 @@ Static:
 $(SHAREDLIB): $(SRCS:%.c=Shared/%.o)
 	/usr/bin/ld -shared -o $@ $? -lc -ldl
 Shared/%.o: %.c $(INCS)
-	/usr/bin/gcc $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
+	$(CC) $(CINCS) $(CFLAGS) -fpic -shared -c $< -o $@
 Shared:
 	/bin/mkdir $@
 	chmod 777 $@
