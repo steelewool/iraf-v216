@@ -46,7 +46,7 @@ else
 endif
 
 CLIBS		= -lm -lc -lcurl -lpthread
-CFLAGS 		= $(CFLAGS) $(CARCH) -D$(PLATFORM) $(CINCS) -DIRAF -L./
+CFLAGS 		= $(CARCH) -D$(PLATFORM) $(CINCS) -DIRAF -L./
 
 # list of source and include files
 SRCS 		= samp.c sampHub.c sampCommands.c sampHandlers.c \
@@ -111,7 +111,7 @@ zztest: zztest.o $(OBJS) lib
 	touch .BASE
 
 lib: objs $(INCS)
-	ar r lib$(NAME).a $(OBJS) 2>&1 /dev/null
+	ar r lib$(NAME).a $(OBJS)
 
 
 
