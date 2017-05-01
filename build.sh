@@ -10,6 +10,25 @@ export HOST_CFITSIO=1
 export HOST_XMLRPC=1
 export IRAFARCH=`${hlib}irafarch.csh`
 
+# Rob Steele added this, but ./install might be a better home:
+
+pushd $HOME/.iraf
+ln -s $iraf/unix/hlib/libc/spp.h .
+popd
+
+# These softlinks were referencing /iraf/iraf
+
+pushd $IRAF/sys/osb
+rm bytmov.c
+rm d1mach.f
+rm i1mach.f
+rm r1mach.f
+ln -s $IRAF/unix/as/bytmov.c   .
+ln -s $IRAF/unix/hlib/d1mach.f .
+ln -s $IRAF/unix/hlib/i1mach.f .
+ln -s $IRAF/unix/hlib/r1mach.f .
+# End of Rob's changes
+
 rm -rf vo/votools/.old
 rm -rf vo/votools/.url*
 rm -f  ${host}/bin/*
