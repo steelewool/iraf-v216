@@ -25,8 +25,19 @@ echo "----------------------- GDEV ---------------------------"
 # Install the newly created executables.
 echo "install HSI executables in $host/bin.$MACH"
 mv -f hlib/*.e bin.$MACH
-pushd bin.$MACH
+
+# When run from Joe's build.sh this pushd and popd are returning errors
+echo "error in push, pushd bin.$MACH"
+echo "print working directory: $PWD"
+
+# pushd bin.$MACH
+
+cd $PWD/bin.$MACH
+
 for i in *.e
 do ln -sf $i ${i%.*}
 done
-popd
+
+# popd
+
+cd $PWD
