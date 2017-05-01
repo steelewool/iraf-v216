@@ -1,0 +1,45 @@
+\O=NOAO/IRAF V2.11BETA dbell@tribble Wed 12:59:08 11-Apr-97
+\T=xgterm
+\G=xgterm
+print\s("---------------\sTEST\sLOG\s22:\s---------------",>>\s"testlog22")\n
+print\s("",>>\s"testlog22")\n
+print\s("\s\s\s\sTest\sPart\s22:\sIMGEOM\stasks\s-\sV2.11\smods)",>>\s"testlog22")\n
+print\s("",>>\s"testlog22")\n
+time\s>>\stestlog22\n
+print\s("",>>\s"testlog22")\n
+
+print\s("*********\simshift\s(spline3)\s*********",>>\s"testlog22")\n
+unlearn\simshift\n
+imshift\sdev$pix\simgeomtest.001\s5.73\s-2.34\sinterp=spline3\s>>\stestlog22\n
+
+print\s("*********\smagnify\s(spline3)\s*********",>>\s"testlog22")\n
+unlearn\smagnify\n
+magnify\sdev$pix\simgeomtest.002\s0.9\s0.9\sinterp=spline3\s>>\stestlog22\n
+chpixtype\simgeomtest.002\simgeomtest.002\sreal\n
+magnify\simgeomtest.002\simgeomtest.003\s2.0\s2.0\sinterp=spline3\sboundary=wrap\s\
+>>\stestlog22\n
+
+print\s("*********\sim3dtran\s*********",>>\s"testlog22")\n
+unlearn\sim3dtran\simexpr\n
+imexpr\s"100*I+10*J+K"\simgeomtest2.001\sdims="7,8,9"\s>>\stestlog22\n
+im3dtran\simgeomtest2.001\simgeomtest2.002\s2\s1\s3\s>>\stestlog22\n
+listpix\simgeomtest2.002[1,*,1]\s>>\stestlog22\n
+chpixtype\simgeomtest2.001\simgeomtest2.001\sreal\n
+im3dtran\simgeomtest2.001[-*,*,*]\simgeomtest2.003\s3\s2\s1\s>>\stestlog22\n
+listpix\simgeomtest2.003[1,1,*]\s>>\stestlog22\n
+imexpr\s"10000*I+100*J+K"\simgeomtest2.004\sdims="999,1,9"\souttype=double\s>>\s\
+testlog22\n
+im3dtran\simgeomtest2.004\simgeomtest2.005\s3\s2\s1\slen_blk=256\s>>\stestlog22\n
+listpix\simgeomtest2.005[*,1,1]\s>>\stestlog22\n
+
+
+imhead\simgeomtest.00?.*\s>>\stestlog22\n
+imhead\simgeomtest2.00?.*\s>>\stestlog22\n
+imstat\simgeomtest.00?.*\s>>\stestlog22\n
+imstat\simgeomtest2.00?.*\s>>\stestlog22\n
+imdel\simgeomtest.00?.*\n
+imdel\simgeomtest2.00?.*\n
+
+print\s("------\sEnd\sof\sTest\sPart\s22\s------",>>\s"testlog22")\n
+stty\splayback=test23.images\n      #comment out this line to stop test here
+#stty\sclear\slogin\n              #uncomment this line to stop test here

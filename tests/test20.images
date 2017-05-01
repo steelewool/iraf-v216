@@ -1,0 +1,39 @@
+\O=NOAO/IRAF V2.11BETA dbell@tribble Wed 12:59:08 09-Apr-97
+\T=xgterm
+\G=xgterm
+print\s("---------------\sTEST\sLOG\s20:\s---------------",>>\s"testlog20")\n
+print\s("",>>\s"testlog20")\n
+print\s("\s\s\s\sTest\sPart\s20:\sIMUTIL\stasks\s-\sV2.11\smods)",>>\s"testlog20")\n
+print\s("",>>\s"testlog20")\n
+time\s>>\stestlog20\n
+print\s("",>>\s"testlog20")\n
+print\s("*********\simsum (ushort)\s*********",>>\s"testlog20")\n
+unlearn\simsum\n
+artdata\n
+unlearn\sartdata\smknoise\n
+
+mknoise\stestimsum.001\sncol=100\snlin=100\sbackg=1000.\sgain=2.\srdnoise\
+    =100.\spoisson+\sncos=100\sseed=1\n
+mknoise\stestimsum.002\sncol=100\snlin=100\sbackg=1000.\sgain=2.\srdnoise\
+    =100.\spoisson+\sncos=100\sseed=2\n
+mknoise\stestimsum.003\sncol=100\snlin=100\sbackg=1000.\sgain=2.\srdnoise\
+    =100.\spoisson+\sncos=100\sseed=3\n
+imsum\stestimsum.001,testimsum.002,testimsum.003\stestimsum.004\scalctype=\
+    real\spixtype=u\soption=average\shigh=1\sverb+\s>>\stestlog20\n
+imsum\stestimsum.001,testimsum.002,testimsum.003\stestimsum.005\scalctype=\
+    short\spixtype=ushort\soption=sum\sverb+\s>>\stestlog20\n
+chpixtype\stestimsum.001\stestimsum.001\sushort\n
+chpixtype\stestimsum.002\stestimsum.002\sushort\n
+chpixtype\stestimsum.003\stestimsum.003\sushort\n
+imsum\stestimsum.001,testimsum.002,testimsum.003\stestimsum.006\s\
+    option=average\shigh=1\sverb+\s>>\stestlog20\n
+chpixtype\stestimsum.003\stestimsum.003\sshort\n
+imsum\stestimsum.001,testimsum.002,testimsum.003\stestimsum.007\s\
+    option=average\shigh=1\sverb+\s>>\stestlog20\n
+imhead\stestimsum.00?.*\s>>\stestlog20\n
+imstat\stestimsum.00?.*\s>>\stestlog20\n
+imdel\stestimsum.00?.*\n
+
+print\s("------\sEnd\sof\sTest\sPart\s20\s------",>>\s"testlog20")\n
+stty\splayback=test21.images\n      #comment out this line to stop test here
+#stty\sclear\slogin\n              #uncomment this line to stop test here

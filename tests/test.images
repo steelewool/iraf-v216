@@ -1,0 +1,29 @@
+\T=vt640
+\G=vt640
+images\n
+plot\n
+dataio\n
+print\s("\s\s\s\s\s\s\s\s\s\sImages\sPlayback\sTest\sScript",>>\s"testlog")\n
+print\s("",>>\s"testlog")\n
+print\s("\s\s\s\sWritten\sby\sEd\sAnderson,\sNOAO\sTucson,\sNovember\s1987",
+>>\s"testlog")\n
+print\s("",>>\s"testlog")\n
+print\s("\s\s\sModified\sby\sMark\sStevens,\sNOAO\sTucson,\sNovember\s1989",>>\s"testlog")\n
+print\s("",>>\s"testlog")\n
+time\s>>\stestlog\n
+print\s("",>>\s"testlog")\n
+show\sversion\s>>\stestlog\n
+print\s("",>>\s"testlog")\n
+show\sarch\s>>\stestlog\n
+print\s("",>>\s"testlog")\n
+print\s("Reading\sFits\sfiles:",>>\s"testlog")\n
+unlearn\srfits\n
+rfits\sfitsbrick\s""\sbrick\sdatatype="r"\sl+\s>>\stestlog\n
+rfits\sfitsbrick2\s""\sbrick2\sdatatype="r"\sl+\s>>testlog\n
+rfits\sfitsdelta\s""\sdelta\sdatatype="r"\sl+\s>>testlog\n
+rfits\sfitsdelta2\s""\sdelta2\sdatatype="r"\sl+\s>>\stestlog\n
+rfits\sfitsoctagon\s""\soctagon\sdatatype="r"\sl+\s>>\stestlog\n
+rfits\sfitsoctagon2\s""\soctagon2\sdatatype="r"\sl+\s>>\stestlog\n
+bye\n
+stty\splayback=test1.images\n      #comment out this line to stop test here
+#stty\sclear\slogin\n              #uncomment this line to stop test here

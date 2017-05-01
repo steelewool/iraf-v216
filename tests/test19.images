@@ -1,0 +1,31 @@
+\O=NOAO/IRAF V2.10.3BETA dbell@tribble Thu 12:59:08 11-May-95
+\T=xgterm
+\G=xgterm
+print\s("---------------\sTEST\sLOG\s19:\s---------------",>>\s"testlog19")\n
+print\s("",>>\s"testlog19")\n
+print\s("\s\s\s\sTest\sPart\s19:\sIMCOMBINE\s(100\simages)",>>\s"testlog19")\n
+print\s("",>>\s"testlog19")\n
+artdata\n
+unlearn\sartdata\n
+unlearn\smkpat\n
+unlearn\smknoise\n
+mkpat\scombtest\spatt=slope\sv2=10000.\sndim=3\sncol=100\snlin=100\sn3=100\n
+print\s("",>>\s"testlog19")\n
+imstat\scombtest\s>>\stestlog19\n
+imslice\scombtest\scombtest\s3\n
+mknoise\scombtest???.fits\srdnoise=10.\sseed=10\sncos=50\n
+unlearn\simcombine\n
+imcombine\scombtest???.fits\scomb1\snrejmasks=pl1\n
+imcombine\scombtest???.fits\scomb2\s\snrejmasks=pl2\sreject=avsigclip\n
+imcombine\scombtest???.fits\scomb3\s\snrejmasks=pl3\sreject=minmax\snlow=10\snhigh=1
+0\n
+imcombine\scombtest???.fits\scomb4\s\snrejmasks=pl4\scombine=median\n
+print\s("",>>\s"testlog19")\n
+imstat\scomb?.fits\s>>\stestlog19\n
+print\s("",>>\s"testlog19")\n
+imstat\spl?.pl\s>>\stestlog19\n
+imdel\scomb*.fits\n
+print\s("------\sEnd\sof\sTest\sPart\s19\s------",>>\s"testlog19")\n
+print\s("===============END\sOF\sTHE\sWHOLE\sTEST================")\n
+stty\splayback=test20.images\n      #comment out this line to stop test here
+#stty\sclear\slogin\n              #uncomment this line to stop test here

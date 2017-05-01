@@ -1,0 +1,3 @@
+imdel *.fits,*.??h,*.pl
+del testlog*,testplot*
+del *.db,*.mat.1
