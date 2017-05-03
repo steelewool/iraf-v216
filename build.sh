@@ -12,21 +12,21 @@ export IRAFARCH=`${hlib}irafarch.csh`
 
 # Rob Steele added this, but ./install might be a better home:
 
-pushd $HOME/.iraf
-ln -s $iraf/unix/hlib/libc/spp.h .
-popd
+echo $HOME
+echo $iraf
 
-# These softlinks were referencing /iraf/iraf
+# These softlinks were set referencing /iraf/iraf and the files did not exist under /iraf/iraf
 
-pushd $IRAF/sys/osb
+pushd $iraf/sys/osb
 rm bytmov.c
 rm d1mach.f
 rm i1mach.f
 rm r1mach.f
-ln -s $IRAF/unix/as/bytmov.c   .
-ln -s $IRAF/unix/hlib/d1mach.f .
-ln -s $IRAF/unix/hlib/i1mach.f .
-ln -s $IRAF/unix/hlib/r1mach.f .
+ln -s $iraf/unix/as/bytmov.c   .
+ln -s $iraf/unix/hlib/d1mach.f .
+ln -s $iraf/unix/hlib/i1mach.f .
+ln -s $iraf/unix/hlib/r1mach.f .
+popd
 # End of Rob's changes
 
 rm -rf vo/votools/.old
@@ -41,6 +41,8 @@ ln -sf mach`getconf LONG_BIT`.h mach.h
 ln -sf iraf`getconf LONG_BIT`.h iraf.h
 popd
 
+echo ${iraf}
+
 find -name "*.a" | xargs rm -f
 make src
 export NOVOS=1
@@ -51,6 +53,10 @@ popd
 
 ${iraf}util/mksysnovos
 
+echo $PWD
+
+echo "This section built lib.vo"
+
 unset NOVOS
 export pkglibs=${iraf}noao/lib/,${iraf}${host}/bin/,${iraf}${host}/hlib/
 pushd vendor/voclient
@@ -58,6 +64,11 @@ make clean
 make mylib 
 cp libvo/libVO.a ${iraf}lib
 popd
+
+echo "Do a find for libVO.a"
+
+find . -name "libVO.a"
+
 
 export pkglibs=${iraf}noao/lib/,${iraf}${host}/bin/,${iraf}${host}/hlib/libc/
 ${iraf}util/mksysvos
