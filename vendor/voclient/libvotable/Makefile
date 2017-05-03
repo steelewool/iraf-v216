@@ -24,7 +24,7 @@ SHAREDLIB 	= $(LIBDIR)/$(LIBBASE).so.$(VERSION)
 
 # includes, flags and libraries
 CC 	  	= gcc
-CINCS  	  	= -I$(INCDIR)  -I. -I../../../include
+CINCS  	  	= -I$(INCDIR)  -I../../../include
 ifeq ($(PLATFORM),Darwin)
     ifeq ($(PLMACH),x86_64)
 	CARCH	= -m64 -mmacosx-version-min=10.5
@@ -42,9 +42,8 @@ else
     CARCH	= 
 endif
 
-CFLAGS 		:= $(CFLAGS) -DHAVE_CFITSIO `pkg-config --cflags cfitsio`
-CLIBS		= -lm -lc `pkg-config --libs cfitsio`
-
+CFLAGS 		:= $(CFLAGS) -DHAVE_CFITSIO `pkg-config --cflags cfitsio libcurl`
+CLIBS		= -lm -lc `pkg-config --libs cfitsio libcurl`
 
 
 # list of source and include files
@@ -225,3 +224,6 @@ Shared/%.o: %.c $(INCS)
 Shared:
 	/bin/mkdir $@
 	chmod 777 $@
+
+%.o: %.c $(INCS)
+	$(CC) $(CINCS) $(CFLAGS) -c $< -o $@
