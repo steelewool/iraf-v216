@@ -55,7 +55,7 @@ ${iraf}util/mksysnovos
 
 echo $PWD
 
-echo "This section built lib.vo"
+echo "This section built libVO.a"
 
 unset NOVOS
 export pkglibs=${iraf}noao/lib/,${iraf}${host}/bin/,${iraf}${host}/hlib/
