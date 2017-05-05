@@ -63,20 +63,15 @@ while [ "$loop_" == "yes" ]; do
 	# Rob Steele added these lines to setup softlinks for these
 	# four files to what seemed 'correct' to him.
 
-	echo $PWD
-
 	pushd sys/osb
 
-	echo $PWD
-
 	/bin/rm -rf bytmov.c d1mach.f i1mach.f r1mach.f 
-	/bin/ln -s ../../unix/as/bytmov.c
-	/bin/ln -s ../../unix/hlib/d1mach.f
-	/bin/ln -s ../../unix/hlib/i1mach.f
-	/bin/ln -s ../../unix/hlib/r1mach.f
+	/bin/ln -s ../../unix/as.linux64/bytmov.c .
+	/bin/ln -s ../../unix/hlib/d1mach.f       .
+	/bin/ln -s ../../unix/hlib/i1mach.f       .
+	/bin/ln -s ../../unix/hlib/r1mach.f       .
+	
 	popd
-
-	echo $PWD
 
     else
         cd unix/hlib; \
