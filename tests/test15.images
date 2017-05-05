@@ -1,0 +1,26 @@
+
+\T=vt640
+\G=vt640
+print\s("----------------------\sTEST\sLOG\s15\s---------------------",>>\s
+"testlog15")\n
+print\s("",>>\s"testlog15")\n
+time\s>>\stestlog15\n
+set\sstdvdm\s=\stestplots15\n
+print\s("\s\s\s\s\s\sTest\sPart\s15\s:\sCHPIXTYPE",>>\s"testlog15")\n
+print\s("",>>\s"testlog15")\n
+unlearn\schpixtype\n
+imarith\soctagon\s*\s25\sxoctagon\n
+chpixtype\sxoctagon.fits\suoctagon\sushort\s>>testlog15\n   
+chpixtype\sxoctagon.fits\ssoctagon\sshort\s>>testlog15\n     
+chpixtype\sxoctagon.fits\sioctagon\sint\s>>testlog15\n         
+chpixtype\sxoctagon.fits\sloctagon\slong\s>>testlog15\n       
+chpixtype\sxoctagon.fits\sdoctagon\sdouble\s>>testlog15\n   
+#chpixtype\sxoctagon.fits\scoctagon\scomplex\s>>testlog15\n   
+chpixtype\ssoctagon.fits\syoctagon\sreal\s>>testlog15\n
+chpixtype\sloctagon.fits\szoctagon\sreal\s>>testlog15\n
+imstatistics\s?octagon.fits\sfields="image,npix,mean,median,mode,stddev,skew,
+min,max"\s>>testlog15\n
+print\s("------\sEnd\sof\sTest\sPart\s15\s-------",>>\s"testlog15")\n
+imdel\s?octagon.fits\n
+stty\splayback=test16.images\n   #comment out this line to stop test here
+#stty\sclear\slogin\n            #uncomment this line to stop test here
