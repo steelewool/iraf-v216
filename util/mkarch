@@ -59,20 +59,6 @@ while [ "$loop_" == "yes" ]; do
 	     rm -f iraf.h mach.h; \
 	     ln -s iraf64.h iraf.h; \
 	     ln -s mach64.h mach.h; cd $iraf
-
-	# Rob Steele added these lines to setup softlinks for these
-	# four files to what seemed 'correct' to him.
-
-	pushd sys/osb
-
-	/bin/rm -rf bytmov.c d1mach.f i1mach.f r1mach.f 
-	/bin/ln -s ../../unix/as.linux64/bytmov.c .
-	/bin/ln -s ../../unix/hlib/d1mach.f       .
-	/bin/ln -s ../../unix/hlib/i1mach.f       .
-	/bin/ln -s ../../unix/hlib/r1mach.f       .
-	
-	popd
-
     else
         cd unix/hlib; \
 	     rm -f iraf.h mach.h; \
