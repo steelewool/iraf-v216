@@ -61,7 +61,11 @@ else
     CLIBS       =  $(LIBCURL) -lm -lc -lpthread -lrt
     CARCH       = 
     ifeq ($(PLMACH),x86_64)
-        LFLAGS	= -L/usr/lib64 $(LFLAGS)
+# This redefinition of LFLAGS which is adding -L/usr/lib64 to the
+# definition of LFLAGS is illegal. I've saved the original line
+# for historical purpose.
+# LFLAGS	= -L/usr/lib64 $(LFLAGS)
+        LFLAGS	+= -L/usr/lib64
     endif
 endif
 
