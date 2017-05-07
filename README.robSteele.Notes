@@ -1,0 +1,12 @@
+Briefly I used Joseph Wang's build.sh file to create a bin.linux64 directory
+that included a libVO.a file. I copied this directory to
+iraf-v216/perserve-bin.linux64
+
+I modified bin/mksysgen to copy the libVO.a file from this directory to
+bin.linux64 after the mkclean step.
+
+Then the build resulted in a cl.e and ecl.e in bin.linux64 that I could
+execute.
+
+From this experiment it seems pretty clear that creating a libVO.a is
+critical to getting a working build.
