@@ -1,0 +1,3166 @@
+Building the IRAF v2.16 software tree
+
+Sat May  6 23:17:55 PDT 2017
+
+(util/mksysgen)
+mach =  linux64
+hmach =  linux64
+Clean host directories ....		Done
+Clean src directories ....		Done
+Clean 'linux64' bin directories ....		Done
+Cleaning spool files ....		Done
++ sh -x setarch.sh
++ ls -d as
++ [ as = as ]
++ rm -rf as
++ ln -s as.linux64 as
++ ls -d bin
++ [ bin = bin ]
++ rm -rf bin
++ ln -s bin.linux64 bin
++ echo ----------------------- OS -----------------------------
+----------------------- OS -----------------------------
++ echo +
++
++ echo +
++
++ cd os
++ sh -x mkpkg.sh
++ echo --------------------- OS ----------------------
+--------------------- OS ----------------------
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall alloc.c getproc.c
++ gcc -I/home/steele/.iraf/ -m64 -Wall alloc.o getproc.o -o alloc.e
++ chmod 4755 alloc.e
++ mv -f alloc.e ../hlib
++ rm -f alloc.o
++ test linux64 != macosx
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall ../as/zsvjmp.s -o zsvjmp.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall gmttolst.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall irafpath.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall prwait.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zalloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zawset.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zcall.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zdojmp.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfacss.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfaloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfchdr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfdele.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfgcwd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfinfo.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiobf.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfioks.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiolp.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiomt.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiond.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiopl.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiopr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiosf.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiotx.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfioty.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zflink.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfmkcp.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfmkdr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfnbrk.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfpath.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfpoll.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfprot.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfrmdr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfrnam.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfsubd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfunc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfutim.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfxdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgcmdl.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zghost.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zglobl.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgmtco.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgtenv.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgtime.c
+zgtime.c: In function ‘zgtime_’:
+zgtime.c:35:12: warning: variable ‘clkfreq’ set but not used [-Wunused-but-set-variable]
+  long cpu, clkfreq;
+            ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgtpid.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zintpr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zlocpr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zlocva.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zmain.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zmaloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zmfree.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zopdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zopdpr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zoscmd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zpanic.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zraloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zshlib.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zwmsec.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zxwhen.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzdbg.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzepro.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzexit.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzpstr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzsetk.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzstrt.c
+zzstrt.c: In function ‘zzstrt_’:
+zzstrt.c:479:10: warning: unused variable ‘fpucw’ [-Wunused-variable]
+      int fpucw = 0x332;
+          ^
++ [ linux64 = macosx ]
++ rm -f zmain.o
++ ar r libos.a getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
+ar: creating libos.a
++ ranlib libos.a
++ rm getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
++ mv -f libos.a ../bin
++ echo ----------------------- F2C ----------------------------
+----------------------- F2C ----------------------------
++ echo +
++
++ echo +
++
++ cd f2c
++ sh -x mkpkg.sh
++ echo ----------------------- F2C ---------------------------
+----------------------- F2C ---------------------------
++ cd src
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/iraf-v216/unix/f2c/src'
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS main.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS init.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS gram.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lex.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS proc.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS equiv.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS data.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS format.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS expr.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS exec.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS intr.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS io.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS misc.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS error.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS mem.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS names.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS output.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS p1output.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pread.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS put.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS putpcc.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS vax.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS formatdata.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS parse_args.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS niceprintf.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS cds.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sysdep.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS version.c
+cc -I/home/steele/.iraf/ -m64  main.o init.o gram.o lex.o proc.o equiv.o data.o format.o expr.o exec.o intr.o io.o misc.o error.o mem.o names.o output.o p1output.o pread.o put.o putpcc.o vax.o formatdata.o parse_args.o niceprintf.o cds.o sysdep.o version.o  -o f2c
+make[1]: Leaving directory '/home/steele/git/iraf-v216/unix/f2c/src'
++ mv f2c ../../bin/f2c.e
++ rm cds.o data.o equiv.o error.o exec.o expr.o format.o formatdata.o gram.o init.o intr.o io.o lex.o main.o mem.o misc.o names.o niceprintf.o output.o p1output.o parse_args.o pread.o proc.o put.o putpcc.o sysdep.o vax.o version.o
++ echo ----------------------- LIBF2C ------------------------
+----------------------- LIBF2C ------------------------
++ cd libf2c
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/iraf-v216/unix/f2c/libf2c'
+cc -c f77vers.c
+cc -c i77vers.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS main.c
+ld -r -x -o main.xxx main.o
+mv main.xxx main.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_rnge.c
+ld -r -x -o s_rnge.xxx s_rnge.o
+mv s_rnge.xxx s_rnge.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS abort_.c
+ld -r -x -o abort_.xxx abort_.o
+mv abort_.xxx abort_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS exit_.c
+ld -r -x -o exit_.xxx exit_.o
+mv exit_.xxx exit_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS getarg_.c
+ld -r -x -o getarg_.xxx getarg_.o
+mv getarg_.xxx getarg_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS iargc_.c
+ld -r -x -o iargc_.xxx iargc_.o
+mv iargc_.xxx iargc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS getenv_.c
+ld -r -x -o getenv_.xxx getenv_.o
+mv getenv_.xxx getenv_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS signal_.c
+ld -r -x -o signal_.xxx signal_.o
+mv signal_.xxx signal_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_stop.c
+ld -r -x -o s_stop.xxx s_stop.o
+mv s_stop.xxx s_stop.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_paus.c
+ld -r -x -o s_paus.xxx s_paus.o
+mv s_paus.xxx s_paus.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS system_.c
+ld -r -x -o system_.xxx system_.o
+mv system_.xxx system_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS cabs.c
+ld -r -x -o cabs.xxx cabs.o
+mv cabs.xxx cabs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ctype.c
+ld -r -x -o ctype.xxx ctype.o
+mv ctype.xxx ctype.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS derf_.c
+ld -r -x -o derf_.xxx derf_.o
+mv derf_.xxx derf_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS derfc_.c
+ld -r -x -o derfc_.xxx derfc_.o
+mv derfc_.xxx derfc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS erf_.c
+ld -r -x -o erf_.xxx erf_.o
+mv erf_.xxx erf_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS erfc_.c
+ld -r -x -o erfc_.xxx erfc_.o
+mv erfc_.xxx erfc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sig_die.c
+ld -r -x -o sig_die.xxx sig_die.o
+mv sig_die.xxx sig_die.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS uninit.c
+ld -r -x -o uninit.xxx uninit.o
+mv uninit.xxx uninit.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_ci.c
+ld -r -x -o pow_ci.xxx pow_ci.o
+mv pow_ci.xxx pow_ci.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_dd.c
+ld -r -x -o pow_dd.xxx pow_dd.o
+mv pow_dd.xxx pow_dd.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_di.c
+ld -r -x -o pow_di.xxx pow_di.o
+mv pow_di.xxx pow_di.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_hh.c
+ld -r -x -o pow_hh.xxx pow_hh.o
+mv pow_hh.xxx pow_hh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_ii.c
+ld -r -x -o pow_ii.xxx pow_ii.o
+mv pow_ii.xxx pow_ii.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_ri.c
+ld -r -x -o pow_ri.xxx pow_ri.o
+mv pow_ri.xxx pow_ri.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_zi.c
+ld -r -x -o pow_zi.xxx pow_zi.o
+mv pow_zi.xxx pow_zi.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_zz.c
+ld -r -x -o pow_zz.xxx pow_zz.o
+mv pow_zz.xxx pow_zz.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_abs.c
+ld -r -x -o c_abs.xxx c_abs.o
+mv c_abs.xxx c_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_cos.c
+ld -r -x -o c_cos.xxx c_cos.o
+mv c_cos.xxx c_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_div.c
+ld -r -x -o c_div.xxx c_div.o
+mv c_div.xxx c_div.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_exp.c
+ld -r -x -o c_exp.xxx c_exp.o
+mv c_exp.xxx c_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_log.c
+ld -r -x -o c_log.xxx c_log.o
+mv c_log.xxx c_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_sin.c
+ld -r -x -o c_sin.xxx c_sin.o
+mv c_sin.xxx c_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_sqrt.c
+ld -r -x -o c_sqrt.xxx c_sqrt.o
+mv c_sqrt.xxx c_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_abs.c
+ld -r -x -o z_abs.xxx z_abs.o
+mv z_abs.xxx z_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_cos.c
+ld -r -x -o z_cos.xxx z_cos.o
+mv z_cos.xxx z_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_div.c
+ld -r -x -o z_div.xxx z_div.o
+mv z_div.xxx z_div.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_exp.c
+ld -r -x -o z_exp.xxx z_exp.o
+mv z_exp.xxx z_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_log.c
+ld -r -x -o z_log.xxx z_log.o
+mv z_log.xxx z_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_sin.c
+ld -r -x -o z_sin.xxx z_sin.o
+mv z_sin.xxx z_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_sqrt.c
+ld -r -x -o z_sqrt.xxx z_sqrt.o
+mv z_sqrt.xxx z_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_abs.c
+ld -r -x -o r_abs.xxx r_abs.o
+mv r_abs.xxx r_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_acos.c
+ld -r -x -o r_acos.xxx r_acos.o
+mv r_acos.xxx r_acos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_asin.c
+ld -r -x -o r_asin.xxx r_asin.o
+mv r_asin.xxx r_asin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_atan.c
+ld -r -x -o r_atan.xxx r_atan.o
+mv r_atan.xxx r_atan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_atn2.c
+ld -r -x -o r_atn2.xxx r_atn2.o
+mv r_atn2.xxx r_atn2.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_cnjg.c
+ld -r -x -o r_cnjg.xxx r_cnjg.o
+mv r_cnjg.xxx r_cnjg.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_cos.c
+ld -r -x -o r_cos.xxx r_cos.o
+mv r_cos.xxx r_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_cosh.c
+ld -r -x -o r_cosh.xxx r_cosh.o
+mv r_cosh.xxx r_cosh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_dim.c
+ld -r -x -o r_dim.xxx r_dim.o
+mv r_dim.xxx r_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_exp.c
+ld -r -x -o r_exp.xxx r_exp.o
+mv r_exp.xxx r_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_imag.c
+ld -r -x -o r_imag.xxx r_imag.o
+mv r_imag.xxx r_imag.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_int.c
+ld -r -x -o r_int.xxx r_int.o
+mv r_int.xxx r_int.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_lg10.c
+ld -r -x -o r_lg10.xxx r_lg10.o
+mv r_lg10.xxx r_lg10.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_log.c
+ld -r -x -o r_log.xxx r_log.o
+mv r_log.xxx r_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_mod.c
+ld -r -x -o r_mod.xxx r_mod.o
+mv r_mod.xxx r_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_nint.c
+ld -r -x -o r_nint.xxx r_nint.o
+mv r_nint.xxx r_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sign.c
+ld -r -x -o r_sign.xxx r_sign.o
+mv r_sign.xxx r_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sin.c
+ld -r -x -o r_sin.xxx r_sin.o
+mv r_sin.xxx r_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sinh.c
+ld -r -x -o r_sinh.xxx r_sinh.o
+mv r_sinh.xxx r_sinh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sqrt.c
+ld -r -x -o r_sqrt.xxx r_sqrt.o
+mv r_sqrt.xxx r_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_tan.c
+ld -r -x -o r_tan.xxx r_tan.o
+mv r_tan.xxx r_tan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_tanh.c
+ld -r -x -o r_tanh.xxx r_tanh.o
+mv r_tanh.xxx r_tanh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_abs.c
+ld -r -x -o d_abs.xxx d_abs.o
+mv d_abs.xxx d_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_acos.c
+ld -r -x -o d_acos.xxx d_acos.o
+mv d_acos.xxx d_acos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_asin.c
+ld -r -x -o d_asin.xxx d_asin.o
+mv d_asin.xxx d_asin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_atan.c
+ld -r -x -o d_atan.xxx d_atan.o
+mv d_atan.xxx d_atan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_atn2.c
+ld -r -x -o d_atn2.xxx d_atn2.o
+mv d_atn2.xxx d_atn2.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_cnjg.c
+ld -r -x -o d_cnjg.xxx d_cnjg.o
+mv d_cnjg.xxx d_cnjg.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_cos.c
+ld -r -x -o d_cos.xxx d_cos.o
+mv d_cos.xxx d_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_cosh.c
+ld -r -x -o d_cosh.xxx d_cosh.o
+mv d_cosh.xxx d_cosh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_dim.c
+ld -r -x -o d_dim.xxx d_dim.o
+mv d_dim.xxx d_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_exp.c
+ld -r -x -o d_exp.xxx d_exp.o
+mv d_exp.xxx d_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_imag.c
+ld -r -x -o d_imag.xxx d_imag.o
+mv d_imag.xxx d_imag.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_int.c
+ld -r -x -o d_int.xxx d_int.o
+mv d_int.xxx d_int.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_lg10.c
+ld -r -x -o d_lg10.xxx d_lg10.o
+mv d_lg10.xxx d_lg10.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_log.c
+ld -r -x -o d_log.xxx d_log.o
+mv d_log.xxx d_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_mod.c
+ld -r -x -o d_mod.xxx d_mod.o
+mv d_mod.xxx d_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_nint.c
+ld -r -x -o d_nint.xxx d_nint.o
+mv d_nint.xxx d_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_prod.c
+ld -r -x -o d_prod.xxx d_prod.o
+mv d_prod.xxx d_prod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sign.c
+ld -r -x -o d_sign.xxx d_sign.o
+mv d_sign.xxx d_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sin.c
+ld -r -x -o d_sin.xxx d_sin.o
+mv d_sin.xxx d_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sinh.c
+ld -r -x -o d_sinh.xxx d_sinh.o
+mv d_sinh.xxx d_sinh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sqrt.c
+ld -r -x -o d_sqrt.xxx d_sqrt.o
+mv d_sqrt.xxx d_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_tan.c
+ld -r -x -o d_tan.xxx d_tan.o
+mv d_tan.xxx d_tan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_tanh.c
+ld -r -x -o d_tanh.xxx d_tanh.o
+mv d_tanh.xxx d_tanh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_abs.c
+ld -r -x -o i_abs.xxx i_abs.o
+mv i_abs.xxx i_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_dim.c
+ld -r -x -o i_dim.xxx i_dim.o
+mv i_dim.xxx i_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_dnnt.c
+ld -r -x -o i_dnnt.xxx i_dnnt.o
+mv i_dnnt.xxx i_dnnt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_indx.c
+ld -r -x -o i_indx.xxx i_indx.o
+mv i_indx.xxx i_indx.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_len.c
+ld -r -x -o i_len.xxx i_len.o
+mv i_len.xxx i_len.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_mod.c
+ld -r -x -o i_mod.xxx i_mod.o
+mv i_mod.xxx i_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_nint.c
+ld -r -x -o i_nint.xxx i_nint.o
+mv i_nint.xxx i_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_sign.c
+ld -r -x -o i_sign.xxx i_sign.o
+mv i_sign.xxx i_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lbitbits.c
+ld -r -x -o lbitbits.xxx lbitbits.o
+mv lbitbits.xxx lbitbits.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lbitshft.c
+ld -r -x -o lbitshft.xxx lbitshft.o
+mv lbitshft.xxx lbitshft.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_abs.c
+ld -r -x -o h_abs.xxx h_abs.o
+mv h_abs.xxx h_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_dim.c
+ld -r -x -o h_dim.xxx h_dim.o
+mv h_dim.xxx h_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_dnnt.c
+ld -r -x -o h_dnnt.xxx h_dnnt.o
+mv h_dnnt.xxx h_dnnt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_indx.c
+ld -r -x -o h_indx.xxx h_indx.o
+mv h_indx.xxx h_indx.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_len.c
+ld -r -x -o h_len.xxx h_len.o
+mv h_len.xxx h_len.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_mod.c
+ld -r -x -o h_mod.xxx h_mod.o
+mv h_mod.xxx h_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_nint.c
+ld -r -x -o h_nint.xxx h_nint.o
+mv h_nint.xxx h_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_sign.c
+ld -r -x -o h_sign.xxx h_sign.o
+mv h_sign.xxx h_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_ge.c
+ld -r -x -o l_ge.xxx l_ge.o
+mv l_ge.xxx l_ge.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_gt.c
+ld -r -x -o l_gt.xxx l_gt.o
+mv l_gt.xxx l_gt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_le.c
+ld -r -x -o l_le.xxx l_le.o
+mv l_le.xxx l_le.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_lt.c
+ld -r -x -o l_lt.xxx l_lt.o
+mv l_lt.xxx l_lt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_ge.c
+ld -r -x -o hl_ge.xxx hl_ge.o
+mv hl_ge.xxx hl_ge.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_gt.c
+ld -r -x -o hl_gt.xxx hl_gt.o
+mv hl_gt.xxx hl_gt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_le.c
+ld -r -x -o hl_le.xxx hl_le.o
+mv hl_le.xxx hl_le.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_lt.c
+ld -r -x -o hl_lt.xxx hl_lt.o
+mv hl_lt.xxx hl_lt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ef1asc_.c
+ld -r -x -o ef1asc_.xxx ef1asc_.o
+mv ef1asc_.xxx ef1asc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ef1cmc_.c
+ld -r -x -o ef1cmc_.xxx ef1cmc_.o
+mv ef1cmc_.xxx ef1cmc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS f77_aloc.c
+ld -r -x -o f77_aloc.xxx f77_aloc.o
+mv f77_aloc.xxx f77_aloc.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_cat.c
+ld -r -x -o s_cat.xxx s_cat.o
+mv s_cat.xxx s_cat.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_cmp.c
+ld -r -x -o s_cmp.xxx s_cmp.o
+mv s_cmp.xxx s_cmp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_copy.c
+ld -r -x -o s_copy.xxx s_copy.o
+mv s_copy.xxx s_copy.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS backspac.c
+ld -r -x -o backspac.xxx backspac.o
+mv backspac.xxx backspac.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS close.c
+ld -r -x -o close.xxx close.o
+mv close.xxx close.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS dfe.c
+ld -r -x -o dfe.xxx dfe.o
+mv dfe.xxx dfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS dolio.c
+ld -r -x -o dolio.xxx dolio.o
+mv dolio.xxx dolio.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS due.c
+ld -r -x -o due.xxx due.o
+mv due.xxx due.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS endfile.c
+ld -r -x -o endfile.xxx endfile.o
+mv endfile.xxx endfile.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS err.c
+ld -r -x -o err.xxx err.o
+mv err.xxx err.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS fmt.c
+ld -r -x -o fmt.xxx fmt.o
+mv fmt.xxx fmt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS fmtlib.c
+ld -r -x -o fmtlib.xxx fmtlib.o
+mv fmtlib.xxx fmtlib.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ftell_.c
+ld -r -x -o ftell_.xxx ftell_.o
+mv ftell_.xxx ftell_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS iio.c
+ld -r -x -o iio.xxx iio.o
+mv iio.xxx iio.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ilnw.c
+ld -r -x -o ilnw.xxx ilnw.o
+mv ilnw.xxx ilnw.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS inquire.c
+ld -r -x -o inquire.xxx inquire.o
+mv inquire.xxx inquire.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lread.c
+ld -r -x -o lread.xxx lread.o
+mv lread.xxx lread.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lwrite.c
+ld -r -x -o lwrite.xxx lwrite.o
+mv lwrite.xxx lwrite.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS open.c
+ld -r -x -o open.xxx open.o
+mv open.xxx open.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rdfmt.c
+ld -r -x -o rdfmt.xxx rdfmt.o
+mv rdfmt.xxx rdfmt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rewind.c
+ld -r -x -o rewind.xxx rewind.o
+mv rewind.xxx rewind.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rsfe.c
+ld -r -x -o rsfe.xxx rsfe.o
+mv rsfe.xxx rsfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rsli.c
+ld -r -x -o rsli.xxx rsli.o
+mv rsli.xxx rsli.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rsne.c
+ld -r -x -o rsne.xxx rsne.o
+mv rsne.xxx rsne.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sfe.c
+ld -r -x -o sfe.xxx sfe.o
+mv sfe.xxx sfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sue.c
+ld -r -x -o sue.xxx sue.o
+mv sue.xxx sue.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS typesize.c
+ld -r -x -o typesize.xxx typesize.o
+mv typesize.xxx typesize.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS uio.c
+ld -r -x -o uio.xxx uio.o
+mv uio.xxx uio.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS util.c
+ld -r -x -o util.xxx util.o
+mv util.xxx util.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wref.c
+ld -r -x -o wref.xxx wref.o
+mv wref.xxx wref.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wrtfmt.c
+ld -r -x -o wrtfmt.xxx wrtfmt.o
+mv wrtfmt.xxx wrtfmt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wsfe.c
+ld -r -x -o wsfe.xxx wsfe.o
+mv wsfe.xxx wsfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wsle.c
+ld -r -x -o wsle.xxx wsle.o
+mv wsle.xxx wsle.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wsne.c
+ld -r -x -o wsne.xxx wsne.o
+mv wsne.xxx wsne.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS xwsne.c
+ld -r -x -o xwsne.xxx xwsne.o
+mv xwsne.xxx xwsne.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS dtime_.c
+ld -r -x -o dtime_.xxx dtime_.o
+mv dtime_.xxx dtime_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS etime_.c
+ld -r -x -o etime_.xxx etime_.o
+mv etime_.xxx etime_.o
+ar r libf2c.a f77vers.o i77vers.o main.o s_rnge.o abort_.o exit_.o getarg_.o iargc_.o getenv_.o signal_.o s_stop.o s_paus.o system_.o cabs.o ctype.o derf_.o derfc_.o erf_.o erfc_.o sig_die.o uninit.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o lbitbits.o lbitshft.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o l_ge.o l_gt.o l_le.o l_lt.o hl_ge.o hl_gt.o hl_le.o hl_lt.o ef1asc_.o ef1cmc_.o f77_aloc.o s_cat.o s_cmp.o s_copy.o backspac.o close.o dfe.o dolio.o due.o endfile.o err.o fmt.o fmtlib.o ftell_.o iio.o ilnw.o inquire.o lread.o lwrite.o open.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o sfe.o sue.o typesize.o uio.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o dtime_.o etime_.o
+ar: creating libf2c.a
+ranlib libf2c.a
+make[1]: Leaving directory '/home/steele/git/iraf-v216/unix/f2c/libf2c'
++ mv libf2c.a ../../bin/
++ rm abort_.o backspac.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o cabs.o close.o ctype.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o derf_.o derfc_.o dfe.o dolio.o dtime_.o due.o ef1asc_.o ef1cmc_.o endfile.o erf_.o erfc_.o err.o etime_.o exit_.o f77_aloc.o f77vers.o fmt.o fmtlib.o ftell_.o getarg_.o getenv_.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o hl_ge.o hl_gt.o hl_le.o hl_lt.o i77vers.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o iargc_.o iio.o ilnw.o inquire.o l_ge.o l_gt.o l_le.o l_lt.o lbitbits.o lbitshft.o lread.o lwrite.o main.o open.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o s_cat.o s_cmp.o s_copy.o s_paus.o s_rnge.o s_stop.o sfe.o sig_die.o signal_.o sue.o system_.o typesize.o uio.o uninit.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o
++ echo ----------------------- BOOT ---------------------------
+----------------------- BOOT ---------------------------
++ echo +
++
++ echo +
++
++ cd boot
++ sh -x mkpkg.sh
++ echo ----------------------- BOOTLIB ------------------------
+----------------------- BOOTLIB ------------------------
++ cd bootlib
++ sh -x mkpkg.sh
++ test -f ../../as/bytmov.s
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS _bytmov.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS envinit.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS index.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osaccess.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osamovb.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oschdir.c
+oschdir.c: In function ‘os_chdir’:
+oschdir.c:20:7: warning: variable ‘sz_dpath’ set but not used [-Wunused-but-set-variable]
+  XINT sz_dpath, sz_osdir, status, x_maxch=SZ_PATHNAME;
+       ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osclose.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oscmd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oscreatedir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oscrfile.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osdelete.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfcopy.c
+osfcopy.c: In function ‘os_fcopy’:
+osfcopy.c:22:60: warning: variable ‘nw’ set but not used [-Wunused-but-set-variable]
+  XINT status, junk, maxch = SZ_FBUF, mode = 0, in, out, n, nw;
+                                                            ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfdate.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfiletype.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfn2vfn.c
+In file included from /home/steele/.iraf/iraf.h:28:0,
+                 from osfn2vfn.c:11:
+/home/steele/git/iraf-v216//unix/hlib/libc/libc.h:325:37: fatal error: /iraf/iraf/unix/bin/f2c.h: No such file or directory
+compilation terminated.
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfpathname.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osgetenv.c
+In file included from /home/steele/.iraf/iraf.h:105:0,
+                 from bootlib.h:6,
+                 from osgetenv.c:6:
+osgetenv.c: In function ‘_os_getenv’:
+/home/steele/git/iraf-v216//unix/hlib/libc/knames.h:114:17: warning: implicit declaration of function ‘zgtenv_’ [-Wimplicit-function-declaration]
+ #define ZGTENV  zgtenv_
+                 ^
+osgetenv.c:87:2: note: in expansion of macro ‘ZGTENV’
+  ZGTENV (symbol, value, &x_maxch, &status);
+  ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osgetowner.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osopen.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osputenv.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osread.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossetfmode.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossetowner.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossettime.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osstrpak.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osstrupk.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossubdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossymlink.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossysfile.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ostime.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oswrite.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rindex.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS tape.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS vfn2osfn.c
+In file included from /home/steele/.iraf/iraf.h:28:0,
+                 from vfn2osfn.c:11:
+/home/steele/git/iraf-v216//unix/hlib/libc/libc.h:325:37: fatal error: /iraf/iraf/unix/bin/f2c.h: No such file or directory
+compilation terminated.
++ ar rv libboot.a _bytmov.o envinit.o index.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o rindex.o tape.o
+ar: creating libboot.a
+a - _bytmov.o
+a - envinit.o
+a - index.o
+a - osaccess.o
+a - osamovb.o
+a - oschdir.o
+a - osclose.o
+a - oscmd.o
+a - oscreatedir.o
+a - oscrfile.o
+a - osdelete.o
+a - osdir.o
+a - osfcopy.o
+a - osfdate.o
+a - osfiletype.o
+a - osfpathname.o
+a - osgetenv.o
+a - osgetowner.o
+a - osopen.o
+a - osputenv.o
+a - osread.o
+a - ossetfmode.o
+a - ossetowner.o
+a - ossettime.o
+a - osstrpak.o
+a - osstrupk.o
+a - ossubdir.o
+a - ossymlink.o
+a - ossysfile.o
+a - ostime.o
+a - oswrite.o
+a - rindex.o
+a - tape.o
++ rm _bytmov.o envinit.o index.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o rindex.o tape.o
++ ranlib libboot.a
++ mv -f libboot.a ../../bin
++ echo ----------------------- GENERIC ------------------------
+----------------------- GENERIC ------------------------
++ cd generic
++ sh -x mkpkg.sh
++ find tok.l -newer lexyy.c -exec rm lexyy.c ;
++ test -f lexyy.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -w lexyy.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS generic.c chario.c yywrap.c
++ gcc -I/home/steele/.iraf/ -m64 generic.o lexyy.o chario.o yywrap.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o generic.e
++ mv -f generic.e ../../hlib
++ rm chario.o generic.o lexyy.o yywrap.o
++ echo ----------------------- MKPKG --------------------------
+----------------------- MKPKG --------------------------
++ cd mkpkg
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS char.c fdcache.c fncache.c host.c main.c pkg.c scanlib.c sflist.c tok.c
+host.c: In function ‘h_updatelibrary’:
+host.c:104:10: warning: variable ‘lname’ set but not used [-Wunused-but-set-variable]
+  char   *lname = NULL;
+          ^
+scanlib.c: In function ‘h_scanlibrary’:
+scanlib.c:73:6: warning: variable ‘len’ set but not used [-Wunused-but-set-variable]
+  int len=0, len_arfmag, nmodules;
+      ^
++ gcc -I/home/steele/.iraf/ -m64 main.o char.o fdcache.o fncache.o host.o pkg.o scanlib.o sflist.o tok.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o mkpkg.e
+host.o: In function `h_rebuildlibrary':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:290: undefined reference to `vfn2osfn'
+host.o: In function `h_incheck':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:328: undefined reference to `vfn2osfn'
+host.o: In function `h_outcheck':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:406: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:410: undefined reference to `vfn2osfn'
+host.o: In function `h_copyfile':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:534: undefined reference to `vfn2osfn'
+host.o:/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:535: more undefined references to `vfn2osfn' follow
+collect2: error: ld returned 1 exit status
++ mv -f mkpkg.e ../../hlib
+mv: cannot stat 'mkpkg.e': No such file or directory
++ rm char.o fdcache.o fncache.o host.o main.o pkg.o scanlib.o sflist.o tok.o
++ echo ----------------------- RMBIN  -------------------------
+----------------------- RMBIN  -------------------------
++ cd rmbin
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rmbin.c
++ gcc -I/home/steele/.iraf/ -m64 rmbin.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o rmbin.e
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osdelete.o): In function `os_delete':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osdelete.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfpathname.o): In function `os_fpathname':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfpathname.c:25: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv -f rmbin.e ../../hlib
+mv: cannot stat 'rmbin.e': No such file or directory
++ rm rmbin.o
++ echo ----------------------- RMFILES  -----------------------
+----------------------- RMFILES  -----------------------
++ cd rmfiles
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rmfiles.c
++ gcc -I/home/steele/.iraf/ -m64 rmfiles.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o rmfiles.e
+rmfiles.o: In function `rmfiles':
+/home/steele/git/iraf-v216/unix/boot/rmfiles/rmfiles.c:150: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osdelete.o): In function `os_delete':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osdelete.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfpathname.o): In function `os_fpathname':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfpathname.c:25: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv -f rmfiles.e ../../hlib
+mv: cannot stat 'rmfiles.e': No such file or directory
++ rm rmfiles.o
++ echo ----------------------- RTAR  --------------------------
+----------------------- RTAR  --------------------------
++ cd rtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rtar.c
++ gcc -I/home/steele/.iraf/ -m64 rtar.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o rtar.e
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osclose.o): In function `os_close':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:20: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:25: undefined reference to `text'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oscreatedir.o): In function `os_createdir':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscreatedir.c:15: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscreatedir.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oscrfile.o): In function `os_createfile':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:19: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:24: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:27: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `text'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osdelete.o): In function `os_delete':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osdelete.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfcopy.o): In function `os_fcopy':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:31: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:36: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:41: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:63: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:67: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:69: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(ossetfmode.o): In function `os_setfmode':
+/home/steele/git/iraf-v216/unix/boot/bootlib/ossetfmode.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(ossetowner.o): In function `os_setowner':
+/home/steele/git/iraf-v216/unix/boot/bootlib/ossetowner.c:20: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(ossettime.o): In function `os_setmtime':
+/home/steele/git/iraf-v216/unix/boot/bootlib/ossettime.c:23: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oswrite.o): In function `os_write':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:25: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:30: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:31: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:39: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:40: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:41: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:41: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:41: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:47: undefined reference to `txop'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(tape.o): In function `tape_open':
+/home/steele/git/iraf-v216/unix/boot/bootlib/tape.c:123: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv rtar.e ../../hlib
+mv: cannot stat 'rtar.e': No such file or directory
++ rm -f rtar.o
++ echo ----------------------- WTAR --------------------------
+----------------------- WTAR --------------------------
++ cd wtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wtar.c
++ gcc -I/home/steele/.iraf/ -m64 wtar.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o wtar.e
+wtar.o: In function `tarfileout':
+/home/steele/git/iraf-v216/unix/boot/wtar/wtar.c:339: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osclose.o): In function `os_close':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:20: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:25: undefined reference to `text'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfpathname.o): In function `os_fpathname':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfpathname.c:25: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osgetowner.o): In function `os_getowner':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osgetowner.c:24: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osopen.o): In function `os_open':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osopen.c:23: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osopen.c:24: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(tape.o): In function `tape_open':
+/home/steele/git/iraf-v216/unix/boot/bootlib/tape.c:123: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oscrfile.o): In function `os_createfile':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:19: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:24: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:27: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `text'
+collect2: error: ld returned 1 exit status
++ mv wtar.e ../../hlib
+mv: cannot stat 'wtar.e': No such file or directory
++ rm -f wtar.o
++ echo ----------------------- SPP ----------------------------
+----------------------- SPP ----------------------------
++ cd spp
++ sh -x mkpkg.sh
++ echo ----------------------- XC  ----------------------------
+----------------------- XC  ----------------------------
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS xc.c
++ gcc -I/home/steele/.iraf/ -m64 xc.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o xc.e
+xc.o: In function `main':
+/home/steele/git/iraf-v216/unix/boot/spp/xc.c:498: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/spp/xc.c:751: undefined reference to `vfn2osfn'
+xc.o: In function `iraflib':
+/home/steele/git/iraf-v216/unix/boot/spp/xc.c:1507: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(envinit.o): In function `loadpkgenv':
+/home/steele/git/iraf-v216/unix/boot/bootlib/envinit.c:69: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv -f xc.e ../../hlib
+mv: cannot stat 'xc.e': No such file or directory
++ rm -f xc.o
++ echo ----------------------- XPP ----------------------------
+----------------------- XPP ----------------------------
++ cd xpp
++ sh -x mkpkg.sh
++ find xpp.l -newer lexyy.c -exec rm lexyy.c ;
++ test -f lexyy.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lexyy.c
+lex.yy.c:2630:12: warning: ‘yy_flex_strlen’ defined but not used [-Wunused-function]
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS xppmain.c xppcode.c decl.c
++ gcc -I/home/steele/.iraf/ -m64 xppmain.o lexyy.o xppcode.o decl.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o xpp.e
+xppmain.o: In function `main':
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xppmain.c:111: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xppmain.c:133: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xppmain.c:142: undefined reference to `vfn2osfn'
+lexyy.o: In function `process_task_statement':
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xpp.l:275: undefined reference to `vfn2osfn'
+lexyy.o: In function `do_include':
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xpp.l:348: undefined reference to `vfn2osfn'
+lexyy.o:/home/steele/git/iraf-v216/unix/boot/spp/xpp/xpp.l:404: more undefined references to `vfn2osfn' follow
+collect2: error: ld returned 1 exit status
++ mv -f xpp.e ../../../hlib
+mv: cannot stat 'xpp.e': No such file or directory
++ rm decl.o lexyy.o xppcode.o xppmain.o
++ echo ----------------------- RPP ----------------------------
+----------------------- RPP ----------------------------
++ cd rpp
++ sh -x mkpkg.sh
++ echo ----------------------- RPPFOR -------------------------
+----------------------- RPPFOR -------------------------
++ cd rppfor
++ sh -x mkpkg.sh
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL addchr.f allblk.f alldig.f baderr.f balpar.f beginc.f
+addchr.f:
+   addchr:
+allblk.f:
+   allblk:
+alldig.f:
+   alldig:
+baderr.f:
+   baderr:
+balpar.f:
+   balpar:
+beginc.f:
+   beginc:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL brknxt.f cascod.f caslab.f declco.f deftok.f doarth.f
+brknxt.f:
+   brknxt:
+cascod.f:
+   cascod:
+caslab.f:
+   caslab:
+declco.f:
+   declco:
+deftok.f:
+   deftok:
+doarth.f:
+   doarth:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL docode.f doif.f doincr.f domac.f dostat.f dosub.f
+docode.f:
+   docode:
+doif.f:
+   doif:
+doincr.f:
+   doincr:
+domac.f:
+   domac:
+dostat.f:
+   dostat:
+dosub.f:
+   dosub:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL eatup.f elseif.f endcod.f entdef.f entdkw.f entfkw.f
+eatup.f:
+   eatup:
+elseif.f:
+   elseif:
+endcod.f:
+   endcod:
+entdef.f:
+   entdef:
+entdkw.f:
+   entdkw:
+entfkw.f:
+   entfkw:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL entrkw.f entxkw.f errchk.f errgo.f errorc.f evalr.f
+entrkw.f:
+   entrkw:
+entxkw.f:
+   entxkw:
+errchk.f:
+   errchk:
+errgo.f:
+   errgo:
+errorc.f:
+   errorc:
+evalr.f:
+   evalr:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL finit.f forcod.f fors.f getdef.f gettok.f gnbtok.f
+finit.f:
+   finit:
+forcod.f:
+   forcod:
+fors.f:
+   fors:
+getdef.f:
+   getdef:
+gettok.f:
+   gettok:
+gnbtok.f:
+   gnbtok:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL gocode.f gtok.f ifcode.f iferrc.f ifgo.f ifparm.f
+gocode.f:
+   gocode:
+gtok.f:
+   gtok:
+ifcode.f:
+   ifcode:
+iferrc.f:
+   iferrc:
+ifgo.f:
+   ifgo:
+ifparm.f:
+   ifparm:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL indent.f initkw.f labelc.f labgen.f lex.f litral.f
+indent.f:
+   indent:
+initkw.f:
+   initkw:
+labelc.f:
+   labelc:
+labgen.f:
+   labgen:
+lex.f:
+   lex:
+litral.f:
+   litral:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL lndict.f ludef.f mapid.f ngetch.f ogotos.f otherc.f
+lndict.f:
+   lndict:
+ludef.f:
+   ludef:
+mapid.f:
+   mapid:
+ngetch.f:
+   ngetch:
+ogotos.f:
+   ogotos:
+otherc.f:
+   otherc:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL outch.f outcon.f outdon.f outdwe.f outgo.f outnum.f
+outch.f:
+   outch:
+outcon.f:
+   outcon:
+outdon.f:
+   outdon:
+outdwe.f:
+   outdwe:
+outgo.f:
+   outgo:
+outnum.f:
+   outnum:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL outstr.f outtab.f parse.f pbnum.f pbstr.f poicod.f
+outstr.f:
+   outstr:
+outtab.f:
+   outtab:
+parse.f:
+   parse:
+pbnum.f:
+   pbnum:
+pbstr.f:
+   pbstr:
+poicod.f:
+   poicod:
+   poidec:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL push.f putbak.f putchr.f puttok.f ratfor.f relate.f
+push.f:
+   push:
+putbak.f:
+   putbak:
+putchr.f:
+   putchr:
+puttok.f:
+   puttok:
+ratfor.f:
+   ratfor:
+relate.f:
+   relate:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL repcod.f retcod.f sdupl.f skpblk.f squash.f strdcl.f
+repcod.f:
+   repcod:
+retcod.f:
+   retcod:
+sdupl.f:
+   sdupl:
+skpblk.f:
+   skpblk:
+squash.f:
+   squash:
+strdcl.f:
+   strdcl:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL swcode.f swend.f swvar.f synerr.f thenco.f ulstal.f
+swcode.f:
+   swcode:
+swend.f:
+   swend:
+swvar.f:
+   swvar:
+synerr.f:
+   synerr:
+thenco.f:
+   thenco:
+ulstal.f:
+   ulstal:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL uniqid.f unstak.f untils.f whilec.f whiles.f
+uniqid.f:
+   uniqid:
+unstak.f:
+   unstak:
+untils.f:
+   untils:
+whilec.f:
+   whilec:
+whiles.f:
+   whiles:
++ ar rv librpp.a addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
+ar: creating librpp.a
+a - addchr.o
+a - allblk.o
+a - alldig.o
+a - baderr.o
+a - balpar.o
+a - beginc.o
+a - brknxt.o
+a - cascod.o
+a - caslab.o
+a - declco.o
+a - deftok.o
+a - doarth.o
+a - docode.o
+a - doif.o
+a - doincr.o
+a - domac.o
+a - dostat.o
+a - dosub.o
+a - eatup.o
+a - elseif.o
+a - endcod.o
+a - entdef.o
+a - entdkw.o
+a - entfkw.o
+a - entrkw.o
+a - entxkw.o
+a - errchk.o
+a - errgo.o
+a - errorc.o
+a - evalr.o
+a - finit.o
+a - forcod.o
+a - fors.o
+a - getdef.o
+a - gettok.o
+a - gnbtok.o
+a - gocode.o
+a - gtok.o
+a - ifcode.o
+a - iferrc.o
+a - ifgo.o
+a - ifparm.o
+a - indent.o
+a - initkw.o
+a - labelc.o
+a - labgen.o
+a - lex.o
+a - litral.o
+a - lndict.o
+a - ludef.o
+a - mapid.o
+a - ngetch.o
+a - ogotos.o
+a - otherc.o
+a - outch.o
+a - outcon.o
+a - outdon.o
+a - outdwe.o
+a - outgo.o
+a - outnum.o
+a - outstr.o
+a - outtab.o
+a - parse.o
+a - pbnum.o
+a - pbstr.o
+a - poicod.o
+a - push.o
+a - putbak.o
+a - putchr.o
+a - puttok.o
+a - ratfor.o
+a - relate.o
+a - repcod.o
+a - retcod.o
+a - sdupl.o
+a - skpblk.o
+a - squash.o
+a - strdcl.o
+a - swcode.o
+a - swend.o
+a - swvar.o
+a - synerr.o
+a - thenco.o
+a - ulstal.o
+a - uniqid.o
+a - unstak.o
+a - untils.o
+a - whilec.o
+a - whiles.o
++ ranlib librpp.a
++ mv -f librpp.a ..
++ rm addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
++ echo ----------------------- RATLIBF ------------------------
+----------------------- RATLIBF ------------------------
++ cd ratlibf
++ sh -x mkpkg.sh
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL addset.f addstr.f amatch.f catsub.f clower.f concat.f
+addset.f:
+   addset:
+addstr.f:
+   addstr:
+amatch.f:
+   amatch:
+catsub.f:
+   catsub:
+clower.f:
+   clower:
+concat.f:
+   concat:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL ctoc.f ctoi.f ctomn.f cupper.f delete.f docant.f dodash.f
+ctoc.f:
+   ctoc:
+ctoi.f:
+   ctoi:
+ctomn.f:
+   ctomn:
+cupper.f:
+   cupper:
+delete.f:
+   delete:
+docant.f:
+   docant:
+dodash.f:
+   dodash:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL dsdbiu.f dsdump.f dsfree.f dsget.f dsinit.f enter.f equal.f
+dsdbiu.f:
+   dsdbiu:
+dsdump.f:
+   dsdump:
+dsfree.f:
+   dsfree:
+dsget.f:
+   dsget:
+dsinit.f:
+   dsinit:
+enter.f:
+   enter:
+equal.f:
+   equal:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL error.f errsub.f esc.f fcopy.f filset.f fmtdat.f fold.f
+error.f:
+   error:
+errsub.f:
+   errsub:
+esc.f:
+   esc:
+fcopy.f:
+   fcopy:
+filset.f:
+   filset:
+fmtdat.f:
+   fmtdat:
+fold.f:
+   fold:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL gctoi.f getc.f getccl.f getpat.f getwrd.f gfnarg.f index.f
+gctoi.f:
+   gctoi:
+getc.f:
+   getc:
+getccl.f:
+   getccl:
+getpat.f:
+   getpat:
+getwrd.f:
+   getwrd:
+gfnarg.f:
+   gfnarg:
+index.f:
+   index:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL insub.f itoc.f length.f locate.f lookup.f lower.f makpat.f
+insub.f:
+   insub:
+itoc.f:
+   itoc:
+length.f:
+   length:
+locate.f:
+   locate:
+lookup.f:
+   lookup:
+lower.f:
+   lower:
+makpat.f:
+   makpat:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL maksub.f match.f mktabl.f mntoc.f omatch.f outsub.f patsiz.f
+maksub.f:
+   maksub:
+match.f:
+   match:
+mktabl.f:
+   mktabl:
+mntoc.f:
+   mntoc:
+omatch.f:
+   omatch:
+outsub.f:
+   outsub:
+patsiz.f:
+   patsiz:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL prompt.f putc.f putdec.f putint.f putstr.f query.f rmtabl.f
+prompt.f:
+   prompt:
+putc.f:
+   putc:
+putdec.f:
+   putdec:
+putint.f:
+   putint:
+putstr.f:
+   putstr:
+query.f:
+   query:
+rmtabl.f:
+   rmtabl:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL scopy.f sctabl.f sdrop.f skipbl.f slstr.f stake.f stclos.f
+scopy.f:
+   scopy:
+sctabl.f:
+   sctabl:
+sdrop.f:
+   sdrop:
+skipbl.f:
+   skipbl:
+slstr.f:
+   slstr:
+stake.f:
+   stake:
+stclos.f:
+   stclos:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL stcopy.f stlu.f strcmp.f strim.f termin.f trmout.f type.f
+stcopy.f:
+   stcopy:
+stlu.f:
+   stlu:
+strcmp.f:
+   strcmp:
+strim.f:
+   strim:
+termin.f:
+   termin:
+trmout.f:
+   trmout:
+type.f:
+   type:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL upper.f wkday.f
+upper.f:
+   upper:
+wkday.f:
+   wkday:
++ ar rv libf.a addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
+ar: creating libf.a
+a - addset.o
+a - addstr.o
+a - amatch.o
+a - catsub.o
+a - clower.o
+a - concat.o
+a - ctoc.o
+a - ctoi.o
+a - ctomn.o
+a - cupper.o
+a - delete.o
+a - docant.o
+a - dodash.o
+a - dsdbiu.o
+a - dsdump.o
+a - dsfree.o
+a - dsget.o
+a - dsinit.o
+a - enter.o
+a - equal.o
+a - error.o
+a - errsub.o
+a - esc.o
+a - fcopy.o
+a - filset.o
+a - fmtdat.o
+a - fold.o
+a - gctoi.o
+a - getc.o
+a - getccl.o
+a - getpat.o
+a - getwrd.o
+a - gfnarg.o
+a - index.o
+a - insub.o
+a - itoc.o
+a - length.o
+a - locate.o
+a - lookup.o
+a - lower.o
+a - makpat.o
+a - maksub.o
+a - match.o
+a - mktabl.o
+a - mntoc.o
+a - omatch.o
+a - outsub.o
+a - patsiz.o
+a - prompt.o
+a - putc.o
+a - putdec.o
+a - putint.o
+a - putstr.o
+a - query.o
+a - rmtabl.o
+a - scopy.o
+a - sctabl.o
+a - sdrop.o
+a - skipbl.o
+a - slstr.o
+a - stake.o
+a - stclos.o
+a - stcopy.o
+a - stlu.o
+a - strcmp.o
+a - strim.o
+a - termin.o
+a - trmout.o
+a - type.o
+a - upper.o
+a - wkday.o
++ ranlib libf.a
++ mv -f libf.a ..
++ rm addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
++ echo ----------------------- RATLIBC ------------------------
+----------------------- RATLIBC ------------------------
++ cd ratlibc
++ sh -x mkpkg.sh
++ gcc -c -g -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS cant.c close.c endst.c getarg.c getlin.c initst.c open.c putch.c putlin.c r4tocstr.c remark.c
++ ar rv libc.a cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
+ar: creating libc.a
+a - cant.o
+a - close.o
+a - endst.o
+a - getarg.o
+a - getlin.o
+a - initst.o
+a - open.o
+a - putch.o
+a - putlin.o
+a - r4tocstr.o
+a - remark.o
++ ranlib libc.a
++ mv -f libc.a ..
++ rm cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rpp.c
++ gcc -I/home/steele/.iraf/ -m64 rpp.o librpp.a libf.a libc.a -o rpp.e
++ mv -f rpp.e ../../../hlib
++ rm libc.a libf.a librpp.a rpp.o
++ echo ----------------------- XYACC --------------------------
+----------------------- XYACC --------------------------
++ cd xyacc
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS y1.c y2.c y3.c y4.c
+y2.c: In function ‘setup’:
+y2.c:189:11: warning: variable ‘sym_prefix’ set but not used [-Wunused-but-set-variable]
+     char *sym_prefix = "";
+           ^
+y2.c: In function ‘cpyact’:
+y2.c:1387:10: warning: variable ‘id_name’ set but not used [-Wunused-but-set-variable]
+     char id_name[NAMESIZE + 1];
+          ^
+y2.c:1386:36: warning: variable ‘argument’ set but not used [-Wunused-but-set-variable]
+     int brac, c, match, j, s, tok, argument;
+                                    ^
++ gcc -I/home/steele/.iraf/ -m64 y1.o y2.o y3.o y4.o -o xyacc.e
++ mv -f xyacc.e ../../hlib
++ cp yaccpar.x ../../../lib
++ rm -f y1.o y2.o y3.o y4.o
++ echo ----------------------- GDEV ---------------------------
+----------------------- GDEV ---------------------------
++ cd gdev
++ sh -x mkpkg.sh
++ cd sgidev
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgiUtil.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgidispatch.c
++ gcc -I/home/steele/.iraf/ -m64 sgidispatch.o ../../hlib/libos.a /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgidispatch.e
++ mv -f sgidispatch.e ../../hlib
++ rm sgidispatch.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uimp.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uimp.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uimp.e
++ mv -f sgi2uimp.e ../../hlib
++ rm sgi2uimp.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uapl.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uapl.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uapl.e
++ mv -f sgi2uapl.e ../../hlib
++ rm sgi2uapl.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uqms.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uqms.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uqms.e
++ mv -f sgi2uqms.e ../../hlib
++ rm sgi2uqms.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uptx.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uptx.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uptx.e
++ mv -f sgi2uptx.e ../../hlib
++ rm sgi2uptx.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uhplj.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uhplj.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uhplj.e
++ mv -f sgi2uhplj.e ../../hlib
++ rm sgi2uhplj.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uhpgl.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uhpgl.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uhpgl.e
++ mv -f sgi2uhpgl.e ../../hlib
++ rm sgi2uhpgl.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2ueps.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2ueps.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2ueps.e
++ mv -f sgi2ueps.e ../../hlib
++ rm sgi2ueps.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2gif.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2gif.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2gif.e
++ mv -f sgi2gif.e ../../hlib
++ rm sgi2gif.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2xbm.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2xbm.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2xbm.e
++ mv -f sgi2xbm.e ../../hlib
++ rm sgi2xbm.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2svg.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2svg.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2svg.e
++ mv -f sgi2svg.e ../../hlib
++ rm sgi2svg.o
++ rm sgiUtil.o
++ echo install HSI executables in /home/steele/git/iraf-v216//unix//bin.linux64
+install HSI executables in /home/steele/git/iraf-v216//unix//bin.linux64
++ mv -f hlib/alloc.e hlib/generic.e hlib/rpp.e hlib/sgi2gif.e hlib/sgi2svg.e hlib/sgi2uapl.e hlib/sgi2ueps.e hlib/sgi2uhpgl.e hlib/sgi2uhplj.e hlib/sgi2uimp.e hlib/sgi2uptx.e hlib/sgi2uqms.e hlib/sgi2xbm.e hlib/sgidispatch.e hlib/xyacc.e bin.linux64
+util/mksysgen: line 49: mkpkg: command not found
++ sh -x setarch.sh
++ ls -d as
++ [ as = as ]
++ rm -rf as
++ ln -s as.linux64 as
++ ls -d bin
++ [ bin = bin ]
++ rm -rf bin
++ ln -s bin.linux64 bin
++ echo ----------------------- OS -----------------------------
+----------------------- OS -----------------------------
++ echo +
++
++ echo +
++
++ cd os
++ sh -x mkpkg.sh
++ echo --------------------- OS ----------------------
+--------------------- OS ----------------------
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall alloc.c getproc.c
++ gcc -I/home/steele/.iraf/ -m64 -Wall alloc.o getproc.o -o alloc.e
++ chmod 4755 alloc.e
++ mv -f alloc.e ../hlib
++ rm -f alloc.o
++ test linux64 != macosx
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall ../as/zsvjmp.s -o zsvjmp.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall gmttolst.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall irafpath.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall prwait.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zalloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zawset.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zcall.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zdojmp.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfacss.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfaloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfchdr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfdele.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfgcwd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfinfo.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiobf.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfioks.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiolp.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiomt.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiond.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiopl.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiopr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiosf.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfiotx.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfioty.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zflink.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfmkcp.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfmkdr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfnbrk.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfpath.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfpoll.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfprot.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfrmdr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfrnam.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfsubd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfunc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfutim.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zfxdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgcmdl.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zghost.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zglobl.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgmtco.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgtenv.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgtime.c
+zgtime.c: In function ‘zgtime_’:
+zgtime.c:35:12: warning: variable ‘clkfreq’ set but not used [-Wunused-but-set-variable]
+  long cpu, clkfreq;
+            ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zgtpid.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zintpr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zlocpr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zlocva.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zmain.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zmaloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zmfree.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zopdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zopdpr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zoscmd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zpanic.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zraloc.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zshlib.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zwmsec.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zxwhen.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzdbg.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzepro.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzexit.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzpstr.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzsetk.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -Wall zzstrt.c
+zzstrt.c: In function ‘zzstrt_’:
+zzstrt.c:479:10: warning: unused variable ‘fpucw’ [-Wunused-variable]
+      int fpucw = 0x332;
+          ^
++ [ linux64 = macosx ]
++ rm -f zmain.o
++ ar r libos.a getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
+ar: creating libos.a
++ ranlib libos.a
++ rm getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
++ mv -f libos.a ../bin
++ echo ----------------------- F2C ----------------------------
+----------------------- F2C ----------------------------
++ echo +
++
++ echo +
++
++ cd f2c
++ sh -x mkpkg.sh
++ echo ----------------------- F2C ---------------------------
+----------------------- F2C ---------------------------
++ cd src
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/iraf-v216/unix/f2c/src'
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS main.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS init.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS gram.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lex.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS proc.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS equiv.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS data.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS format.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS expr.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS exec.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS intr.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS io.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS misc.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS error.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS mem.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS names.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS output.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS p1output.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pread.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS put.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS putpcc.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS vax.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS formatdata.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS parse_args.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS niceprintf.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS cds.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sysdep.c
+cc -c -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS version.c
+cc -I/home/steele/.iraf/ -m64  main.o init.o gram.o lex.o proc.o equiv.o data.o format.o expr.o exec.o intr.o io.o misc.o error.o mem.o names.o output.o p1output.o pread.o put.o putpcc.o vax.o formatdata.o parse_args.o niceprintf.o cds.o sysdep.o version.o  -o f2c
+make[1]: Leaving directory '/home/steele/git/iraf-v216/unix/f2c/src'
++ mv f2c ../../bin/f2c.e
++ rm cds.o data.o equiv.o error.o exec.o expr.o format.o formatdata.o gram.o init.o intr.o io.o lex.o main.o mem.o misc.o names.o niceprintf.o output.o p1output.o parse_args.o pread.o proc.o put.o putpcc.o sysdep.o vax.o version.o
++ echo ----------------------- LIBF2C ------------------------
+----------------------- LIBF2C ------------------------
++ cd libf2c
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/iraf-v216/unix/f2c/libf2c'
+cc -c f77vers.c
+cc -c i77vers.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS main.c
+ld -r -x -o main.xxx main.o
+mv main.xxx main.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_rnge.c
+ld -r -x -o s_rnge.xxx s_rnge.o
+mv s_rnge.xxx s_rnge.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS abort_.c
+ld -r -x -o abort_.xxx abort_.o
+mv abort_.xxx abort_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS exit_.c
+ld -r -x -o exit_.xxx exit_.o
+mv exit_.xxx exit_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS getarg_.c
+ld -r -x -o getarg_.xxx getarg_.o
+mv getarg_.xxx getarg_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS iargc_.c
+ld -r -x -o iargc_.xxx iargc_.o
+mv iargc_.xxx iargc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS getenv_.c
+ld -r -x -o getenv_.xxx getenv_.o
+mv getenv_.xxx getenv_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS signal_.c
+ld -r -x -o signal_.xxx signal_.o
+mv signal_.xxx signal_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_stop.c
+ld -r -x -o s_stop.xxx s_stop.o
+mv s_stop.xxx s_stop.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_paus.c
+ld -r -x -o s_paus.xxx s_paus.o
+mv s_paus.xxx s_paus.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS system_.c
+ld -r -x -o system_.xxx system_.o
+mv system_.xxx system_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS cabs.c
+ld -r -x -o cabs.xxx cabs.o
+mv cabs.xxx cabs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ctype.c
+ld -r -x -o ctype.xxx ctype.o
+mv ctype.xxx ctype.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS derf_.c
+ld -r -x -o derf_.xxx derf_.o
+mv derf_.xxx derf_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS derfc_.c
+ld -r -x -o derfc_.xxx derfc_.o
+mv derfc_.xxx derfc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS erf_.c
+ld -r -x -o erf_.xxx erf_.o
+mv erf_.xxx erf_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS erfc_.c
+ld -r -x -o erfc_.xxx erfc_.o
+mv erfc_.xxx erfc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sig_die.c
+ld -r -x -o sig_die.xxx sig_die.o
+mv sig_die.xxx sig_die.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS uninit.c
+ld -r -x -o uninit.xxx uninit.o
+mv uninit.xxx uninit.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_ci.c
+ld -r -x -o pow_ci.xxx pow_ci.o
+mv pow_ci.xxx pow_ci.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_dd.c
+ld -r -x -o pow_dd.xxx pow_dd.o
+mv pow_dd.xxx pow_dd.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_di.c
+ld -r -x -o pow_di.xxx pow_di.o
+mv pow_di.xxx pow_di.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_hh.c
+ld -r -x -o pow_hh.xxx pow_hh.o
+mv pow_hh.xxx pow_hh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_ii.c
+ld -r -x -o pow_ii.xxx pow_ii.o
+mv pow_ii.xxx pow_ii.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_ri.c
+ld -r -x -o pow_ri.xxx pow_ri.o
+mv pow_ri.xxx pow_ri.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_zi.c
+ld -r -x -o pow_zi.xxx pow_zi.o
+mv pow_zi.xxx pow_zi.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS pow_zz.c
+ld -r -x -o pow_zz.xxx pow_zz.o
+mv pow_zz.xxx pow_zz.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_abs.c
+ld -r -x -o c_abs.xxx c_abs.o
+mv c_abs.xxx c_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_cos.c
+ld -r -x -o c_cos.xxx c_cos.o
+mv c_cos.xxx c_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_div.c
+ld -r -x -o c_div.xxx c_div.o
+mv c_div.xxx c_div.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_exp.c
+ld -r -x -o c_exp.xxx c_exp.o
+mv c_exp.xxx c_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_log.c
+ld -r -x -o c_log.xxx c_log.o
+mv c_log.xxx c_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_sin.c
+ld -r -x -o c_sin.xxx c_sin.o
+mv c_sin.xxx c_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS c_sqrt.c
+ld -r -x -o c_sqrt.xxx c_sqrt.o
+mv c_sqrt.xxx c_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_abs.c
+ld -r -x -o z_abs.xxx z_abs.o
+mv z_abs.xxx z_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_cos.c
+ld -r -x -o z_cos.xxx z_cos.o
+mv z_cos.xxx z_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_div.c
+ld -r -x -o z_div.xxx z_div.o
+mv z_div.xxx z_div.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_exp.c
+ld -r -x -o z_exp.xxx z_exp.o
+mv z_exp.xxx z_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_log.c
+ld -r -x -o z_log.xxx z_log.o
+mv z_log.xxx z_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_sin.c
+ld -r -x -o z_sin.xxx z_sin.o
+mv z_sin.xxx z_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS z_sqrt.c
+ld -r -x -o z_sqrt.xxx z_sqrt.o
+mv z_sqrt.xxx z_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_abs.c
+ld -r -x -o r_abs.xxx r_abs.o
+mv r_abs.xxx r_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_acos.c
+ld -r -x -o r_acos.xxx r_acos.o
+mv r_acos.xxx r_acos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_asin.c
+ld -r -x -o r_asin.xxx r_asin.o
+mv r_asin.xxx r_asin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_atan.c
+ld -r -x -o r_atan.xxx r_atan.o
+mv r_atan.xxx r_atan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_atn2.c
+ld -r -x -o r_atn2.xxx r_atn2.o
+mv r_atn2.xxx r_atn2.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_cnjg.c
+ld -r -x -o r_cnjg.xxx r_cnjg.o
+mv r_cnjg.xxx r_cnjg.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_cos.c
+ld -r -x -o r_cos.xxx r_cos.o
+mv r_cos.xxx r_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_cosh.c
+ld -r -x -o r_cosh.xxx r_cosh.o
+mv r_cosh.xxx r_cosh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_dim.c
+ld -r -x -o r_dim.xxx r_dim.o
+mv r_dim.xxx r_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_exp.c
+ld -r -x -o r_exp.xxx r_exp.o
+mv r_exp.xxx r_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_imag.c
+ld -r -x -o r_imag.xxx r_imag.o
+mv r_imag.xxx r_imag.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_int.c
+ld -r -x -o r_int.xxx r_int.o
+mv r_int.xxx r_int.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_lg10.c
+ld -r -x -o r_lg10.xxx r_lg10.o
+mv r_lg10.xxx r_lg10.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_log.c
+ld -r -x -o r_log.xxx r_log.o
+mv r_log.xxx r_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_mod.c
+ld -r -x -o r_mod.xxx r_mod.o
+mv r_mod.xxx r_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_nint.c
+ld -r -x -o r_nint.xxx r_nint.o
+mv r_nint.xxx r_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sign.c
+ld -r -x -o r_sign.xxx r_sign.o
+mv r_sign.xxx r_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sin.c
+ld -r -x -o r_sin.xxx r_sin.o
+mv r_sin.xxx r_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sinh.c
+ld -r -x -o r_sinh.xxx r_sinh.o
+mv r_sinh.xxx r_sinh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_sqrt.c
+ld -r -x -o r_sqrt.xxx r_sqrt.o
+mv r_sqrt.xxx r_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_tan.c
+ld -r -x -o r_tan.xxx r_tan.o
+mv r_tan.xxx r_tan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS r_tanh.c
+ld -r -x -o r_tanh.xxx r_tanh.o
+mv r_tanh.xxx r_tanh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_abs.c
+ld -r -x -o d_abs.xxx d_abs.o
+mv d_abs.xxx d_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_acos.c
+ld -r -x -o d_acos.xxx d_acos.o
+mv d_acos.xxx d_acos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_asin.c
+ld -r -x -o d_asin.xxx d_asin.o
+mv d_asin.xxx d_asin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_atan.c
+ld -r -x -o d_atan.xxx d_atan.o
+mv d_atan.xxx d_atan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_atn2.c
+ld -r -x -o d_atn2.xxx d_atn2.o
+mv d_atn2.xxx d_atn2.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_cnjg.c
+ld -r -x -o d_cnjg.xxx d_cnjg.o
+mv d_cnjg.xxx d_cnjg.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_cos.c
+ld -r -x -o d_cos.xxx d_cos.o
+mv d_cos.xxx d_cos.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_cosh.c
+ld -r -x -o d_cosh.xxx d_cosh.o
+mv d_cosh.xxx d_cosh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_dim.c
+ld -r -x -o d_dim.xxx d_dim.o
+mv d_dim.xxx d_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_exp.c
+ld -r -x -o d_exp.xxx d_exp.o
+mv d_exp.xxx d_exp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_imag.c
+ld -r -x -o d_imag.xxx d_imag.o
+mv d_imag.xxx d_imag.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_int.c
+ld -r -x -o d_int.xxx d_int.o
+mv d_int.xxx d_int.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_lg10.c
+ld -r -x -o d_lg10.xxx d_lg10.o
+mv d_lg10.xxx d_lg10.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_log.c
+ld -r -x -o d_log.xxx d_log.o
+mv d_log.xxx d_log.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_mod.c
+ld -r -x -o d_mod.xxx d_mod.o
+mv d_mod.xxx d_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_nint.c
+ld -r -x -o d_nint.xxx d_nint.o
+mv d_nint.xxx d_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_prod.c
+ld -r -x -o d_prod.xxx d_prod.o
+mv d_prod.xxx d_prod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sign.c
+ld -r -x -o d_sign.xxx d_sign.o
+mv d_sign.xxx d_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sin.c
+ld -r -x -o d_sin.xxx d_sin.o
+mv d_sin.xxx d_sin.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sinh.c
+ld -r -x -o d_sinh.xxx d_sinh.o
+mv d_sinh.xxx d_sinh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_sqrt.c
+ld -r -x -o d_sqrt.xxx d_sqrt.o
+mv d_sqrt.xxx d_sqrt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_tan.c
+ld -r -x -o d_tan.xxx d_tan.o
+mv d_tan.xxx d_tan.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS d_tanh.c
+ld -r -x -o d_tanh.xxx d_tanh.o
+mv d_tanh.xxx d_tanh.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_abs.c
+ld -r -x -o i_abs.xxx i_abs.o
+mv i_abs.xxx i_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_dim.c
+ld -r -x -o i_dim.xxx i_dim.o
+mv i_dim.xxx i_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_dnnt.c
+ld -r -x -o i_dnnt.xxx i_dnnt.o
+mv i_dnnt.xxx i_dnnt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_indx.c
+ld -r -x -o i_indx.xxx i_indx.o
+mv i_indx.xxx i_indx.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_len.c
+ld -r -x -o i_len.xxx i_len.o
+mv i_len.xxx i_len.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_mod.c
+ld -r -x -o i_mod.xxx i_mod.o
+mv i_mod.xxx i_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_nint.c
+ld -r -x -o i_nint.xxx i_nint.o
+mv i_nint.xxx i_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS i_sign.c
+ld -r -x -o i_sign.xxx i_sign.o
+mv i_sign.xxx i_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lbitbits.c
+ld -r -x -o lbitbits.xxx lbitbits.o
+mv lbitbits.xxx lbitbits.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lbitshft.c
+ld -r -x -o lbitshft.xxx lbitshft.o
+mv lbitshft.xxx lbitshft.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_abs.c
+ld -r -x -o h_abs.xxx h_abs.o
+mv h_abs.xxx h_abs.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_dim.c
+ld -r -x -o h_dim.xxx h_dim.o
+mv h_dim.xxx h_dim.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_dnnt.c
+ld -r -x -o h_dnnt.xxx h_dnnt.o
+mv h_dnnt.xxx h_dnnt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_indx.c
+ld -r -x -o h_indx.xxx h_indx.o
+mv h_indx.xxx h_indx.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_len.c
+ld -r -x -o h_len.xxx h_len.o
+mv h_len.xxx h_len.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_mod.c
+ld -r -x -o h_mod.xxx h_mod.o
+mv h_mod.xxx h_mod.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_nint.c
+ld -r -x -o h_nint.xxx h_nint.o
+mv h_nint.xxx h_nint.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS h_sign.c
+ld -r -x -o h_sign.xxx h_sign.o
+mv h_sign.xxx h_sign.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_ge.c
+ld -r -x -o l_ge.xxx l_ge.o
+mv l_ge.xxx l_ge.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_gt.c
+ld -r -x -o l_gt.xxx l_gt.o
+mv l_gt.xxx l_gt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_le.c
+ld -r -x -o l_le.xxx l_le.o
+mv l_le.xxx l_le.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS l_lt.c
+ld -r -x -o l_lt.xxx l_lt.o
+mv l_lt.xxx l_lt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_ge.c
+ld -r -x -o hl_ge.xxx hl_ge.o
+mv hl_ge.xxx hl_ge.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_gt.c
+ld -r -x -o hl_gt.xxx hl_gt.o
+mv hl_gt.xxx hl_gt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_le.c
+ld -r -x -o hl_le.xxx hl_le.o
+mv hl_le.xxx hl_le.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS hl_lt.c
+ld -r -x -o hl_lt.xxx hl_lt.o
+mv hl_lt.xxx hl_lt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ef1asc_.c
+ld -r -x -o ef1asc_.xxx ef1asc_.o
+mv ef1asc_.xxx ef1asc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ef1cmc_.c
+ld -r -x -o ef1cmc_.xxx ef1cmc_.o
+mv ef1cmc_.xxx ef1cmc_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS f77_aloc.c
+ld -r -x -o f77_aloc.xxx f77_aloc.o
+mv f77_aloc.xxx f77_aloc.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_cat.c
+ld -r -x -o s_cat.xxx s_cat.o
+mv s_cat.xxx s_cat.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_cmp.c
+ld -r -x -o s_cmp.xxx s_cmp.o
+mv s_cmp.xxx s_cmp.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS s_copy.c
+ld -r -x -o s_copy.xxx s_copy.o
+mv s_copy.xxx s_copy.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS backspac.c
+ld -r -x -o backspac.xxx backspac.o
+mv backspac.xxx backspac.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS close.c
+ld -r -x -o close.xxx close.o
+mv close.xxx close.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS dfe.c
+ld -r -x -o dfe.xxx dfe.o
+mv dfe.xxx dfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS dolio.c
+ld -r -x -o dolio.xxx dolio.o
+mv dolio.xxx dolio.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS due.c
+ld -r -x -o due.xxx due.o
+mv due.xxx due.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS endfile.c
+ld -r -x -o endfile.xxx endfile.o
+mv endfile.xxx endfile.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS err.c
+ld -r -x -o err.xxx err.o
+mv err.xxx err.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS fmt.c
+ld -r -x -o fmt.xxx fmt.o
+mv fmt.xxx fmt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS fmtlib.c
+ld -r -x -o fmtlib.xxx fmtlib.o
+mv fmtlib.xxx fmtlib.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ftell_.c
+ld -r -x -o ftell_.xxx ftell_.o
+mv ftell_.xxx ftell_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS iio.c
+ld -r -x -o iio.xxx iio.o
+mv iio.xxx iio.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ilnw.c
+ld -r -x -o ilnw.xxx ilnw.o
+mv ilnw.xxx ilnw.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS inquire.c
+ld -r -x -o inquire.xxx inquire.o
+mv inquire.xxx inquire.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lread.c
+ld -r -x -o lread.xxx lread.o
+mv lread.xxx lread.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lwrite.c
+ld -r -x -o lwrite.xxx lwrite.o
+mv lwrite.xxx lwrite.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS open.c
+ld -r -x -o open.xxx open.o
+mv open.xxx open.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rdfmt.c
+ld -r -x -o rdfmt.xxx rdfmt.o
+mv rdfmt.xxx rdfmt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rewind.c
+ld -r -x -o rewind.xxx rewind.o
+mv rewind.xxx rewind.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rsfe.c
+ld -r -x -o rsfe.xxx rsfe.o
+mv rsfe.xxx rsfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rsli.c
+ld -r -x -o rsli.xxx rsli.o
+mv rsli.xxx rsli.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rsne.c
+ld -r -x -o rsne.xxx rsne.o
+mv rsne.xxx rsne.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sfe.c
+ld -r -x -o sfe.xxx sfe.o
+mv sfe.xxx sfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sue.c
+ld -r -x -o sue.xxx sue.o
+mv sue.xxx sue.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS typesize.c
+ld -r -x -o typesize.xxx typesize.o
+mv typesize.xxx typesize.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS uio.c
+ld -r -x -o uio.xxx uio.o
+mv uio.xxx uio.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS util.c
+ld -r -x -o util.xxx util.o
+mv util.xxx util.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wref.c
+ld -r -x -o wref.xxx wref.o
+mv wref.xxx wref.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wrtfmt.c
+ld -r -x -o wrtfmt.xxx wrtfmt.o
+mv wrtfmt.xxx wrtfmt.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wsfe.c
+ld -r -x -o wsfe.xxx wsfe.o
+mv wsfe.xxx wsfe.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wsle.c
+ld -r -x -o wsle.xxx wsle.o
+mv wsle.xxx wsle.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wsne.c
+ld -r -x -o wsne.xxx wsne.o
+mv wsne.xxx wsne.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS xwsne.c
+ld -r -x -o xwsne.xxx xwsne.o
+mv xwsne.xxx xwsne.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS dtime_.c
+ld -r -x -o dtime_.xxx dtime_.o
+mv dtime_.xxx dtime_.o
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS etime_.c
+ld -r -x -o etime_.xxx etime_.o
+mv etime_.xxx etime_.o
+ar r libf2c.a f77vers.o i77vers.o main.o s_rnge.o abort_.o exit_.o getarg_.o iargc_.o getenv_.o signal_.o s_stop.o s_paus.o system_.o cabs.o ctype.o derf_.o derfc_.o erf_.o erfc_.o sig_die.o uninit.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o lbitbits.o lbitshft.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o l_ge.o l_gt.o l_le.o l_lt.o hl_ge.o hl_gt.o hl_le.o hl_lt.o ef1asc_.o ef1cmc_.o f77_aloc.o s_cat.o s_cmp.o s_copy.o backspac.o close.o dfe.o dolio.o due.o endfile.o err.o fmt.o fmtlib.o ftell_.o iio.o ilnw.o inquire.o lread.o lwrite.o open.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o sfe.o sue.o typesize.o uio.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o dtime_.o etime_.o
+ar: creating libf2c.a
+ranlib libf2c.a
+make[1]: Leaving directory '/home/steele/git/iraf-v216/unix/f2c/libf2c'
++ mv libf2c.a ../../bin/
++ rm abort_.o backspac.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o cabs.o close.o ctype.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o derf_.o derfc_.o dfe.o dolio.o dtime_.o due.o ef1asc_.o ef1cmc_.o endfile.o erf_.o erfc_.o err.o etime_.o exit_.o f77_aloc.o f77vers.o fmt.o fmtlib.o ftell_.o getarg_.o getenv_.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o hl_ge.o hl_gt.o hl_le.o hl_lt.o i77vers.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o iargc_.o iio.o ilnw.o inquire.o l_ge.o l_gt.o l_le.o l_lt.o lbitbits.o lbitshft.o lread.o lwrite.o main.o open.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o s_cat.o s_cmp.o s_copy.o s_paus.o s_rnge.o s_stop.o sfe.o sig_die.o signal_.o sue.o system_.o typesize.o uio.o uninit.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o
++ echo ----------------------- BOOT ---------------------------
+----------------------- BOOT ---------------------------
++ echo +
++
++ echo +
++
++ cd boot
++ sh -x mkpkg.sh
++ echo ----------------------- BOOTLIB ------------------------
+----------------------- BOOTLIB ------------------------
++ cd bootlib
++ sh -x mkpkg.sh
++ test -f ../../as/bytmov.s
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS _bytmov.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS envinit.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS index.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osaccess.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osamovb.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oschdir.c
+oschdir.c: In function ‘os_chdir’:
+oschdir.c:20:7: warning: variable ‘sz_dpath’ set but not used [-Wunused-but-set-variable]
+  XINT sz_dpath, sz_osdir, status, x_maxch=SZ_PATHNAME;
+       ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osclose.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oscmd.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oscreatedir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oscrfile.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osdelete.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfcopy.c
+osfcopy.c: In function ‘os_fcopy’:
+osfcopy.c:22:60: warning: variable ‘nw’ set but not used [-Wunused-but-set-variable]
+  XINT status, junk, maxch = SZ_FBUF, mode = 0, in, out, n, nw;
+                                                            ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfdate.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfiletype.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfn2vfn.c
+In file included from /home/steele/.iraf/iraf.h:28:0,
+                 from osfn2vfn.c:11:
+/home/steele/git/iraf-v216//unix/hlib/libc/libc.h:325:37: fatal error: /iraf/iraf/unix/bin/f2c.h: No such file or directory
+compilation terminated.
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osfpathname.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osgetenv.c
+In file included from /home/steele/.iraf/iraf.h:105:0,
+                 from bootlib.h:6,
+                 from osgetenv.c:6:
+osgetenv.c: In function ‘_os_getenv’:
+/home/steele/git/iraf-v216//unix/hlib/libc/knames.h:114:17: warning: implicit declaration of function ‘zgtenv_’ [-Wimplicit-function-declaration]
+ #define ZGTENV  zgtenv_
+                 ^
+osgetenv.c:87:2: note: in expansion of macro ‘ZGTENV’
+  ZGTENV (symbol, value, &x_maxch, &status);
+  ^
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osgetowner.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osopen.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osputenv.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osread.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossetfmode.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossetowner.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossettime.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osstrpak.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS osstrupk.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossubdir.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossymlink.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ossysfile.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS ostime.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS oswrite.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rindex.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS tape.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS vfn2osfn.c
+In file included from /home/steele/.iraf/iraf.h:28:0,
+                 from vfn2osfn.c:11:
+/home/steele/git/iraf-v216//unix/hlib/libc/libc.h:325:37: fatal error: /iraf/iraf/unix/bin/f2c.h: No such file or directory
+compilation terminated.
++ ar rv libboot.a _bytmov.o envinit.o index.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o rindex.o tape.o
+ar: creating libboot.a
+a - _bytmov.o
+a - envinit.o
+a - index.o
+a - osaccess.o
+a - osamovb.o
+a - oschdir.o
+a - osclose.o
+a - oscmd.o
+a - oscreatedir.o
+a - oscrfile.o
+a - osdelete.o
+a - osdir.o
+a - osfcopy.o
+a - osfdate.o
+a - osfiletype.o
+a - osfpathname.o
+a - osgetenv.o
+a - osgetowner.o
+a - osopen.o
+a - osputenv.o
+a - osread.o
+a - ossetfmode.o
+a - ossetowner.o
+a - ossettime.o
+a - osstrpak.o
+a - osstrupk.o
+a - ossubdir.o
+a - ossymlink.o
+a - ossysfile.o
+a - ostime.o
+a - oswrite.o
+a - rindex.o
+a - tape.o
++ rm _bytmov.o envinit.o index.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o rindex.o tape.o
++ ranlib libboot.a
++ mv -f libboot.a ../../bin
++ echo ----------------------- GENERIC ------------------------
+----------------------- GENERIC ------------------------
++ cd generic
++ sh -x mkpkg.sh
++ find tok.l -newer lexyy.c -exec rm lexyy.c ;
++ test -f lexyy.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS -w lexyy.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS generic.c chario.c yywrap.c
++ gcc -I/home/steele/.iraf/ -m64 generic.o lexyy.o chario.o yywrap.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o generic.e
++ mv -f generic.e ../../hlib
++ rm chario.o generic.o lexyy.o yywrap.o
++ echo ----------------------- MKPKG --------------------------
+----------------------- MKPKG --------------------------
++ cd mkpkg
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS char.c fdcache.c fncache.c host.c main.c pkg.c scanlib.c sflist.c tok.c
+host.c: In function ‘h_updatelibrary’:
+host.c:104:10: warning: variable ‘lname’ set but not used [-Wunused-but-set-variable]
+  char   *lname = NULL;
+          ^
+scanlib.c: In function ‘h_scanlibrary’:
+scanlib.c:73:6: warning: variable ‘len’ set but not used [-Wunused-but-set-variable]
+  int len=0, len_arfmag, nmodules;
+      ^
++ gcc -I/home/steele/.iraf/ -m64 main.o char.o fdcache.o fncache.o host.o pkg.o scanlib.o sflist.o tok.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o mkpkg.e
+host.o: In function `h_rebuildlibrary':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:290: undefined reference to `vfn2osfn'
+host.o: In function `h_incheck':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:328: undefined reference to `vfn2osfn'
+host.o: In function `h_outcheck':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:406: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:410: undefined reference to `vfn2osfn'
+host.o: In function `h_copyfile':
+/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:534: undefined reference to `vfn2osfn'
+host.o:/home/steele/git/iraf-v216/unix/boot/mkpkg/host.c:535: more undefined references to `vfn2osfn' follow
+collect2: error: ld returned 1 exit status
++ mv -f mkpkg.e ../../hlib
+mv: cannot stat 'mkpkg.e': No such file or directory
++ rm char.o fdcache.o fncache.o host.o main.o pkg.o scanlib.o sflist.o tok.o
++ echo ----------------------- RMBIN  -------------------------
+----------------------- RMBIN  -------------------------
++ cd rmbin
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rmbin.c
++ gcc -I/home/steele/.iraf/ -m64 rmbin.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o rmbin.e
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osdelete.o): In function `os_delete':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osdelete.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfpathname.o): In function `os_fpathname':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfpathname.c:25: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv -f rmbin.e ../../hlib
+mv: cannot stat 'rmbin.e': No such file or directory
++ rm rmbin.o
++ echo ----------------------- RMFILES  -----------------------
+----------------------- RMFILES  -----------------------
++ cd rmfiles
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rmfiles.c
++ gcc -I/home/steele/.iraf/ -m64 rmfiles.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o rmfiles.e
+rmfiles.o: In function `rmfiles':
+/home/steele/git/iraf-v216/unix/boot/rmfiles/rmfiles.c:150: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osdelete.o): In function `os_delete':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osdelete.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfpathname.o): In function `os_fpathname':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfpathname.c:25: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv -f rmfiles.e ../../hlib
+mv: cannot stat 'rmfiles.e': No such file or directory
++ rm rmfiles.o
++ echo ----------------------- RTAR  --------------------------
+----------------------- RTAR  --------------------------
++ cd rtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rtar.c
++ gcc -I/home/steele/.iraf/ -m64 rtar.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o rtar.e
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osclose.o): In function `os_close':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:20: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:25: undefined reference to `text'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oscreatedir.o): In function `os_createdir':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscreatedir.c:15: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscreatedir.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oscrfile.o): In function `os_createfile':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:19: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:24: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:27: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `text'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osdelete.o): In function `os_delete':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osdelete.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfcopy.o): In function `os_fcopy':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:31: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:36: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:41: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:63: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:67: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfcopy.c:69: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(ossetfmode.o): In function `os_setfmode':
+/home/steele/git/iraf-v216/unix/boot/bootlib/ossetfmode.c:17: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(ossetowner.o): In function `os_setowner':
+/home/steele/git/iraf-v216/unix/boot/bootlib/ossetowner.c:20: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(ossettime.o): In function `os_setmtime':
+/home/steele/git/iraf-v216/unix/boot/bootlib/ossettime.c:23: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oswrite.o): In function `os_write':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:25: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:30: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:31: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:39: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:40: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:41: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:41: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:41: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oswrite.c:47: undefined reference to `txop'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(tape.o): In function `tape_open':
+/home/steele/git/iraf-v216/unix/boot/bootlib/tape.c:123: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv rtar.e ../../hlib
+mv: cannot stat 'rtar.e': No such file or directory
++ rm -f rtar.o
++ echo ----------------------- WTAR --------------------------
+----------------------- WTAR --------------------------
++ cd wtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS wtar.c
++ gcc -I/home/steele/.iraf/ -m64 wtar.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o wtar.e
+wtar.o: In function `tarfileout':
+/home/steele/git/iraf-v216/unix/boot/wtar/wtar.c:339: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osclose.o): In function `os_close':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:20: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:23: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:24: undefined reference to `text'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osclose.c:25: undefined reference to `text'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osfpathname.o): In function `os_fpathname':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osfpathname.c:25: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osgetowner.o): In function `os_getowner':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osgetowner.c:24: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osopen.o): In function `os_open':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osopen.c:23: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/osopen.c:24: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(tape.o): In function `tape_open':
+/home/steele/git/iraf-v216/unix/boot/bootlib/tape.c:123: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(oscrfile.o): In function `os_createfile':
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:19: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:24: undefined reference to `bdebug'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:27: undefined reference to `osfiletype'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `txop'
+/home/steele/git/iraf-v216/unix/boot/bootlib/oscrfile.c:33: undefined reference to `text'
+collect2: error: ld returned 1 exit status
++ mv wtar.e ../../hlib
+mv: cannot stat 'wtar.e': No such file or directory
++ rm -f wtar.o
++ echo ----------------------- SPP ----------------------------
+----------------------- SPP ----------------------------
++ cd spp
++ sh -x mkpkg.sh
++ echo ----------------------- XC  ----------------------------
+----------------------- XC  ----------------------------
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS xc.c
++ gcc -I/home/steele/.iraf/ -m64 xc.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o xc.e
+xc.o: In function `main':
+/home/steele/git/iraf-v216/unix/boot/spp/xc.c:498: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/spp/xc.c:751: undefined reference to `vfn2osfn'
+xc.o: In function `iraflib':
+/home/steele/git/iraf-v216/unix/boot/spp/xc.c:1507: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(envinit.o): In function `loadpkgenv':
+/home/steele/git/iraf-v216/unix/boot/bootlib/envinit.c:69: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216//unix/hlib/libboot.a(osaccess.o): In function `os_access':
+/home/steele/git/iraf-v216/unix/boot/bootlib/osaccess.c:23: undefined reference to `vfn2osfn'
+collect2: error: ld returned 1 exit status
++ mv -f xc.e ../../hlib
+mv: cannot stat 'xc.e': No such file or directory
++ rm -f xc.o
++ echo ----------------------- XPP ----------------------------
+----------------------- XPP ----------------------------
++ cd xpp
++ sh -x mkpkg.sh
++ find xpp.l -newer lexyy.c -exec rm lexyy.c ;
++ test -f lexyy.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS lexyy.c
+lex.yy.c:2630:12: warning: ‘yy_flex_strlen’ defined but not used [-Wunused-function]
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS xppmain.c xppcode.c decl.c
++ gcc -I/home/steele/.iraf/ -m64 xppmain.o lexyy.o xppcode.o decl.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o xpp.e
+xppmain.o: In function `main':
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xppmain.c:111: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xppmain.c:133: undefined reference to `vfn2osfn'
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xppmain.c:142: undefined reference to `vfn2osfn'
+lexyy.o: In function `process_task_statement':
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xpp.l:275: undefined reference to `vfn2osfn'
+lexyy.o: In function `do_include':
+/home/steele/git/iraf-v216/unix/boot/spp/xpp/xpp.l:348: undefined reference to `vfn2osfn'
+lexyy.o:/home/steele/git/iraf-v216/unix/boot/spp/xpp/xpp.l:404: more undefined references to `vfn2osfn' follow
+collect2: error: ld returned 1 exit status
++ mv -f xpp.e ../../../hlib
+mv: cannot stat 'xpp.e': No such file or directory
++ rm decl.o lexyy.o xppcode.o xppmain.o
++ echo ----------------------- RPP ----------------------------
+----------------------- RPP ----------------------------
++ cd rpp
++ sh -x mkpkg.sh
++ echo ----------------------- RPPFOR -------------------------
+----------------------- RPPFOR -------------------------
++ cd rppfor
++ sh -x mkpkg.sh
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL addchr.f allblk.f alldig.f baderr.f balpar.f beginc.f
+addchr.f:
+   addchr:
+allblk.f:
+   allblk:
+alldig.f:
+   alldig:
+baderr.f:
+   baderr:
+balpar.f:
+   balpar:
+beginc.f:
+   beginc:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL brknxt.f cascod.f caslab.f declco.f deftok.f doarth.f
+brknxt.f:
+   brknxt:
+cascod.f:
+   cascod:
+caslab.f:
+   caslab:
+declco.f:
+   declco:
+deftok.f:
+   deftok:
+doarth.f:
+   doarth:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL docode.f doif.f doincr.f domac.f dostat.f dosub.f
+docode.f:
+   docode:
+doif.f:
+   doif:
+doincr.f:
+   doincr:
+domac.f:
+   domac:
+dostat.f:
+   dostat:
+dosub.f:
+   dosub:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL eatup.f elseif.f endcod.f entdef.f entdkw.f entfkw.f
+eatup.f:
+   eatup:
+elseif.f:
+   elseif:
+endcod.f:
+   endcod:
+entdef.f:
+   entdef:
+entdkw.f:
+   entdkw:
+entfkw.f:
+   entfkw:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL entrkw.f entxkw.f errchk.f errgo.f errorc.f evalr.f
+entrkw.f:
+   entrkw:
+entxkw.f:
+   entxkw:
+errchk.f:
+   errchk:
+errgo.f:
+   errgo:
+errorc.f:
+   errorc:
+evalr.f:
+   evalr:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL finit.f forcod.f fors.f getdef.f gettok.f gnbtok.f
+finit.f:
+   finit:
+forcod.f:
+   forcod:
+fors.f:
+   fors:
+getdef.f:
+   getdef:
+gettok.f:
+   gettok:
+gnbtok.f:
+   gnbtok:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL gocode.f gtok.f ifcode.f iferrc.f ifgo.f ifparm.f
+gocode.f:
+   gocode:
+gtok.f:
+   gtok:
+ifcode.f:
+   ifcode:
+iferrc.f:
+   iferrc:
+ifgo.f:
+   ifgo:
+ifparm.f:
+   ifparm:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL indent.f initkw.f labelc.f labgen.f lex.f litral.f
+indent.f:
+   indent:
+initkw.f:
+   initkw:
+labelc.f:
+   labelc:
+labgen.f:
+   labgen:
+lex.f:
+   lex:
+litral.f:
+   litral:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL lndict.f ludef.f mapid.f ngetch.f ogotos.f otherc.f
+lndict.f:
+   lndict:
+ludef.f:
+   ludef:
+mapid.f:
+   mapid:
+ngetch.f:
+   ngetch:
+ogotos.f:
+   ogotos:
+otherc.f:
+   otherc:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL outch.f outcon.f outdon.f outdwe.f outgo.f outnum.f
+outch.f:
+   outch:
+outcon.f:
+   outcon:
+outdon.f:
+   outdon:
+outdwe.f:
+   outdwe:
+outgo.f:
+   outgo:
+outnum.f:
+   outnum:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL outstr.f outtab.f parse.f pbnum.f pbstr.f poicod.f
+outstr.f:
+   outstr:
+outtab.f:
+   outtab:
+parse.f:
+   parse:
+pbnum.f:
+   pbnum:
+pbstr.f:
+   pbstr:
+poicod.f:
+   poicod:
+   poidec:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL push.f putbak.f putchr.f puttok.f ratfor.f relate.f
+push.f:
+   push:
+putbak.f:
+   putbak:
+putchr.f:
+   putchr:
+puttok.f:
+   puttok:
+ratfor.f:
+   ratfor:
+relate.f:
+   relate:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL repcod.f retcod.f sdupl.f skpblk.f squash.f strdcl.f
+repcod.f:
+   repcod:
+retcod.f:
+   retcod:
+sdupl.f:
+   sdupl:
+skpblk.f:
+   skpblk:
+squash.f:
+   squash:
+strdcl.f:
+   strdcl:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL swcode.f swend.f swvar.f synerr.f thenco.f ulstal.f
+swcode.f:
+   swcode:
+swend.f:
+   swend:
+swvar.f:
+   swvar:
+synerr.f:
+   synerr:
+thenco.f:
+   thenco:
+ulstal.f:
+   ulstal:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL uniqid.f unstak.f untils.f whilec.f whiles.f
+uniqid.f:
+   uniqid:
+unstak.f:
+   unstak:
+untils.f:
+   untils:
+whilec.f:
+   whilec:
+whiles.f:
+   whiles:
++ ar rv librpp.a addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
+ar: creating librpp.a
+a - addchr.o
+a - allblk.o
+a - alldig.o
+a - baderr.o
+a - balpar.o
+a - beginc.o
+a - brknxt.o
+a - cascod.o
+a - caslab.o
+a - declco.o
+a - deftok.o
+a - doarth.o
+a - docode.o
+a - doif.o
+a - doincr.o
+a - domac.o
+a - dostat.o
+a - dosub.o
+a - eatup.o
+a - elseif.o
+a - endcod.o
+a - entdef.o
+a - entdkw.o
+a - entfkw.o
+a - entrkw.o
+a - entxkw.o
+a - errchk.o
+a - errgo.o
+a - errorc.o
+a - evalr.o
+a - finit.o
+a - forcod.o
+a - fors.o
+a - getdef.o
+a - gettok.o
+a - gnbtok.o
+a - gocode.o
+a - gtok.o
+a - ifcode.o
+a - iferrc.o
+a - ifgo.o
+a - ifparm.o
+a - indent.o
+a - initkw.o
+a - labelc.o
+a - labgen.o
+a - lex.o
+a - litral.o
+a - lndict.o
+a - ludef.o
+a - mapid.o
+a - ngetch.o
+a - ogotos.o
+a - otherc.o
+a - outch.o
+a - outcon.o
+a - outdon.o
+a - outdwe.o
+a - outgo.o
+a - outnum.o
+a - outstr.o
+a - outtab.o
+a - parse.o
+a - pbnum.o
+a - pbstr.o
+a - poicod.o
+a - push.o
+a - putbak.o
+a - putchr.o
+a - puttok.o
+a - ratfor.o
+a - relate.o
+a - repcod.o
+a - retcod.o
+a - sdupl.o
+a - skpblk.o
+a - squash.o
+a - strdcl.o
+a - swcode.o
+a - swend.o
+a - swvar.o
+a - synerr.o
+a - thenco.o
+a - ulstal.o
+a - uniqid.o
+a - unstak.o
+a - untils.o
+a - whilec.o
+a - whiles.o
++ ranlib librpp.a
++ mv -f librpp.a ..
++ rm addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
++ echo ----------------------- RATLIBF ------------------------
+----------------------- RATLIBF ------------------------
++ cd ratlibf
++ sh -x mkpkg.sh
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL addset.f addstr.f amatch.f catsub.f clower.f concat.f
+addset.f:
+   addset:
+addstr.f:
+   addstr:
+amatch.f:
+   amatch:
+catsub.f:
+   catsub:
+clower.f:
+   clower:
+concat.f:
+   concat:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL ctoc.f ctoi.f ctomn.f cupper.f delete.f docant.f dodash.f
+ctoc.f:
+   ctoc:
+ctoi.f:
+   ctoi:
+ctomn.f:
+   ctomn:
+cupper.f:
+   cupper:
+delete.f:
+   delete:
+docant.f:
+   docant:
+dodash.f:
+   dodash:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL dsdbiu.f dsdump.f dsfree.f dsget.f dsinit.f enter.f equal.f
+dsdbiu.f:
+   dsdbiu:
+dsdump.f:
+   dsdump:
+dsfree.f:
+   dsfree:
+dsget.f:
+   dsget:
+dsinit.f:
+   dsinit:
+enter.f:
+   enter:
+equal.f:
+   equal:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL error.f errsub.f esc.f fcopy.f filset.f fmtdat.f fold.f
+error.f:
+   error:
+errsub.f:
+   errsub:
+esc.f:
+   esc:
+fcopy.f:
+   fcopy:
+filset.f:
+   filset:
+fmtdat.f:
+   fmtdat:
+fold.f:
+   fold:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL gctoi.f getc.f getccl.f getpat.f getwrd.f gfnarg.f index.f
+gctoi.f:
+   gctoi:
+getc.f:
+   getc:
+getccl.f:
+   getccl:
+getpat.f:
+   getpat:
+getwrd.f:
+   getwrd:
+gfnarg.f:
+   gfnarg:
+index.f:
+   index:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL insub.f itoc.f length.f locate.f lookup.f lower.f makpat.f
+insub.f:
+   insub:
+itoc.f:
+   itoc:
+length.f:
+   length:
+locate.f:
+   locate:
+lookup.f:
+   lookup:
+lower.f:
+   lower:
+makpat.f:
+   makpat:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL maksub.f match.f mktabl.f mntoc.f omatch.f outsub.f patsiz.f
+maksub.f:
+   maksub:
+match.f:
+   match:
+mktabl.f:
+   mktabl:
+mntoc.f:
+   mntoc:
+omatch.f:
+   omatch:
+outsub.f:
+   outsub:
+patsiz.f:
+   patsiz:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL prompt.f putc.f putdec.f putint.f putstr.f query.f rmtabl.f
+prompt.f:
+   prompt:
+putc.f:
+   putc:
+putdec.f:
+   putdec:
+putint.f:
+   putint:
+putstr.f:
+   putstr:
+query.f:
+   query:
+rmtabl.f:
+   rmtabl:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL scopy.f sctabl.f sdrop.f skipbl.f slstr.f stake.f stclos.f
+scopy.f:
+   scopy:
+sctabl.f:
+   sctabl:
+sdrop.f:
+   sdrop:
+skipbl.f:
+   skipbl:
+slstr.f:
+   slstr:
+stake.f:
+   stake:
+stclos.f:
+   stclos:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL stcopy.f stlu.f strcmp.f strim.f termin.f trmout.f type.f
+stcopy.f:
+   stcopy:
+stlu.f:
+   stlu:
+strcmp.f:
+   strcmp:
+strim.f:
+   strim:
+termin.f:
+   termin:
+trmout.f:
+   trmout:
+type.f:
+   type:
++ /home/steele/git/iraf-v216//unix/hlib//f77.sh -c -I/home/steele/.iraf/ -g -m64 -DBLD_KERNEL upper.f wkday.f
+upper.f:
+   upper:
+wkday.f:
+   wkday:
++ ar rv libf.a addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
+ar: creating libf.a
+a - addset.o
+a - addstr.o
+a - amatch.o
+a - catsub.o
+a - clower.o
+a - concat.o
+a - ctoc.o
+a - ctoi.o
+a - ctomn.o
+a - cupper.o
+a - delete.o
+a - docant.o
+a - dodash.o
+a - dsdbiu.o
+a - dsdump.o
+a - dsfree.o
+a - dsget.o
+a - dsinit.o
+a - enter.o
+a - equal.o
+a - error.o
+a - errsub.o
+a - esc.o
+a - fcopy.o
+a - filset.o
+a - fmtdat.o
+a - fold.o
+a - gctoi.o
+a - getc.o
+a - getccl.o
+a - getpat.o
+a - getwrd.o
+a - gfnarg.o
+a - index.o
+a - insub.o
+a - itoc.o
+a - length.o
+a - locate.o
+a - lookup.o
+a - lower.o
+a - makpat.o
+a - maksub.o
+a - match.o
+a - mktabl.o
+a - mntoc.o
+a - omatch.o
+a - outsub.o
+a - patsiz.o
+a - prompt.o
+a - putc.o
+a - putdec.o
+a - putint.o
+a - putstr.o
+a - query.o
+a - rmtabl.o
+a - scopy.o
+a - sctabl.o
+a - sdrop.o
+a - skipbl.o
+a - slstr.o
+a - stake.o
+a - stclos.o
+a - stcopy.o
+a - stlu.o
+a - strcmp.o
+a - strim.o
+a - termin.o
+a - trmout.o
+a - type.o
+a - upper.o
+a - wkday.o
++ ranlib libf.a
++ mv -f libf.a ..
++ rm addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
++ echo ----------------------- RATLIBC ------------------------
+----------------------- RATLIBC ------------------------
++ cd ratlibc
++ sh -x mkpkg.sh
++ gcc -c -g -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS cant.c close.c endst.c getarg.c getlin.c initst.c open.c putch.c putlin.c r4tocstr.c remark.c
++ ar rv libc.a cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
+ar: creating libc.a
+a - cant.o
+a - close.o
+a - endst.o
+a - getarg.o
+a - getlin.o
+a - initst.o
+a - open.o
+a - putch.o
+a - putlin.o
+a - r4tocstr.o
+a - remark.o
++ ranlib libc.a
++ mv -f libc.a ..
++ rm cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS rpp.c
++ gcc -I/home/steele/.iraf/ -m64 rpp.o librpp.a libf.a libc.a -o rpp.e
++ mv -f rpp.e ../../../hlib
++ rm libc.a libf.a librpp.a rpp.o
++ echo ----------------------- XYACC --------------------------
+----------------------- XYACC --------------------------
++ cd xyacc
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS y1.c y2.c y3.c y4.c
+y2.c: In function ‘setup’:
+y2.c:189:11: warning: variable ‘sym_prefix’ set but not used [-Wunused-but-set-variable]
+     char *sym_prefix = "";
+           ^
+y2.c: In function ‘cpyact’:
+y2.c:1387:10: warning: variable ‘id_name’ set but not used [-Wunused-but-set-variable]
+     char id_name[NAMESIZE + 1];
+          ^
+y2.c:1386:36: warning: variable ‘argument’ set but not used [-Wunused-but-set-variable]
+     int brac, c, match, j, s, tok, argument;
+                                    ^
++ gcc -I/home/steele/.iraf/ -m64 y1.o y2.o y3.o y4.o -o xyacc.e
++ mv -f xyacc.e ../../hlib
++ cp yaccpar.x ../../../lib
++ rm -f y1.o y2.o y3.o y4.o
++ echo ----------------------- GDEV ---------------------------
+----------------------- GDEV ---------------------------
++ cd gdev
++ sh -x mkpkg.sh
++ cd sgidev
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgiUtil.c
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgidispatch.c
++ gcc -I/home/steele/.iraf/ -m64 sgidispatch.o ../../hlib/libos.a /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgidispatch.e
++ mv -f sgidispatch.e ../../hlib
++ rm sgidispatch.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uimp.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uimp.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uimp.e
++ mv -f sgi2uimp.e ../../hlib
++ rm sgi2uimp.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uapl.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uapl.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uapl.e
++ mv -f sgi2uapl.e ../../hlib
++ rm sgi2uapl.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uqms.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uqms.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uqms.e
++ mv -f sgi2uqms.e ../../hlib
++ rm sgi2uqms.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uptx.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uptx.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uptx.e
++ mv -f sgi2uptx.e ../../hlib
++ rm sgi2uptx.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uhplj.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uhplj.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uhplj.e
++ mv -f sgi2uhplj.e ../../hlib
++ rm sgi2uhplj.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2uhpgl.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2uhpgl.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2uhpgl.e
++ mv -f sgi2uhpgl.e ../../hlib
++ rm sgi2uhpgl.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2ueps.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2ueps.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2ueps.e
++ mv -f sgi2ueps.e ../../hlib
++ rm sgi2ueps.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2gif.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2gif.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2gif.e
++ mv -f sgi2gif.e ../../hlib
++ rm sgi2gif.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2xbm.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2xbm.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2xbm.e
++ mv -f sgi2xbm.e ../../hlib
++ rm sgi2xbm.o
++ gcc -c -I/home/steele/.iraf/ -g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64 -DNOVOS sgi2svg.c
++ gcc -I/home/steele/.iraf/ -m64 sgi2svg.o sgiUtil.o /home/steele/git/iraf-v216//unix/hlib/libboot.a /home/steele/git/iraf-v216//unix/hlib/libos.a -o sgi2svg.e
++ mv -f sgi2svg.e ../../hlib
++ rm sgi2svg.o
++ rm sgiUtil.o
++ echo install HSI executables in /home/steele/git/iraf-v216//unix//bin.linux64
+install HSI executables in /home/steele/git/iraf-v216//unix//bin.linux64
++ mv -f hlib/alloc.e hlib/generic.e hlib/rpp.e hlib/sgi2gif.e hlib/sgi2svg.e hlib/sgi2uapl.e hlib/sgi2ueps.e hlib/sgi2uhpgl.e hlib/sgi2uhplj.e hlib/sgi2uimp.e hlib/sgi2uptx.e hlib/sgi2uqms.e hlib/sgi2xbm.e hlib/sgidispatch.e hlib/xyacc.e bin.linux64
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor'
+(./mklibs)
+Building support libraries ....
+  (Using toplevel directory '/home/steele/git/iraf-v216/' ....)
+    Building CFITSIO libs ....done
+    Building Readline libs ....mkpkg: Command not found.
+done
+    Building VOClient libs ....util/mksysgen: line 60: mkpkg: command not found
+util/mksysgen: line 64: mkpkg: command not found
+util/mksysgen: line 68: mkpkg: command not found
+
+
+
+Start:  Sat May  6 23:17:55 PDT 2017
+  End:  Sat May  6 23:20:27 PDT 2017
+Makefile:23: recipe for target 'sysgen' failed
