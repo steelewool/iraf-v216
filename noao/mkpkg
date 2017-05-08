@@ -296,9 +296,4 @@ linuxppc:				# install Linux (PPC) binaries
 	             nproto nobsolete rv surfphot twodspec obsutil"
 	!$(hlib)/mkfloat.csh linuxppc -d $(DIRS)
 	;
-linux64:				# install Linux (64-bit) binaries
-	$verbose off
-	$set DIRS = "lib artdata astcat astutil digiphot imred mtlocal onedspec\
-	             nproto nobsolete rv surfphot twodspec obsutil"
-	!$(hlib)/mkfloat.csh linux64 -d $(DIRS)
-	;
+
