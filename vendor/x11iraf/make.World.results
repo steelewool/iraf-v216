@@ -1,0 +1,974 @@
+Building the X11IRAF v2.0BETA2 software tree
+
+Mon May  8 20:05:45 PDT 2017
+
+
+make  arch      X11IRAFDIR=$PWD
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+Configuring X11IRAF for linux...
+System is already configured for 'linux'.
+make[1]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make  Makefile  X11IRAFDIR=$PWD
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
++ rm -f Makefile.bak
++ mv -f Makefile Makefile.bak
+imake -DUseInstalled -I/usr/lib/X11/config  		    -Wundef -DTOPDIR=. -DCURDIR=.
+make[1]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make  Makefiles X11IRAFDIR=$PWD
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+making Makefiles in obm...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+making Makefiles in obm/Tcl...
+	mv -f Makefile Makefile.bak
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+make[3]: Nothing to be done for 'Makefiles'.
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+making Makefiles in obm/ObmW...
+	mv -f Makefile Makefile.bak
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmW'
+make[3]: Nothing to be done for 'Makefiles'.
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmW'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+making Makefiles in xaw3d...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+In file included from /usr/lib/X11/config/Imake.tmpl:2295:0,
+                 from Imakefile.c:34:
+/tmp/IIf.64t7pM:6:0: warning: "DoNormalLib" redefined
+ #define DoNormalLib NormalLibXaw
+ ^
+In file included from ./../X11IRAF.tmpl:9:0,
+                 from /tmp/IIf.64t7pM:5,
+                 from /usr/lib/X11/config/Imake.tmpl:2295,
+                 from Imakefile.c:34:
+/usr/lib/X11/config/Library.tmpl:25:0: note: this is the location of the previous definition
+ #define DoNormalLib NO
+ ^
+In file included from /usr/lib/X11/config/Imake.tmpl:2295:0,
+                 from Imakefile.c:34:
+/tmp/IIf.64t7pM:9:0: warning: "DoDebugLib" redefined
+ #define DoDebugLib DebugLibXaw 
+ ^
+In file included from ./../X11IRAF.tmpl:9:0,
+                 from /tmp/IIf.64t7pM:5,
+                 from /usr/lib/X11/config/Imake.tmpl:2295,
+                 from Imakefile.c:34:
+/usr/lib/X11/config/Library.tmpl:31:0: note: this is the location of the previous definition
+ #define DoDebugLib NO
+ ^
+In file included from /usr/lib/X11/config/Imake.tmpl:2295:0,
+                 from Imakefile.c:34:
+/tmp/IIf.64t7pM:10:0: warning: "DoProfileLib" redefined
+ #define DoProfileLib ProfileLibXaw 
+ ^
+In file included from ./../X11IRAF.tmpl:9:0,
+                 from /tmp/IIf.64t7pM:5,
+                 from /usr/lib/X11/config/Imake.tmpl:2295,
+                 from Imakefile.c:34:
+/usr/lib/X11/config/Library.tmpl:34:0: note: this is the location of the previous definition
+ #define DoProfileLib NO
+ ^
+In file included from /usr/lib/X11/config/Imake.tmpl:2295:0,
+                 from Imakefile.c:34:
+/tmp/IIf.64t7pM:11:0: warning: "HasSharedData" redefined
+ #define HasSharedData YES
+ ^
+In file included from ./../X11IRAF.tmpl:9:0,
+                 from /tmp/IIf.64t7pM:5,
+                 from /usr/lib/X11/config/Imake.tmpl:2295,
+                 from Imakefile.c:34:
+/usr/lib/X11/config/Library.tmpl:49:0: note: this is the location of the previous definition
+ #define HasSharedData NO
+ ^
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xaw3d'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xaw3d'
+making Makefiles in xpm...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xpm'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xpm'
+making Makefiles in cdl...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/cdl'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/cdl'
+making Makefiles in xgterm...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+In file included from /usr/lib/X11/config/Imake.tmpl:2295:0,
+                 from Imakefile.c:34:
+./Imakefile:97:0: warning: "InstallXgtermSetUID" is not defined [-Wundef]
+ #if InstallXgtermSetUID
+ ^
+./Imakefile:105:0: warning: "InstallXgtermSetUID" is not defined [-Wundef]
+ #if InstallXgtermSetUID && defined(SunArchitecture) && HasSharedLibraries
+ ^
+./Imakefile:123:0: warning: "InstallXgtermSetUID" is not defined [-Wundef]
+ #if InstallXgtermSetUID
+ ^
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xgterm'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xgterm'
+making Makefiles in ximtool...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+making Makefiles in ximtool/clients...
+	mv -f Makefile Makefile.bak
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool/clients'
+make[3]: Nothing to be done for 'Makefiles'.
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool/clients'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+making Makefiles in xtapemon...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xtapemon'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xtapemon'
+making Makefiles in obmsh...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obmsh'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obmsh'
+making Makefiles in vximtool...
+	mv -f Makefile Makefile.bak
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/vximtool'
+make[2]: Nothing to be done for 'Makefiles'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/vximtool'
+make[1]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make  includes  X11IRAFDIR=$PWD
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+including in ./obm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/Obm.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/Obm.h /home/steele/git/iraf-v216/vendor/x11iraf/include/Obm.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmP.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/widget.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/widget.h /home/steele/git/iraf-v216/vendor/x11iraf/include/widget.h
+including in obm/Tcl...
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/patchlevel.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl/patchlevel.h /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/patchlevel.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tclRegexp.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl/tclRegexp.h /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tclRegexp.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tcl.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl/tcl.h /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tcl.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tclInt.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl/tclInt.h /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tclInt.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tclUnix.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl/tclUnix.h /home/steele/git/iraf-v216/vendor/x11iraf/include/Tcl/tclUnix.h
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+including in obm/ObmW...
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmW'
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Arrow.h
++ cp -p -p Arrow.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Arrow.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ArrowP.h
++ cp -p -p ArrowP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ArrowP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Board.h
++ cp -p -p Board.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Board.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/BoardP.h
++ cp -p -p BoardP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/BoardP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Button.h
++ cp -p -p Button.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Button.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ButtonP.h
++ cp -p -p ButtonP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ButtonP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Common.h
++ cp -p -p Common.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Common.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/CommonP.h
++ cp -p -p CommonP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/CommonP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Converters.h
++ cp -p -p Converters.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Converters.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/DrawingArea.h
++ cp -p -p DrawingArea.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/DrawingArea.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/DrawingAreaP.h
++ cp -p -p DrawingAreaP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/DrawingAreaP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Frame.h
++ cp -p -p Frame.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Frame.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/FrameP.h
++ cp -p -p FrameP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/FrameP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Group.h
++ cp -p -p Group.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Group.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/GroupP.h
++ cp -p -p GroupP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/GroupP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Gterm.h
++ cp -p -p Gterm.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Gterm.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/GtermP.h
++ cp -p -p GtermP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/GtermP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/HTML.h
++ cp -p -p HTML.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/HTML.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/HTMLP.h
++ cp -p -p HTMLP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/HTMLP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/HTMLamp.h
++ cp -p -p HTMLamp.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/HTMLamp.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Icon.h
++ cp -p -p Icon.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Icon.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/IconP.h
++ cp -p -p IconP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/IconP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Label.h
++ cp -p -p Label.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Label.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/LabelP.h
++ cp -p -p LabelP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/LabelP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Layout.h
++ cp -p -p Layout.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Layout.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/LayoutP.h
++ cp -p -p LayoutP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/LayoutP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MenuBar.h
++ cp -p -p MenuBar.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MenuBar.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MenuBarP.h
++ cp -p -p MenuBarP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MenuBarP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MultiList.h
++ cp -p -p MultiList.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MultiList.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MultiListP.h
++ cp -p -p MultiListP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/MultiListP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RadioGrp.h
++ cp -p -p RadioGrp.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RadioGrp.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RadioGrpP.h
++ cp -p -p RadioGrpP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RadioGrpP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RowCol.h
++ cp -p -p RowCol.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RowCol.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RowColP.h
++ cp -p -p RowColP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/RowColP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Scrollbar.h
++ cp -p -p Scrollbar.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Scrollbar.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ScrollbarP.h
++ cp -p -p ScrollbarP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ScrollbarP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Slider2.h
++ cp -p -p Slider2.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Slider2.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Slider2P.h
++ cp -p -p Slider2P.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Slider2P.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/TabString.h
++ cp -p -p TabString.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/TabString.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Toggle.h
++ cp -p -p Toggle.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Toggle.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ToggleP.h
++ cp -p -p ToggleP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ToggleP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/done.h
++ cp -p -p done.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/done.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/inkstore.h
++ cp -p -p inkstore.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/inkstore.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/laygram.h
++ cp -p -p laygram.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/laygram.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/scroll.h
++ cp -p -p scroll.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/scroll.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Tabs.h
++ cp -p -p Tabs.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Tabs.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/TabsP.h
++ cp -p -p TabsP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/TabsP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Gcs.h
++ cp -p -p Gcs.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/Gcs.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ListTree.h
++ cp -p -p ListTree.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ListTree.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ListTreeP.h
++ cp -p -p ListTreeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/ObmW/ListTreeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/3d.h
++ cp -p -p Xraw/3d.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/3d.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AllWidgets.h
++ cp -p -p Xraw/AllWidgets.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AllWidgets.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Arrow.h
++ cp -p -p Xraw/Arrow.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Arrow.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ArrowP.h
++ cp -p -p Xraw/ArrowP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ArrowP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSink.h
++ cp -p -p Xraw/AsciiSink.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSink.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSinkP.h
++ cp -p -p Xraw/AsciiSinkP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSinkP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSrc.h
++ cp -p -p Xraw/AsciiSrc.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSrc.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSrcP.h
++ cp -p -p Xraw/AsciiSrcP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiSrcP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiText.h
++ cp -p -p Xraw/AsciiText.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiText.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiTextP.h
++ cp -p -p Xraw/AsciiTextP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/AsciiTextP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Box.h
++ cp -p -p Xraw/Box.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Box.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/BoxP.h
++ cp -p -p Xraw/BoxP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/BoxP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Cardinals.h
++ cp -p -p Xraw/Cardinals.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Cardinals.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Clock.h
++ cp -p -p Xraw/Clock.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Clock.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ClockP.h
++ cp -p -p Xraw/ClockP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ClockP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Command.h
++ cp -p -p Xraw/Command.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Command.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/CommandP.h
++ cp -p -p Xraw/CommandP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/CommandP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Container.h
++ cp -p -p Xraw/Container.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Container.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ContainerP.h
++ cp -p -p Xraw/ContainerP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ContainerP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Dialog.h
++ cp -p -p Xraw/Dialog.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Dialog.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/DialogP.h
++ cp -p -p Xraw/DialogP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/DialogP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Form.h
++ cp -p -p Xraw/Form.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Form.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/FormP.h
++ cp -p -p Xraw/FormP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/FormP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Frame.h
++ cp -p -p Xraw/Frame.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Frame.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/FrameP.h
++ cp -p -p Xraw/FrameP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/FrameP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Grip.h
++ cp -p -p Xraw/Grip.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Grip.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/GripP.h
++ cp -p -p Xraw/GripP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/GripP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Label.h
++ cp -p -p Xraw/Label.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Label.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/LabelP.h
++ cp -p -p Xraw/LabelP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/LabelP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/List.h
++ cp -p -p Xraw/List.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/List.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ListP.h
++ cp -p -p Xraw/ListP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ListP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Logo.h
++ cp -p -p Xraw/Logo.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Logo.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/LogoP.h
++ cp -p -p Xraw/LogoP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/LogoP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Mailbox.h
++ cp -p -p Xraw/Mailbox.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Mailbox.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/MailboxP.h
++ cp -p -p Xraw/MailboxP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/MailboxP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/MenuButtoP.h
++ cp -p -p Xraw/MenuButtoP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/MenuButtoP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/MenuButton.h
++ cp -p -p Xraw/MenuButton.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/MenuButton.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Object.h
++ cp -p -p Xraw/Object.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Object.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Paned.h
++ cp -p -p Xraw/Paned.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Paned.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/PanedP.h
++ cp -p -p Xraw/PanedP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/PanedP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Panner.h
++ cp -p -p Xraw/Panner.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Panner.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/PannerP.h
++ cp -p -p Xraw/PannerP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/PannerP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Porthole.h
++ cp -p -p Xraw/Porthole.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Porthole.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/PortholeP.h
++ cp -p -p Xraw/PortholeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/PortholeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Repeater.h
++ cp -p -p Xraw/Repeater.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Repeater.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/RepeaterP.h
++ cp -p -p Xraw/RepeaterP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/RepeaterP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Reports.h
++ cp -p -p Xraw/Reports.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Reports.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Scrollbar.h
++ cp -p -p Xraw/Scrollbar.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Scrollbar.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ScrollbarP.h
++ cp -p -p Xraw/ScrollbarP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ScrollbarP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ScrolledTable.h
++ cp -p -p Xraw/ScrolledTable.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ScrolledTable.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ScrolledTableP.h
++ cp -p -p Xraw/ScrolledTableP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ScrolledTableP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Separator.h
++ cp -p -p Xraw/Separator.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Separator.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SeparatorP.h
++ cp -p -p Xraw/SeparatorP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SeparatorP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Simple.h
++ cp -p -p Xraw/Simple.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Simple.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SimpleMenP.h
++ cp -p -p Xraw/SimpleMenP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SimpleMenP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SimpleMenu.h
++ cp -p -p Xraw/SimpleMenu.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SimpleMenu.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SimpleP.h
++ cp -p -p Xraw/SimpleP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SimpleP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Sme.h
++ cp -p -p Xraw/Sme.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Sme.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeBSB.h
++ cp -p -p Xraw/SmeBSB.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeBSB.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeBSBP.h
++ cp -p -p Xraw/SmeBSBP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeBSBP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeLine.h
++ cp -p -p Xraw/SmeLine.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeLine.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeLineP.h
++ cp -p -p Xraw/SmeLineP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeLineP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeP.h
++ cp -p -p Xraw/SmeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/SmeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/StripCharP.h
++ cp -p -p Xraw/StripCharP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/StripCharP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/StripChart.h
++ cp -p -p Xraw/StripChart.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/StripChart.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Table.h
++ cp -p -p Xraw/Table.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Table.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Table3d.h
++ cp -p -p Xraw/Table3d.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Table3d.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TableP.h
++ cp -p -p Xraw/TableP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TableP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TableUtil.h
++ cp -p -p Xraw/TableUtil.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TableUtil.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Template.h
++ cp -p -p Xraw/Template.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Template.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TemplateP.h
++ cp -p -p Xraw/TemplateP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TemplateP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Text.h
++ cp -p -p Xraw/Text.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Text.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextP.h
++ cp -p -p Xraw/TextP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSink.h
++ cp -p -p Xraw/TextSink.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSink.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSinkP.h
++ cp -p -p Xraw/TextSinkP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSinkP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSrc.h
++ cp -p -p Xraw/TextSrc.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSrc.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSrcP.h
++ cp -p -p Xraw/TextSrcP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TextSrcP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Toggle.h
++ cp -p -p Xraw/Toggle.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Toggle.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ToggleP.h
++ cp -p -p Xraw/ToggleP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ToggleP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Tree.h
++ cp -p -p Xraw/Tree.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Tree.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TreeP.h
++ cp -p -p Xraw/TreeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/TreeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Viewport.h
++ cp -p -p Xraw/Viewport.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Viewport.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ViewportP.h
++ cp -p -p Xraw/ViewportP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/ViewportP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/XawAll.h
++ cp -p -p Xraw/XawAll.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/XawAll.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/XawInit.h
++ cp -p -p Xraw/XawInit.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/XawInit.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Xosdefs.h
++ cp -p -p Xraw/Xosdefs.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/Xosdefs.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/XrawInit.h
++ cp -p -p Xraw/XrawInit.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/XrawInit.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/color.h
++ cp -p -p Xraw/color.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/color.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/xraw_table.h
++ cp -p -p Xraw/xraw_table.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xraw/xraw_table.h
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmW'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+including in ./xaw3d...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xaw3d'
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AllWidgets.h
++ cp -p -p AllWidgets.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AllWidgets.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSink.h
++ cp -p -p AsciiSink.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSink.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSinkP.h
++ cp -p -p AsciiSinkP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSinkP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSrc.h
++ cp -p -p AsciiSrc.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSrc.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSrcP.h
++ cp -p -p AsciiSrcP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiSrcP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiText.h
++ cp -p -p AsciiText.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiText.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiTextP.h
++ cp -p -p AsciiTextP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/AsciiTextP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Box.h
++ cp -p -p Box.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Box.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/BoxP.h
++ cp -p -p BoxP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/BoxP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Cardinals.h
++ cp -p -p Cardinals.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Cardinals.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Command.h
++ cp -p -p Command.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Command.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/CommandP.h
++ cp -p -p CommandP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/CommandP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Dialog.h
++ cp -p -p Dialog.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Dialog.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/DialogP.h
++ cp -p -p DialogP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/DialogP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Form.h
++ cp -p -p Form.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Form.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/FormP.h
++ cp -p -p FormP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/FormP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Grip.h
++ cp -p -p Grip.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Grip.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/GripP.h
++ cp -p -p GripP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/GripP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Label.h
++ cp -p -p Label.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Label.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/LabelP.h
++ cp -p -p LabelP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/LabelP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Layout.h
++ cp -p -p Layout.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Layout.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/LayoutP.h
++ cp -p -p LayoutP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/LayoutP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/List.h
++ cp -p -p List.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/List.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ListP.h
++ cp -p -p ListP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ListP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MenuButton.h
++ cp -p -p MenuButton.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MenuButton.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MenuButtoP.h
++ cp -p -p MenuButtoP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MenuButtoP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSrc.h
++ cp -p -p MultiSrc.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSrc.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSrcP.h
++ cp -p -p MultiSrcP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSrcP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSink.h
++ cp -p -p MultiSink.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSink.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSinkP.h
++ cp -p -p MultiSinkP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/MultiSinkP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Paned.h
++ cp -p -p Paned.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Paned.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/PanedP.h
++ cp -p -p PanedP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/PanedP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Panner.h
++ cp -p -p Panner.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Panner.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/PannerP.h
++ cp -p -p PannerP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/PannerP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Porthole.h
++ cp -p -p Porthole.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Porthole.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/PortholeP.h
++ cp -p -p PortholeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/PortholeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Repeater.h
++ cp -p -p Repeater.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Repeater.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/RepeaterP.h
++ cp -p -p RepeaterP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/RepeaterP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Reports.h
++ cp -p -p Reports.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Reports.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Scrollbar.h
++ cp -p -p Scrollbar.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Scrollbar.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ScrollbarP.h
++ cp -p -p ScrollbarP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ScrollbarP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Simple.h
++ cp -p -p Simple.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Simple.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SimpleP.h
++ cp -p -p SimpleP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SimpleP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SimpleMenu.h
++ cp -p -p SimpleMenu.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SimpleMenu.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SimpleMenP.h
++ cp -p -p SimpleMenP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SimpleMenP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Sme.h
++ cp -p -p Sme.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Sme.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeP.h
++ cp -p -p SmeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeBSB.h
++ cp -p -p SmeBSB.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeBSB.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeBSBP.h
++ cp -p -p SmeBSBP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeBSBP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeLine.h
++ cp -p -p SmeLine.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeLine.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeLineP.h
++ cp -p -p SmeLineP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeLineP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeThreeD.h
++ cp -p -p SmeThreeD.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeThreeD.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeThreeDP.h
++ cp -p -p SmeThreeDP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/SmeThreeDP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/StripChart.h
++ cp -p -p StripChart.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/StripChart.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/StripCharP.h
++ cp -p -p StripCharP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/StripCharP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Template.c
++ cp -p -p Template.c /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Template.c
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Template.h
++ cp -p -p Template.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Template.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TemplateP.h
++ cp -p -p TemplateP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TemplateP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Text.h
++ cp -p -p Text.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Text.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextP.h
++ cp -p -p TextP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSink.h
++ cp -p -p TextSink.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSink.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSinkP.h
++ cp -p -p TextSinkP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSinkP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSrc.h
++ cp -p -p TextSrc.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSrc.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSrcP.h
++ cp -p -p TextSrcP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TextSrcP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ThreeD.h
++ cp -p -p ThreeD.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ThreeD.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ThreeDP.h
++ cp -p -p ThreeDP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ThreeDP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Toggle.h
++ cp -p -p Toggle.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Toggle.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ToggleP.h
++ cp -p -p ToggleP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ToggleP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Tree.h
++ cp -p -p Tree.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Tree.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TreeP.h
++ cp -p -p TreeP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/TreeP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/VendorEP.h
++ cp -p -p VendorEP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/VendorEP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Viewport.h
++ cp -p -p Viewport.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/Viewport.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ViewportP.h
++ cp -p -p ViewportP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/ViewportP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/XawImP.h
++ cp -p -p XawImP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/XawImP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/XawInit.h
++ cp -p -p XawInit.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/Xaw3d/XawInit.h
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xaw3d'
+including in ./xpm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xpm'
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/xpm.h
++ cp -p -p xpm.h /home/steele/git/iraf-v216/vendor/x11iraf/include/xpm.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/xpm.h
++ cp -p -p xpm.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/xpm.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/xpmP.h
++ cp -p -p xpmP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/xpmP.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/xpmP.h
++ cp -p -p xpmP.h /home/steele/git/iraf-v216/vendor/x11iraf/include/X11/xpmP.h
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xpm'
+including in ./cdl...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/cdl'
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/cdl.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/cdl/cdl.h /home/steele/git/iraf-v216/vendor/x11iraf/include/cdl.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/cdlspp.h
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/cdl/cdlspp.h /home/steele/git/iraf-v216/vendor/x11iraf/include/cdlspp.h
++ rm -f /home/steele/git/iraf-v216/vendor/x11iraf/include/cdlftn.inc
++ cp -p -p /home/steele/git/iraf-v216/vendor/x11iraf/cdl/cdlftn.inc /home/steele/git/iraf-v216/vendor/x11iraf/include/cdlftn.inc
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/cdl'
+including in ./xgterm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xgterm'
+make[2]: Nothing to be done for 'includes'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xgterm'
+including in ./ximtool...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+including in ximtool/clients...
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool/clients'
+make[3]: Nothing to be done for 'includes'.
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool/clients'
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+including in ./xtapemon...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xtapemon'
+make[2]: Nothing to be done for 'includes'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xtapemon'
+including in ./obmsh...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obmsh'
+make[2]: Nothing to be done for 'includes'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obmsh'
+including in ./vximtool...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/vximtool'
+make[2]: Nothing to be done for 'includes'.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/vximtool'
+make[1]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make  depend    X11IRAFDIR=$PWD
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+depending in ./obm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+depending in obm/Tcl...
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+gccmakedep -I.. -I. -DHAVE_UNISTD_H=1  --      -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO      -- panic.c regexp.c tclAppInit.c tclAsync.c tclBasic.c 	tclCkalloc.c tclCmdAH.c tclCmdIL.c tclCmdMZ.c tclEnv.c 	tclExpr.c tclGet.c tclGlob.c tclHash.c tclHistory.c 	tclLink.c tclMain.c tclMtherr.c tclParse.c tclProc.c 	tclTest.c tclUnixAZ.c tclUnixStr.c tclUnixUtil.c tclUtil.c 	tclVar.c
+In file included from tclInt.h:73:0,
+                 from regexp.c:35:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclAsync.c:34:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclBasic.c:33:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclCkalloc.c:30:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclCmdAH.c:33:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclCmdIL.c:34:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclCmdMZ.c:34:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclEnv.c:40:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclExpr.c:35:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclGet.c:33:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclGlob.c:32:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclHash.c:32:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclHistory.c:34:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclLink.c:35:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclMtherr.c:32:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclParse.c:33:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclProc.c:32:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclTest.c:34:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclUnixAZ.c:35:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclUnixStr.c:33:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclUnixUtil.c:37:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclUtil.c:32:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+In file included from tclInt.h:73:0,
+                 from tclVar.c:35:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+depending in obm/ObmW...
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmW'
+gccmakedep  --  -I../../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO    -D_NO_PROTO  -- Arrow.c Board.c Button.c Common.c DrawIString.c DrawString.c 	DrawingArea.c Frame.c Group.c Gterm.c HTML-PSformat.c HTML.c 	HTMLformat.c HTMLimages.c HTMLjot.c HTMLlists.c HTMLparse.c 	HTMLwidgets.c Icon.c Label.c Layout.c MenuBar.c MultiList.c 	RadioGrp.c RowCol.c Scrollbar.c Slider2.c Tablist2Tabs.c TextWidth.c 	Toggle.c cvtLong.c iconutil.c laygram.c laylex.c scroll.c strnchr.c 	Tabs.c Gcs.c ListTree.c Separator.c Table.c Table3d.c TableUtil.c 	Container.c color.c
+Gterm.c:11:29: fatal error: X11/Xaw/XawInit.h: No such file or directory
+compilation terminated.
+In file included from HTML-PSformat.c:57:0:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+HTML.c:62:31: fatal error: X11/Xaw/Scrollbar.h: No such file or directory
+compilation terminated.
+HTMLwidgets.c:72:28: fatal error: X11/Xaw/Toggle.h: No such file or directory
+compilation terminated.
+In file included from MultiList.c:60:0:
+MultiListP.h:56:29: fatal error: X11/Xaw/SimpleP.h: No such file or directory
+compilation terminated.
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/ObmW'
+gccmakedep  --  -I. -I/home/steele/git/iraf-v216/vendor/x11iraf/include -I../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO    -D_NO_PROTO  -- Obm.c client.c param.c server.c widget.c gterm.c marker.c 		    html.c geom.c
+In file included from Obm.c:5:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from client.c:4:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from param.c:4:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from server.c:4:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from widget.c:4:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from gterm.c:4:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from marker.c:5:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+In file included from html.c:4:0:
+./ObmP.h:19:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+depending in ./xaw3d...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xaw3d'
+gccmakedep  --  -I. -I../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO    -DARROW_SCROLLBAR -DUSEGRAY  -- AllWidgets.c 	AsciiSink.c 	AsciiSrc.c 	AsciiText.c 	Box.c 	Command.c 	Dialog.c \ Form.c 	Grip.c 	Label.c 	List.c 	MenuButton.c 	MultiSrc.c 	MultiSink.c 	Paned.c 	Panner.c 	Porthole.c 	Repeater.c 	Scrollbar.c 	Simple.c 	SimpleMenu.c 	Sme.c 	SmeBSB.c 	SmeLine.c 	SmeThreeD.c 	StripChart.c 	Text.c 	TextSink.c 	TextSrc.c 	TextAction.c 	TextPop.c 	TextTr.c 	ThreeD.c 	Toggle.c 	Tree.c 	Vendor.c 	Viewport.c 	XawIm.c 	XawInit.c 	XawI18n.c 	sharedlib.c 	laygram.c 	laylex.c
+gcc: error:  Form.c: No such file or directory
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xaw3d'
+depending in ./xpm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xpm'
+gccmakedep  -- -I.     -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO   -DZPIPE   -- data.c create.c misc.c rgb.c scan.c parse.c hashtable.c 	 XpmCrBufFrI.c XpmCrDataFrP.c XpmCrPFrBuf.c XpmRdFToI.c XpmWrFFrI.c 	 XpmCrBufFrP.c XpmCrIFrBuf.c XpmCrPFrData.c XpmRdFToP.c XpmWrFFrP.c 	 XpmCrDataFrI.c XpmCrIFrData.c XpmRdFToData.c XpmWrFFrData.c strdup.c
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xpm'
+depending in ./cdl...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/cdl'
+gccmakedep  --  -I.    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO      -- cdl.c cdlmark.c cdlfits.c cdliraf.c cdlzscale.c cdl_f77.c 		  cdl_spp.c eps.c comm.c imd.c
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/cdl'
+depending in ./xgterm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xgterm'
+gccmakedep -I../include -I../include/ObmW --  -I../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO    -DALLOWLOGGING  -- button.c charproc.c cursor.c data.c gtermio.c input.c 		  main.c menu.c misc.c screen.c scrollbar.c tabs.c 		  util.c VTPrsTbl.c resize.c
+gtermio.c:10:31: fatal error: X11/Xaw/Cardinals.h: No such file or directory
+compilation terminated.
+main.c:97:32: fatal error: X11/Xaw/SimpleMenu.h: No such file or directory
+compilation terminated.
+menu.c:35:32: fatal error: X11/Xaw/SimpleMenu.h: No such file or directory
+compilation terminated.
+scrollbar.c:37:31: fatal error: X11/Xaw/Scrollbar.h: No such file or directory
+compilation terminated.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xgterm'
+depending in ./ximtool...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+gccmakedep  --  -I/home/steele/git/iraf-v216/vendor/x11iraf/include -I../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO      -- eps.c iis.c load.c print.c raster.c save.c 		  rasio.c fitsio.c ximclient.c ximtool.c quant.c util.c 		  zscale.c gifio.c tiffio.c irafio.c ism.c ism_wcspix.c 		  logo.c
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/ximtool'
+depending in ./xtapemon...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/xtapemon'
+gccmakedep  -- -I. -I/home/steele/git/iraf-v216/vendor/x11iraf/include -I../include     -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO   -DXTAPEMON   -- classnames.c types.c xtapemon.c
+classnames.c:13:29: fatal error: X11/Xaw/Command.h: No such file or directory
+compilation terminated.
+types.c:12:26: fatal error: X11/Xaw/Form.h: No such file or directory
+compilation terminated.
+xtapemon.c:14:28: fatal error: X11/Xaw/Paned.h: No such file or directory
+compilation terminated.
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/xtapemon'
+depending in ./obmsh...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obmsh'
+gccmakedep  --  -I/home/steele/git/iraf-v216/vendor/x11iraf/include -I../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO      -- obmsh.c
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obmsh'
+depending in ./vximtool...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/vximtool'
+gccmakedep  --  -I/home/steele/git/iraf-v216/vendor/x11iraf/include -I../include    -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO      -- vximtool.c
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/vximtool'
+make[1]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+make  libs      X11IRAFDIR=$PWD
+make[1]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+making linklibs in ./obm...
+make[2]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+making all in obm/Tcl...
+make[3]: Entering directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+gcc -g -O2 -fno-strict-aliasing -g -I.. -I. -DHAVE_UNISTD_H=1  -DNOSTDHDRS -DSYSV -DANSI -D_BSD_SOURCE -W 		  -fstrength-reduce -fpcc-struct-return                   -DTCL_LIBRARY=\"/usr/local/lib/tcl\"       -Dlinux -D__amd64__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE                                 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 				  				  -DFUNCPROTO=15 -DNARROWPROTO       -c -o regexp.o regexp.c
+In file included from tclInt.h:73:0,
+                 from regexp.c:35:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+<builtin>: recipe for target 'regexp.o' failed
+make[3]: *** [regexp.o] Error 1
+make[3]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm/Tcl'
+Makefile:1139: recipe for target 'Tcl' failed
+make[2]: *** [Tcl] Error 2
+make[2]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf/obm'
+Makefile:1145: recipe for target 'libs' failed
+make[1]: *** [libs] Error 2
+make[1]: Leaving directory '/home/steele/git/iraf-v216/vendor/x11iraf'
+Makefile:1099: recipe for target 'World' failed
+make: *** [World] Error 2
