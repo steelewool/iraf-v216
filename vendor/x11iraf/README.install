@@ -11,6 +11,9 @@ Before building x11iraf you should check the archives on iraf.noao.edu (or
 it's mirror sites) to see if there are already pre-built binaries available
 for your platform.
 
+To get xmkmf on either linux or raspberry pi one can use:
+	sudo apt-get install xutils-dev
+
 To build x11iraf type, in the x11iraf root directory,
 
     % xmkmf
