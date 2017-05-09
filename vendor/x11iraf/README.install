@@ -15,8 +15,7 @@ To get xmkmf,csh, and yacc  on either linux or raspberry pi one can use:
 	sudo apt-get install xutils-dev
 	sudo apt-get install csh
 	sudo apt-get install bison
-
-
+	sudo apt-get install flex
 
 To build x11iraf type, in the x11iraf root directory,
 
