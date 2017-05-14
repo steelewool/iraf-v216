@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 #
 # IRAF definitions for the UNIX/bash user.  The additional variables iraf$ and
 # home$ should be defined in the user's .login file.

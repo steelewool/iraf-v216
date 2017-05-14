@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 
 # Allow a previously defined $iraf to be used.
 if [ -n $iraf ]; then

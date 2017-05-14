@@ -1,4 +1,4 @@
-#!/bin/csh
+#!/bin/csh -xv
 #
 # MKFLOAT.CSH -- Install the indicated version of the IRAF binaries, i.e.,
 # archive the current objects and libraries, set BIN to point to bin.FFF,

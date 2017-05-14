@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 #
 # MKFLOAT.SH -- Install the indicated version of the IRAF binaries, i.e.,
 # archive the current objects and libraries, BIN to point to bin.FFF,

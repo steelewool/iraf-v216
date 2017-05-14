@@ -1,6 +1,9 @@
 # Root MKPKG for IRAF.  The bootstrap utilities and libraries in the HOST
 # subdirectory must be made before this can be run.
 
+set echo
+set verbose
+
 $verbose
 $call	mkall					# make everything
 $exit

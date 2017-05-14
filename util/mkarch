@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 #
 #  MKARCH - Return platform architecture.  Assumes source-only tree and
 #  that it's safe to just manually change links.

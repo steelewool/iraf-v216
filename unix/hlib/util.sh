@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -xv
 #
 #  UTIL.SH -- Utility support script for IRAF commands.
 #

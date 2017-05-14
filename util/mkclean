@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 #
 #  MKSRC -- Make a pure source tree and configure the links for the 
 #  current architecture.
