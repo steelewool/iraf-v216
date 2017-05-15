@@ -1,0 +1,19 @@
+os:
+  - linux
+  - osx
+
+dist:
+  - trusty
+
+language: c
+
+before_script:
+  - build_tmp=`mktemp -d`
+  - ./install -v --term xterm --bindir $build_tmp/bin --cache $build_tmp/cache --imdir $build_tmp/imdir --root `pwd` < /dev/null || true
+  - source unix/hlib/setup.sh
+  - make ${IRAFARCH}
+  - make sysgen
+
+script:
+  - source unix/hlib/setup.sh
+  - ./test/run_tests
