@@ -88,8 +88,8 @@ char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
 		    "-lpthread",		/*  4  */
 		    "-lm",			/*  5  */
 		    "-lrt",			/*  6  */
-		    "",				/*  7  */
-		    "",				/*  8  */
+		    "-lcurl",			/*  7  */
+		    "-lexpat",			/*  8  */
 		    "",				/*  9  */
 		    0};				/* EOF */
 
@@ -103,8 +103,8 @@ char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
 		    "-lf2c",			/*  1  */
 		    "-lm",			/*  2  */
 		    "-lcompat",			/*  3  */
-		    "",				/*  4  */
-		    "",				/*  5  */
+		    "-lcurl",			/*  4  */
+		    "-lexpat",			/*  5  */
 		    "",				/*  6  */
 		    "",				/*  7  */
 		    "",				/*  8  */
@@ -121,7 +121,7 @@ char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
 		    "-lf2c",			/*  1  */
 		    "-lm",			/*  2  */
 		    "-lcurl",			/*  3  */
-		    "",				/*  4  */
+		    "-lexpat",			/*  4  */
 		    "",				/*  5  */
 		    "",				/*  6  */
 		    "",				/*  7  */
@@ -149,8 +149,8 @@ char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
 		    "-lintl",			/*  5  */
 		    "-ldl",			/*  6  */
 		    "-lelf",			/*  7  */
-		    "",				/*  8  */
-		    "",				/*  9  */
+		    "-lcurl",			/*  8  */
+		    "-lexpat",			/*  9  */
 		    0};				/* EOF */
 
 char *opt_flags[] = { "-O",			/*  0  */
@@ -163,8 +163,8 @@ char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
 		    "-lf2c",			/*  1  */
 		    "-lm",			/*  2  */
 		    "-lcompat",			/*  3  */
-		    "",				/*  4  */
-		    "",				/*  5  */
+		    "-lcurl",			/*  4  */
+		    "-lexpat",			/*  5  */
 		    "",				/*  6  */
 		    "",				/*  7  */
 		    "",				/*  8  */
@@ -181,8 +181,8 @@ char *fortlib[] = { "-lU77",			/*  0  (host progs) */
 		    "-lF77",			/*  2  */
 		    "-lI77",			/*  3  */
 		    "-lm",			/*  4  */
-		    "",				/*  5  */
-		    "",				/*  6  */
+		    "-lcurl",			/*  5  */
+		    "-lexpat",			/*  6  */
 		    "",				/*  7  */
 		    "",				/*  8  */
 		    "",				/*  9  */
@@ -1454,17 +1454,15 @@ iraflib (char *libref)
 
 	strcpy (savename, libref);
 
-	/* If dbgout is enabled try the debug library first, but fall back
-	 * to the normal library if thie debug library is not found.
-	 */
-again:
 	if (strncmp (libref, "-l", 2) == 0) { 
 	    sprintf (libname, "lib%s.a", libref+2);
 	    libref = libname;
-	    goto again;
-	} else
-	    strcpy (libname, libref);
+	}
 
+	/* If dbgout is enabled try the debug library first, but fall back
+	 * to the normal library if the debug library is not found.
+	 */
+again:
 	/* Position IP to EOS. */
 	for (ip=libref;  *ip;  ip++)
 	    ;

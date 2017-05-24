@@ -37,13 +37,8 @@ F77 	    = gfortran
 FFLAGS 	    = -g -Wall
 
 
-ifeq ($(PLATFORM),Darwin)
-    LIBCURL	= -lcurl
-else
-    LIBCURL	= ../lib/libcurl.a
-endif
 LIBCFITSIO	= ../lib/libcfitsio.a
-        
+
 ifeq ($(PLATFORM),Darwin)
     ifeq ($(PLMACH),x86_64)
         CARCH   = -m64 -mmacosx-version-min=10.5
@@ -58,11 +53,15 @@ ifeq ($(PLATFORM),Darwin)
         endif
     endif
 else
-    CLIBS       =  $(LIBCURL) -lm -lc -lpthread -lrt
-    CARCH       = 
+    CLIBS       =  -lcurl -lm -lc -lpthread -lrt
+    ifdef IRAFARCH
+        ifeq ($(IRAFARCH),linux)
+            CARCH = -m32
+        endif
+    endif
 endif
 
-#CLIBS           = $(LIBCURL) -lm -lpthread -lc
+#CLIBS           = -lcurl -lm -lpthread -lc
 CFLAGS          = -g -Wall $(CARCH) -D$(PLATFORM) $(CINCS) -L./ 
 
 
@@ -108,13 +107,13 @@ TARGETS	    = $(F77_TASKS) $(SPP_TASKS) $(C_TASKS)
 
 SRCS	    = $(C_SRCS) $(F77_SRCS) $(SPP_SRCS) 
 OBJS	    = $(C_OBJS) $(F77_OBJS) $(SPP_OBJS) 
-HOST_LIBS   = $(LIBCURL) $(LFLAGS) -lcfitsio $(CLIBS)
+HOST_LIBS   = -lexpat -lcurl $(LFLAGS) -lcfitsio $(CLIBS)
 LIBS        = lib$(NAME).a -lVOTable -lVOClient -lsamp $(HOST_LIBS)
 
 
 
-all:
-	(make c_progs)
+all: c_progs
+	mkdir -p $(LIBDIR) $(BINDIR)
 	cp lib$(NAME).a $(LIBDIR)
 	cp $(TARGETS) $(BINDIR)
 

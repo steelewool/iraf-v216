@@ -43,7 +43,11 @@ ifeq ($(PLATFORM),Darwin)
     endif
 else
     CLIBS       = -lm -lc -lpthread -lcurl
-    CARCH       = 
+    ifdef IRAFARCH
+        ifeq ($(IRAFARCH),linux)
+            CARCH = -m32
+        endif
+    endif
 endif
 
 CLIBS		= -lm -lc -lcurl -lpthread
@@ -69,6 +73,7 @@ all:	.BASE lib install
 World:	.BASE lib apps install
 
 install: .BASE lib apps
+	mkdir -p $(LIBDIR) $(INCDIR)
 	cp lib$(NAME).a $(LIBDIR)
 	cp $(INCS) $(INCDIR)
 	/bin/rm -rf *.o
