@@ -56,7 +56,7 @@ $(cat $clres_file)
 
 Diff
 ====
-$(cat $diff_file| tail +3)
+$(cat $diff_file | tail +3)
 EOF
 	printf "F"
     else
@@ -121,7 +121,7 @@ for CL in $IRAF_SHELLS ; do
     if [ -x "${iraf}/bin/${CL}" ] ; then
 	for t in $TEST_FILES ; do
 	    tmp_dir=$(mktemp -d)
-	    printf "%b" "${t} @ ${CL} "
+	    printf "%b" "$(basename ${t}) @ ${CL} "
 	    cd "$tmp_dir" ; run_tests "${iraf}/bin/${CL}" "${t}"
 	    rm -rf "${tmp_dir}"
 	done

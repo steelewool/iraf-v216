@@ -1,9 +1,3 @@
-This is taken from the file
-[testproc.ps.Z](http://iraf.noao.edu/iraf/ftp/iraf/docs/testproc.ps.Z)
-(IRAF Version V2.11, Jeannette Barnes, Central Computer Services,
-National Optical Astronomy Observatories, P.O. Box 26732, Tucson, AZ
-85726, Revised September 23, 1997).
-=======
 This is compiled from
 
  * [Preliminary Test Procedure for IRAF](http://iraf.noao.edu/iraf/ftp/iraf/docs/testproc.ps.Z),
@@ -23,10 +17,6 @@ correctly and also help the rst time user gain familiarity with the
 system. The commands you need to type and the expected terminal output
 are given below.
 
-We will assume that you have started IRAF and are residing in an empty
-directory from which you wish to work.
-
-=======
 The basics
 ==========
 
@@ -76,7 +66,6 @@ cl> ?
       images      noao        proto       utilities   
 ```
 
-=======
 Image files
 -----------
 
@@ -140,15 +129,14 @@ HISTORY '24-04-87'
 HISTORY 'KPNO-IRAF'           /
 HISTORY '08-04-92'            /
 ```
-=======
 
 Note that the pixels are short integers (=16 bits).
 
 It would be useful to generate two more copies of this image but with
 different pixel types - one with 32-bit floating point pixels (called
 `real`s) and one with 64-bit double precision floating point pixels
-(called `double`). Note that IRAF also supports other pixel data types
-- 32-bit integers called `long`, 16-bit unsigned integers called
+(called `double`). Note that IRAF also supports other pixel data types -
+32-bit integers called `long`, 16-bit unsigned integers called
 `ushort`, and complex numbers. Execute the following:
 
 ```
@@ -185,7 +173,6 @@ cl> listpix image.short[300:305,200:205] formats="%4s %4s" | table
    3.   2.  145.     6.   3.  141.     3.   5.  133.     6.   6.  149.
 ```
 
-=======
 Image sections
 --------------
 
@@ -199,7 +186,6 @@ cl> imhead image.sect
 image.sect[101,101][real]: m51  B  600s
 ```
 
-=======
 Modifying images
 ----------------
 
@@ -224,7 +210,6 @@ image.sect.fits[101,101][real]: m51  B  600s
 image.short.fits[512,512][short]: m51  B  600s
 ```
 
-=======
 Plotting data
 =============
 
@@ -444,11 +429,10 @@ Hopefully all went well to this point. Let's clean things up a bit.
 
 ```
 cl> dir
-image.dbl.fits      image.sect.fits     uparmimlminmax.par  
-image.real.fits     image.short.fits
+image.dbl.fits      image.sect.fits     inlist              
+image.real.fits     image.short.fits    uparmimlminmax.par  
 cl> imdelete image.*
 cl> dir
-uparmimlminmax.par
 inlist              uparmimlminmax.par  
 ```
 
@@ -462,3 +446,4 @@ examples closely. It might be advisable to backtrack a few steps and
 verify things again. If the discrepancies are repeatable there could
 indeed be a problem. Please document the discrepancy and feel free to
 contact us if some advice or help is needed (iraf@noao.edu).
+
