@@ -1,35 +1,28 @@
-os:
-  - linux
-  - osx
-
-dist:
-  - trusty
-
 matrix:
   include:
     - os: linux
       dist: trusty
-      env: IRAFARCH=linux64 LINUXDIST=trusty
+      env: IRAFARCH=linux64 OS_VERS=trusty
       addons:
         apt:
           packages:
-            - flex
+            - flex-old
             - byacc
     - os: linux
       dist: precise
-      env: IRAFARCH=linux64 LINUXDIST=precise
+      env: IRAFARCH=linux64 OS_VERS=precise
       addons:
         apt:
           packages:
-            - flex
+            - flex-old
             - byacc
     - os: linux
       dist: trusty
-      env: IRAFARCH=linux LINUXDIST=trusty
+      env: IRAFARCH=linux OS_VERS=trusty
       addons:
         apt:
           packages:
-            - flex
+            - flex-old
             - byacc
             - gcc-multilib
             - libcurl4-gnutls-dev:i386
@@ -37,25 +30,33 @@ matrix:
             - libexpat1-dev:i386
     - os: linux
       dist: precise
-      env: IRAFARCH=linux LINUXDIST=precise
+      env: IRAFARCH=linux OS_VERS=precise
       addons:
         apt:
           packages:
-            - flex
+            - flex-old
             - byacc
             - gcc-multilib
             - libcurl4-gnutls-dev:i386
             - libncurses5-dev:i386
             - libexpat1-dev:i386
     - os: osx
-      env: IRAFARCH=macintel
+      osx_image: xcode8.3
+      env: IRAFARCH=macintel OS_VERS=sierra
     - os: osx
-      env: IRAFARCH=macosx
+      osx_image: xcode7.3
+      env: IRAFARCH=macintel OS_VERS=elcapitan
+    - os: osx
+      osx_image: xcode8.3
+      env: IRAFARCH=macosx OS_VERS=sierra
+    - os: osx
+      osx_image: xcode7.3
+      env: IRAFARCH=macosx OS_VERS=elcapitan
 
 language: c
 
 before_script:
-  - build_tmp=`mktemp -d`
+  - build_tmp=`mktemp -d -t irafbuild.XXXXXXXXX`
   - ./install -v --term xterm --bindir $build_tmp/bin --cache $build_tmp/cache --imdir $build_tmp/imdir --root `pwd` < /dev/null || true
   - source unix/hlib/setup.sh
   - make ${IRAFARCH}
