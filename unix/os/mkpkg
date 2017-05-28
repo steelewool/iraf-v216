@@ -7,7 +7,7 @@ $checkin  libos.a hlib$
 $exit
 
 alloc:
-	!cc -O alloc.c getproc.c -o alloc.e; chmod 4755 alloc.e;\
+	!cc -O alloc.c getproc.c -o alloc.e;\
 	    mv -f alloc.e ../hlib
 	;
 
