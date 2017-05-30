@@ -5,6 +5,7 @@ echo		"--------------------- OS ----------------------"
 
 $CC -c $HSI_CF -Wall alloc.c getproc.c
 $CC $HSI_LF -Wall alloc.o getproc.o $HSI_OSLIBS -o alloc.e
+chmod		4755 alloc.e
 mv -f		alloc.e ../hlib
 rm -f		alloc.o
 
