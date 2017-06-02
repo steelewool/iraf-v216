@@ -10,6 +10,8 @@
 
 # Determine CL binary to run based on how we were called.
 
+echo "start of unix/hlib/vocl.csh"
+
 set cl_binary		= "vocl.e"
 
 if (`echo $0 | egrep ecl` != "") then
@@ -29,6 +31,7 @@ else if ($#argv > 0) then
 	# CC command can't be found and eventually the 'cl' (lisp) compiler
 	# is tried.  It will always apparently have the conftest.c test file,
 	# so simply exit with a code to tell autoconf it won't work.
+	echo "first exit of unix/hlib/vocl.sh"
 	exit 1
     endif
 endif
@@ -52,6 +55,7 @@ if ($#argv > 0) then
     if ("$argv[1]" == "-v" || "$argv[1]" == "-version" || \
 	"$argv[1]" == "-V" || "$argv[1]" == "--version") then
             head -1 $iraf/unix/hlib/motd
+	    echo "second exit of unix/hlib/vocl.sh"
 	    exit 0
     endif
 endif
@@ -72,6 +76,7 @@ if ($?IRAFARCH) then
 	if ("$ACTUAL_ARCH" != "$IRAFARCH") then
             echo "ERROR:  IRAFARCH set to '$IRAFARCH', should be '$ACTUAL_ARCH'"
 	endif
+	echo "third exit of unix/hlib/vocl.sh"
 	exit 1
     endif
     setenv arch ".$MACH"
@@ -110,6 +115,7 @@ else
 
     if (! (-e $iraf/bin.${MACH}/${cl_binary}) ) then
         echo "ERROR:  No $iraf/bin.${IRAFARCH}/${cl_binary} binary found."
+	echo "fourth exit of unix/hlib/vocl.sh"
 	exit 1
     endif
 endif
@@ -151,3 +157,5 @@ setenv IRAFBIN 	${iraf}bin$arch/
 
 # Run the desired CL.
 exec  ${IRAFBIN}$cl_binary
+
+echo " exit from unix/hlib/vocl.csh"

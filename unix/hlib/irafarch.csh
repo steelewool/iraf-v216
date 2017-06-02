@@ -19,6 +19,7 @@
 #
 # ----------------------------------------------------------------------------
 
+echo "Start of unix/hlib/irafarch.csh"
 
 unset	noclobber
 onintr	cleanup_
@@ -159,6 +160,7 @@ switch ($MNAME)
     case redhat:
     case linux:
     case linux64:
+    case arm8:
         if ($?IRAFARCH) then
             set mach 		= "$IRAFARCH"
             set hmach 		= "$IRAFARCH"
@@ -266,5 +268,7 @@ else
 	echo "Invalid option '"$1"'"
     endif
 endif
+
+echo "End of unix/hlib/irafarch.csh"
 
 exit 0

@@ -10,6 +10,7 @@
 
 # Determine CL binary to run based on how we were called.
 
+echo "Start of unix/hlib/vocl.sh"
 
 nm=${0##*/}
 cl_binary="vocl.e"
@@ -163,3 +164,5 @@ export IRAFBIN=${iraf}bin$arch/
 
 # Run the desired CL.
 exec  ${IRAFBIN}$cl_binary
+
+echo "End of unix/hlib/vocl.sh"

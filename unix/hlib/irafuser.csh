@@ -3,6 +3,7 @@
 # IRAF definitions for the UNIX/csh user.  The additional variables iraf$ and
 # home$ should be defined in the user's .login file.
 
+echo "Start of unix/hlib/irafuser.csh"
 
 set old_method		= 0
 
@@ -56,6 +57,7 @@ else		# old_method
         setenv IRAFARCH  $a
     else
 	echo "Error:  "$a
+	echo "first exit of unix/hlib/irafuser.csh"
 	exit 1
     endif
             
@@ -132,6 +134,17 @@ case linux64:
     set    mkzflags = "'lflags=-Nxz -/Wl,-Bstatic'"
     breaksw
 
+case arm8:
+    setenv HSI_CF "-g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -w -m64"
+    setenv HSI_XF "-g -Inolibc -w -/m64 -/Wunused"
+    setenv HSI_FF "-g -m64 -DBLD_KERNEL"
+    setenv HSI_LF "-m64 "
+    setenv HSI_F77LIBS ""
+    setenv HSI_LFLAGS ""
+    setenv HSI_OSLIBS ""
+    set    mkzflags = "'lflags=-Nxz -/Wl,-Bstatic'"
+    breaksw
+
 case linux:
 case redhat:
     setenv HSI_CF "-O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused"
@@ -173,6 +186,7 @@ case cygwin:
 
 default:
     echo 'Warning in hlib$irafuser.csh: unknown platform '"$MACH"
+    echo "second exit of unix/hlib/irafuser.csh"
     exit 1
     breaksw
 endsw
@@ -212,3 +226,5 @@ alias	rtar	${hbin}rtar.e
 alias	wtar	${hbin}wtar.e
 alias	xc	${hbin}xc.e
 alias	xyacc	${hbin}xyacc.e
+
+echo "end of unix/hlib/irafuser.csh"
