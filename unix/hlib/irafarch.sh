@@ -28,8 +28,6 @@ export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/5bin:/usr/ucb:/etc:/usr/etc:$PATH
 ##############################################################################
 
 echo "Start of unix/hlib/irafarch.sh"
-echo "Set debug=1 for debugging - remove when debugged!"
-debug=1
 
 hmach="INDEF"
 nbits=32
@@ -38,7 +36,7 @@ shlibs=0
 tapecaps=0
 tapes=1
 
-# original code debug=0
+debug=0
 
 # Get the Utility aliases.
 # Initialize the $iraf and environment.

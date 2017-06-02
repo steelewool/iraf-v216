@@ -1,7 +1,5 @@
 #!/bin/csh -f
 
-echo "Start of unix/hlib/setup.csh"
-
 # Allow a previously defined $iraf to be used.
 if ( ! ( $?iraf )) then
     setenv iraf	/iraf/iraf/
@@ -21,4 +19,3 @@ alias iraf	"xgterm -e cl &"
 
 rehash
 
-echo "End of unix/hlib/setup.csh"

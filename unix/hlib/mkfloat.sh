@@ -8,7 +8,7 @@
 # assumed that the environment variables defined in the IRAF .login and in
 # hlib/irafuser.csh are defined.
 
-echo "Start of unix/hlib/mkfloat.sh"
+echo "start of unix/hlib/mkfloat.sh"
 
 ARCH="$1"
 DIRS="lib pkg sys"
@@ -146,4 +146,4 @@ if [ -n $IRAFARCH ]; then
     fi
 fi
 
-echo "End of unix/hlib/mkfloat.csh"
+echo "end of unix/hlib/mkfloat.csh"
