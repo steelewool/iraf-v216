@@ -60,7 +60,7 @@ else
 fi
 
 case $UNAME in 
-    "linux" | "linux64")
+    "linux" | "linux64" | "arm8")
 	dlcmd="/usr/bin/wget"
 	;;
     "darwin" | "macosx" | "macintel" | "ipad")		    # Mac OSX/iOS

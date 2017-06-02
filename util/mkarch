@@ -54,6 +54,13 @@ while [ "$loop_" == "yes" ]; do
         cd unix; ln -s as.$arch as; cd ../
     fi
 
+    if [ "$arch" == "arm8" ]; then
+        cd unix/hlib; \
+	     rm -f iraf.h mach.h; \
+	     ln -s iraf64.h iraf.h; \
+	     ln -s mach64.h mach.h; cd $iraf
+    fi
+
     if [ "$arch" == "macintel" -o "$arch" == "linux64" ]; then
         cd unix/hlib; \
 	     rm -f iraf.h mach.h; \

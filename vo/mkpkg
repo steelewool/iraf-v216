@@ -68,6 +68,14 @@ linux64:                                # install x86_64 binaries
         $set DIRS = "lib votools"
         !$(hlib)/mkfloat.csh linux64 -d $(DIRS)
         ;
+arm8:                                # install x86_64 binaries
+	$ifnfile (bin.arm8)
+	    !mkdir bin.arm8
+	$endif
+        $verbose off
+        $set DIRS = "lib votools"
+        !$(hlib)/mkfloat.csh arm8 -d $(DIRS)
+        ;
 macosx:                                 # install Mac OS X (PPC) binaries
 	$ifnfile (bin.macosx)
 	    !mkdir bin.macosx

@@ -114,6 +114,8 @@ linux::
 	(util/mkarch linux)
 linux64::
 	(util/mkarch linux64)
+arm8::
+	(util/mkarch arm8)
 freebsd::
 	(util/mkarch freebsd)
 cygwin::
