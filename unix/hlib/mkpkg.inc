@@ -18,6 +18,10 @@ $else $ifeq (MACH, linux64) then
 $set	XFLAGS		= "-c -w -/g -/m64"	# default XC compile flags
 $set	XVFLAGS		= "-c -w -/g -/m64"	# VOPS XC compile flags
 $set	LFLAGS		= "-Nz   -/g -/m64"	# default XC link flags
+$else $ifeq (MACH, arm8) then
+$set	XFLAGS		= "-c -w -/g -/m64"	# default XC compile flags
+$set	XVFLAGS		= "-c -w -/g -/m64"	# VOPS XC compile flags
+$set	LFLAGS		= "-Nz   -/g -/m64"	# default XC link flags
 $else $ifeq (MACH, redhat) then
 $set	XFLAGS		= "-c -w"	# default XC compile flags
 $set	XVFLAGS		= "-c -w"	# VOPS XC compile flags
@@ -68,6 +72,8 @@ $else $ifeq (MACH, linux, redhat, linuxppc) then
     $include "hlib$mkpkg.sf.LNUX"
 $else $ifeq (MACH, linux64) then
     $include "hlib$mkpkg.sf.LNUX64"
+$else $ifeq (MACH, arm8) then
+    $include "hlib$mkpkg.sf.ARM8"
 $else $ifeq (MACH, freebsd) then
     $include "hlib$mkpkg.sf.FBSD"
 $else $ifeq (MACH, sunos) then
