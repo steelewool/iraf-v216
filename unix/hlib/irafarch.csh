@@ -19,6 +19,7 @@
 #
 # ----------------------------------------------------------------------------
 
+echo ""
 echo "Start of unix/hlib/irafarch.csh"
 
 unset	noclobber

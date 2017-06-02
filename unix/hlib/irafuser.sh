@@ -3,13 +3,13 @@
 # IRAF definitions for the UNIX/bash user.  The additional variables iraf$ and
 # home$ should be defined in the user's .login file.
 
+echo ""
 echo "Start of unix/hlib/irafuser.sh"
+echo "invoking irafarch.sh from unix/hlib/irafuser.sh"
 
 export MACH=`$iraf/unix/hlib/irafarch.sh`
 export IRAFARCH=`$iraf/unix/hlib/irafarch.sh`
             
-
-
 export	hostid=unix
 export	host=${iraf}unix/
 export	hlib=${iraf}unix/hlib/
@@ -21,6 +21,8 @@ export	CC=gcc
 export	F77=$hlib/f77.sh
 export	F2C=$hbin/f2c.e
 export	RANLIB=ranlib
+
+echo "MACH: $MACH"
 
 case "$MACH" in
   "freebsd")
@@ -129,7 +131,8 @@ case "$MACH" in
     ;;
 
 *)
-    echo 'Warning in hlib$irafuser.csh: unknown platform '"$MACH"
+    echo 'This file was incorrectly display .csh not .sh in echo statement'
+    echo 'Warning in hlib$irafuser.sh: unknown platform '"$MACH"
     exit 1
     ;;
 esac

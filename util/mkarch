@@ -3,6 +3,7 @@
 #  MKARCH - Return platform architecture.  Assumes source-only tree and
 #  that it's safe to just manually change links.
 
+echo "Start of util/mkarch"
 
 # Initialize the $iraf and environment.
 if [ -z "$iraf" ]; then
@@ -83,3 +84,5 @@ done
 if [ -e "$HOME/.iraf/arch" ]; then
     echo $arch > $HOME/.iraf/arch
 fi
+
+echo "End of util/mkarch"

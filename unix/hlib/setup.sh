@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Start of unix/hlib/setup.sh"
+
 # Allow a previously defined $iraf to be used.
 if [ -z "$iraf" ]; then
     export iraf=/iraf/iraf/
@@ -16,3 +18,4 @@ export PATH=$HOME/.iraf/bin:${PATH}
 # The world'd most obvious alias ....
 alias iraf="xgterm -e cl &"
 
+echo "End of unix/hlib/setup.sh

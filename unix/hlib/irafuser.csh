@@ -77,6 +77,8 @@ setenv	F77	$hlib/f77.sh
 setenv	F2C	$hbin/f2c.e
 setenv	RANLIB	ranlib
 
+echo "MACH: $MACH"
+
 switch ($MACH)
 case freebsd:
     setenv HSI_CF "-O -DBSD -DPOSIX -w -Wunused -m32"
