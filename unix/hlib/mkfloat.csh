@@ -8,7 +8,6 @@
 # assumed that the environment variables defined in the IRAF .login and in
 # hlib/irafuser.csh are defined.
 
-echo "start of unix/hlib/mkfloat.csh"
 
 set ARCH = "$1"
 set DIRS = "lib pkg sys"
@@ -18,10 +17,6 @@ set TFL  = _TFL.mkfloat
 
 set mach = `uname -s | tr '[A-Z]' '[a-z]'`
 set os_mach = `uname -s | tr '[A-Z]' '[a-z]' | cut -c1-6`
-
-echo "Results of uname:"
-echo "mach   : $mach"
-echo "os_mach: $os_mach"
 
 unalias	ls rm cat grep tar cmp diff echo ln mv zcat gunzip compress which
 unset noclobber
@@ -146,5 +141,3 @@ if ($?IRAFARCH == 1) then
 	echo "Warning: IRAFARCH is still set in your environment to $IRAFARCH"
     endif
 endif
-
-echo "end of unix/hlib/mkfloat.csh"

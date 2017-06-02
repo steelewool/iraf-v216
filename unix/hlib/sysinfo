@@ -21,8 +21,6 @@
 #
 # ----------------------------------------------------------------------------
 
-echo "Start of unix/hlib/sysinfo"
-
 unset	noclobber
 unalias cd cp cmp echo ln mv rm sed set grep ls chmod chown pwd touch sort 
 unalias uniq head sed tr which
@@ -2482,8 +2480,6 @@ exit_early:
 sysinfo_cleanup:
   RM /tmp/_cmd$$
   RM /tmp/_ext$$
-
-echo "End of unix/hlib/sysinfo"
 
 exit 0
 

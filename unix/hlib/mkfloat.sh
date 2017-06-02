@@ -8,7 +8,6 @@
 # assumed that the environment variables defined in the IRAF .login and in
 # hlib/irafuser.csh are defined.
 
-echo "start of unix/hlib/mkfloat.sh"
 
 ARCH="$1"
 DIRS="lib pkg sys"
@@ -18,10 +17,6 @@ TFL=_TFL.mkfloat
 
 mach=`uname -s | tr '[A-Z]' '[a-z]'`
 os_mach=`uname -s | tr '[A-Z]' '[a-z]' | cut -c1-6`
-
-echo "Results of uname:"
-echo "mach   : $mach"
-echo "os_mach: $os_mach"
 
 
 # Set the following to -xpf for BSD Tar and to -xof for SYSV Tar.
@@ -145,5 +140,3 @@ if [ -n $IRAFARCH ]; then
 	/bin/echo "Warning: IRAFARCH is still in your environment to 'generic'"
     fi
 fi
-
-echo "end of unix/hlib/mkfloat.csh"

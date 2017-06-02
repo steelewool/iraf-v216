@@ -3,7 +3,6 @@
 # IRAF definitions for the UNIX/bash user.  The additional variables iraf$ and
 # home$ should be defined in the user's .login file.
 
-echo "Start of unix/hlib/irafuser.sh"
 
 export MACH=`$iraf/unix/hlib/irafarch.sh`
 export IRAFARCH=`$iraf/unix/hlib/irafarch.sh`
@@ -69,17 +68,6 @@ case "$MACH" in
     ;;
 
   "linux64")
-    export HSI_CF="-g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64"
-    export HSI_XF="-g -Inolibc -w -/m64 -/Wunused"
-    export HSI_FF="-g -m64 -DBLD_KERNEL"
-    export HSI_LF="-m64 "
-    export HSI_F77LIBS=""
-    export HSI_LFLAGS=""
-    export HSI_OSLIBS=""
-    #mkzflags="lflags=-Nxz -/Wl,-Bstatic"
-    ;;
-
-  "arm8")
     export HSI_CF="-g -DLINUX -DREDHAT -DPOSIX -DSYSV -DLINUX64 -DMACH64 -Wall -m64"
     export HSI_XF="-g -Inolibc -w -/m64 -/Wunused"
     export HSI_FF="-g -m64 -DBLD_KERNEL"
@@ -168,5 +156,3 @@ alias	rtar=${hbin}rtar.e
 alias	wtar=${hbin}wtar.e
 alias	xc=${hbin}xc.e
 alias	xyacc=${hbin}xyacc.e
-
-echo "Start of unix/hlib/irafuser.sh"

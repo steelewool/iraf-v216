@@ -27,8 +27,6 @@ export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/5bin:/usr/ucb:/etc:/usr/etc:$PATH
 # START OF MACHDEP DEFINITIONS.
 ##############################################################################
 
-echo "Start of unix/hlib/irafarch.sh"
-
 hmach="INDEF"
 nbits=32
 pipes=1
@@ -270,4 +268,3 @@ else
     esac
 fi
 
-echo "End of unix/hlib/irafarch.csh"
