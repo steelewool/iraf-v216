@@ -17,16 +17,6 @@
 #include "extern.h"
 #include "../bootProto.h"
 
-#ifdef LINUX
-#  undef SYSV
-#  undef i386
-#  define GNUAR
-#else
-#  ifdef BSD
-#    undef SYSV
-#  endif
-#endif
-
 /*
  * HOST.C -- [MACHDEP] Special host interface routines required by the MKPKG
  * utility.
@@ -185,20 +175,7 @@ h_updatelibrary (
 	 * Update the library.
 	 * ---------------------
 	 */
-#if defined(LINUX) || defined(BSD) || defined(MACOSX)
-#if defined(MACOSX) && !defined(MACH64)
-	/* For FAT libraries we need to use libtool to update.
-	 */
-	if (access (lname, F_OK) == 0)
-	    sprintf (cmd, "%s %s %s %s", LIBTOOL, "-a -T -o", lname, lname);
-	else
-	    sprintf (cmd, "%s %s %s ", LIBTOOL, "-a -T -o", lname);
-#else
 	sprintf (cmd, "%s %s %s", LIBRARIAN, LIBFLAGS, resolvefname(libfname));
-#endif
-#else
-	sprintf (cmd, "%s %s %s", LIBRARIAN, LIBFLAGS, libfname);
-#endif
 
 	/* Compute offset to the file list and initialize loop variables.
 	 * Since the maximum command length is limited, only a few files
@@ -209,18 +186,6 @@ h_updatelibrary (
 	ndone = 0;
 
 	for (npass=0; nleft > 0; npass++) {
-
-#if defined(MACOSX) && !defined(MACH64)
-	    if (npass > 0) {
-	        /* For FAT libraries we need to use libtool to update.
-	         */
-	        if (access (lname, F_OK) == 0)
-	            sprintf (cmd, "%s %s %s %s", LIBTOOL, "-a -T -o", 
-			lname, lname);
-	        else
-	            sprintf (cmd, "%s %s %s ", LIBTOOL, "-a -T -o", lname);
-	    }
-#endif
 
 	    /* Add as many filenames as will fit on the command line.  */
 	    nfiles = add_objects (cmd, SZ_CMD, &flist[ndone], nleft,
@@ -259,9 +224,6 @@ h_updatelibrary (
 	    ndone += nfiles;
 	    nleft -= nfiles;
 
-#if defined(MACOSX) && !defined(MACH64)
-	    h_rebuildlibrary (lname);
-#endif
 	}
 
 	return (exit_status);
@@ -277,10 +239,6 @@ h_rebuildlibrary (
     char  *library 		/* filename of library	*/
 )
 {
-#ifdef SYSV
-	/* Skip the library rebuild if COFF format library. */
-	return (OK);
-#else
 	char cmd[SZ_LINE+1];
 	char libfname[SZ_PATHNAME+1];
 	char *libpath;
@@ -299,7 +257,6 @@ h_rebuildlibrary (
 	    return (os_cmd (cmd));
 	else
 	    return (OK);
-#endif
 }
 
 

@@ -36,7 +36,7 @@
 #include <ctype.h>
 #include <memory.h>
 #include <string.h>
-#ifdef LINUX
+#ifdef __linux__
 #include <malloc.h>
 #include <values.h>
 #else
@@ -54,7 +54,7 @@ extern "C" {
 #if u3b || u3b15 || u3b2 || vax || uts || sparc
 #define	WORD32
 #endif
-#ifdef LINUX
+#ifdef __linux__
 #include <libintl.h>
 #endif
 
@@ -350,11 +350,6 @@ extern char *parser;
 #ifndef ZAPFILE
 #define	ZAPFILE(x) (void)unlink(x)
 #endif
-
-#ifndef PARSER
-#define	PARSER "/iraf/iraf/lib/yaccpar.x"
-#endif
-
 
 
 /*

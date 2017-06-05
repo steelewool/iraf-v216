@@ -4,55 +4,8 @@
 #include <stdio.h>
 #include <signal.h>
 
-#ifdef CYGWIN
-#  include <mingw/fenv.h>
-#else
-#ifdef LINUX
-#  include <fpu_control.h>
-#else
-# ifdef BSD
-#  include <floatingpoint.h>
-# endif
-#endif
-#endif
-
-#ifdef SOLARIS
-# include <sys/siginfo.h>
-# include <sys/ucontext.h>
-# include <ieeefp.h>
-#endif
-
-#ifdef MACOSX
 #include <math.h>
 #include <fenv.h>
-#endif
-
-#ifdef LINUXPPC
-#define MACUNIX
-#endif
-
-#ifdef MACOSX
-#ifndef MACINTEL
-#define MACUNIX
-#endif
-
-/* The following are needed for OS X 10.1 for backward compatability.  The
- * signal sa_flags are set to use them to get signal handling working on
- * 10.2 and later systems.
- */
-#ifdef OLD_MACOSX
-#ifndef SA_NODEFER
-#define SA_NODEFER      0x0010  /* don't mask the signal we're delivering */
-#endif
-#ifndef SA_NOCLDWAIT
-#define SA_NOCLDWAIT    0x0020  /* don't keep zombies around */
-#endif
-#ifndef SA_SIGINFO
-#define SA_SIGINFO      0x0040  /* signal handler with SA_SIGINFO args */
-#endif
-#endif
-
-#endif
 
 #define import_spp
 #define	import_kernel
@@ -73,28 +26,15 @@
  */
 int debug_sig = 0;
 
-#ifdef LINUX
+#ifdef __linux__
 # define	fcancel(fp)
 #else
-# ifdef BSD
+# ifdef __APPLE__
 # define	fcancel(fp)	((fp)->_r = (fp)->_w = 0)
-#else
-# ifdef MACOSX
-# define	fcancel(fp)	((fp)->_r = (fp)->_w = 0)
-#else
-# ifdef SOLARIS
-# define	fcancel(fp)     ((fp)->_cnt=BUFSIZ,(fp)->_ptr=(fp)->_base)
-#endif
-#endif
 #endif
 #endif
 
-
-#if (defined(MACOSX) && defined(OLD_MACOSX))
-void ex_handler ( int, int, struct sigcontext * );
-#else
 void ex_handler ( int, siginfo_t *, void * );
-#endif
 
 static long setsig();
 static int ignore_sigint = 0;
@@ -178,7 +118,7 @@ struct	_hwx {
 	char	*v_msg;			/* Descriptive error message	*/
 };
 
-#ifdef MACOSX
+#ifdef __APPLE__
 #ifdef  FPE_INTDIV
 #undef  FPE_INTDIV
 #endif
@@ -315,7 +255,7 @@ SIGFUNC	handler;
 	long status;
 
 	sigemptyset (&sig.sa_mask);
-#ifdef MACOSX
+#ifdef __APPLE__
 	sig.sa_handler = (SIGFUNC) handler;
 #else
 	sig.sa_sigaction = (SIGFUNC) handler;
@@ -333,38 +273,15 @@ SIGFUNC	handler;
  * handler.  If we get the software termination signal from the CL, 
  * stop process execution immediately (used to kill detached processes).
  */
-#if (defined(MACOSX) && defined(OLD_MACOSX))
-
-void
-ex_handler (unix_signal, info, scp)
-int unix_signal;
-#ifdef OLD_MACOSX
-void *info;
-#else
-siginfo_t *info;
-#endif
-#ifdef MACINTEL
-ucontext_t *scp;
-#else
-struct sigcontext *scp;
-#endif
-
-#else
-
 void
 ex_handler (
   int  	    unix_signal,
   siginfo_t *info,
   void      *ucp
 )
-#endif
 {
 	XINT  next_epa, epa, x_vex;
 	int   vex;
-
-#ifndef LINUX64
-	extern  int sfpucw_();
-#endif
 
 	last_os_exception = unix_signal;
         last_os_hwcode = info ? info->si_code : 0;
@@ -376,51 +293,9 @@ ex_handler (
 	/* Reenable/initialize the exception handler.
 	 */
 
-#if defined(MACOSX) || defined(CYGWIN)
-        /* Clear the exception bits (ppc and x86). */
+        /*  Clears the exception-occurred bits in the FP status register.
+         */
         feclearexcept (FE_ALL_EXCEPT);
-#else
-#ifdef LINUX
-	/* setfpucw (0x1372); */
-	{
-#ifdef MACUNIX
-	/* This is for Linux on a Mac, e.g., LinuxPPC (not MacOSX). */
-	    int fpucw = _FPU_IEEE;
-
-	    /*
-	    if (unix_signal == SIGFPE)
-		kernel_panic ("unrecoverable floating exception");
-	    else
-		sfpucw_ (&fpucw);
-	    if (unix_signal == SIGPIPE && !ignore_sigint)
-		sigset (SIGINT, (SIGFUNC) ex_handler);
-	     */
-
-	    sfpucw_ (&fpucw);
-#else
-#ifdef LINUX64
-            /*
-            XINT fpucw = 0x336;
-            SFPUCW (&fpucw);
-            */
-            fpu_control_t cw = 
-                (_FPU_EXTENDED | _FPU_MASK_PM | _FPU_MASK_UM | _FPU_MASK_ZM | _FPU_MASK_DM);
-            _FPU_SETCW(cw);
-
-#else
-	    int fpucw = 0x336;
-	    sfpucw_ (&fpucw);
-#endif
-#endif
-	}
-#endif
-#endif
-
-
-#ifdef SOLARIS
-        fpsetsticky (0x0);
-	fpsetmask (FP_X_INV | FP_X_OFL | FP_X_DZ);
-#endif
 
 	/* If signal was SIGINT, cancel any buffered standard output.  */
 	if (unix_signal == SIGINT) {
@@ -475,25 +350,3 @@ ZXGMES (
 
 	return (XOK);
 }
-
-
-#ifdef LINUX64
-
-int
-gfpucw_ (XINT *xcw)
-{
-        fpu_control_t cw;
-        _FPU_GETCW(cw);
-        *xcw = cw;
-        return cw;
-}
-
-int
-sfpucw_ (XINT *xcw)
-{
-        fpu_control_t cw = *xcw;
-        _FPU_SETCW(cw);
-        return cw;
-}
-
-#endif

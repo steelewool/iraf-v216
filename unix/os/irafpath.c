@@ -71,63 +71,24 @@ char *fname;			/* simple filename, no dirs */
 	/* Look first in HBIN.
 	 */
 	strcpy (pathname, (char *)hostdir);
-	strcat (pathname, "bin.");
+	strcat (pathname, "bin");
 
-#ifdef LINUXPPC
-	strcat (pathname, "linuxppc");
-#else
-#ifdef CYGWIN
-	strcat (pathname, "cygwin");
-#else
-#ifdef LINUX64
-	strcat (pathname, "linux64");
-#else
-#ifdef REDHAT
-	strcat (pathname, "redhat");
-#else
-#ifdef LINUX
-	strcat (pathname, "linux");
-#else
-#ifdef BSD
-	strcat (pathname, "freebsd");
-#else
-#ifdef IPAD
-	strcat (pathname, "ipad");
-#else
-#ifdef MACOSX
-	/* Setup for cross-compilation, default to 'macintel'.
-	 */
-        if ((irafarch = getenv("IRAFARCH"))) {
-            if (strcmp (irafarch, "macosx") == 0) 
-		strcat (pathname, "macosx");
-            else if (strcmp (irafarch, "macintel") == 0) 
-		strcat (pathname, "macintel");
-            else 
-		strcat (pathname, "macosx");
-        } else
-	    strcat (pathname, "macintel");
-#else
-#ifdef SOLARIS
-#ifdef X86
-	strcat (pathname, "sunos");
-#else
-	strcat (pathname, "ssol");
+#ifdef __linux__
+#ifdef __x86_64__
+	strcat (pathname, ".linux64");
 #endif
-#else
-#ifdef sparc
-	strcat (pathname, "sparc");
-#else
+#ifdef __i386__
+	strcat (pathname, ".linux");
 #endif
 #endif
+#ifdef __APPLE__
+#ifdef __x86_64__
+	strcat (pathname, ".macintel");
+#endif
+#ifdef __i386__
+	strcat (pathname, ".macosx");
 #endif
 #endif
-#endif
-#endif
-#endif
-#endif
-#endif
-#endif
-
 	strcat (pathname, "/");
 	strcat (pathname, fname);
 	if (access (pathname, 0) == 0)

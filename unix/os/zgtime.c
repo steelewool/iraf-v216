@@ -3,9 +3,6 @@
 
 #include <stdio.h>
 #include <sys/types.h>
-#ifndef SYSV
-#include <sys/timeb.h>
-#endif
 #include <sys/times.h>
 #include <sys/time.h>
 #include <time.h>
@@ -26,24 +23,12 @@ ZGTIME (
 )
 {
 	struct	tms t;
-#ifdef BSD
-	time_t	time();
-#else
 	long	time();
-#endif
 	time_t	gmt_to_lst();
 	long	cpu, clkfreq;
 
 
-#ifdef LINUX
 	clkfreq = CLOCKS_PER_SEC;
-#else
-#ifdef MACOSX
-	clkfreq = CLOCKS_PER_SEC;
-#else
-	clkfreq = CLKFREQ;			/* from <kernel.h> */
-#endif
-#endif
 
 	times (&t);
 	*clock_time = gmt_to_lst ((time_t)time(0));

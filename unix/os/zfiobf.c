@@ -385,10 +385,6 @@ int _u_fmode (int mode)
  */
 #include <signal.h>
 
-#ifdef LINUX
-#define USE_SIGACTION
-#endif
-
 #define	DEF_ACCESSVAL	  1
 #define	ENV_VMPORT	  "VMPORT"
 #define	ENV_VMCLIENT	  "VMCLIENT"
@@ -398,7 +394,7 @@ int _u_fmode (int mode)
 #define	SZ_CMDBUF	  2048
 #define	SZ_CNAME	  32
 
-#ifdef MACOSX
+#ifdef __APPLE__
 static int vm_enabled 	  = 0;
 static int vm_dioenabled  = 1;
 #else
@@ -665,14 +661,8 @@ vm_largefile (long nbytes)
 int
 vm_directio (int fd, int flag)
 {
-#ifdef SOLARIS
-	/* Currently direct i/o is implemented only for Solaris. */
-	if (vm_debug > 1)
-	    fprintf (stderr, "vmclient (%s): directio=%d\n", vm_client, flag);
-	return (directio (fd, flag));
-#else
+	/* Direct i/o is implemented only for Solaris. */
 	return (-1);
-#endif
 }
 
 
@@ -754,11 +744,7 @@ vm_initialize (void)
 	if (vm_enabled && !vm_dioenabled)
 	    vm_connect();
 
-#ifdef SUNOS
-	on_exit (vm_shutdown, NULL);
-#else
 	atexit (vm_shutdown);
-#endif
 	vm_initialized++;
 }
 
@@ -829,11 +815,7 @@ static int
 vm_write (int fd, char *buf, int nbytes)
 {
 	int status;
-#ifdef USE_SIGACTION
 	struct sigaction oldact;
-#else
-	SIGFUNC oldact;
-#endif
 
 	if (vm_debug > 1) {
 	    fprintf (stderr, "vmclient (%s):: %s", vm_client, buf);
@@ -841,15 +823,9 @@ vm_write (int fd, char *buf, int nbytes)
 		fprintf (stderr, "\n");
 	}
 
-#ifdef USE_SIGACTION
         sigaction (SIGPIPE, NULL, &oldact);
 	status = write (fd, buf, nbytes);
         sigaction (SIGPIPE, &oldact, NULL);
-#else
-	oldact = (SIGFUNC) signal (SIGPIPE, SIG_IGN);
-	status = write (fd, buf, nbytes);
-        signal (SIGPIPE, oldact);
-#endif
 
 	if (vm_debug && status < 0)
 	    fprintf (stderr,

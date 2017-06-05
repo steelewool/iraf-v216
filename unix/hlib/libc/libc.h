@@ -11,13 +11,16 @@
 #endif
 
 #define	XCHAR		short
-#ifdef MACH64
+#if (__SIZEOF_LONG__ == 8 && __SIZEOF_POINTER__ == 8) /* LP64 */
 #define	XINT		long
 #define	XLONG		long
-#else
+#elif (__SIZEOF_INT__ == 4 && __SIZEOF_POINTER__ == 4) /* ILP32 */
 #define	XINT		int
 #define	XLONG		int
+#else
+#error "No data model: need either LP64 or ILP32"
 #endif
+
 #define	SZ_DEFIOBUF	1024
 #define	FIO_MAXFD	4096
 
@@ -322,7 +325,7 @@ extern void	c_xwhen (int exception, PFI new_handler, PFI *old_handler);
 
 /*
 */
-#include "../../bin/f2c.h"
+#include "../../f2c/libf2c/f2c.h"
 #include "vosproto.h"
 
 #define	D_libc

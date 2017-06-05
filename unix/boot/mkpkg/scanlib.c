@@ -9,7 +9,7 @@
 #include <sys/stat.h>
 
 #include <ar.h>
-#ifdef MACOSX
+#ifdef __APPLE__
 #include <ranlib.h>
 #include <mach-o/fat.h>
 #endif
@@ -18,11 +18,6 @@
 #include <iraf.h>
 #include "mkpkg.h"
 #include "extern.h"
-
-#ifdef  OLD_MACOSX
-#define AR_EFMT1	1
-#endif
-
 
 /*
  * SCANLIB.C -- Routines to scan a 4.2BSD UNIX archive file and create a
@@ -110,7 +105,7 @@ h_scanlibrary (char *library)
 	memset (lbuf, 0, SZ_LINE);
 	fread (lbuf, 1, SARMAG, fp);
 	if (strncmp (lbuf, ARMAG, SARMAG) != 0) {
-#ifndef MACOSX
+#ifndef __APPLE__
 	    printf ("file `%s' is not a library\n", libfname);
 	    goto err;
 #else
@@ -183,7 +178,7 @@ h_scanlibrary (char *library)
 	    /* Skip dummy entry with null modname (COFF format) as well
 	     * as the __SYMDEF from ranlib.
 	     */
-#ifdef MACOSX
+#ifdef __APPLE__
 	    if (strncmp (modname, RANLIBMAG, 9) || modname[0] != EOS) {
 #else
 	    if (modname[0] != EOS) {
