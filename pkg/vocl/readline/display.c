@@ -55,6 +55,9 @@
 #include "rlprivate.h"
 #include "xmalloc.h"
 
+#define _XOPEN_SOURCE
+#include <wchar.h>
+
 #if !defined (strchr) && !defined (__STDC__)
 extern char *strchr (), *strrchr ();
 #endif /* !strchr && !__STDC__ */
