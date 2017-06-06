@@ -56,9 +56,6 @@
 #include "rlprivate.h"
 #include "xmalloc.h"
 
-#define _XOPEN_SOURCE
-#include <wchar.h>
-
 /* Declared here so it can be shared between the readline and history
    libraries. */
 #if defined (HANDLE_MULTIBYTE)

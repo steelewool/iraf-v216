@@ -62,9 +62,6 @@ extern int errno;
 #include "xmalloc.h"
 #include "rlprivate.h"
 
-#define _XOPEN_SOURCE
-#include <wchar.h>
-
 #ifdef __STDC__
 typedef int QSFUNC (const void *, const void *);
 #else
