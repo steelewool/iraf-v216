@@ -4,8 +4,6 @@
 #  current architecture.
 
 
-export 	PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/5bin:/usr/ucb:/etc:/usr/etc:$PATH:/usr/local/bin:/opt/local/bin:/local/bin:/home/local/bin
-
 # Initialize the $iraf and environment.
 if [ -z "$iraf" ]; then
   if [ -e "$HOME/.iraf/setup.sh" ]; then
