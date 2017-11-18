@@ -1,14 +1,40 @@
 ﻿# immatch - Image matching and combining package
 
+# cl> copy ../../../home/steele/starGateCluster/regList .
+# cl> directory $iraf
+# cl> directory 
+# cl> directory ..
+# cl> directory ../..
+# cl> directory ../../..
+# cl> directory ../../../home/steele
+# cl> directory ../../../home/steele/starGateCluster
+# cl> !cp ~/starGateCluster/regList  .
+# cl> !ls $iraf
+# cl> directory
+# regList
+# cl> del regList
 
 Test options: `decimals=5`
 ```
-# cl> copy /home/steele/starGateCluster/r*.fit               .
-cl> copy /home/steele/starGateCluster/StarGateCluster*.fit .
-cl> copy /home/steele/starGateCluster/origList             .
-cl> copy /home/steele/starGateCluster/regList              .
+cl> !cp $iraf/starGateCluster/StarGateCluster*.fit .
+cl> !cp $iraf/starGateCluster/origList             .
+cl> !cp $iraf/starGateCluster/regList              .
+cl> !ls 
+origList
+regList
+StarGateCluster_030_sec_1x1_0001.fit
+StarGateCluster_030_sec_1x1_0002.fit
+StarGateCluster_030_sec_1x1_0003.fit
+StarGateCluster_030_sec_1x1_0004.fit
+StarGateCluster_030_sec_1x1_0005.fit
+StarGateCluster_030_sec_1x1_0006.fit
+StarGateCluster_030_sec_1x1_0007.fit
+StarGateCluster_030_sec_1x1_0008.fit
+StarGateCluster_030_sec_1x1_0009.fit
+StarGateCluster_030_sec_1x1_0010.fit
 ```
-Test options: `decimals=5`
+
+Test options: `decimals=6`
 ```
 cl> xregister input=@origList reference=StarGateCluster_030_sec_1x1_0005.fit regions=[10:700,10:500] shifts=input_output_shifts.txt output=@regList
 Average shift from StarGateCluster_030_sec_1x1_0001.fit to StarGateCluster_030_sec_1x1_0005.fit is 3.223879 4.60711 pixels
@@ -62,8 +88,8 @@ Nov 17 13:27: IMCOMBINE
 ```
 
 ```
-cl> dir imcombineRegisteredImage.fit
-imcombineRegistere
+cl> !ls imcombineRegisteredImage.fit
+imcombineRegisteredImage.fit
 ```
 
 # For reasons that I don’t understand the test harness is declaring this
@@ -76,12 +102,11 @@ cl> noao
 cl> imred
 cl> ccdred
 cl> combine input=@regList output=combineRegisteredImage.fit
-
 ```
 
 ```
-cl> dir combineRegisteredImage.fit 
-combineRegisteredI
+cl> !ls combineRegisteredImage.fit 
+combineRegisteredImage.fit
 ```
 
 ```

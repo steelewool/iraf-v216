@@ -1,0 +1,775 @@
+!clear;date
+[3J[H[2JTue Oct 31 14:59:27 PDT 2017
+==================== MAKE IRAF! =========================
++
+====================== SYSLIBS ==========================
++
+-------------- LIBSYS ----------------
+check out file `libsys.a = /home/steele/git/olebole/iraf-v216/lib/libsys.a'
+Subdirectory sys/fio is up to date
+Subdirectory sys/fmio is up to date
+fmtio/evvexpr.x is out of date; rebuilding with XYACC:
+!xyacc evvexpr.y; mv -f ytab.x evvexpr.x
+"evvexpr.y", line 250: warning: redeclaration of precedence of GT.
+
+conflicts: 19 shift/reduce
+fmtio/evexpr.x is out of date; rebuilding with XYACC:
+!xyacc evexpr.y; mv -f ytab.x evexpr.x
+"evexpr.y", line 119: warning: redeclaration of precedence of GT.
+
+conflicts: 16 shift/reduce
+xc -c -w -/Nx512 -/Ns2048 evvexpr.x
+xc -c -w evexpr.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libsys.a evexpr.o evvexpr.o
+Subdirectory sys/clio is up to date
+Subdirectory sys/etc/gen is up to date
+Subdirectory sys/etc is up to date
+Subdirectory sys/gty is up to date
+Subdirectory sys/nmemio is up to date
+Subdirectory sys/mtio is up to date
+Subdirectory sys/symtab is up to date
+Subdirectory sys/tty is up to date
+Subdirectory sys/ki is up to date
+Subdirectory sys/psio is up to date
+Warning, mkpkg line 10: cannot access subdirectory `iism70'
+Warning, mkpkg line 11: cannot access subdirectory `iism75'
+Subdirectory sys/host$gdev/ is up to date
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libsys.a
+Updated 2 files in libsys.a
+check file `libsys.a' into `lib$'
+-------------- LIBEX -----------------
+check out file `libex.a = /home/steele/git/olebole/iraf-v216/lib/libex.a'
+Subdirectory sys/gio/glabax is up to date
+Subdirectory sys/gio/gki is up to date
+Subdirectory sys/gio/gim is up to date
+Subdirectory sys/gio is up to date
+Subdirectory sys/imio/tf is up to date
+Subdirectory sys/imio/db is up to date
+Subdirectory sys/imio/dbc is up to date
+Subdirectory sys/imio/iki/oif is up to date
+Subdirectory sys/imio/iki/fxf is up to date
+Subdirectory sys/imio/iki/plf is up to date
+Subdirectory sys/imio/iki/qpf is up to date
+Subdirectory sys/imio/iki/stf is up to date
+Subdirectory sys/imio/iki is up to date
+Subdirectory sys/imio/imt is up to date
+Subdirectory sys/imio is up to date
+Subdirectory sys/plio/tf is up to date
+Subdirectory sys/plio is up to date
+Subdirectory sys/pmio/tf is up to date
+Subdirectory sys/pmio is up to date
+Subdirectory sys/qpoe/gen is up to date
+Subdirectory sys/qpoe is up to date
+Subdirectory sys/mwcs/gen is up to date
+Subdirectory sys/mwcs is up to date
+Library libex.a is up to date
+check file `libex.a' into `lib$'
+-------------- LIBVOPS ---------------
+check out file `libvops.a = /home/steele/git/olebole/iraf-v216/lib/libvops.a'
+generic -k        -t csilrdx acht.gx
+generic -k -p ak/ -t csilrdx achtc.x achts.x achti.x achtl.x achtr.x achtd.x achtx.x
+delete file achtc.x
+delete file achts.x
+delete file achti.x
+delete file achtl.x
+delete file achtr.x
+delete file achtd.x
+delete file achtx.x
+xc -c -w achtcc.x achtcd.x achtci.x achtcl.x achtcr.x achtcs.x achtcx.x achtdc.x achtdd.x achtdi.x achtdl.x achtdr.x achtds.x achtdx.x achtic.x achtid.x achtii.x achtil.x achtir.x achtis.x achtix.x achtlc.x achtld.x achtli.x achtll.x achtlr.x achtls.x achtlx.x achtrc.x achtrd.x achtri.x achtrl.x achtrr.x achtrs.x achtrx.x achtsc.x achtsd.x achtsi.x achtsl.x achtsr.x achtss.x achtsx.x achtxc.x achtxd.x achtxi.x achtxl.x achtxr.x achtxs.x achtxx.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libvops.a achtcc.o achtcd.o achtci.o achtcl.o achtcr.o achtcs.o achtcx.o achtdc.o achtdd.o achtdi.o achtdl.o achtdr.o achtds.o achtdx.o achtic.o achtid.o achtii.o achtil.o achtir.o achtis.o achtix.o achtlc.o achtld.o achtli.o achtll.o achtlr.o achtls.o achtlx.o achtrc.o achtrd.o achtri.o achtrl.o achtrr.o achtrs.o achtrx.o achtsc.o achtsd.o achtsi.o achtsl.o achtsr.o achtss.o achtsx.o achtxc.o achtxd.o achtxi.o achtxl.o achtxr.o achtxs.o achtxx.o
+Subdirectory sys/vops/lz is up to date
+Subdirectory sys/vops/achtgen is up to date
+Subdirectory sys/vops is up to date
+Subdirectory sys/osb is up to date
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libvops.a
+Updated 49 files in libvops.a
+check file `libvops.a' into `lib$'
+-------------- LIBCUR ----------------
+check out file `libcur.a = /home/steele/git/olebole/iraf-v216/lib/libcur.a'
+Subdirectory sys/gio/cursor is up to date
+Subdirectory sys/gio is up to date
+Library libcur.a is up to date
+check file `libcur.a' into `lib$'
+-------------- LIBSTG ----------------
+check out file `libstg.a = /home/steele/git/olebole/iraf-v216/lib/libstg.a'
+Subdirectory sys/gio/stdgraph is up to date
+Subdirectory sys/gio is up to date
+Library libstg.a is up to date
+check file `libstg.a' into `lib$'
+-------------- LIBMAIN.O -------------
+Libmain.o is up to date
+-------------- LIBC ------------------
+check out file `libc.a = /home/steele/git/olebole/iraf-v216/lib/libc.a'
+Subdirectory sys/libc is up to date
+Library libc.a is up to date
+check file `libc.a' into `lib$'
+-------------- IMFORT ----------------
+check out file `libimfort.a = /home/steele/git/olebole/iraf-v216/lib/libimfort.a'
+Subdirectory sys/imfort/db is up to date
+Subdirectory sys/imfort is up to date
+Library libimfort.a is up to date
+check file `libimfort.a' into `lib$'
+-------------- LIBGKS ----------------
+check out file `libgks.a = /home/steele/git/olebole/iraf-v216/lib/libgks.a'
+Subdirectory sys/gio/gks is up to date
+Subdirectory sys/gio is up to date
+Library libgks.a is up to date
+check file `libgks.a' into `lib$'
+-------------- LIBNCAR ---------------
+check out file `libncar.a = /home/steele/git/olebole/iraf-v216/lib/libncar.a'
+Subdirectory sys/gio/ncarutil/sysint is up to date
+Subdirectory sys/gio/ncarutil/autograph is up to date
+Subdirectory sys/gio/ncarutil/conlib is up to date
+Subdirectory sys/gio/ncarutil is up to date
+Subdirectory sys/gio is up to date
+Library libncar.a is up to date
+check file `libncar.a' into `lib$'
+-------------- LIBSGI ----------------
+check out file `libsgi.a = /home/steele/git/olebole/iraf-v216/lib/libsgi.a'
+Subdirectory sys/gio/sgikern is up to date
+Subdirectory sys/gio is up to date
+Library libsgi.a is up to date
+check file `libsgi.a' into `lib$'
+-------------- LIBIMD ----------------
+check out file `libimd.a = /home/steele/git/olebole/iraf-v216/lib/libimd.a'
+Subdirectory sys/gio/imdkern is up to date
+Subdirectory sys/gio is up to date
+Library libimd.a is up to date
+check file `libimd.a' into `lib$'
+-------------- LIBDS ----------------
+check out file `libds.a = /home/steele/git/olebole/iraf-v216/lib/libds.a'
+Subdirectory sys/pkg$images/tv/display/ is up to date
+Library libds.a is up to date
+check file `libds.a' into `lib$'
+-------------- LIBMEMDBG  ------------
+check out file `libmemdbg.a = /home/steele/git/olebole/iraf-v216/lib/libmemdbg.a'
+Subdirectory sys/memdbg is up to date
+Library libmemdbg.a is up to date
+check file `libmemdbg.a' into `lib$'
+purge directory `lib$'
++
++
+====================== MATHLIBS =========================
++
++
+-------------- LIBBEV -------------------
+check out file `libbev.a = /home/steele/git/olebole/iraf-v216/lib/libbev.a'
+warning: library `libbev.a' not found
+xc -c -w agauss.f area.f chifit.f curfit.f determ.f factor.f fchisq.f fderiv.f gamma.f gradls.f gridls.f integ.f interp.f legfit.f linfit.f matinv.f pbinom.f pchisq.f pcorre.f pgauss.f ploren.f polfit.f ppoiss.f regres.f smooth.f xfit.f
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libbev.a agauss.o area.o chifit.o curfit.o determ.o factor.o fchisq.o fderiv.o gamma.o gradls.o gridls.o integ.o interp.o legfit.o linfit.o matinv.o pbinom.o pchisq.o pcorre.o pgauss.o ploren.o polfit.o ppoiss.o regres.o smooth.o xfit.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libbev.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libbev.a
+Updated 26 files in libbev.a
+check file `libbev.a' into `lib$'
+-------------- LIBCURFIT ----------------
+check out file `libcurfit.a = /home/steele/git/olebole/iraf-v216/lib/libcurfit.a'
+warning: library `libcurfit.a' not found
+xc -c -w cvaccumr.x cvacptsr.x cv_bevalr.x cv_b1evalr.x cvchomatr.x cvcoeffr.x cverrorsr.x cvevalr.x cv_fevalr.x cvfitr.x cvfreer.x cvinitr.x cvpowerr.x cvrefitr.x cvrejectr.x cvrestorer.x cvsaver.x cvsetr.x cvsolver.x cvstatr.x cv_userfncr.x cvvectorr.x cvzeror.x cvaccumd.x cvacptsd.x cv_bevald.x cv_b1evald.x cvchomatd.x cvcoeffd.x cverrorsd.x cvevald.x cv_fevald.x cvfitd.x cvfreed.x cvinitd.x cvpowerd.x cvrefitd.x cvrejectd.x cvrestored.x cvsaved.x cvsetd.x cvsolved.x cvstatd.x cv_userfncd.x cvvectord.x cvzerod.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libcurfit.a cvaccumr.o cvacptsr.o cv_bevalr.o cv_b1evalr.o cvchomatr.o cvcoeffr.o cverrorsr.o cvevalr.o cv_fevalr.o cvfitr.o cvfreer.o cvinitr.o cvpowerr.o cvrefitr.o cvrejectr.o cvrestorer.o cvsaver.o cvsetr.o cvsolver.o cvstatr.o cv_userfncr.o cvvectorr.o cvzeror.o cvaccumd.o cvacptsd.o cv_bevald.o cv_b1evald.o cvchomatd.o cvcoeffd.o cverrorsd.o cvevald.o cv_fevald.o cvfitd.o cvfreed.o cvinitd.o cvpowerd.o cvrefitd.o cvrejectd.o cvrestored.o cvsaved.o cvsetd.o cvsolved.o cvstatd.o cv_userfncd.o cvvectord.o cvzerod.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libcurfit.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libcurfit.a
+Updated 46 files in libcurfit.a
+check file `libcurfit.a' into `lib$'
+-------------- LIBDEBOOR ----------------
+check out file `libdeboor.a = /home/steele/git/olebole/iraf-v216/lib/libdeboor.a'
+warning: library `libdeboor.a' not found
+xc -c -w banfac.f banslv.f bchfac.f bchslv.f bsplbv.f bsplpp.f bsplvd.f bspp2d.f bvalue.f chol1d.f cubspl.f cwidth.f dtblok.f factrb.f fcblok.f fsplin.x interv.f knots.f l2appr.f l2knts.f newnot_fake.f ppvalu.f round.f sbblok.f setdat.f setdat2.f setdat3.f setupq.f seval.x shiftb.f slvblk.f smooth.f spline.x splint.f spllsq.x splsqv.x subbak.f subfor.f tautsp.f titand.f
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libdeboor.a banfac.o banslv.o bchfac.o bchslv.o bsplbv.o bsplpp.o bsplvd.o bspp2d.o bvalue.o chol1d.o cubspl.o cwidth.o dtblok.o factrb.o fcblok.o fsplin.o interv.o knots.o l2appr.o l2knts.o newnot_fake.o ppvalu.o round.o sbblok.o setdat.o setdat2.o setdat3.o setupq.o seval.o shiftb.o slvblk.o smooth.o spline.o splint.o spllsq.o splsqv.o subbak.o subfor.o tautsp.o titand.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libdeboor.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libdeboor.a
+Updated 40 files in libdeboor.a
+check file `libdeboor.a' into `lib$'
+-------------- LIBGSURFIT ---------------
+check out file `libgsurfit.a = /home/steele/git/olebole/iraf-v216/lib/libgsurfit.a'
+warning: library `libgsurfit.a' not found
+xc -c -w gs_b1evalr.x gs_bevalr.x gs_chomatr.x gs_f1devalr.x gs_fevalr.x gs_fderr.x gs_devalr.x gsaccumr.x gsacptsr.x gsaddr.x gscoeffr.x gscopyr.x gsderr.x gserrorsr.x gsevalr.x gsfitr.x gsfreer.x gsgcoeffr.x gsinitr.x gsrefitr.x gsrejectr.x gsrestorer.x gssaver.x gsscoeffr.x gssolver.x gsstatr.x gssubr.x gsvectorr.x gszeror.x gs_b1evald.x gs_bevald.x gs_chomatd.x gs_f1devald.x gs_fevald.x gs_fderd.x gs_devald.x gsaccumd.x gsacptsd.x gsaddd.x gscoeffd.x gscopyd.x gsderd.x gserrorsd.x gsevald.x gsfitd.x gsfreed.x gsgcoeffd.x gsinitd.x gsrefitd.x gsrejectd.x gsrestored.x gssaved.x gsscoeffd.x gssolved.x gsstatd.x gssubd.x gsvectord.x gszerod.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libgsurfit.a gs_b1evalr.o gs_bevalr.o gs_chomatr.o gs_f1devalr.o gs_fevalr.o gs_fderr.o gs_devalr.o gsaccumr.o gsacptsr.o gsaddr.o gscoeffr.o gscopyr.o gsderr.o gserrorsr.o gsevalr.o gsfitr.o gsfreer.o gsgcoeffr.o gsinitr.o gsrefitr.o gsrejectr.o gsrestorer.o gssaver.o gsscoeffr.o gssolver.o gsstatr.o gssubr.o gsvectorr.o gszeror.o gs_b1evald.o gs_bevald.o gs_chomatd.o gs_f1devald.o gs_fevald.o gs_fderd.o gs_devald.o gsaccumd.o gsacptsd.o gsaddd.o gscoeffd.o gscopyd.o gsderd.o gserrorsd.o gsevald.o gsfitd.o gsfreed.o gsgcoeffd.o gsinitd.o gsrefitd.o gsrejectd.o gsrestored.o gssaved.o gsscoeffd.o gssolved.o gsstatd.o gssubd.o gsvectord.o gszerod.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libgsurfit.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libgsurfit.a
+Updated 58 files in libgsurfit.a
+check file `libgsurfit.a' into `lib$'
+-------------- LIBIMINTERP --------------
+check out file `libiminterp.a = /home/steele/git/olebole/iraf-v216/lib/libiminterp.a'
+warning: library `libiminterp.a' not found
+xc -c -w arbpix.x arider.x arieval.x asider.x asieval.x asifit.x asifree.x asigeti.x asigetr.x asigrl.x asiinit.x asisinit.x asirestore.x asisave.x asitype.x asivector.x ii_1dinteg.x ii_bieval.x ii_cubspl.f ii_eval.x ii_greval.x ii_pc1deval.x ii_pc2deval.x ii_polterp.x ii_sinctable.x ii_spline.x ii_spline2d.x mrider.x mrieval.x msider.x msieval.x msifit.x msifree.x msigeti.x msigetr.x msigrid.x msigrl.x msiinit.x msisinit.x msirestore.x msisave.x msisqgrl.x msivector.x msitype.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libiminterp.a arbpix.o arider.o arieval.o asider.o asieval.o asifit.o asifree.o asigeti.o asigetr.o asigrl.o asiinit.o asisinit.o asirestore.o asisave.o asitype.o asivector.o ii_1dinteg.o ii_bieval.o ii_cubspl.o ii_eval.o ii_greval.o ii_pc1deval.o ii_pc2deval.o ii_polterp.o ii_sinctable.o ii_spline.o ii_spline2d.o mrider.o mrieval.o msider.o msieval.o msifit.o msifree.o msigeti.o msigetr.o msigrid.o msigrl.o msiinit.o msisinit.o msirestore.o msisave.o msisqgrl.o msivector.o msitype.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libiminterp.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libiminterp.a
+Updated 44 files in libiminterp.a
+check file `libiminterp.a' into `lib$'
+-------------- LIBINTERP ----------------
+check out file `libinterp.a = /home/steele/git/olebole/iraf-v216/lib/libinterp.a'
+warning: library `libinterp.a' not found
+xc -c -w arbpix.x arider.x arival.x asider.x asieva.x asifit.x asigrl.x asiset.x asival.x iieval.x iif_spline.x iipol_terp.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libinterp.a arbpix.o arider.o arival.o asider.o asieva.o asifit.o asigrl.o asiset.o asival.o iieval.o iif_spline.o iipol_terp.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libinterp.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libinterp.a
+Updated 12 files in libinterp.a
+check file `libinterp.a' into `lib$'
+-------------- LIBLLSQ ------------------
+check out file `libllsq.a = /home/steele/git/olebole/iraf-v216/lib/libllsq.a'
+warning: library `libllsq.a' not found
+xc -c -w bndacc.f bndsol.f diff.f g1.f g2.f gen.f h12.f hfti.f ldp.f mfeout.f nnls.f qrbd.f sva.f svdrs.f
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libllsq.a bndacc.o bndsol.o diff.o g1.o g2.o gen.o h12.o hfti.o ldp.o mfeout.o nnls.o qrbd.o sva.o svdrs.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libllsq.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libllsq.a
+Updated 14 files in libllsq.a
+check file `libllsq.a' into `lib$'
+-------------- LIBNLFIT -----------------
+check out file `libnlfit.a = /home/steele/git/olebole/iraf-v216/lib/libnlfit.a'
+warning: library `libnlfit.a' not found
+xc -c -w nlacptsd.x nlacptsr.x nlchomatd.x nlchomatr.x nldumpd.x nldumpr.x nlerrmsg.x nlerrorsd.x nlerrorsr.x nlevald.x nlevalr.x nlfitd.x nlfitr.x nlfreed.x nlfreer.x nlinitd.x nlinitr.x nliterd.x nliterr.x nllist.x nlpgetd.x nlpgetr.x nlsolved.x nlsolver.x nlstati.x nlstatd.x nlstatr.x nlvectord.x nlvectorr.x nlzerod.x nlzeror.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libnlfit.a nlacptsd.o nlacptsr.o nlchomatd.o nlchomatr.o nldumpd.o nldumpr.o nlerrmsg.o nlerrorsd.o nlerrorsr.o nlevald.o nlevalr.o nlfitd.o nlfitr.o nlfreed.o nlfreer.o nlinitd.o nlinitr.o nliterd.o nliterr.o nllist.o nlpgetd.o nlpgetr.o nlsolved.o nlsolver.o nlstati.o nlstatd.o nlstatr.o nlvectord.o nlvectorr.o nlzerod.o nlzeror.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libnlfit.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libnlfit.a
+Updated 31 files in libnlfit.a
+check file `libnlfit.a' into `lib$'
+-------------- LIBSLALIB ----------------
+check out file `libslalib.a = /home/steele/git/olebole/iraf-v216/lib/libslalib.a'
+warning: library `libslalib.a' not found
+xc -c -/NL400 obs.f
+xc -c -w addet.f afin.f airmas.f altaz.f amp.f ampqk.f aop.f aoppa.f aoppat.f aopqk.f atmdsp.f atms.f atmt.f av2m.f bear.f caf2r.f caldj.f calyd.f cc2s.f cc62s.f cd2tf.f cldj.f clyd.f cr2af.f cr2tf.f cs2c.f cs2c6.f ctf2d.f ctf2r.f daf2r.f dafin.f dat.f dav2m.f dbear.f dbjin.f dc62s.f dcc2s.f dcmpf.f dcs2c.f dd2tf.f de2h.f deuler.f dfltin.f dh2e.f dimxv.f djcal.f djcl.f dm2av.f dmat.f dmoon.f dmxm.f dmxv.f dpav.f dr2af.f dr2tf.f drange.f dranrm.f ds2c6.f ds2tp.f dsep.f dsepv.f dt.f dtf2d.f dtf2r.f dtp2s.f dtp2v.f dtps2c.f dtpv2c.f dtt.f dv2tp.f dvdv.f dvn.f dvxv.f e2h.f earth.f ecleq.f ecmat.f ecor.f eg50.f el2ue.f epb.f epb2d.f epco.f epj.f epj2d.f eqecl.f eqeqx.f eqgal.f etrms.f euler.f evp.f fitxy.f fk425.f fk45z.f fk524.f fk54z.f fk52h.f fk5hz.f flotin.f galeq.f galsup.f ge50.f geoc.f gmst.f gmsta.f h2e.f h2fk5.f hfk5z.f idchf.f idchi.f imxv.f intin.f invf.f kbj.f m2av.f map.f mappa.f mapqk.f mapqkz.f moon.f mxm.f mxv.f nut.f nutc.f oap.f oapqk.f pa.f pav.f pcd.f pda2h.f pdq2h.f pertel.f pertue.f planel.f planet.f plante.f pm.f polmo.f prebn.f prec.f preces.f precl.f precss.f prenut.f pv2ue.f pv2el.f pvobs.f pxy.f range.f ranorm.f rcc.f rdplan.f refco.f refcoq.f refro.f refv.f refz.f rverot.f rvgalc.f rvlg.f rvlsrd.f rvlsrk.f s2tp.f sep.f smat.f subet.f supgal.f svd.f svdcov.f svdsol.f tp2s.f tp2v.f tps2c.f tpv2c.f ue2el.f ue2pv.f unpcd.f v2tp.f vdv.f vn.f vxv.f xy2xy.f zd.f
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libslalib.a addet.o afin.o airmas.o altaz.o amp.o ampqk.o aop.o aoppa.o aoppat.o aopqk.o atmdsp.o atms.o atmt.o av2m.o bear.o caf2r.o caldj.o calyd.o cc2s.o cc62s.o cd2tf.o cldj.o clyd.o cr2af.o cr2tf.o cs2c.o cs2c6.o ctf2d.o ctf2r.o daf2r.o dafin.o dat.o dav2m.o dbear.o dbjin.o dc62s.o dcc2s.o dcmpf.o dcs2c.o dd2tf.o de2h.o deuler.o dfltin.o dh2e.o dimxv.o djcal.o djcl.o dm2av.o dmat.o dmoon.o dmxm.o dmxv.o dpav.o dr2af.o dr2tf.o drange.o dranrm.o ds2c6.o ds2tp.o dsep.o dsepv.o dt.o dtf2d.o dtf2r.o dtp2s.o dtp2v.o dtps2c.o dtpv2c.o dtt.o dv2tp.o dvdv.o dvn.o dvxv.o e2h.o earth.o ecleq.o ecmat.o ecor.o eg50.o el2ue.o epb.o epb2d.o epco.o epj.o epj2d.o eqecl.o eqeqx.o eqgal.o etrms.o euler.o evp.o fitxy.o fk425.o fk45z.o fk524.o fk54z.o fk52h.o fk5hz.o flotin.o galeq.o galsup.o ge50.o geoc.o gmst.o gmsta.o h2e.o h2fk5.o hfk5z.o idchf.o idchi.o imxv.o intin.o invf.o kbj.o m2av.o map.o mappa.o mapqk.o mapqkz.o moon.o mxm.o mxv.o nut.o nutc.o oap.o oapqk.o obs.o pa.o pav.o pcd.o pda2h.o pdq2h.o pertel.o pertue.o planel.o planet.o plante.o pm.o polmo.o prebn.o prec.o preces.o precl.o precss.o prenut.o pv2ue.o pv2el.o pvobs.o pxy.o range.o ranorm.o rcc.o rdplan.o refco.o refcoq.o refro.o refv.o refz.o rverot.o rvgalc.o rvlg.o rvlsrd.o rvlsrk.o s2tp.o sep.o smat.o subet.o supgal.o svd.o svdcov.o svdsol.o tp2s.o tp2v.o tps2c.o tpv2c.o ue2el.o ue2pv.o unpcd.o v2tp.o vdv.o vn.o vxv.o xy2xy.o zd.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libslalib.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libslalib.a
+Updated 184 files in libslalib.a
+check file `libslalib.a' into `lib$'
+-------------- LIBSURFIT ----------------
+check out file `libsurfit.a = /home/steele/git/olebole/iraf-v216/lib/libsurfit.a'
+warning: library `libsurfit.a' not found
+xc -c -w iscoeff.x iseval.x isfree.x isinit.x islaccum.x islfit.x islrefit.x islsolve.x islzero.x isreplace.x isresolve.x issave.x issolve.x isvector.x iszero.x sf_b1eval.x sf_beval.x sf_f1deval.x sf_feval.x sfchomat.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libsurfit.a iscoeff.o iseval.o isfree.o isinit.o islaccum.o islfit.o islrefit.o islsolve.o islzero.o isreplace.o isresolve.o issave.o issolve.o isvector.o iszero.o sf_b1eval.o sf_beval.o sf_f1deval.o sf_feval.o sfchomat.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libsurfit.a
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libsurfit.a
+Updated 20 files in libsurfit.a
+check file `libsurfit.a' into `lib$'
+purge directory `lib$'
++
++
+====================== SYSEXE ===========================
++
++
+-------------- GIO ----------------
+xc -c -w x_stdgraph.x
+xc -Nz x_stdgraph.o -lstg
+move `x_stdgraph.e' to `bin$x_stdgraph.e'
+xc -c -w x_sgikern.x
+xc -Nz x_sgikern.o -lsgi
+move `x_sgikern.e' to `bin$x_sgikern.e'
+xc -c -w x_imdkern.x
+xc -Nz x_imdkern.o -limd -lds -lstg -o xx_imdkern.e
+move `xx_imdkern.e' to `bin$x_imdkern.e'
+-------------- KI  ----------------
+xc -c -w irafks.x
+xc -Nz irafks.o
+move `irafks.e' to `bin$irafks.e'
+-------------- TTY ----------------
+xc -c -w x_mkttydata.x
+xc -Nz x_mkttydata.o
+move `x_mkttydata.e' to `bin$x_mkttydata.e'
++
++
+====================== PACKAGES =========================
++
++
+!mkdir /home/steele/git/olebole/iraf-v216/bin >& /dev/null
+--------------------- CL --------------------------
+warning: library `libpkg.a' not found
+xc -c -w binop.c bkg.c builtin.c clprintf.c clsystem.c compile.c debug.c decl.c edcap.c eparam.c errs.c exec.c gquery.c gram.c history.c lists.c main.c modes.c operand.c param.c pfiles.c prcache.c scan.c stack.c task.c unop.c ytab.c
+ar r /home/steele/git/olebole/iraf-v216/pkg/cl/libpkg.a binop.o bkg.o builtin.o clprintf.o clsystem.o compile.o debug.o decl.o edcap.o eparam.o errs.o exec.o gquery.o gram.o history.o lists.o main.o modes.o operand.o param.o pfiles.o prcache.o scan.o stack.o task.o unop.o ytab.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/cl/libpkg.a
+ranlib libpkg.a
+Updated 27 files in libpkg.a
+xc -c -w cl.x
+xc -c -w globals.c
+xc -c -w opcodes.c
+xc -Nz cl.o globals.o opcodes.o libpkg.a -lc -lcur -lds -lstg
+move `cl.e' to `bin$cl.e'
+--------------------- ECL -------------------------
+warning: library `libpkg.a' not found
+xc -c -w -qx binop.c bkg.c builtin.c clprintf.c clsystem.c compile.c debug.c decl.c edcap.c eparam.c errs.c exec.c gquery.c gram.c history.c lists.c main.c modes.c operand.c param.c pfiles.c prcache.c scan.c stack.c task.c unop.c ytab.c
+ar r /home/steele/git/olebole/iraf-v216/pkg/ecl/libpkg.a binop.o bkg.o builtin.o clprintf.o clsystem.o compile.o debug.o decl.o edcap.o eparam.o errs.o exec.o gquery.o gram.o history.o lists.o main.o modes.o operand.o param.o pfiles.o prcache.o scan.o stack.o task.o unop.o ytab.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/ecl/libpkg.a
+ranlib libpkg.a
+Updated 27 files in libpkg.a
+xc -c -w -x ecl.x
+xc -c -w -x globals.c
+xc -c -w -x opcodes.c
+xc -Nz ecl.o globals.o opcodes.o libpkg.a -lc -lcur -lds -lstg -lreadline -lncurses
+move `ecl.e' to `bin$ecl.e'
+--------------------- VOCL ------------------------
+warning: library `libpkg.a' not found
+xc -c -w -x -/I../../vendor/ -I./ binop.c bkg.c builtin.c clprintf.c clsystem.c compile.c debug.c decl.c edcap.c eparam.c errs.c exec.c gquery.c gram.c history.c lists.c main.c modes.c multop.c operand.c param.c pfiles.c prcache.c scan.c stack.c task.c unop.c ytab.c builtin_vo.c voclient.c samp.c sampCmd.c sampFuncs.c sampHandlers.c
+ar r /home/steele/git/olebole/iraf-v216/pkg/vocl/libpkg.a binop.o bkg.o builtin.o clprintf.o clsystem.o compile.o debug.o decl.o edcap.o eparam.o errs.o exec.o gquery.o gram.o history.o lists.o main.o modes.o multop.o operand.o param.o pfiles.o prcache.o scan.o stack.o task.o unop.o ytab.o builtin_vo.o voclient.o samp.o sampCmd.o sampFuncs.o sampHandlers.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/vocl/libpkg.a
+ranlib libpkg.a
+Updated 34 files in libpkg.a
+xc -c -w -x -/I../../vendor/ -I./ vocl.x
+xc -c -w -x -/I../../vendor/ -I./ globals.c
+xc -c -w -x -/I../../vendor/ -I./ opcodes.c
+xc -Nz vocl.o globals.o opcodes.o libpkg.a -lc -lcur -lds -lstg -lreadline -lncurses
+move `vocl.e' to `bin$vocl.e'
+--------------------- SYSTEM ----------------------
+warning: library `libpkg.a' not found
+xc -c -w breakline.x center.x dols.x getarg.x indent.x input.x justify.x lroff.x lroff2html.x lroff2ps.x nextcmd.x nofill.x output.x rawcopy.x section.x skiplines.x textlen.x textout.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/system/libpkg.a breakline.o center.o dols.o getarg.o indent.o input.o justify.o lroff.o lroff2html.o lroff2ps.o nextcmd.o nofill.o output.o rawcopy.o section.o skiplines.o textlen.o textout.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/system/libpkg.a
+xc -c -w xhelp.x xhcmds.x xhdir.x xhfiles.x xhhelp.x xhinit.x xhofile.x xhpkg.x xhprint.x xhqref.x xhroot.x xhsave.x xhsearch.x xhsort.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/system/libpkg.a xhelp.o xhcmds.o xhdir.o xhfiles.o xhhelp.o xhinit.o xhofile.o xhpkg.o xhprint.o xhqref.o xhroot.o xhsave.o xhsearch.o xhsort.o
+xc -c -w filetemp.x getoption.x hbgetblk.x helpdb.x helpdir.x hinput.x houtput.x manout.x modlist.x modtemp.x prblkhdr.x prdir.x prfile.x prfnames.x prhelp.x prhlpblk.x prmodname.x prsummary.x t_hdbexamine.x t_help.x t_lroff.x t_mkhelpdb.x tlist.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/system/libpkg.a filetemp.o getoption.o hbgetblk.o helpdb.o helpdir.o hinput.o houtput.o manout.o modlist.o modtemp.o prblkhdr.o prdir.o prfile.o prfnames.o prhelp.o prhlpblk.o prmodname.o prsummary.o t_hdbexamine.o t_help.o t_lroff.o t_mkhelpdb.o tlist.o
+xc -c -w cmdstr.x chkupdate.x concatenate.x copy.x count.x delete.x directory.x files.x head.x lprint.x match.x mkdir.x movefiles.x mtclean.x netstatus.x page.x pathnames.x protect.x rename.x rewind.x sort.x tail.x tee.x touch.x type.x unprotect.x t_fcache.x t_urlget.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/system/libpkg.a cmdstr.o chkupdate.o concatenate.o copy.o count.o delete.o directory.o files.o head.o lprint.o match.o mkdir.o movefiles.o mtclean.o netstatus.o page.o pathnames.o protect.o rename.o rewind.o sort.o tail.o tee.o touch.o type.o unprotect.o t_fcache.o t_urlget.o
+ranlib libpkg.a
+Updated 83 files in libpkg.a
+xc -c -w x_system.x
+xc -Nz x_system.o libpkg.a -o xx_system.e
+move `xx_system.e' to `bin$x_system.e'
+--------------------- SOFTOOLS --------------------
+warning: library `libpkg.a' not found
+xc -c -w memchk.x mktags.x tgutil.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/softools/libpkg.a memchk.o mktags.o tgutil.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/softools/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w x_softools.x
+xc -Nz x_softools.o libpkg.a -o xx_softools.e
+move `xx_softools.e' to `bin$x_softools.e'
+--------------------- XTOOLS ----------------------
+check out file `libxtools.a = /home/steele/git/olebole/iraf-v216/lib/libxtools.a'
+warning: library `libxtools.a' not found
+xc -c -w rgbind.x rgbinr.x rgdump.x rgencode.x rgexcluded.x rgexcluder.x rgfree.x rggxmarkd.x rggxmarkr.x rgindices.x rginrange.x rgintersect.x rginverse.x rgmerge.x rgnext.x rgorder.x rgpackd.x rgpackr.x rgranges.x rgunion.x rgunpackd.x rgunpackr.x rgwindow.x rgwtbind.x rgwtbinr.x rgxrangesd.x rgxrangesr.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a rgbind.o rgbinr.o rgdump.o rgencode.o rgexcluded.o rgexcluder.o rgfree.o rggxmarkd.o rggxmarkr.o rgindices.o rginrange.o rgintersect.o rginverse.o rgmerge.o rgnext.o rgorder.o rgpackd.o rgpackr.o rgranges.o rgunion.o rgunpackd.o rgunpackr.o rgwindow.o rgwtbind.o rgwtbinr.o rgxrangesd.o rgxrangesr.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a
+xc -c -w gtascale.x gtcolon.x gtcopy.x gtctran.x gtcur.x gtcur1.x gtfree.x gtget.x gtgui.x gtinit.x gtlabax.x gtplot.x gtreset.x gtset.x gtswind.x gtvplot.x gtwindow.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a gtascale.o gtcolon.o gtcopy.o gtctran.o gtcur.o gtcur1.o gtfree.o gtget.o gtgui.o gtinit.o gtlabax.o gtplot.o gtreset.o gtset.o gtswind.o gtvplot.o gtwindow.o
+xc -c -w iccleand.x iccleanr.x icdeviantd.x icdeviantr.x icdosetupd.x icdosetupr.x icerrorsd.x icerrorsr.x icferrorsd.x icferrorsr.x icfitd.x icfitr.x icfshow.x icfvshowd.x icfvshowr.x icgaddd.x icgaddr.x icgaxesd.x icgaxesr.x icgcolond.x icgcolonr.x icgdeleted.x icgdeleter.x icgfitd.x icgfitr.x icggraphd.x icggraphr.x icgnearestd.x icgnearestr.x icgparamsd.x icgparamsr.x icgsampled.x icgsampler.x icguaxesd.x icguaxesr.x icgui.x icguishowd.x icguishowr.x icgundeleted.x icgundeleter.x icguser.x iclistd.x iclistr.x icparams.x icrejectd.x icrejectr.x icshow.x icvshowd.x icvshowr.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a iccleand.o iccleanr.o icdeviantd.o icdeviantr.o icdosetupd.o icdosetupr.o icerrorsd.o icerrorsr.o icferrorsd.o icferrorsr.o icfitd.o icfitr.o icfshow.o icfvshowd.o icfvshowr.o icgaddd.o icgaddr.o icgaxesd.o icgaxesr.o icgcolond.o icgcolonr.o icgdeleted.o icgdeleter.o icgfitd.o icgfitr.o icggraphd.o icggraphr.o icgnearestd.o icgnearestr.o icgparamsd.o icgparamsr.o icgsampled.o icgsampler.o icguaxesd.o icguaxesr.o icgui.o icguishowd.o icguishowr.o icgundeleted.o icgundeleter.o icguser.o iclistd.o iclistr.o icparams.o icrejectd.o icrejectr.o icshow.o icvshowd.o icvshowr.o
+xc -c -w incopyd.x incopyr.x indeviantd.x indeviantr.x indumpd.x indumpr.x inerrorsd.x inerrorsr.x infitd.x infitr.x infreed.x infreer.x ingaxesd.x ingaxesr.x ingcolond.x ingcolonr.x ingdatar.x ingdatad.x ingdefkey.x ingdeleted.x ingdeleter.x ingerrorsd.x ingerrorsr.x inget.x ingfitd.x ingfitr.x inggetlabel.x inggraphd.x inggraphr.x ingnearestd.x ingnearestr.x ingparamsd.x ingparamsr.x ingresultsr.x ingresultsd.x ingshowd.x ingshowr.x inguaxesd.x inguaxesr.x ingucolond.x ingucolonr.x ingufit.x ingundeleted.x ingundeleter.x ingvarsr.x ingvarsd.x ingvshowd.x ingvshowr.x ininitd.x ininitr.x inlimitd.x inlimitr.x inlstrext.x inlstrwrd.x innlinitd.x innlinitr.x input.x inrefitd.x inrefitr.x inrejectd.x inrejectr.x inrmsd.x inrmsr.x ingtitle.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a incopyd.o incopyr.o indeviantd.o indeviantr.o indumpd.o indumpr.o inerrorsd.o inerrorsr.o infitd.o infitr.o infreed.o infreer.o ingaxesd.o ingaxesr.o ingcolond.o ingcolonr.o ingdatar.o ingdatad.o ingdefkey.o ingdeleted.o ingdeleter.o ingerrorsd.o ingerrorsr.o inget.o ingfitd.o ingfitr.o inggetlabel.o inggraphd.o inggraphr.o ingnearestd.o ingnearestr.o ingparamsd.o ingparamsr.o ingresultsr.o ingresultsd.o ingshowd.o ingshowr.o inguaxesd.o inguaxesr.o ingucolond.o ingucolonr.o ingufit.o ingundeleted.o ingundeleter.o ingvarsr.o ingvarsd.o ingvshowd.o ingvshowr.o ininitd.o ininitr.o inlimitd.o inlimitr.o inlstrext.o inlstrwrd.o innlinitd.o innlinitr.o input.o inrefitd.o inrefitr.o inrejectd.o inrejectr.o inrmsd.o inrmsr.o ingtitle.o
+xc -c -w setfp.x xtfixpix.x xtfp.x xtpmmap.x ytfixpix.x ytpmmap.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a setfp.o xtfixpix.o xtfp.o xtpmmap.o ytfixpix.o ytpmmap.o
+xc -c -w skdecode.x skwrite.x skstat.x skset.x sktransform.x sksaveim.x skwrdstr.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a skdecode.o skwrite.o skstat.o skset.o sktransform.o sksaveim.o skwrdstr.o
+xc -c -w cqmap.x cqstat.x cqlocate.x cqsetcat.x cqnqpars.x cqgqpars.x cqsqpars.x cqquery.x cqrstat.x cqrinfo.x cqgrecords.x cqgfields.x cqimquery.x cqistat.x cqiminfo.x cqget.x cqdb.x cqwrdstr.x cqdtype.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a cqmap.o cqstat.o cqlocate.o cqsetcat.o cqnqpars.o cqgqpars.o cqsqpars.o cqquery.o cqrstat.o cqrinfo.o cqgrecords.o cqgfields.o cqimquery.o cqistat.o cqiminfo.o cqget.o cqdb.o cqwrdstr.o cqdtype.o
+xc -c -w mefappfile.x mefclose.x mefcpextn.x mefdummyh.x mefencode.x mefget.x mefgnbc.x mefgval.x mefkfind.x mefksection.x mefldhdr.x mefopen.x mefrdhdr.x mefsetpl.x mefwrhdr.x mefwrpl.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a mefappfile.o mefclose.o mefcpextn.o mefdummyh.o mefencode.o mefget.o mefgnbc.o mefgval.o mefkfind.o mefksection.o mefldhdr.o mefopen.o mefrdhdr.o mefsetpl.o mefwrhdr.o mefwrpl.o
+xc -c -w center1d.x clgcurfit.x clginterp.x clgsec.x cogetr.x dttext.x extrema.x getdatatype.x gstrdetab.x gstrentab.x gstrsettab.x imtools.x intrp.f isdir.x peaks.x ranges.x rmmed.x rmsorted.x rmturlach.x rngranges.x obsdb.x strdetab.x strentab.x syshost.x xt21imsum.x xtanswer.x xtargs.x xtbitarray.x xtextns.x xtgids.x xtimleneq.x xtimnames.x xtimtgetim.x xtlogfiles.x xtmaskname.x xtmksection.x xtphistory.x xtsample.x xtsort.x xtstat.x xtstripwhite.x xtsums.x xttxtfio.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a center1d.o clgcurfit.o clginterp.o clgsec.o cogetr.o dttext.o extrema.o getdatatype.o gstrdetab.o gstrentab.o gstrsettab.o imtools.o intrp.o isdir.o peaks.o ranges.o rmmed.o rmsorted.o rmturlach.o rngranges.o obsdb.o strdetab.o strentab.o syshost.o xt21imsum.o xtanswer.o xtargs.o xtbitarray.o xtextns.o xtgids.o xtimleneq.o xtimnames.o xtimtgetim.o xtlogfiles.o xtmaskname.o xtmksection.o xtphistory.o xtsample.o xtsort.o xtstat.o xtstripwhite.o xtsums.o xttxtfio.o
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libxtools.a
+Updated 248 files in libxtools.a
+check file `libxtools.a' into `lib$'
+purge directory `lib$'
+--------------------- TBTABLES --------------------
+check out file `libtbtables.a = /home/steele/git/olebole/iraf-v216/lib/libtbtables.a'
+warning: library `libtbtables.a' not found
+xc -Inolibc -c -w tcsrdaryb.x tcsrdaryc.x tcsrdaryd.x tcsrdaryi.x tcsrdaryr.x tcsrdarys.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a tcsrdaryb.o tcsrdaryc.o tcsrdaryd.o tcsrdaryi.o tcsrdaryr.o tcsrdarys.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a
+xc -Inolibc -c -w omniread.x rdselect.x rst.x selrows.x tcsaddcol.x tcsclose.x tcscolumn.x tcsintinfo.x tcslinesize.x tcsopen.x tcsshape.x tcstotsize.x tcstxtinfo.x tbcga.x tbcnel.x trsclose.x trseval.x trsgencode.x trsopen.x trsrows.x trstree.x trstrim.x whatfile.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a omniread.o rdselect.o rst.o selrows.o tcsaddcol.o tcsclose.o tcscolumn.o tcsintinfo.o tcslinesize.o tcsopen.o tcsshape.o tcstotsize.o tcstxtinfo.o tbcga.o tbcnel.o trsclose.o trseval.o trsgencode.o trsopen.o trsrows.o trstree.o trstrim.o whatfile.o
+NOTE:  SPP FITSIO will be used for FITS tables.
+xc -Inolibc -c -w fsadef.x fsarch.x fsasfm.x fsbdef.x fsbnfm.x fsclos.x fscmps.x fscmsg.x fscopy.x fscpdt.x fscrhd.x fsdcol.x fsddef.x fsdelt.x fsdhdu.x fsdkey.x fsdrec.x fsdrow.x fsdsum.x fsdtyp.x fsesum.x fsfiou.x fsg2db.x fsg2dd.x fsg2de.x fsg2di.x fsg2dj.x fsg3db.x fsg3dd.x fsg3de.x fsg3di.x fsg3dj.x fsgabc.x fsgacl.x fsgbcl.x fsgcfb.x fsgcfc.x fsgcfd.x fsgcfe.x fsgcfi.x fsgcfj.x fsgcfl.x fsgcfm.x fsgcfs.x fsgcks.x fsgcl.x fsgcnn.x fsgcno.x fsgcrd.x fsgcvb.x fsgcvc.x fsgcvd.x fsgcve.x fsgcvi.x fsgcvj.x fsgcvm.x fsgcvs.x fsgcx.x fsgcxd.x fsgcxi.x fsgcxj.x fsgdes.x fsgerr.x fsggpb.x fsggpd.x fsggpe.x fsggpi.x fsggpj.x fsghad.x fsghbn.x fsghdn.x fsghpr.x fsghps.x fsghsp.x fsghtb.x fsgics.x fsgiou.x fsgkey.x fsgknd.x fsgkne.x fsgknj.x fsgknl.x fsgkns.x fsgkyd.x fsgkye.x fsgkyj.x fsgkyl.x fsgkyn.x fsgkys.x fsgkyt.x fsgmsg.x fsgpfb.x fsgpfd.x fsgpfe.x fsgpfi.x fsgpfj.x fsgpvb.x fsgpvd.x fsgpve.x fsgpvi.x fsgpvj.x fsgrec.x fsgrsz.x fsgsdt.x fsgsfb.x fsgsfd.x fsgsfe.x fsgsfi.x fsgsfj.x fsgsvb.x fsgsvd.x fsgsve.x fsgsvi.x fsgsvj.x fsgtbb.x fsgtbs.x fsgtcl.x fsgtcs.x fsgtdm.x fsgthd.x fshdef.x fsibin.x fsicol.x fsiimg.x fsikyd.x fsikye.x fsikyf.x fsikyg.x fsikyj.x fsikyl.x fsikys.x fsinit.x fsirec.x fsirow.x fsitab.x fskeyn.x fsmahd.x fsmcom.x fsmcrd.x fsmkyd.x fsmkye.x fsmkyf.x fsmkyg.x fsmkyj.x fsmkyl.x fsmkys.x fsmnam.x fsmrec.x fsmrhd.x fsnkey.x fsopen.x fsp2db.x fsp2dd.x fsp2de.x fsp2di.x fsp2dj.x fsp3db.x fsp3dd.x fsp3de.x fsp3di.x fsp3dj.x fspcks.x fspclb.x fspclc.x fspcld.x fspcle.x fspcli.x fspclj.x fspcll.x fspclm.x fspcls.x fspclu.x fspclx.x fspcnb.x fspcnd.x fspcne.x fspcni.x fspcnj.x fspcom.x fspdat.x fspdef.x fspdes.x fspgpb.x fspgpd.x fspgpe.x fspgpi.x fspgpj.x fsphbn.x fsphis.x fsphpr.x fsphtb.x fspkls.x fspknd.x fspkne.x fspknf.x fspkng.x fspknj.x fspknl.x fspkns.x fspkyd.x fspkye.x fspkyf.x fspkyg.x fspkyj.x fspkyl.x fspkys.x fspkyt.x fsplsw.x fspmsg.x fspnul.x fsppnb.x fsppnd.x fsppne.x fsppni.x fsppnj.x fspprb.x fspprd.x fsppre.x fsppri.x fspprj.x fsppru.x fsprec.x fspscl.x fspssb.x fspssd.x
+xc -Inolibc -c -w fspsse.x fspssi.x fspssj.x fspsvc.x fsptbb.x fsptbs.x fsptdm.x fspthp.x fsrdef.x fssnul.x fstkey.x fstnul.x fstscl.x fsucks.x fsucrd.x fsukyd.x fsukye.x fsukyf.x fsukyg.x fsukyj.x fsukyl.x fsukys.x fsvcks.x fsvers.x fswldp.x fsxypx.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a fsadef.o fsarch.o fsasfm.o fsbdef.o fsbnfm.o fsclos.o fscmps.o fscmsg.o fscopy.o fscpdt.o fscrhd.o fsdcol.o fsddef.o fsdelt.o fsdhdu.o fsdkey.o fsdrec.o fsdrow.o fsdsum.o fsdtyp.o fsesum.o fsfiou.o fsg2db.o fsg2dd.o fsg2de.o fsg2di.o fsg2dj.o fsg3db.o fsg3dd.o fsg3de.o fsg3di.o fsg3dj.o fsgabc.o fsgacl.o fsgbcl.o fsgcfb.o fsgcfc.o fsgcfd.o fsgcfe.o fsgcfi.o fsgcfj.o fsgcfl.o fsgcfm.o fsgcfs.o fsgcks.o fsgcl.o fsgcnn.o fsgcno.o fsgcrd.o fsgcvb.o fsgcvc.o fsgcvd.o fsgcve.o fsgcvi.o fsgcvj.o fsgcvm.o fsgcvs.o fsgcx.o fsgcxd.o fsgcxi.o fsgcxj.o fsgdes.o fsgerr.o fsggpb.o fsggpd.o fsggpe.o fsggpi.o fsggpj.o fsghad.o fsghbn.o fsghdn.o fsghpr.o fsghps.o fsghsp.o fsghtb.o fsgics.o fsgiou.o fsgkey.o fsgknd.o fsgkne.o fsgknj.o fsgknl.o fsgkns.o fsgkyd.o fsgkye.o fsgkyj.o fsgkyl.o fsgkyn.o fsgkys.o fsgkyt.o fsgmsg.o fsgpfb.o fsgpfd.o fsgpfe.o fsgpfi.o fsgpfj.o fsgpvb.o fsgpvd.o fsgpve.o fsgpvi.o fsgpvj.o fsgrec.o fsgrsz.o fsgsdt.o fsgsfb.o fsgsfd.o fsgsfe.o fsgsfi.o fsgsfj.o fsgsvb.o fsgsvd.o fsgsve.o fsgsvi.o fsgsvj.o fsgtbb.o fsgtbs.o fsgtcl.o fsgtcs.o fsgtdm.o fsgthd.o fshdef.o fsibin.o fsicol.o fsiimg.o fsikyd.o fsikye.o fsikyf.o fsikyg.o fsikyj.o fsikyl.o fsikys.o fsinit.o fsirec.o fsirow.o fsitab.o fskeyn.o fsmahd.o fsmcom.o fsmcrd.o fsmkyd.o fsmkye.o fsmkyf.o fsmkyg.o fsmkyj.o fsmkyl.o fsmkys.o fsmnam.o fsmrec.o fsmrhd.o fsnkey.o fsopen.o fsp2db.o fsp2dd.o fsp2de.o fsp2di.o fsp2dj.o fsp3db.o fsp3dd.o fsp3de.o fsp3di.o fsp3dj.o fspcks.o fspclb.o fspclc.o fspcld.o fspcle.o fspcli.o fspclj.o fspcll.o fspclm.o fspcls.o fspclu.o fspclx.o fspcnb.o fspcnd.o fspcne.o fspcni.o fspcnj.o fspcom.o fspdat.o fspdef.o fspdes.o fspgpb.o fspgpd.o fspgpe.o fspgpi.o fspgpj.o fsphbn.o fsphis.o fsphpr.o fsphtb.o fspkls.o fspknd.o fspkne.o fspknf.o fspkng.o fspknj.o fspknl.o fspkns.o fspkyd.o fspkye.o fspkyf.o fspkyg.o fspkyj.o fspkyl.o fspkys.o fspkyt.o fsplsw.o fspmsg.o fspnul.o fsppnb.o fsppnd.o fsppne.o fsppni.o fsppnj.o fspprb.o fspprd.o fsppre.o fsppri.o fspprj.o
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a fsppru.o fsprec.o fspscl.o fspssb.o fspssd.o fspsse.o fspssi.o fspssj.o fspsvc.o fsptbb.o fsptbs.o fsptdm.o fspthp.o fsrdef.o fssnul.o fstkey.o fstnul.o fstscl.o fsucks.o fsucrd.o fsukyd.o fsukye.o fsukyf.o fsukyg.o fsukyj.o fsukyl.o fsukys.o fsvcks.o fsvers.o fswldp.o fsxypx.o
+xc -Inolibc -c -w ftpcbf.x ftgcbf.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a ftpcbf.o ftgcbf.o
+xc -Inolibc -c -w ftadef.f ftaini.f ftarch.f ftas2c.f ftasfm.f ftbdef.f ftbini.f ftbnfm.f ftc2as.f ftc2d.f ftc2dd.f ftc2i.f ftc2ii.f ftc2l.f ftc2ll.f ftc2r.f ftc2rr.f ftc2s.f ftc2x.f ftcdel.f ftcdfl.f ftchdu.f ftchfl.f ftcins.f ftclos.f ftcmps.f ftcmsg.f ftcopy.f ftcpdt.f ftcrep.f ftcrhd.f ftcsum.f ftd2e.f ftd2f.f ftdblk.f ftdcol.f ftddef.f ftdelt.f ftdhdu.f ftdkey.f ftdrec.f ftdrow.f ftdsum.f ftdtyp.f ftesum.f ftfiou.f ftfrcl.f ftg2db.f ftg2dd.f ftg2de.f ftg2di.f ftg2dj.f ftg3db.f ftg3dd.f ftg3de.f ftg3di.f ftg3dj.f ftgabc.f ftgacl.f ftgatp.f ftgbcl.f ftgbit.f ftgbnh.f ftgbtp.f ftgcfb.f ftgcfc.f ftgcfd.f ftgcfe.f ftgcfi.f ftgcfj.f ftgcfl.f ftgcfm.f ftgcfs.f ftgcks.f ftgcl.f ftgclb.f ftgclc.f ftgcld.f ftgcle.f ftgcli.f ftgclj.f ftgclm.f ftgcls.f ftgcnn.f ftgcno.f ftgcrd.f ftgcvb.f ftgcvc.f ftgcvd.f ftgcve.f ftgcvi.f ftgcvj.f ftgcvm.f ftgcvs.f ftgcx.f ftgcxd.f ftgcxi.f ftgcxj.f ftgdes.f ftgerr.f ftgext.f ftggpb.f ftggpd.f ftggpe.f ftggpi.f ftggpj.f ftghad.f ftghbn.f ftghdn.f ftghpr.f ftghps.f ftghsp.f ftghtb.f ftgi1b.f ftgics.f ftgiou.f ftgkey.f ftgknd.f ftgkne.f ftgknj.f ftgknl.f ftgkns.f ftgkyd.f ftgkye.f ftgkyj.f ftgkyl.f ftgkyn.f ftgkys.f ftgkyt.f ftgmsg.f ftgnst.f ftgpfb.f ftgpfd.f ftgpfe.f ftgpfi.f ftgpfj.f ftgphx.f ftgprh.f ftgpvb.f ftgpvd.f ftgpve.f ftgpvi.f ftgpvj.f ftgrec.f ftgsfb.f ftgsfd.f ftgsfe.f ftgsfi.f ftgsfj.f ftgsvb.f ftgsvd.f ftgsve.f ftgsvi.f ftgsvj.f ftgtbb.f ftgtbc.f ftgtbh.f ftgtbn.f ftgtbs.f ftgtcl.f ftgtcs.f ftgtdm.f ftgthd.f ftgtkn.f ftgttb.f fthdef.f fthpdn.f fthpup.f fti1i1.f fti1i2.f fti1i4.f fti1r4.f fti1r8.f fti2c.f fti2i1.f fti2i2.f fti2i4.f fti2r4.f fti2r8.f fti4i1.f fti4i2.f fti4i4.f fti4r4.f fti4r8.f ftibin.f ftiblk.f fticol.f ftiimg.f ftikyd.f ftikye.f ftikyf.f ftikyg.f ftikyj.f ftikyl.f ftikys.f ftinit.f ftirec.f ftirow.f ftitab.f ftkeyn.f ftkshf.f ftl2c.f ftmahd.f ftmcom.f ftmcrd.f ftmkey.f ftmkyd.f ftmkye.f ftmkyf.f ftmkyg.f ftmkyj.f ftmkyl.f ftmkys.f ftmnam.f ftmodr.f ftmrec.f ftmrhd.f ftnkey.f ftnulc.f ftnulm.f ftopen.f ftp2db.f ftp2dd.f ftp2de.f ftp2di.f ftp2dj.f
+xc -Inolibc -c -w ftp3db.f ftp3dd.f ftp3de.f ftp3di.f ftp3dj.f ftpbit.f ftpbnh.f ftpcks.f ftpclb.f ftpclc.f ftpcld.f ftpcle.f ftpcli.f ftpclj.f ftpcll.f ftpclm.f ftpcls.f ftpclu.f ftpclx.f ftpcnb.f ftpcnd.f ftpcne.f ftpcni.f ftpcnj.f ftpcom.f ftpdat.f ftpdef.f ftpdes.f ftpdfl.f ftpgpb.f ftpgpd.f ftpgpe.f ftpgpi.f ftpgpj.f ftphbn.f ftphis.f ftphpr.f ftphtb.f ftpi1b.f ftpini.f ftpkey.f ftpkls.f ftpknd.f ftpkne.f ftpknf.f ftpkng.f ftpknj.f ftpknl.f ftpkns.f ftpkyd.f ftpkye.f ftpkyf.f ftpkyg.f ftpkyj.f ftpkyl.f ftpkys.f ftpkyt.f ftplsw.f ftpmsg.f ftpnul.f ftppnb.f ftppnd.f ftppne.f ftppni.f ftppnj.f ftpprb.f ftpprd.f ftppre.f ftpprh.f ftppri.f ftpprj.f ftppru.f ftprec.f ftprsv.f ftpscl.f ftpssb.f ftpssd.f ftpsse.f ftpssi.f ftpssj.f ftpsvc.f ftptbb.f ftptbh.f ftptbs.f ftptdm.f ftpthp.f ftr2e.f ftr2f.f ftr4i1.f ftr4i2.f ftr4i4.f ftr4r4.f ftr4r8.f ftr8i1.f ftr8i2.f ftr8i4.f ftr8r4.f ftr8r8.f ftrdef.f ftrhdu.f ftrsnm.f ftrwdn.f ftrwup.f fts2c.f ftsdnn.f ftsnul.f ftsrnn.f fttbit.f fttdnn.f fttkey.f fttkyn.f fttnul.f fttrec.f fttrnn.f fttscl.f ftucks.f ftucrd.f ftukyd.f ftukye.f ftukyf.f ftukyg.f ftukyj.f ftukyl.f ftukys.f ftuscc.f ftuscm.f ftvcks.f ftvers.f ftwend.f ftwldp.f ftxiou.f ftxmsg.f ftxypx.f fitsspp.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a ftadef.o ftaini.o ftarch.o ftas2c.o ftasfm.o ftbdef.o ftbini.o ftbnfm.o ftc2as.o ftc2d.o ftc2dd.o ftc2i.o ftc2ii.o ftc2l.o ftc2ll.o ftc2r.o ftc2rr.o ftc2s.o ftc2x.o ftcdel.o ftcdfl.o ftchdu.o ftchfl.o ftcins.o ftclos.o ftcmps.o ftcmsg.o ftcopy.o ftcpdt.o ftcrep.o ftcrhd.o ftcsum.o ftd2e.o ftd2f.o ftdblk.o ftdcol.o ftddef.o ftdelt.o ftdhdu.o ftdkey.o ftdrec.o ftdrow.o ftdsum.o ftdtyp.o ftesum.o ftfiou.o ftfrcl.o ftg2db.o ftg2dd.o ftg2de.o ftg2di.o ftg2dj.o ftg3db.o ftg3dd.o ftg3de.o ftg3di.o ftg3dj.o ftgabc.o ftgacl.o ftgatp.o ftgbcl.o ftgbit.o ftgbnh.o ftgbtp.o ftgcfb.o ftgcfc.o ftgcfd.o ftgcfe.o ftgcfi.o ftgcfj.o ftgcfl.o ftgcfm.o ftgcfs.o ftgcks.o ftgcl.o ftgclb.o ftgclc.o ftgcld.o ftgcle.o ftgcli.o ftgclj.o ftgclm.o ftgcls.o ftgcnn.o ftgcno.o ftgcrd.o ftgcvb.o ftgcvc.o ftgcvd.o ftgcve.o ftgcvi.o ftgcvj.o ftgcvm.o ftgcvs.o ftgcx.o ftgcxd.o ftgcxi.o ftgcxj.o ftgdes.o ftgerr.o ftgext.o ftggpb.o ftggpd.o ftggpe.o ftggpi.o ftggpj.o ftghad.o ftghbn.o ftghdn.o ftghpr.o ftghps.o ftghsp.o ftghtb.o ftgi1b.o ftgics.o ftgiou.o ftgkey.o ftgknd.o ftgkne.o ftgknj.o ftgknl.o ftgkns.o ftgkyd.o ftgkye.o ftgkyj.o ftgkyl.o ftgkyn.o ftgkys.o ftgkyt.o ftgmsg.o ftgnst.o ftgpfb.o ftgpfd.o ftgpfe.o ftgpfi.o ftgpfj.o ftgphx.o ftgprh.o ftgpvb.o ftgpvd.o ftgpve.o ftgpvi.o ftgpvj.o ftgrec.o ftgsfb.o ftgsfd.o ftgsfe.o ftgsfi.o ftgsfj.o ftgsvb.o ftgsvd.o ftgsve.o ftgsvi.o ftgsvj.o ftgtbb.o ftgtbc.o ftgtbh.o ftgtbn.o ftgtbs.o ftgtcl.o ftgtcs.o ftgtdm.o ftgthd.o ftgtkn.o ftgttb.o fthdef.o fthpdn.o fthpup.o fti1i1.o fti1i2.o fti1i4.o fti1r4.o fti1r8.o fti2c.o fti2i1.o fti2i2.o fti2i4.o fti2r4.o fti2r8.o fti4i1.o fti4i2.o fti4i4.o fti4r4.o fti4r8.o ftibin.o ftiblk.o fticol.o ftiimg.o ftikyd.o ftikye.o ftikyf.o ftikyg.o ftikyj.o ftikyl.o ftikys.o ftinit.o ftirec.o ftirow.o ftitab.o ftkeyn.o ftkshf.o ftl2c.o ftmahd.o ftmcom.o ftmcrd.o ftmkey.o ftmkyd.o ftmkye.o ftmkyf.o ftmkyg.o ftmkyj.o ftmkyl.o ftmkys.o ftmnam.o ftmodr.o ftmrec.o ftmrhd.o ftnkey.o ftnulc.o ftnulm.o ftopen.o
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a ftp2db.o ftp2dd.o ftp2de.o ftp2di.o ftp2dj.o ftp3db.o ftp3dd.o ftp3de.o ftp3di.o ftp3dj.o ftpbit.o ftpbnh.o ftpcks.o ftpclb.o ftpclc.o ftpcld.o ftpcle.o ftpcli.o ftpclj.o ftpcll.o ftpclm.o ftpcls.o ftpclu.o ftpclx.o ftpcnb.o ftpcnd.o ftpcne.o ftpcni.o ftpcnj.o ftpcom.o ftpdat.o ftpdef.o ftpdes.o ftpdfl.o ftpgpb.o ftpgpd.o ftpgpe.o ftpgpi.o ftpgpj.o ftphbn.o ftphis.o ftphpr.o ftphtb.o ftpi1b.o ftpini.o ftpkey.o ftpkls.o ftpknd.o ftpkne.o ftpknf.o ftpkng.o ftpknj.o ftpknl.o ftpkns.o ftpkyd.o ftpkye.o ftpkyf.o ftpkyg.o ftpkyj.o ftpkyl.o ftpkys.o ftpkyt.o ftplsw.o ftpmsg.o ftpnul.o ftppnb.o ftppnd.o ftppne.o ftppni.o ftppnj.o ftpprb.o ftpprd.o ftppre.o ftpprh.o ftppri.o ftpprj.o ftppru.o ftprec.o ftprsv.o ftpscl.o ftpssb.o ftpssd.o ftpsse.o ftpssi.o ftpssj.o ftpsvc.o ftptbb.o ftptbh.o ftptbs.o ftptdm.o ftpthp.o ftr2e.o ftr2f.o ftr4i1.o ftr4i2.o ftr4i4.o ftr4r4.o ftr4r8.o ftr8i1.o ftr8i2.o ftr8i4.o ftr8r4.o ftr8r8.o ftrdef.o ftrhdu.o ftrsnm.o ftrwdn.o ftrwup.o fts2c.o ftsdnn.o ftsnul.o ftsrnn.o fttbit.o fttdnn.o fttkey.o fttkyn.o fttnul.o fttrec.o fttrnn.o fttscl.o ftucks.o ftucrd.o ftukyd.o ftukye.o ftukyf.o ftukyg.o ftukyj.o ftukyl.o ftukys.o ftuscc.o ftuscm.o ftvcks.o ftvers.o ftwend.o ftwldp.o ftxiou.o ftxmsg.o ftxypx.o fitsspp.o
+xc -Inolibc -c -w tbagt.x tbapt.x tbbadf.x tbbaln.x tbbcmt.x tbbftp.x tbbnll.x tbbptf.x tbbtyp.x tbbwrd.x tbcadd.x tbcchg.x tbcdef.x tbcdef1.x tbcdes.x tbcfmt.x tbcfnd.x tbcfnd1.x tbcftl.x tbcgt.x tbciga.x tbcigi.x tbcigt.x tbcinf.x tbcnam.x tbcnit.x tbcnum.x tbcpt.x tbcrcd.x tbcscal.x tbctpe.x tbcwcd.x tbdsav.x tbegp.x tbegt.x tbeoff.x tbepp.x tbept.x tbeszt.x tbfag.x tbfanp.x tbfap.x tbfcal.x tbfchp.x tbfckn.x tbfclo.x tbfdef.x tbfdel.x tbferr.x tbffkw.x tbffmt.x tbffnd.x tbfgcm.x tbfgnp.x tbfhdl.x tbfhg.x tbfiga.x tbfopn.x tbfnam.x tbfnew.x tbfnit.x tbfnll.x tbfpcm.x tbfpnp.x tbfpri.x tbfptf.x tbfrcd.x tbfres.x tbfrsi.x tbfscal.x tbfsiz.x tbfsft.x tbftya.x tbftyb.x tbfudf.x tbfwcd.x tbfwer.x tbfwsi.x tbhad.x tbhanp.x tbhcal.x tbhckn.x tbhdel.x tbhfcm.x tbhfkr.x tbhfkw.x tbhgcm.x tbhgnp.x tbhgt.x tbhisc.x tbhkeq.x tbhpcm.x tbhpnp.x tbhpt.x tbhrpr.x tbhwpr.x tbnopen.x tbpset.x tbpsta.x tbrchg.x tbrcmp.x tbrcpy.x tbrcsc.x tbrdel.x tbrgt.x tbrnll.x tbrpt.x tbrsft.x tbrswp.x tbrudf.x tbscol.x tbsirow.x tbsopn.x tbsrow.x tbswer.x tbswer1.x tbtacc.x tbtbod.x tbtchs.x tbtclo.x tbtcpy.x tbtcre.x tbtdel.x tbtext.x tbtflu.x tbtfst.x tbtnam.x tbtopn.x tbtopns.x tbtren.x tbtrsi.x tbtscd.x tbtscu.x tbtsrt.x tbttyp.x tbtwer.x tbtwsi.x tbuopn.x tbxag.x tbxap.x tbxcg.x tbxcp.x tbxncn.x tbxnew.x tbxnll.x tbxoff.x tbxrg.x tbxrp.x tbxscp.x tbxsft.x tbxsiz.x tbxudf.x tbxwnc.x tbxwer.x tbycg.x tbycp.x tbyncn.x tbynew.x tbynll.x tbyoff.x tbyrg.x tbyrp.x tbyscn.x tbyscp.x tbysft.x tbysiz.x tbyudf.x tbywer.x tbywnc.x tbzadd.x tbzcg.x tbzclo.x tbzcol.x tbzcp.x tbzd2t.x tbzgt.x tbzi2d.x tbzi2t.x tbzt2t.x tbzkey.x tbzlin.x tbzmem.x tbznew.x tbznll.x tbzopn.x tbzpt.x tbzrds.x tbzrdx.x tbzsft.x tbzsiz.x tbzsub.x tbztyp.x tbzudf.x tbzwer.x tbzwrt.x tbparse.x tbnparse.x tbfhp_f.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a tbagt.o tbapt.o tbbadf.o tbbaln.o tbbcmt.o tbbftp.o tbbnll.o tbbptf.o tbbtyp.o tbbwrd.o tbcadd.o tbcchg.o tbcdef.o tbcdef1.o tbcdes.o tbcfmt.o tbcfnd.o tbcfnd1.o tbcftl.o tbcgt.o tbciga.o tbcigi.o tbcigt.o tbcinf.o tbcnam.o tbcnit.o tbcnum.o tbcpt.o tbcrcd.o tbcscal.o tbctpe.o tbcwcd.o tbdsav.o tbegp.o tbegt.o tbeoff.o tbepp.o tbept.o tbeszt.o tbfag.o tbfanp.o tbfap.o tbfcal.o tbfchp.o tbfckn.o tbfclo.o tbfdef.o tbfdel.o tbferr.o tbffkw.o tbffmt.o tbffnd.o tbfgcm.o tbfgnp.o tbfhdl.o tbfhg.o tbfiga.o tbfopn.o tbfnam.o tbfnew.o tbfnit.o tbfnll.o tbfpcm.o tbfpnp.o tbfpri.o tbfptf.o tbfrcd.o tbfres.o tbfrsi.o tbfscal.o tbfsiz.o tbfsft.o tbftya.o tbftyb.o tbfudf.o tbfwcd.o tbfwer.o tbfwsi.o tbhad.o tbhanp.o tbhcal.o tbhckn.o tbhdel.o tbhfcm.o tbhfkr.o tbhfkw.o tbhgcm.o tbhgnp.o tbhgt.o tbhisc.o tbhkeq.o tbhpcm.o tbhpnp.o tbhpt.o tbhrpr.o tbhwpr.o tbnopen.o tbpset.o tbpsta.o tbrchg.o tbrcmp.o tbrcpy.o tbrcsc.o tbrdel.o tbrgt.o tbrnll.o tbrpt.o tbrsft.o tbrswp.o tbrudf.o tbscol.o tbsirow.o tbsopn.o tbsrow.o tbswer.o tbswer1.o tbtacc.o tbtbod.o tbtchs.o tbtclo.o tbtcpy.o tbtcre.o tbtdel.o tbtext.o tbtflu.o tbtfst.o tbtnam.o tbtopn.o tbtopns.o tbtren.o tbtrsi.o tbtscd.o tbtscu.o tbtsrt.o tbttyp.o tbtwer.o tbtwsi.o tbuopn.o tbxag.o tbxap.o tbxcg.o tbxcp.o tbxncn.o tbxnew.o tbxnll.o tbxoff.o tbxrg.o tbxrp.o tbxscp.o tbxsft.o tbxsiz.o tbxudf.o tbxwnc.o tbxwer.o tbycg.o tbycp.o tbyncn.o tbynew.o tbynll.o tbyoff.o tbyrg.o tbyrp.o tbyscn.o tbyscp.o tbysft.o tbysiz.o tbyudf.o tbywer.o tbywnc.o tbzadd.o tbzcg.o tbzclo.o tbzcol.o tbzcp.o tbzd2t.o tbzgt.o tbzi2d.o tbzi2t.o tbzt2t.o tbzkey.o tbzlin.o tbzmem.o tbznew.o tbznll.o tbzopn.o tbzpt.o tbzrds.o tbzrdx.o tbzsft.o tbzsiz.o tbzsub.o tbztyp.o tbzudf.o tbzwer.o tbzwrt.o tbparse.o tbnparse.o tbfhp_f.o
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libtbtables.a
+Updated 840 files in libtbtables.a
+check file `libtbtables.a' into `lib$'
+purge directory `lib$'
+--------------------- DATAIO ----------------------
+warning: library `libpkg.a' not found
+xc -c -w addcards.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a addcards.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a
+xc -c -w exobands.x exraster.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a exobands.o exraster.o
+xc -c -w exeps.x exgif.x exiraf.x exmiff.x expgm.x exppm.x exras.x exrgb.x exvicar.x exxwd.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a exeps.o exgif.o exiraf.o exmiff.o expgm.o exppm.o exras.o exrgb.o exvicar.o exxwd.o
+xc -c -w exbltins.x excmap.x exhdr.x expreproc.x exrgb8.x exzscale.x t_export.x zzedbg.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a exbltins.o excmap.o exhdr.o expreproc.o exrgb8.o exzscale.o t_export.o zzedbg.o
+xc -c -w ipdb.x ipfio.x ipobands.x ipproc.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a ipdb.o ipfio.o ipobands.o ipproc.o
+xc -c -w ipcmap.x ipgif.x ipras.x ipxwd.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a ipcmap.o ipgif.o ipras.o ipxwd.o
+xc -c -w fmtdb.x ipbuiltin.x ipinfo.x iplistpix.x ipmkhdr.x t_import.x zzidbg.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a fmtdb.o ipbuiltin.o ipinfo.o iplistpix.o ipmkhdr.o t_import.o zzidbg.o
+xc -c -w putcplx.x putint.x putreal.x wti_wheader.x t_wtextimage.x rt_rheader.x rt_cvtpix.x rt_rwpix.x t_rtextimage.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a putcplx.o putint.o putreal.o wti_wheader.o t_wtextimage.o rt_rheader.o rt_cvtpix.o rt_rwpix.o t_rtextimage.o
+xc -c -w t_reblock.x reblock_file.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a t_reblock.o reblock_file.o
+xc -c -w fits_cards.x fits_params.x fits_read.x fits_rheader.x fits_rimage.x fits_rpixels.x fits_wheader.x fits_wimage.x fits_wpixels.x fits_write.x fits_files.x t_rfits.x t_wfits.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a fits_cards.o fits_params.o fits_read.o fits_rheader.o fits_rimage.o fits_rpixels.o fits_wheader.o fits_wimage.o fits_wpixels.o fits_write.o fits_files.o t_rfits.o t_wfits.o
+xc -c -w t_bintxt.x t_txtbin.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a t_bintxt.o t_txtbin.o
+xc -c -w t_mtexamine.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a t_mtexamine.o
+xc -c -w t_rcardimage.x t_wcardimage.x conversion.x tabs.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a t_rcardimage.o t_wcardimage.o conversion.o tabs.o
+xc -c -w t_t2d.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/dataio/libpkg.a t_t2d.o
+ranlib libpkg.a
+Updated 68 files in libpkg.a
+xc -c -w x_dataio.x
+xc -Nz x_dataio.o libpkg.a -lxtools -o xx_dataio.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_dataio.e' to `bin$x_dataio.e'
+--------------------- IMAGES ----------------------
+check out file `libds.a = /home/steele/git/olebole/iraf-v216/lib/libds.a'
+Subdirectory pkg/images/tv/display is up to date
+xc -c -w wlutil.x wcslab.x wlwcslab.x wlsetup.x wlgrid.x wllabel.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libds.a wlutil.o wcslab.o wlwcslab.o wlsetup.o wlgrid.o wllabel.o
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libds.a
+Updated 6 files in libds.a
+check file `libds.a' into `lib$'
+warning: library `libpkg.a' not found
+xc -c -w epbackground.x epcol.x epcolon.x epconstant.x epdisplay.x epdosurface.x epgcur.x epgdata.x epgsfit.x epimcopy.x epinput.x epline.x epmask.x epmove.x epnoise.x epreplace.x epsearch.x epsetpars.x epstatistics.x epsurface.x t_imedit.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/tv/libpkg.a epbackground.o epcol.o epcolon.o epconstant.o epdisplay.o epdosurface.o epgcur.o epgdata.o epgsfit.o epimcopy.o epinput.o epline.o epmask.o epmove.o epnoise.o epreplace.o epsearch.o epsetpars.o epstatistics.o epsurface.o t_imedit.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/images/tv/libpkg.a
+xc -c -w iecimexam.x iecolon.x iedisplay.x ieeimexam.x iegcur.x iegdata.x iegimage.x iegnfr.x iegraph.x iehimexam.x ieimname.x iejimexam.x ielimexam.x iemw.x ieopenlog.x iepos.x ieprint.x ieqrimexam.x ierimexam.x iesimexam.x iestatistics.x ietimexam.x ievimexam.x stfmeasure.x stfprofile.x t_imexam.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/tv/libpkg.a iecimexam.o iecolon.o iedisplay.o ieeimexam.o iegcur.o iegdata.o iegimage.o iegnfr.o iegraph.o iehimexam.o ieimname.o iejimexam.o ielimexam.o iemw.o ieopenlog.o iepos.o ieprint.o ieqrimexam.o ierimexam.o iesimexam.o iestatistics.o ietimexam.o ievimexam.o stfmeasure.o stfprofile.o t_imexam.o
+xc -c -w mkbmark.x mkcolon.x mkgmarks.x mkgpars.x mkgscur.x mkremove.x mkfind.x mkppars.x mkmag.x mkmark.x mknew.x mkonemark.x mkoutname.x mkshow.x mktext.x mktools.x t_tvmark.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/tv/libpkg.a mkbmark.o mkcolon.o mkgmarks.o mkgpars.o mkgscur.o mkremove.o mkfind.o mkppars.o mkmag.o mkmark.o mknew.o mkonemark.o mkoutname.o mkshow.o mktext.o mktools.o t_tvmark.o
+xc -c -w t_wcslab.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/tv/libpkg.a t_wcslab.o
+ranlib libpkg.a
+Updated 65 files in libpkg.a
+xc -c -w x_tv.x
+xc -Nz x_tv.o libpkg.a -liminterp -lncar -lgks -lds -lxtools -lgsurfit -lnlfit -lcurfit -lllsq -liminterp -o xx_tv.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_tv.e' to `bin$x_tv.e'
+check out file `libimc.a = /home/steele/git/olebole/iraf-v216/lib/libimc.a'
+warning: library `libimc.a' not found
+xc -c -w icaclip.x icaverage.x iccclip.x icgdata.x icgrow.x icmedian.x icmm.x icnmodel.x icomb.x icpclip.x icquad.x icsclip.x icsigma.x icsort.x icstat.x xtimmap.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libimc.a icaclip.o icaverage.o iccclip.o icgdata.o icgrow.o icmedian.o icmm.o icnmodel.o icomb.o icpclip.o icquad.o icsclip.o icsigma.o icsort.o icstat.o xtimmap.o
+ar: creating /home/steele/git/olebole/iraf-v216/lib/../bin/libimc.a
+xc -c -w icemask.x icgscale.x ichdr.x icimstack.x iclog.x icmask.x icombine.x icpmmap.x icrmasks.x icscale.x icsection.x icsetout.x tymax.x xtprocid.x
+ar r /home/steele/git/olebole/iraf-v216/lib/../bin/libimc.a icemask.o icgscale.o ichdr.o icimstack.o iclog.o icmask.o icombine.o icpmmap.o icrmasks.o icscale.o icsection.o icsetout.o tymax.o xtprocid.o
+ranlib /home/steele/git/olebole/iraf-v216/lib/../bin/libimc.a
+Updated 30 files in libimc.a
+check file `libimc.a' into `lib$'
+warning: library `libpkg.a' not found
+xc -c -w ccfunc.x ccstd.x ccxytran.x healpix.x rgstr.x sfconvolve.x sffind.x sftools.x skyctran.x t_ccfind.x t_ccget.x t_ccmap.x t_ccsetwcs.x t_ccstd.x t_cctran.x t_ccxymatch.x t_hpctran.x t_imcctran.x t_skyctran.x t_starfind.x t_wcsctran.x t_wcsedit.x t_wcsreset.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a ccfunc.o ccstd.o ccxytran.o healpix.o rgstr.o sfconvolve.o sffind.o sftools.o skyctran.o t_ccfind.o t_ccget.o t_ccmap.o t_ccsetwcs.o t_ccstd.o t_cctran.o t_ccxymatch.o t_hpctran.o t_imcctran.o t_skyctran.o t_starfind.o t_wcsctran.o t_wcsedit.o t_wcsreset.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a
+Subdirectory pkg/images/imcoords is up to date
+xc -c -w aboxcar.x boxcar.x convolve.x fmd_buf.x fmd_hist.x fmd_maxmin.x fmedian.x fmode.x frmedian.x frmode.x med_buf.x median.x med_sort.x med_utils.x mode.x radcnv.x rmedian.x rmode.x runmed.x t_boxcar.x t_convolve.x t_fmedian.x t_fmode.x t_frmedian.x t_frmode.x t_gauss.x t_gradient.x t_laplace.x t_median.x t_mode.x t_rmedian.x t_rmode.x t_runmed.x xyconvolve.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a aboxcar.o boxcar.o convolve.o fmd_buf.o fmd_hist.o fmd_maxmin.o fmedian.o fmode.o frmedian.o frmode.o med_buf.o median.o med_sort.o med_utils.o mode.o radcnv.o rmedian.o rmode.o runmed.o t_boxcar.o t_convolve.o t_fmedian.o t_fmode.o t_frmedian.o t_frmode.o t_gauss.o t_gradient.o t_laplace.o t_median.o t_mode.o t_rmedian.o t_rmode.o t_runmed.o xyconvolve.o
+Subdirectory pkg/images/imfilter is up to date
+xc -c -w fit1d.x imsurfit.x pixlist.x ranges.x t_imsurfit.x t_lineclean.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a fit1d.o imsurfit.o pixlist.o ranges.o t_imsurfit.o t_lineclean.o
+Subdirectory pkg/images/imfit is up to date
+xc -c -w blkav.x blkrp.x imtrans.x im3dtran.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a blkav.o blkrp.o imtrans.o im3dtran.o
+xc -c -w blkcomp.x shiftlines.x t_blkavg.x t_blkrep.x t_imshift.x t_imtrans.x t_im3dtran.x t_magnify.x t_shiftlines.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a blkcomp.o shiftlines.o t_blkavg.o t_blkrep.o t_imshift.o t_imtrans.o t_im3dtran.o t_magnify.o t_shiftlines.o
+Subdirectory pkg/images/imgeom is up to date
+xc -c -w geofunc.x geotimtran.x geotran.x geoxytran.x t_geomap.x t_geotran.x t_geoxytran.x trinvert.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a geofunc.o geotimtran.o geotran.o geoxytran.o t_geomap.o t_geotran.o t_geoxytran.o trinvert.o
+xc -c -w t_imcombine.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a t_imcombine.o
+xc -c -w rglcolon.x rgldbio.x rgldelete.x rgliscale.x rglpars.x rglplot.x rglregions.x rglscale.x rglshow.x rglsqfit.x rgltools.x t_linmatch.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a rglcolon.o rgldbio.o rgldelete.o rgliscale.o rglpars.o rglplot.o rglregions.o rglscale.o rglshow.o rglsqfit.o rgltools.o t_linmatch.o
+xc -c -w t_imctroid.x t_xyxymatch.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a t_imctroid.o t_xyxymatch.o
+xc -c -w rgpbckgrd.x rgpcolon.x rgpconvolve.x rgpisfm.x rgpfft.x rgpfilter.x rgppars.x rgpregions.x rgpsfm.x rgpshow.x rgptools.x t_psfmatch.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a rgpbckgrd.o rgpcolon.o rgpconvolve.o rgpisfm.o rgpfft.o rgpfilter.o rgppars.o rgpregions.o rgpsfm.o rgpshow.o rgptools.o t_psfmatch.o
+xc -c -w rgmatchio.x t_skyxymatch.x t_wcscopy.x t_wcsxymatch.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a rgmatchio.o t_skyxymatch.o t_wcscopy.o t_wcsxymatch.o
+xc -c -w rgxbckgrd.x rgxcolon.x rgxcorr.x rgxdbio.x rgxfft.x rgxfit.x rgxgpars.x rgxicorr.x rgximshift.x rgxplot.x rgxppars.x rgxregions.x rgxshow.x rgxtools.x rgxtransform.x t_xregister.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a rgxbckgrd.o rgxcolon.o rgxcorr.o rgxdbio.o rgxfft.o rgxfit.o rgxgpars.o rgxicorr.o rgximshift.o rgxplot.o rgxppars.o rgxregions.o rgxshow.o rgxtools.o rgxtransform.o t_xregister.o
+Subdirectory pkg/images/immatch/src is up to date
+Subdirectory pkg/images/immatch is up to date
+xc -c -w imaadd.x imadiv.x imamax.x imamin.x imamul.x imanl.x imasub.x imfuncs.x imjoin.x imrep.x imsum.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a imaadd.o imadiv.o imamax.o imamin.o imamul.o imanl.o imasub.o imfuncs.o imjoin.o imrep.o imsum.o
+xc -c -w getcmd.x gettok.x hedit.x imdelete.x imexpr.x iegsym.x imfunction.x imgets.x imheader.x imhistogram.x imminmax.x listpixels.x minmax.x nhedit.x t_imstat.x t_sections.x hselect.x t_imarith.x t_imaxes.x t_chpix.x t_imcopy.x t_imdivide.x t_imjoin.x t_imrename.x t_imreplace.x t_imslice.x t_imsum.x t_imstack.x t_imtile.x t_minmax.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a getcmd.o gettok.o hedit.o imdelete.o imexpr.o iegsym.o imfunction.o imgets.o imheader.o imhistogram.o imminmax.o listpixels.o minmax.o nhedit.o t_imstat.o t_sections.o hselect.o t_imarith.o t_imaxes.o t_chpix.o t_imcopy.o t_imdivide.o t_imjoin.o t_imrename.o t_imreplace.o t_imslice.o t_imsum.o t_imstack.o t_imtile.o t_minmax.o
+Subdirectory pkg/images/imutil is up to date
+xc -c -w imcopy.x rgbckgrd.x rgcontour.x rgfft.x liststr.x rgwrdstr.x rgccwcs.x rgsort.x rglltran.x rgxymatch.x rgmerge.x rgtransform.x xymatch.x geofit.x geogmap.x geograph.x geoset.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/images/libpkg.a imcopy.o rgbckgrd.o rgcontour.o rgfft.o liststr.o rgwrdstr.o rgccwcs.o rgsort.o rglltran.o rgxymatch.o rgmerge.o rgtransform.o xymatch.o geofit.o geogmap.o geograph.o geoset.o
+ranlib libpkg.a
+Updated 189 files in libpkg.a
+xc -c -w x_images.x
+xc -Nz x_images.o libpkg.a -limc -lxtools -lcurfit -lsurfit -lgsurfit -liminterp -lnlfit -lslalib -lncar -lgks -o xx_images.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_images.e' to `bin$x_images.e'
+--------------------- LISTS -----------------------
+warning: library `libpkg.a' not found
+xc -c -w columns.x lintran.x rgcursor.x rimcursor.x table.x tokens.x unique.x words.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/lists/libpkg.a columns.o lintran.o rgcursor.o rimcursor.o table.o tokens.o unique.o words.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/lists/libpkg.a
+ranlib libpkg.a
+Updated 8 files in libpkg.a
+xc -c -w x_lists.x
+xc -Nz x_lists.o libpkg.a -lxtools -lds -o xx_lists.e
+move `xx_lists.e' to `bin$x_lists.e'
+--------------------- OBSOLETE --------------------
+warning: library `libpkg.a' not found
+xc -c -w fixcol.x fixline.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/obsolete/libpkg.a fixcol.o fixline.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/obsolete/libpkg.a
+xc -c -w fits_cards.x fits_params.x fits_read.x fits_rheader.x fits_rimage.x fits_rpixels.x fits_wheader.x fits_wimage.x fits_wpixels.x fits_write.x ranges.x t_rfits.x t_wfits.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/obsolete/libpkg.a fits_cards.o fits_params.o fits_read.o fits_rheader.o fits_rimage.o fits_rpixels.o fits_wheader.o fits_wimage.o fits_wpixels.o fits_write.o ranges.o t_rfits.o t_wfits.o
+xc -c -w icaclip.x icaverage.x iccclip.x icgdata.x icgrow.x icmedian.x icmm.x icombine.x icpclip.x icsclip.x icsigma.x icsort.x icstat.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/obsolete/libpkg.a icaclip.o icaverage.o iccclip.o icgdata.o icgrow.o icmedian.o icmm.o icombine.o icpclip.o icsclip.o icsigma.o icsort.o icstat.o
+xc -c -w icimstack.x iclog.x icmask.x icrmasks.x icscale.x icsection.x icsetout.x t_imcombine.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/obsolete/libpkg.a icimstack.o iclog.o icmask.o icrmasks.o icscale.o icsection.o icsetout.o t_imcombine.o
+xc -c -w t_fixpix.x t_imtitle.x t_mkhgm.x t_oimstat.x t_radplt.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/obsolete/libpkg.a t_fixpix.o t_imtitle.o t_mkhgm.o t_oimstat.o t_radplt.o
+ranlib libpkg.a
+Updated 41 files in libpkg.a
+xc -c -w x_obsolete.x
+xc -Nz x_obsolete.o libpkg.a -lxtools -o xx_obsolete.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_obsolete.e' to `bin$x_obsolete.e'
+--------------------- PLOT ------------------------
+warning: library `libpkg.a' not found
+xc -c -w calchgms.x crtulut.x drawgraph.x drawgrey.x mapimage.x minmax.x plothgms.x plotimage.x setxform.x sigl2.x t_crtpict.x tweakndc.x xformimage.x xyscale.x zscale.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/plot/libpkg.a calchgms.o crtulut.o drawgraph.o drawgrey.o mapimage.o minmax.o plothgms.o plotimage.o setxform.o sigl2.o t_crtpict.o tweakndc.o xformimage.o xyscale.o zscale.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/plot/libpkg.a
+xc -c -w gdevices.x getdata.x hgpline.x improject.x impprofile.x impstatus.x initmarker.x perim.x phistogram.x phminmax.x pltwcs.x t_contour.x t_gkidir.x t_gkimos.x t_gkixt.x t_graph.x t_hafton.x t_implot.x t_pcol.x t_pcols.x t_pradprof.x t_prow.x t_prows.x t_pvector.x t_surface.x t_velvect.x vport.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/plot/libpkg.a gdevices.o getdata.o hgpline.o improject.o impprofile.o impstatus.o initmarker.o perim.o phistogram.o phminmax.o pltwcs.o t_contour.o t_gkidir.o t_gkimos.o t_gkixt.o t_graph.o t_hafton.o t_implot.o t_pcol.o t_pcols.o t_pradprof.o t_prow.o t_prows.o t_pvector.o t_surface.o t_velvect.o vport.o
+ranlib libpkg.a
+Updated 42 files in libpkg.a
+xc -c -w x_plot.x
+xc -Nz x_plot.o libpkg.a -lncar -lgks -lxtools -liminterp -o xx_plot.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+xc -c -w x_ncar.x
+xc -Nz x_ncar.o libpkg.a -lncar -lgks -lxtools -o xx_ncar.e
+move `xx_plot.e' to `bin$x_plot.e'
+move `xx_ncar.e' to `bin$x_ncar.e'
+--------------------- PROTO -----------------------
+warning: library `libpkg.a' not found
+xc -c -w t_rgbdither.x t_rgbsun.x t_rgbto8.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/color/src/libpkg.a t_rgbdither.o t_rgbsun.o t_rgbto8.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/proto/color/src/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w x_color.x
+xc -Nz x_color.o libpkg.a -o xx_color.e
+warning: library `libpkg.a' not found
+xc -c -w t_im3dtran.x txyz3.x txzy3.x tyxz3.x tyzx3.x tzxy3.x tzyx3.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/vol/src/libpkg.a t_im3dtran.o txyz3.o txzy3.o tyxz3.o tyzx3.o tzxy3.o tzyx3.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/proto/vol/src/libpkg.a
+xc -c -w t_i2sun.x trulut.x trsetup.x cnvimage.x sigln.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/vol/src/libpkg.a t_i2sun.o trulut.o trsetup.o cnvimage.o sigln.o
+xc -c -w t_pvol.x vproject.x vmatrix.x vtransmit.x vgetincr.x pv_gmem.x t_imjoin.x imjoin.x imminmax.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/vol/src/libpkg.a t_pvol.o vproject.o vmatrix.o vtransmit.o vgetincr.o pv_gmem.o t_imjoin.o imjoin.o imminmax.o
+ranlib libpkg.a
+Updated 21 files in libpkg.a
+xc -c -w x_vol.x
+xc -Nz x_vol.o libpkg.a -lxtools -o xx_vol.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+warning: library `libpkg.a' not found
+xc -c -w t_mimstat.x mstcache.x t_rskysub.x rsstats.x rsmmean.x rsmean.x rsscache.x rsreject.x rsfnames.x mimstat.x mptools.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/libpkg.a t_mimstat.o mstcache.o t_rskysub.o rsstats.o rsmmean.o rsmean.o rsscache.o rsreject.o rsfnames.o mimstat.o mptools.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/proto/libpkg.a
+xc -c -w t_mskexpr.x memkmask.x t_mskregions.x mesetreg.x mesetexpr.x meregmask.x peregfuncs.x peregufcn.x megeom.x meregfuncs.x mskexpand.x megsym.x gettok.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/libpkg.a t_mskexpr.o memkmask.o t_mskregions.o mesetreg.o mesetexpr.o meregmask.o peregfuncs.o peregufcn.o megeom.o meregfuncs.o mskexpand.o megsym.o gettok.o
+xc -c -w epix.x fields.x interp.x intrp.f t_binfil.x t_bscale.x t_fixpix.x t_hfix.x t_imext.x t_imcntr.x t_imscale.x t_joinlines.x t_mask2text.x t_mkglbhdr.x t_suntoiraf.x t_text2mask.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/proto/libpkg.a epix.o fields.o interp.o intrp.o t_binfil.o t_bscale.o t_fixpix.o t_hfix.o t_imext.o t_imcntr.o t_imscale.o t_joinlines.o t_mask2text.o t_mkglbhdr.o t_suntoiraf.o t_text2mask.o
+ranlib libpkg.a
+Updated 40 files in libpkg.a
+xc -c -w x_proto.x
+xc -Nz x_proto.o libpkg.a -lxtools -liminterp -o xx_proto.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_color.e' to `bin$x_color.e'
+move `xx_vol.e' to `bin$x_vol.e'
+move `xx_proto.e' to `bin$x_proto.e'
+--------------------- UTILITIES -------------------
+warning: library `libpkg.a' not found
+xc -c -w tscopy.x tcpyone.x tcpyrow.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tscopy.o tcpyone.o tcpyrow.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a
+xc -c -w txtcptb.x txtcptc.x txtcptd.x txtcpti.x txtcptr.x txtcpts.x txthvb.x txthvc.x txthvd.x txthvi.x txthvr.x txthvs.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a txtcptb.o txtcptc.o txtcptd.o txtcpti.o txtcptr.o txtcpts.o txthvb.o txthvc.o txthvd.o txthvi.o txthvr.o txthvs.o
+xc -c -w txtable.x txtone.x txtcpy.x txtcpyco.x txtcpysc.x txthc.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a txtable.o txtone.o txtcpy.o txtcpyco.o txtcpysc.o txthc.o
+xc -c -w tximage.x txione.x txicpy.x txihc.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tximage.o txione.o txicpy.o txihc.o
+xc -c -w tirowsb.x tirowsc.x tirowsd.x tirowsi.x tirowsr.x tirowss.x tichb.x tichc.x tichd.x tichi.x tichr.x tichs.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tirowsb.o tirowsc.o tirowsd.o tirowsi.o tirowsr.o tirowss.o tichb.o tichc.o tichd.o tichi.o tichr.o tichs.o
+xc -c -w ticc.x ticopy.x tiheader.x tinew.x tinsert.x tisetc.x titable.x tiupdate.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a ticc.o ticopy.o tiheader.o tinew.o tinsert.o tisetc.o titable.o tiupdate.o
+xc -c -w tmcp1s.x tmcp1i.x tmcp1r.x tmcp1d.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tmcp1s.o tmcp1i.o tmcp1r.o tmcp1d.o
+xc -c -w tiimage.x tmcopy.x tmhc.x tmheader.x tmloop.x tmmode.x tmscan.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tiimage.o tmcopy.o tmhc.o tmheader.o tmloop.o tmmode.o tmscan.o
+Subdirectory pkg/utilities/nttools/threed is up to date
+xc -c -w odget.x odmap.x odopep.x odpare.x odput.x odsetn.x odunmp.x odwcsn.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a odget.o odmap.o odopep.o odpare.o odput.o odsetn.o odunmp.o odwcsn.o
+xc -c -w spchag.x spdise.x spmapt.x sprote.x spstry.x sptras.x spw2ld.x spwcss.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a spchag.o spdise.o spmapt.o sprote.o spstry.o sptras.o spw2ld.o spwcss.o
+xc -c -w wlutil.x wcslab.x wlwcslab.x wlsetup.x wlgrid.x wllabel.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a wlutil.o wcslab.o wlwcslab.o wlsetup.o wlgrid.o wllabel.o
+xc -c -w changt.x checkdim.x cif.x clgnone.x copyimg.x errxit.x fbuild.x fparse.x grmimy.x isblank.x lubksb.f lubksd.f ludcmd.x ludcmp.x postexit.x savgol.x sbuf.x sgcone.x similar.x strjust.x stxgetcoord.x tpbreak.x tpclose.x tpcount.x tpfetch.x tpgroup.x tpimtype.x tpopen.x tpparse.x vexcompile.x vexeval.x vexfree.x vexfunc.x vexstack.x word.x xtwcs.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a changt.o checkdim.o cif.o clgnone.o copyimg.o errxit.o fbuild.o fparse.o grmimy.o isblank.o lubksb.o lubksd.o ludcmd.o ludcmp.o postexit.o savgol.o sbuf.o sgcone.o similar.o strjust.o stxgetcoord.o tpbreak.o tpclose.o tpcount.o tpfetch.o tpgroup.o tpimtype.o tpopen.o tpparse.o vexcompile.o vexeval.o vexfree.o vexfunc.o vexstack.o word.o xtwcs.o
+xc -c -w taextract.x tainsert.x taincr.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a taextract.o tainsert.o taincr.o
+xc -c -w addslash.x datatype.x filetype.x getimghdr.x gettabdat.x gettabhdr.x isdouble.x keypar.x keytab.x parkey.x partab.x putimghdr.x puttabdat.x puttabhdr.x tabaccess.x tabhdrtyp.x tabkey.x tabpar.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a addslash.o datatype.o filetype.o getimghdr.o gettabdat.o gettabhdr.o isdouble.o keypar.o keytab.o parkey.o partab.o putimghdr.o puttabdat.o puttabhdr.o tabaccess.o tabhdrtyp.o tabkey.o tabpar.o
+xc -c -w gtdelete.x gtdodel.x gthinfo.x gtplot.x gtrdxycol.x gtupdate.x gtwrdata.x gtwrhead.x t_gtedit.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a gtdelete.o gtdodel.o gthinfo.o gtplot.o gtrdxycol.o gtupdate.o gtwrdata.o gtwrhead.o t_gtedit.o
+xc -c -w imtab.x itbwcs.x tabim.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a imtab.o itbwcs.o tabim.o
+xc -c -w expr.x keyselect.x keyword.x list.x tab.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a expr.o keyselect.o keyword.o list.o tab.o
+xc -c -w allcols.x allrows.x ftnexpr.x gettabcol.x inquotes.x invert.x mjd.x newcolnam.x reorder.x select.x tabvar.x tbfile.x tuopen.x tbleval.x tblsearch.x tblsort.x tblterm.x tctexp.x tldtype.x unique.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a allcols.o allrows.o ftnexpr.o gettabcol.o inquotes.o invert.o mjd.o newcolnam.o reorder.o select.o tabvar.o tbfile.o tuopen.o tbleval.o tblsearch.o tblsort.o tblterm.o tctexp.o tldtype.o unique.o
+xc -c -w tcalc.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tcalc.o
+xc -c -w tchcol.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tchcol.o
+xc -c -w tchsize.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tchsize.o
+xc -c -w cmdsplit.x tcheck.x wrtcheck.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a cmdsplit.o tcheck.o wrtcheck.o
+xc -c -w iswholetab.x tcopy.x tdelete.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a iswholetab.o tcopy.o tdelete.o
+xc -c -w tcreate.x gnextl.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tcreate.o gnextl.o
+xc -c -w tbldiff.x tdiffer.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tbldiff.o tdiffer.o
+xc -c -w addch.x addstr.x bindstruct.x box.x clear.x clearok.x clrtobot.x clrtoeol.x delch.x deleteln.x delwin.x echo.x endwin.x erase.x freescreen.x getch.x getscreen.x getstr.x getstruct.x getyx.x hidewin.x inch.x initscr.x insch.x insertln.x leaveok.x move.x mvwin.x mvword.x newwin.x putscreen.x refresh.x savewin.x scrollok.x showwin.x standout.x wdimen.x winstat.x wslide.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a addch.o addstr.o bindstruct.o box.o clear.o clearok.o clrtobot.o clrtoeol.o delch.o deleteln.o delwin.o echo.o endwin.o erase.o freescreen.o getch.o getscreen.o getstr.o getstruct.o getyx.o hidewin.o inch.o initscr.o insch.o insertln.o leaveok.o move.o mvwin.o mvword.o newwin.o putscreen.o refresh.o savewin.o scrollok.o showwin.o standout.o wdimen.o winstat.o wslide.o
+xc -c -w fmbegin.x fmcheck.x fmend.x fmhelp.x fmgetform.x fmmkform.x fmprompt.x fmredraw.x formfn.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a fmbegin.o fmcheck.o fmend.o fmhelp.o fmgetform.o fmmkform.o fmprompt.o fmredraw.o formfn.o
+xc -c -w kbegin.x kcompile.x kconvert.x kdoline.x kend.x kget.x khelp.x kpushbk.x psbegin.x psbeep.x psend.x psfill.x psheight.x psintersect.x psscreen.x pssendcap.x pssetcur.x psslide.x pssynch.x pswidth.x pswrite.x pswrtcells.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a kbegin.o kcompile.o kconvert.o kdoline.o kend.o kget.o khelp.o kpushbk.o psbegin.o psbeep.o psend.o psfill.o psheight.o psintersect.o psscreen.o pssendcap.o pssetcur.o psslide.o pssynch.o pswidth.o pswrite.o pswrtcells.o
+Subdirectory pkg/utilities/nttools/tedit/display is up to date
+xc -c -w bell.x command.x edit.x field.x paste.x prompt.x screen.x substitute.x table.x tedit.x tread.x window.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a bell.o command.o edit.o field.o paste.o prompt.o screen.o substitute.o table.o tedit.o tread.o window.o
+xc -c -w dbgrules.x lexer.x mkrules.x movelem.x movtbrow.x parser.x pushstack.x span.x texpand.x userules.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a dbgrules.o lexer.o mkrules.o movelem.o movtbrow.o parser.o pushstack.o span.o texpand.o userules.o
+xc -c -w t_thedit.x t_thselect.x tkw.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a t_thedit.o t_thselect.o tkw.o
+xc -c -w tinfo.x tlcol.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tinfo.o tlcol.o
+xc -c -w tintegrate.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tintegrate.o
+xc -c -w closeiotab.x dojoin.x freetol.x isnumber.x issame.x mkjoin.x openitab.x openotab.x readtol.x removejcol.x renamecol.x spptype.x tjoin.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a closeiotab.o dojoin.o freetol.o isnumber.o issame.o mkjoin.o openitab.o openotab.o readtol.o removejcol.o renamecol.o spptype.o tjoin.o
+xc -c -w tlinear.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tlinear.o
+xc -c -w getmatch.x getnorm.x getweight.x infomatch.x putmatch.x rowname.x setindex.x sortclose.x sortdist.x tmatch.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a getmatch.o getnorm.o getweight.o infomatch.o putmatch.o rowname.o setindex.o sortclose.o sortdist.o tmatch.o
+xc -c -w tmerge.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tmerge.o
+xc -c -w tdump.x tprint.x tprhtml.x tprplain.x tprlatex.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tdump.o tprint.o tprhtml.o tprplain.o tprlatex.o
+xc -c -w tproduct.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tproduct.o
+xc -c -w nextuniq.x tproject.x wproject.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a nextuniq.o tproject.o wproject.o
+xc -c -w doquery.x tquery.x wquery.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a doquery.o tquery.o wquery.o
+xc -c -w tnamcls.x tnamgio.x tnaminit.x trebin.x tucspl.f tudcol.x tugcol.x tugetput.x tuhunt.f tuiep3.f tuifit.x tuinterp.x tuiset.x tuispl.f tuival.x tutrim.x tuxget.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tnamcls.o tnamgio.o tnaminit.o trebin.o tucspl.o tudcol.o tugcol.o tugetput.o tuhunt.o tuiep3.o tuifit.o tuinterp.o tuiset.o tuispl.o tuival.o tutrim.o tuxget.o
+xc -c -w subset.x tselect.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a subset.o tselect.o
+xc -c -w tblextsort.x tblintsort.x tblmaxrow.x tsort.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tblextsort.o tblintsort.o tblmaxrow.o tsort.o
+xc -c -w thistogram.x thoptions.x tstat.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a thistogram.o thoptions.o tstat.o
+xc -c -w ttranspose.x ttrflip.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a ttranspose.o ttrflip.o
+xc -c -w abrev.x convertcol.x factor.x parseunits.x tuniterr.x tunits.x unhash.x units.x unstr.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a abrev.o convertcol.o factor.o parseunits.o tuniterr.o tunits.o unhash.o units.o unstr.o
+xc -c -w tupar.x tuinstr.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/nttools/libpkg.a tupar.o tuinstr.o
+ranlib libpkg.a
+Updated 359 files in libpkg.a
+xc -c -w x_nttools.x
+xc -Nz x_nttools.o libpkg.a -lxtools -ltbtables -o xx_nttools.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_nttools.e' to `bin$x_nttools.e'
+Subdirectory pkg/utilities/nttools/threed/tscopy is up to date
+Subdirectory pkg/utilities/nttools/threed/txtable/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/txtable is up to date
+Subdirectory pkg/utilities/nttools/threed/tximage is up to date
+Subdirectory pkg/utilities/nttools/threed/titable/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/titable is up to date
+Subdirectory pkg/utilities/nttools/threed/tiimage/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/tiimage is up to date
+Subdirectory pkg/utilities/nttools/threed is up to date
+Subdirectory pkg/utilities/nttools/stxtools/od is up to date
+Subdirectory pkg/utilities/nttools/stxtools/sp_util is up to date
+Subdirectory pkg/utilities/nttools/stxtools/wcslab is up to date
+Subdirectory pkg/utilities/nttools/stxtools is up to date
+Subdirectory pkg/utilities/nttools/atools is up to date
+Subdirectory pkg/utilities/nttools/copyone is up to date
+Subdirectory pkg/utilities/nttools/gtedit is up to date
+Subdirectory pkg/utilities/nttools/imtab is up to date
+Subdirectory pkg/utilities/nttools/keyselect is up to date
+Subdirectory pkg/utilities/nttools/lib is up to date
+Subdirectory pkg/utilities/nttools/tcalc is up to date
+Subdirectory pkg/utilities/nttools/tchcol is up to date
+Subdirectory pkg/utilities/nttools/tchsize is up to date
+Subdirectory pkg/utilities/nttools/tcheck is up to date
+Subdirectory pkg/utilities/nttools/tcopy is up to date
+Subdirectory pkg/utilities/nttools/tcreate is up to date
+Subdirectory pkg/utilities/nttools/tdiffer is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/curses is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/forms is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/screen is up to date
+Subdirectory pkg/utilities/nttools/tedit/display is up to date
+Subdirectory pkg/utilities/nttools/tedit is up to date
+Subdirectory pkg/utilities/nttools/texpand is up to date
+Subdirectory pkg/utilities/nttools/thedit is up to date
+Subdirectory pkg/utilities/nttools/tinfo is up to date
+Subdirectory pkg/utilities/nttools/tintegrate is up to date
+Subdirectory pkg/utilities/nttools/tjoin is up to date
+Subdirectory pkg/utilities/nttools/tlinear is up to date
+Subdirectory pkg/utilities/nttools/tmatch is up to date
+Subdirectory pkg/utilities/nttools/tmerge is up to date
+Subdirectory pkg/utilities/nttools/tprint is up to date
+Subdirectory pkg/utilities/nttools/tproduct is up to date
+Subdirectory pkg/utilities/nttools/tproject is up to date
+Subdirectory pkg/utilities/nttools/tquery is up to date
+Subdirectory pkg/utilities/nttools/trebin is up to date
+Subdirectory pkg/utilities/nttools/tselect is up to date
+Subdirectory pkg/utilities/nttools/tsort is up to date
+Subdirectory pkg/utilities/nttools/tstat is up to date
+Subdirectory pkg/utilities/nttools/ttranspose is up to date
+Subdirectory pkg/utilities/nttools/tunits is up to date
+Subdirectory pkg/utilities/nttools/tupar is up to date
+Library libpkg.a is up to date
+Object x_nttools.o is up to date
+xc -Nz x_nttools.o libpkg.a -lxtools -ltbtables -o xx_nttools.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+warning: library `libpkg.a' not found
+xc -c -w curfit.x decod_tablst.x t_lcase.x pfregres.f pffctn.x t_split.x t_curfit.x t_detab.x t_entab.x t_polyfit.x t_surfit.x t_translit.x t_ucase.x t_urand.x
+ar r /home/steele/git/olebole/iraf-v216/pkg/utilities/libpkg.a curfit.o decod_tablst.o t_lcase.o pfregres.o pffctn.o t_split.o t_curfit.o t_detab.o t_entab.o t_polyfit.o t_surfit.o t_translit.o t_ucase.o t_urand.o
+ar: creating /home/steele/git/olebole/iraf-v216/pkg/utilities/libpkg.a
+ranlib libpkg.a
+Updated 14 files in libpkg.a
+xc -c -w x_utilities.x
+xc -Nz x_utilities.o libpkg.a -lxtools -lcurfit -lbev -lgsurfit -o xx_utilities.e
+/home/steele/git/olebole/iraf-v216/bin.linux64/libVO.a(votget.o): In function `votableHandler':
+/home/steele/git/olebole/iraf-v216/vendor/voclient/voapps/votget.c:342: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+move `xx_utilities.e' to `bin$x_utilities.e'
+purge directory `bin$'
++
++
+!touch unix/hlib/utime
+====================== (done) ===========================
+!date
+Tue Oct 31 15:02:49 PDT 2017

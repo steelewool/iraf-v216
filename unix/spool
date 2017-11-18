@@ -1,0 +1,1970 @@
++ sh -x setarch.sh
++ ls -d as
++ [ as = as ]
++ rm -rf as
++ ln -s as.linux64 as
++ ls -d bin
++ [ bin = bin ]
++ rm -rf bin
++ ln -s bin.linux64 bin
++ echo ----------------------- OS -----------------------------
+----------------------- OS -----------------------------
++ echo +
++
++ echo +
++
++ cd os
++ sh -x mkpkg.sh
++ echo --------------------- OS ----------------------
+--------------------- OS ----------------------
++ zsvjmp=../as/zsvjmp.s
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS -Wall ../as/zsvjmp.s gmttolst.c irafpath.c prwait.c zalloc.c zawset.c zcall.c zdojmp.c zfacss.c zfaloc.c zfchdr.c zfdele.c zfgcwd.c zfinfo.c zfiobf.c zfioks.c zfiolp.c zfiomt.c zfiond.c zfiopl.c zfiopr.c zfiosf.c zfiotx.c zfioty.c zflink.c zfmkcp.c zfmkdr.c zfnbrk.c zfpath.c zfpoll.c zfprot.c zfrmdr.c zfrnam.c zfsubd.c zfunc.c zfutim.c zfxdir.c zgcmdl.c zghost.c zglobl.c zgmtco.c zgtenv.c zgtime.c zgtpid.c zintpr.c zlocpr.c zlocva.c zmain.c zmaloc.c zmfree.c zopdir.c zopdpr.c zoscmd.c zpanic.c zraloc.c zshlib.c zwmsec.c zxwhen.c zzdbg.c zzepro.c zzexit.c zzpstr.c zzsetk.c zzstrt.c alloc.c getproc.c
+zfiobf.c: In function ‘vm_connect’:
+zfiobf.c:783:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long int’ [-Wformat=]
+   fprintf (stderr, "fd=%d\n", fd);
+                        ~^
+                        %ld
+In file included from /usr/include/unistd.h:1167:0,
+                 from zfiobf.c:8:
+In function ‘read’,
+    inlined from ‘vm_access’ at zfiobf.c:496:6:
+/usr/include/x86_64-linux-gnu/bits/unistd.h:42:9: warning: call to ‘__read_chk_warn’ declared with attribute warning: read called with bigger length than size of the destination buffer
+  return __read_chk_warn (__fd, __buf, __nbytes, __bos0 (__buf));
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘read’,
+    inlined from ‘vm_delete’ at zfiobf.c:566:6:
+/usr/include/x86_64-linux-gnu/bits/unistd.h:42:9: warning: call to ‘__read_chk_warn’ declared with attribute warning: read called with bigger length than size of the destination buffer
+  return __read_chk_warn (__fd, __buf, __nbytes, __bos0 (__buf));
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfioks.c: In function ‘zopnks_’:
+zfioks.c:452:49: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      fd = open ("/dev/null", 0);     close(0);  dup(fd);  close(fd);
+                                                 ^~~~~~~
+zfioks.c:453:49: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      fd = open ("/dev/console", 1);  close(1);  dup(fd);  close(fd);
+                                                 ^~~~~~~
+zfioks.c:454:49: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      fd = open ("/dev/console", 2);  close(2);  dup(fd);  close(fd);
+                                                 ^~~~~~~
+zfioks.c:792:19: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (0);  dup (pout[0]);  close (pout[0]);
+                   ^~~~~~~~~~~~~
+zfioks.c:793:19: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (1);  dup (pin[1]);   close (pin[1]);
+                   ^~~~~~~~~~~~
+zfioks.c: In function ‘ks_getpass’:
+zfioks.c:1925:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (tty, prompt, strlen(prompt));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfioks.c:1944:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (tty, "\n", 1);
+  ^~~~~~~~~~~~~~~~~~~~
+zfiomt.c: In function ‘zzclmt_’:
+zfiomt.c:592:7: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+       write (fd, bufp, bufsize);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c: In function ‘zopcpr_’:
+zfiopr.c:130:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      close (0);  dup (pout[0]);  close (pout[0]);
+                  ^~~~~~~~~~~~~
+zfiopr.c:131:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      close (1);  dup (pin[1]);   close (pin[1]);
+                  ^~~~~~~~~~~~
+zfiopr.c: In function ‘zardpr_’:
+zfiopr.c:284:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_in, (char *)&temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:296:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_in, (char *)&temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:333:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, (char *)buf, op - (char *)buf);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:337:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_in, (char *)buf, op - (char *)buf);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c: In function ‘zawrpr_’:
+zfiopr.c:395:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (fd, &temp, 2);
+  ^~~~~~~~~~~~~~~~~~~~
+zfiopr.c:397:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_out, &temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:399:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (fd, &temp, 2);
+  ^~~~~~~~~~~~~~~~~~~~
+zfiopr.c:401:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_out, &temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:407:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_out, (char *)buf, (int)*nbytes);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:421:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, (char *)buf, (int)*nbytes);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zgtime.c: In function ‘zgtime_’:
+zgtime.c:28:12: warning: variable ‘clkfreq’ set but not used [-Wunused-but-set-variable]
+  long cpu, clkfreq;
+            ^~~~~~~
+zmain.c: In function ‘main’:
+zmain.c:137:3: warning: ignoring return value of ‘freopen’, declared with attribute warn_unused_result [-Wunused-result]
+   freopen ("/dev/null", "r", stdin);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zoscmd.c: In function ‘zoscmd_’:
+zoscmd.c:91:14: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+   close (0); dup (fd); close (fd);
+              ^~~~~~~~
+zoscmd.c:99:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (1); dup (fd); close (fd);
+                  ^~~~~~~~
+zoscmd.c:108:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (2); dup (1);
+                  ^~~~~~~
+zoscmd.c:114:15: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+    close (2); dup (fd); close (fd);
+               ^~~~~~~~
+zpanic.c: In function ‘zpanic_’:
+zpanic.c:45:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (2, msg, strlen(msg));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+zpanic.c:53:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write (fd, &msg[1], strlen(&msg[1]));
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zzpstr.c: In function ‘zzpstr_’:
+zzpstr.c:77:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, buf, op-buf);
+      ^~~~~~~~~~~~~~~~~~~~~~
+zzpstr.c:84:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, buf, op-buf);
+      ^~~~~~~~~~~~~~~~~~~~~~
+zzpstr.c:88:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, "\n", 1);
+      ^~~~~~~~~~~~~~~~~~
+getproc.c: In function ‘uid_executing’:
+getproc.c:24:29: warning: ‘%s’ directive writing up to 255 bytes into a region of size 250 [-Wformat-overflow=]
+      sprintf (fname, "/proc/%s", direntp->d_name);
+                             ^~
+In file included from /usr/include/stdio.h:862:0,
+                 from getproc.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 7 and 262 bytes into a destination of size 256
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc -Wall alloc.o getproc.o -o alloc.e
++ chmod 4755 alloc.e
++ mv -f alloc.e ../hlib
++ rm -f alloc.o zmain.o
++ ar r libos.a getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
+ar: creating libos.a
++ ranlib libos.a
++ rm getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
++ mv -f libos.a ../bin
++ echo ----------------------- F2C ----------------------------
+----------------------- F2C ----------------------------
++ echo +
++
++ echo +
++
++ cd f2c
++ sh -x mkpkg.sh
++ echo ----------------------- F2C ---------------------------
+----------------------- F2C ---------------------------
++ cd src
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/olebole/iraf-v216/unix/f2c/src'
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS main.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS init.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS gram.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS lex.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS proc.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS equiv.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS data.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS format.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS expr.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS exec.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS intr.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS io.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS misc.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS error.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS mem.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS names.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS output.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS p1output.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pread.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS put.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS putpcc.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS vax.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS formatdata.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS parse_args.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS niceprintf.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS cds.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS sysdep.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS version.c
+cc  main.o init.o gram.o lex.o proc.o equiv.o data.o format.o expr.o exec.o intr.o io.o misc.o error.o mem.o names.o output.o p1output.o pread.o put.o putpcc.o vax.o formatdata.o parse_args.o niceprintf.o cds.o sysdep.o version.o  -o f2c
+make[1]: Leaving directory '/home/steele/git/olebole/iraf-v216/unix/f2c/src'
++ mv f2c ../../bin/f2c.e
++ rm cds.o data.o equiv.o error.o exec.o expr.o format.o formatdata.o gram.o init.o intr.o io.o lex.o main.o mem.o misc.o names.o niceprintf.o output.o p1output.o parse_args.o pread.o proc.o put.o putpcc.o sysdep.o vax.o version.o
++ echo ----------------------- LIBF2C ------------------------
+----------------------- LIBF2C ------------------------
++ cd libf2c
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/olebole/iraf-v216/unix/f2c/libf2c'
+cc -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS -c f77vers.c
+cc -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS -c i77vers.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS main.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS s_rnge.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS abort_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS exit_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS getarg_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS iargc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS getenv_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS signal_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS s_stop.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS s_paus.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS system_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS cabs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS ctype.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS derf_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS derfc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS erf_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS erfc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS sig_die.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS uninit.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_ci.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_dd.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_di.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_hh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_ii.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_ri.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_zi.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS pow_zz.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_div.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS c_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_div.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS z_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_acos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_asin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_atan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_atn2.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_cnjg.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_cosh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_imag.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_int.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_lg10.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_sinh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_tan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS r_tanh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_acos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_asin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_atan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_atn2.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_cnjg.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_cosh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_imag.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_int.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_lg10.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_prod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_sinh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_tan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS d_tanh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_dnnt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_indx.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_len.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS i_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS lbitbits.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS lbitshft.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_dnnt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_indx.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_len.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS h_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS l_ge.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS l_gt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS l_le.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS l_lt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS hl_ge.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS hl_gt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS hl_le.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS hl_lt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS ef1asc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS ef1cmc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS f77_aloc.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS s_cat.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS s_cmp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS s_copy.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS backspac.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS close.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS dfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS dolio.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS due.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS endfile.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS err.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS fmt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS fmtlib.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS ftell_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS iio.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS ilnw.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS inquire.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS lread.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS lwrite.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS open.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS rdfmt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS rewind.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS rsfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS rsli.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS rsne.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS sfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS sue.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS typesize.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS uio.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS util.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS wref.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS wrtfmt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS wsfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS wsle.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS wsne.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS xwsne.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS dtime_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -DNOVOS etime_.c
+ar r libf2c.a f77vers.o i77vers.o main.o s_rnge.o abort_.o exit_.o getarg_.o iargc_.o getenv_.o signal_.o s_stop.o s_paus.o system_.o cabs.o ctype.o derf_.o derfc_.o erf_.o erfc_.o sig_die.o uninit.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o lbitbits.o lbitshft.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o l_ge.o l_gt.o l_le.o l_lt.o hl_ge.o hl_gt.o hl_le.o hl_lt.o ef1asc_.o ef1cmc_.o f77_aloc.o s_cat.o s_cmp.o s_copy.o backspac.o close.o dfe.o dolio.o due.o endfile.o err.o fmt.o fmtlib.o ftell_.o iio.o ilnw.o inquire.o lread.o lwrite.o open.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o sfe.o sue.o typesize.o uio.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o dtime_.o etime_.o
+ar: creating libf2c.a
+ranlib libf2c.a
+make[1]: Leaving directory '/home/steele/git/olebole/iraf-v216/unix/f2c/libf2c'
++ mv libf2c.a ../../bin/
++ rm abort_.o backspac.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o cabs.o close.o ctype.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o derf_.o derfc_.o dfe.o dolio.o dtime_.o due.o ef1asc_.o ef1cmc_.o endfile.o erf_.o erfc_.o err.o etime_.o exit_.o f77_aloc.o f77vers.o fmt.o fmtlib.o ftell_.o getarg_.o getenv_.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o hl_ge.o hl_gt.o hl_le.o hl_lt.o i77vers.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o iargc_.o iio.o ilnw.o inquire.o l_ge.o l_gt.o l_le.o l_lt.o lbitbits.o lbitshft.o lread.o lwrite.o main.o open.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o s_cat.o s_cmp.o s_copy.o s_paus.o s_rnge.o s_stop.o sfe.o sig_die.o signal_.o sue.o system_.o typesize.o uio.o uninit.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o
++ echo ----------------------- BOOT ---------------------------
+----------------------- BOOT ---------------------------
++ echo +
++
++ echo +
++
++ cd boot
++ sh -x mkpkg.sh
++ echo ----------------------- BOOTLIB ------------------------
+----------------------- BOOTLIB ------------------------
++ cd bootlib
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS bytmov.c
+In file included from /home/steele/git/olebole/iraf-v216/include/iraf.h:98:0,
+                 from bytmov.c:6:
+/home/steele/git/olebole/iraf-v216/include/iraf/knames.h:282:17: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ #define BYTMOV  bytmov_
+                 ^
+bytmov.c:14:1: note: in expansion of macro ‘BYTMOV’
+ BYTMOV (a, aoff, b, boff, nbytes)
+ ^~~~~~
+bytmov.c: In function ‘bytmov_’:
+bytmov.c:22:6: warning: implicit declaration of function ‘memmove’ [-Wimplicit-function-declaration]
+      memmove ((char *)b + (*boff-1), (char *)a + (*aoff-1), *nbytes);
+      ^~~~~~~
+bytmov.c:22:6: warning: incompatible implicit declaration of built-in function ‘memmove’
+bytmov.c:22:6: note: include ‘<string.h>’ or provide a declaration of ‘memmove’
+bytmov.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS envinit.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osaccess.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osamovb.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS oschdir.c
+oschdir.c: In function ‘os_chdir’:
+oschdir.c:20:7: warning: variable ‘sz_dpath’ set but not used [-Wunused-but-set-variable]
+  XINT sz_dpath, sz_osdir, status, x_maxch=SZ_PATHNAME;
+       ^~~~~~~~
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osclose.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS oscmd.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS oscreatedir.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS oscrfile.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osdelete.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osdir.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osfcopy.c
+osfcopy.c: In function ‘os_fcopy’:
+osfcopy.c:22:60: warning: variable ‘nw’ set but not used [-Wunused-but-set-variable]
+  XINT status, junk, maxch = SZ_FBUF, mode = 0, in, out, n, nw;
+                                                            ^~
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osfdate.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osfiletype.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osfn2vfn.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osfpathname.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osgetenv.c
+In file included from /home/steele/git/olebole/iraf-v216/include/iraf.h:98:0,
+                 from bootlib.h:6,
+                 from osgetenv.c:6:
+osgetenv.c: In function ‘_os_getenv’:
+/home/steele/git/olebole/iraf-v216/include/iraf/knames.h:114:17: warning: implicit declaration of function ‘zgtenv_’ [-Wimplicit-function-declaration]
+ #define ZGTENV  zgtenv_
+                 ^
+osgetenv.c:87:2: note: in expansion of macro ‘ZGTENV’
+  ZGTENV (symbol, value, &x_maxch, &status);
+  ^~~~~~
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osgetowner.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osopen.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osputenv.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osread.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ossetfmode.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ossetowner.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ossettime.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osstrpak.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS osstrupk.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ossubdir.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ossymlink.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ossysfile.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS ostime.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS oswrite.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS tape.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS vfn2osfn.c
++ ar rv libboot.a bytmov.o envinit.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfn2vfn.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o tape.o vfn2osfn.o
+ar: creating libboot.a
+a - bytmov.o
+a - envinit.o
+a - osaccess.o
+a - osamovb.o
+a - oschdir.o
+a - osclose.o
+a - oscmd.o
+a - oscreatedir.o
+a - oscrfile.o
+a - osdelete.o
+a - osdir.o
+a - osfcopy.o
+a - osfdate.o
+a - osfiletype.o
+a - osfn2vfn.o
+a - osfpathname.o
+a - osgetenv.o
+a - osgetowner.o
+a - osopen.o
+a - osputenv.o
+a - osread.o
+a - ossetfmode.o
+a - ossetowner.o
+a - ossettime.o
+a - osstrpak.o
+a - osstrupk.o
+a - ossubdir.o
+a - ossymlink.o
+a - ossysfile.o
+a - ostime.o
+a - oswrite.o
+a - tape.o
+a - vfn2osfn.o
++ rm bytmov.o envinit.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfn2vfn.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o tape.o vfn2osfn.o
++ ranlib libboot.a
++ mv -f libboot.a ../../bin
++ echo ----------------------- GENERIC ------------------------
+----------------------- GENERIC ------------------------
++ cd generic
++ sh -x mkpkg.sh
++ lex -o lexyy.c tok.l
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS generic.c yywrap.c lexyy.c
++ gcc generic.o lexyy.o yywrap.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o generic.e
++ mv -f generic.e ../../hlib
++ rm generic.o lexyy.o yywrap.o
++ echo ----------------------- MKPKG --------------------------
+----------------------- MKPKG --------------------------
++ cd mkpkg
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS char.c fdcache.c fncache.c host.c main.c pkg.c scanlib.c sflist.c tok.c
+fncache.c: In function ‘m_fninit’:
+fncache.c:120:23: warning: ‘>’ directive writing 1 byte into a region of size between 0 and 32 [-Wformat-overflow=]
+       sprintf (lname, "<%s>", fn->lname);
+                       ^~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from fncache.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 3 and 35 bytes into a destination of size 33
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+host.c: In function ‘h_updatelibrary’:
+host.c:94:10: warning: variable ‘lname’ set but not used [-Wunused-but-set-variable]
+  char   *lname = NULL;
+          ^~~~~
+pkg.c: In function ‘do_mkpkg’:
+pkg.c:48:25: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 512 [-Wformat-overflow=]
+      sprintf (fname, "%s%s", cx->curdir, cx->mkpkgfile);
+                         ^~
+In file included from /usr/include/stdio.h:862:0,
+                 from pkg.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 1 and 767 bytes into a destination of size 512
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+scanlib.c: In function ‘h_scanlibrary’:
+scanlib.c:69:6: warning: variable ‘len’ set but not used [-Wunused-but-set-variable]
+  int len=0, len_arfmag, nmodules;
+      ^~~
+scanlib.c:106:2: warning: ignoring return value of ‘fread’, declared with attribute warn_unused_result [-Wunused-result]
+  fread (lbuf, 1, SARMAG, fp);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc main.o char.o fdcache.o fncache.o host.o pkg.o scanlib.o sflist.o tok.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o mkpkg.e
++ mv -f mkpkg.e ../../hlib
++ rm char.o fdcache.o fncache.o host.o main.o pkg.o scanlib.o sflist.o tok.o
++ echo ----------------------- RMBIN  -------------------------
+----------------------- RMBIN  -------------------------
++ cd rmbin
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS rmbin.c
+rmbin.c: In function ‘verify_delete’:
+rmbin.c:256:2: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+  fgets   (lbuf, SZ_LINE, stdin);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc rmbin.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o rmbin.e
++ mv -f rmbin.e ../../hlib
++ rm rmbin.o
++ echo ----------------------- RMFILES  -----------------------
+----------------------- RMFILES  -----------------------
++ cd rmfiles
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS rmfiles.c
++ gcc rmfiles.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o rmfiles.e
++ mv -f rmfiles.e ../../hlib
++ rm rmfiles.o
++ echo ----------------------- RTAR  --------------------------
+----------------------- RTAR  --------------------------
++ cd rtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS rtar.c
++ gcc rtar.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o rtar.e
++ mv rtar.e ../../hlib
++ rm -f rtar.o
++ echo ----------------------- WTAR --------------------------
+----------------------- WTAR --------------------------
++ cd wtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS wtar.c
+wtar.c: In function ‘tarfileout’:
+wtar.c:428:33: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  sprintf (hb.dbuf.size,  "%11lo ", fh->size);
+                                 ^
+In file included from /usr/include/stdio.h:862:0,
+                 from wtar.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 13 and 24 bytes into a destination of size 12
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wtar.c:429:33: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  sprintf (hb.dbuf.mtime, "%11lo ", fh->mtime);
+                                 ^
+In file included from /usr/include/stdio.h:862:0,
+                 from wtar.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 13 and 24 bytes into a destination of size 12
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc wtar.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o wtar.e
++ mv wtar.e ../../hlib
++ rm -f wtar.o
++ echo ----------------------- SPP ----------------------------
+----------------------- SPP ----------------------------
++ cd spp
++ sh -x mkpkg.sh
++ echo ----------------------- XC  ----------------------------
+----------------------- XC  ----------------------------
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS xc.c
+xc.c: In function ‘main’:
+xc.c:786:6: warning: ignoring return value of ‘mkstemp’, declared with attribute warn_unused_result [-Wunused-result]
+      mkstemp (tempfile);
+      ^~~~~~~~~~~~~~~~~~
+xc.c:882:3: warning: ignoring return value of ‘link’, declared with attribute warn_unused_result [-Wunused-result]
+   link (tempfile, outfile);
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+xc.c: In function ‘sys’:
+xc.c:1284:3: warning: ignoring return value of ‘freopen’, declared with attribute warn_unused_result [-Wunused-result]
+   freopen (inname, "r", stdin);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xc.c:1286:3: warning: ignoring return value of ‘freopen’, declared with attribute warn_unused_result [-Wunused-result]
+   freopen (outname, (append ? "a" : "w"), stdout);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+xc.c:1411:1: warning: ‘findexe’ defined but not used [-Wunused-function]
+ findexe (
+ ^~~~~~~
++ gcc xc.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o xc.e
++ mv -f xc.e ../../hlib
++ rm -f xc.o
++ echo ----------------------- XPP ----------------------------
+----------------------- XPP ----------------------------
++ cd xpp
++ sh -x mkpkg.sh
++ [ ! -f lexyy.c -o xpp.l -nt lexyy.c ]
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS xppmain.c xppcode.c decl.c lexyy.c
++ gcc xppmain.o lexyy.o xppcode.o decl.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o xpp.e
++ mv -f xpp.e ../../../hlib
++ rm decl.o lexyy.o xppcode.o xppmain.o
++ echo ----------------------- RPP ----------------------------
+----------------------- RPP ----------------------------
++ cd rpp
++ sh -x mkpkg.sh
++ echo ----------------------- RPPFOR -------------------------
+----------------------- RPPFOR -------------------------
++ cd rppfor
++ sh -x mkpkg.sh
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 addchr.f allblk.f alldig.f baderr.f balpar.f beginc.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 brknxt.f cascod.f caslab.f declco.f deftok.f doarth.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 docode.f doif.f doincr.f domac.f dostat.f dosub.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 eatup.f elseif.f endcod.f entdef.f entdkw.f entfkw.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 entrkw.f entxkw.f errchk.f errgo.f errorc.f evalr.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 finit.f forcod.f fors.f getdef.f gettok.f gnbtok.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 gocode.f gtok.f ifcode.f iferrc.f ifgo.f ifparm.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 indent.f initkw.f labelc.f labgen.f lex.f litral.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 lndict.f ludef.f mapid.f ngetch.f ogotos.f otherc.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 outch.f outcon.f outdon.f outdwe.f outgo.f outnum.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 outstr.f outtab.f parse.f pbnum.f pbstr.f poicod.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 push.f putbak.f putchr.f puttok.f ratfor.f relate.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 repcod.f retcod.f sdupl.f skpblk.f squash.f strdcl.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 swcode.f swend.f swvar.f synerr.f thenco.f ulstal.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 uniqid.f unstak.f untils.f whilec.f whiles.f
++ ar rv librpp.a addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
+ar: creating librpp.a
+a - addchr.o
+a - allblk.o
+a - alldig.o
+a - baderr.o
+a - balpar.o
+a - beginc.o
+a - brknxt.o
+a - cascod.o
+a - caslab.o
+a - declco.o
+a - deftok.o
+a - doarth.o
+a - docode.o
+a - doif.o
+a - doincr.o
+a - domac.o
+a - dostat.o
+a - dosub.o
+a - eatup.o
+a - elseif.o
+a - endcod.o
+a - entdef.o
+a - entdkw.o
+a - entfkw.o
+a - entrkw.o
+a - entxkw.o
+a - errchk.o
+a - errgo.o
+a - errorc.o
+a - evalr.o
+a - finit.o
+a - forcod.o
+a - fors.o
+a - getdef.o
+a - gettok.o
+a - gnbtok.o
+a - gocode.o
+a - gtok.o
+a - ifcode.o
+a - iferrc.o
+a - ifgo.o
+a - ifparm.o
+a - indent.o
+a - initkw.o
+a - labelc.o
+a - labgen.o
+a - lex.o
+a - litral.o
+a - lndict.o
+a - ludef.o
+a - mapid.o
+a - ngetch.o
+a - ogotos.o
+a - otherc.o
+a - outch.o
+a - outcon.o
+a - outdon.o
+a - outdwe.o
+a - outgo.o
+a - outnum.o
+a - outstr.o
+a - outtab.o
+a - parse.o
+a - pbnum.o
+a - pbstr.o
+a - poicod.o
+a - push.o
+a - putbak.o
+a - putchr.o
+a - puttok.o
+a - ratfor.o
+a - relate.o
+a - repcod.o
+a - retcod.o
+a - sdupl.o
+a - skpblk.o
+a - squash.o
+a - strdcl.o
+a - swcode.o
+a - swend.o
+a - swvar.o
+a - synerr.o
+a - thenco.o
+a - ulstal.o
+a - uniqid.o
+a - unstak.o
+a - untils.o
+a - whilec.o
+a - whiles.o
++ ranlib librpp.a
++ mv -f librpp.a ..
++ rm addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
++ echo ----------------------- RATLIBF ------------------------
+----------------------- RATLIBF ------------------------
++ cd ratlibf
++ sh -x mkpkg.sh
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 addset.f addstr.f amatch.f catsub.f clower.f concat.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 ctoc.f ctoi.f ctomn.f cupper.f delete.f docant.f dodash.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 dsdbiu.f dsdump.f dsfree.f dsget.f dsinit.f enter.f equal.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 error.f errsub.f esc.f fcopy.f filset.f fmtdat.f fold.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 gctoi.f getc.f getccl.f getpat.f getwrd.f gfnarg.f index.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 insub.f itoc.f length.f locate.f lookup.f lower.f makpat.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 maksub.f match.f mktabl.f mntoc.f omatch.f outsub.f patsiz.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 prompt.f putc.f putdec.f putint.f putstr.f query.f rmtabl.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 scopy.f sctabl.f sdrop.f skipbl.f slstr.f stake.f stclos.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 stcopy.f stlu.f strcmp.f strim.f termin.f trmout.f type.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 upper.f wkday.f
++ ar rv libf.a addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
+ar: creating libf.a
+a - addset.o
+a - addstr.o
+a - amatch.o
+a - catsub.o
+a - clower.o
+a - concat.o
+a - ctoc.o
+a - ctoi.o
+a - ctomn.o
+a - cupper.o
+a - delete.o
+a - docant.o
+a - dodash.o
+a - dsdbiu.o
+a - dsdump.o
+a - dsfree.o
+a - dsget.o
+a - dsinit.o
+a - enter.o
+a - equal.o
+a - error.o
+a - errsub.o
+a - esc.o
+a - fcopy.o
+a - filset.o
+a - fmtdat.o
+a - fold.o
+a - gctoi.o
+a - getc.o
+a - getccl.o
+a - getpat.o
+a - getwrd.o
+a - gfnarg.o
+a - index.o
+a - insub.o
+a - itoc.o
+a - length.o
+a - locate.o
+a - lookup.o
+a - lower.o
+a - makpat.o
+a - maksub.o
+a - match.o
+a - mktabl.o
+a - mntoc.o
+a - omatch.o
+a - outsub.o
+a - patsiz.o
+a - prompt.o
+a - putc.o
+a - putdec.o
+a - putint.o
+a - putstr.o
+a - query.o
+a - rmtabl.o
+a - scopy.o
+a - sctabl.o
+a - sdrop.o
+a - skipbl.o
+a - slstr.o
+a - stake.o
+a - stclos.o
+a - stcopy.o
+a - stlu.o
+a - strcmp.o
+a - strim.o
+a - termin.o
+a - trmout.o
+a - type.o
+a - upper.o
+a - wkday.o
++ ranlib libf.a
++ mv -f libf.a ..
++ rm addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
++ echo ----------------------- RATLIBC ------------------------
+----------------------- RATLIBC ------------------------
++ cd ratlibc
++ sh -x mkpkg.sh
++ gcc -c -g -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS cant.c close.c endst.c getarg.c getlin.c initst.c open.c putch.c putlin.c r4tocstr.c remark.c
++ ar rv libc.a cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
+ar: creating libc.a
+a - cant.o
+a - close.o
+a - endst.o
+a - getarg.o
+a - getlin.o
+a - initst.o
+a - open.o
+a - putch.o
+a - putlin.o
+a - r4tocstr.o
+a - remark.o
++ ranlib libc.a
++ mv -f libc.a ..
++ rm cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS rpp.c
++ gcc rpp.o librpp.a libf.a libc.a -o rpp.e
++ mv -f rpp.e ../../../hlib
++ rm libc.a libf.a librpp.a rpp.o
++ echo ----------------------- XYACC --------------------------
+----------------------- XYACC --------------------------
++ cd xyacc
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS y1.c y2.c y3.c y4.c
+y2.c: In function ‘setup’:
+y2.c:190:11: warning: variable ‘sym_prefix’ set but not used [-Wunused-but-set-variable]
+     char *sym_prefix = "";
+           ^~~~~~~~~~
+y2.c: In function ‘cpyact’:
+y2.c:1392:10: warning: variable ‘id_name’ set but not used [-Wunused-but-set-variable]
+     char id_name[NAMESIZE + 1];
+          ^~~~~~~
+y2.c:1391:36: warning: variable ‘argument’ set but not used [-Wunused-but-set-variable]
+     int brac, c, match, j, s, tok, argument;
+                                    ^~~~~~~~
++ gcc y1.o y2.o y3.o y4.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o xyacc.e
++ mv -f xyacc.e ../../hlib
++ cp yaccpar.x ../../../lib
++ rm -f y1.o y2.o y3.o y4.o
++ echo ----------------------- GDEV ---------------------------
+----------------------- GDEV ---------------------------
++ cd gdev
++ sh -x mkpkg.sh
++ cd sgidev
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgiUtil.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgidispatch.c
++ gcc sgidispatch.o ../../hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgidispatch.e
++ mv -f sgidispatch.e ../../hlib
++ rm sgidispatch.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2uimp.c
++ gcc sgi2uimp.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2uimp.e
++ mv -f sgi2uimp.e ../../hlib
++ rm sgi2uimp.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2uapl.c
++ gcc sgi2uapl.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2uapl.e
++ mv -f sgi2uapl.e ../../hlib
++ rm sgi2uapl.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2uqms.c
++ gcc sgi2uqms.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2uqms.e
++ mv -f sgi2uqms.e ../../hlib
++ rm sgi2uqms.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2uptx.c
++ gcc sgi2uptx.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2uptx.e
++ mv -f sgi2uptx.e ../../hlib
++ rm sgi2uptx.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2uhplj.c
+sgi2uhplj.c: In function ‘main’:
+sgi2uhplj.c:45:18: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+ #define DEV_VECT "\033*p%03dX\033*p%03dY"/* x,y cursor posn in dots */
+                  ^
+sgi2uhplj.c:221:20: note: in expansion of macro ‘DEV_VECT’
+     sprintf (obuf, DEV_VECT, x, y);
+                    ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from sgi2uhplj.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 15 and 31 bytes into a destination of size 14
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sgi2uhplj.c:45:18: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+ #define DEV_VECT "\033*p%03dX\033*p%03dY"/* x,y cursor posn in dots */
+                  ^
+sgi2uhplj.c:221:20: note: in expansion of macro ‘DEV_VECT’
+     sprintf (obuf, DEV_VECT, x, y);
+                    ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from sgi2uhplj.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 15 and 31 bytes into a destination of size 14
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sgi2uhplj.c:46:18: warning: ‘%03d’ directive writing between 3 and 11 bytes into a region of size 4 [-Wformat-overflow=]
+ #define DEV_RAST "\033*b%03dW"  /* transfer raster graphics */
+                  ^
+sgi2uhplj.c:202:25: note: in expansion of macro ‘DEV_RAST’
+      sprintf (buf_rast, DEV_RAST, n1);
+                         ^~~~~~~~
+sgi2uhplj.c:46:18: note: directive argument in the range [-2147483648, 268435455]
+ #define DEV_RAST "\033*b%03dW"  /* transfer raster graphics */
+                  ^
+sgi2uhplj.c:202:25: note: in expansion of macro ‘DEV_RAST’
+      sprintf (buf_rast, DEV_RAST, n1);
+                         ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from sgi2uhplj.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 8 and 16 bytes into a destination of size 7
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc sgi2uhplj.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2uhplj.e
++ mv -f sgi2uhplj.e ../../hlib
++ rm sgi2uhplj.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2uhpgl.c
++ gcc sgi2uhpgl.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2uhpgl.e
++ mv -f sgi2uhpgl.e ../../hlib
++ rm sgi2uhpgl.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2ueps.c
++ gcc sgi2ueps.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2ueps.e
++ mv -f sgi2ueps.e ../../hlib
++ rm sgi2ueps.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2gif.c
++ gcc sgi2gif.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2gif.e
++ mv -f sgi2gif.e ../../hlib
++ rm sgi2gif.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2xbm.c
++ gcc sgi2xbm.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2xbm.e
++ mv -f sgi2xbm.e ../../hlib
++ rm sgi2xbm.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -DNOVOS sgi2svg.c
++ gcc sgi2svg.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a -lm -o sgi2svg.e
++ mv -f sgi2svg.e ../../hlib
++ rm sgi2svg.o
++ rm sgiUtil.o
++ echo install HSI executables in /home/steele/git/olebole/iraf-v216/unix//bin.linux64
+install HSI executables in /home/steele/git/olebole/iraf-v216/unix//bin.linux64
++ mv -f hlib/alloc.e hlib/generic.e hlib/mkpkg.e hlib/rmbin.e hlib/rmfiles.e hlib/rpp.e hlib/rtar.e hlib/sgi2gif.e hlib/sgi2svg.e hlib/sgi2uapl.e hlib/sgi2ueps.e hlib/sgi2uhpgl.e hlib/sgi2uhplj.e hlib/sgi2uimp.e hlib/sgi2uptx.e hlib/sgi2uqms.e hlib/sgi2xbm.e hlib/sgidispatch.e hlib/wtar.e hlib/xc.e hlib/xpp.e hlib/xyacc.e bin.linux64
++ sh -x setarch.sh
++ ls -d as
++ [ as = as ]
++ rm -rf as
++ ln -s as.linux64 as
++ ls -d bin
++ [ bin = bin ]
++ rm -rf bin
++ ln -s bin.linux64 bin
++ echo ----------------------- OS -----------------------------
+----------------------- OS -----------------------------
++ echo +
++
++ echo +
++
++ cd os
++ sh -x mkpkg.sh
++ echo --------------------- OS ----------------------
+--------------------- OS ----------------------
++ zsvjmp=../as/zsvjmp.s
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 -Wall ../as/zsvjmp.s gmttolst.c irafpath.c prwait.c zalloc.c zawset.c zcall.c zdojmp.c zfacss.c zfaloc.c zfchdr.c zfdele.c zfgcwd.c zfinfo.c zfiobf.c zfioks.c zfiolp.c zfiomt.c zfiond.c zfiopl.c zfiopr.c zfiosf.c zfiotx.c zfioty.c zflink.c zfmkcp.c zfmkdr.c zfnbrk.c zfpath.c zfpoll.c zfprot.c zfrmdr.c zfrnam.c zfsubd.c zfunc.c zfutim.c zfxdir.c zgcmdl.c zghost.c zglobl.c zgmtco.c zgtenv.c zgtime.c zgtpid.c zintpr.c zlocpr.c zlocva.c zmain.c zmaloc.c zmfree.c zopdir.c zopdpr.c zoscmd.c zpanic.c zraloc.c zshlib.c zwmsec.c zxwhen.c zzdbg.c zzepro.c zzexit.c zzpstr.c zzsetk.c zzstrt.c alloc.c getproc.c
+zfiobf.c: In function ‘vm_connect’:
+zfiobf.c:783:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long int’ [-Wformat=]
+   fprintf (stderr, "fd=%d\n", fd);
+                        ~^
+                        %ld
+In file included from /usr/include/unistd.h:1167:0,
+                 from zfiobf.c:8:
+In function ‘read’,
+    inlined from ‘vm_access’ at zfiobf.c:496:6:
+/usr/include/x86_64-linux-gnu/bits/unistd.h:42:9: warning: call to ‘__read_chk_warn’ declared with attribute warning: read called with bigger length than size of the destination buffer
+  return __read_chk_warn (__fd, __buf, __nbytes, __bos0 (__buf));
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘read’,
+    inlined from ‘vm_delete’ at zfiobf.c:566:6:
+/usr/include/x86_64-linux-gnu/bits/unistd.h:42:9: warning: call to ‘__read_chk_warn’ declared with attribute warning: read called with bigger length than size of the destination buffer
+  return __read_chk_warn (__fd, __buf, __nbytes, __bos0 (__buf));
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfioks.c: In function ‘zopnks_’:
+zfioks.c:452:49: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      fd = open ("/dev/null", 0);     close(0);  dup(fd);  close(fd);
+                                                 ^~~~~~~
+zfioks.c:453:49: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      fd = open ("/dev/console", 1);  close(1);  dup(fd);  close(fd);
+                                                 ^~~~~~~
+zfioks.c:454:49: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      fd = open ("/dev/console", 2);  close(2);  dup(fd);  close(fd);
+                                                 ^~~~~~~
+zfioks.c:792:19: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (0);  dup (pout[0]);  close (pout[0]);
+                   ^~~~~~~~~~~~~
+zfioks.c:793:19: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (1);  dup (pin[1]);   close (pin[1]);
+                   ^~~~~~~~~~~~
+zfioks.c: In function ‘ks_getpass’:
+zfioks.c:1925:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (tty, prompt, strlen(prompt));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfioks.c:1944:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (tty, "\n", 1);
+  ^~~~~~~~~~~~~~~~~~~~
+zfiomt.c: In function ‘zzclmt_’:
+zfiomt.c:592:7: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+       write (fd, bufp, bufsize);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c: In function ‘zopcpr_’:
+zfiopr.c:130:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      close (0);  dup (pout[0]);  close (pout[0]);
+                  ^~~~~~~~~~~~~
+zfiopr.c:131:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+      close (1);  dup (pin[1]);   close (pin[1]);
+                  ^~~~~~~~~~~~
+zfiopr.c: In function ‘zardpr_’:
+zfiopr.c:284:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_in, (char *)&temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:296:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_in, (char *)&temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:333:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, (char *)buf, op - (char *)buf);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:337:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_in, (char *)buf, op - (char *)buf);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c: In function ‘zawrpr_’:
+zfiopr.c:395:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (fd, &temp, 2);
+  ^~~~~~~~~~~~~~~~~~~~
+zfiopr.c:397:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_out, &temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:399:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (fd, &temp, 2);
+  ^~~~~~~~~~~~~~~~~~~~
+zfiopr.c:401:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_out, &temp, 2);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:407:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (ipc_out, (char *)buf, (int)*nbytes);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zfiopr.c:421:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, (char *)buf, (int)*nbytes);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zgtime.c: In function ‘zgtime_’:
+zgtime.c:28:12: warning: variable ‘clkfreq’ set but not used [-Wunused-but-set-variable]
+  long cpu, clkfreq;
+            ^~~~~~~
+zmain.c: In function ‘main’:
+zmain.c:137:3: warning: ignoring return value of ‘freopen’, declared with attribute warn_unused_result [-Wunused-result]
+   freopen ("/dev/null", "r", stdin);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zoscmd.c: In function ‘zoscmd_’:
+zoscmd.c:91:14: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+   close (0); dup (fd); close (fd);
+              ^~~~~~~~
+zoscmd.c:99:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (1); dup (fd); close (fd);
+                  ^~~~~~~~
+zoscmd.c:108:18: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+       close (2); dup (1);
+                  ^~~~~~~
+zoscmd.c:114:15: warning: ignoring return value of ‘dup’, declared with attribute warn_unused_result [-Wunused-result]
+    close (2); dup (fd); close (fd);
+               ^~~~~~~~
+zpanic.c: In function ‘zpanic_’:
+zpanic.c:45:2: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+  write (2, msg, strlen(msg));
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+zpanic.c:53:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write (fd, &msg[1], strlen(&msg[1]));
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zzpstr.c: In function ‘zzpstr_’:
+zzpstr.c:77:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, buf, op-buf);
+      ^~~~~~~~~~~~~~~~~~~~~~
+zzpstr.c:84:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, buf, op-buf);
+      ^~~~~~~~~~~~~~~~~~~~~~
+zzpstr.c:88:6: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+      write (2, "\n", 1);
+      ^~~~~~~~~~~~~~~~~~
+getproc.c: In function ‘uid_executing’:
+getproc.c:24:29: warning: ‘%s’ directive writing up to 255 bytes into a region of size 250 [-Wformat-overflow=]
+      sprintf (fname, "/proc/%s", direntp->d_name);
+                             ^~
+In file included from /usr/include/stdio.h:862:0,
+                 from getproc.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 7 and 262 bytes into a destination of size 256
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc -Wall alloc.o getproc.o -o alloc.e
++ chmod 4755 alloc.e
++ mv -f alloc.e ../hlib
++ rm -f alloc.o zmain.o
++ ar r libos.a getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
+ar: creating libos.a
++ ranlib libos.a
++ rm getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
++ mv -f libos.a ../bin
++ echo ----------------------- F2C ----------------------------
+----------------------- F2C ----------------------------
++ echo +
++
++ echo +
++
++ cd f2c
++ sh -x mkpkg.sh
++ echo ----------------------- F2C ---------------------------
+----------------------- F2C ---------------------------
++ cd src
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/olebole/iraf-v216/unix/f2c/src'
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 main.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 init.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 gram.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 lex.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 proc.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 equiv.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 data.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 format.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 expr.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 exec.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 intr.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 io.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 misc.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 error.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 mem.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 names.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 output.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 p1output.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pread.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 put.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 putpcc.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 vax.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 formatdata.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 parse_args.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 niceprintf.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 cds.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 sysdep.c
+cc -c -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 version.c
+cc  main.o init.o gram.o lex.o proc.o equiv.o data.o format.o expr.o exec.o intr.o io.o misc.o error.o mem.o names.o output.o p1output.o pread.o put.o putpcc.o vax.o formatdata.o parse_args.o niceprintf.o cds.o sysdep.o version.o  -o f2c
+make[1]: Leaving directory '/home/steele/git/olebole/iraf-v216/unix/f2c/src'
++ mv f2c ../../bin/f2c.e
++ rm cds.o data.o equiv.o error.o exec.o expr.o format.o formatdata.o gram.o init.o intr.o io.o lex.o main.o mem.o misc.o names.o niceprintf.o output.o p1output.o parse_args.o pread.o proc.o put.o putpcc.o sysdep.o vax.o version.o
++ echo ----------------------- LIBF2C ------------------------
+----------------------- LIBF2C ------------------------
++ cd libf2c
++ sh -x mkpkg.sh
++ make -f makefile.u
+make[1]: Entering directory '/home/steele/git/olebole/iraf-v216/unix/f2c/libf2c'
+cc -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -c f77vers.c
+cc -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 -c i77vers.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 main.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 s_rnge.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 abort_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 exit_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 getarg_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 iargc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 getenv_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 signal_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 s_stop.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 s_paus.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 system_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 cabs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 ctype.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 derf_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 derfc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 erf_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 erfc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 sig_die.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 uninit.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_ci.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_dd.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_di.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_hh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_ii.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_ri.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_zi.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 pow_zz.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_div.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 c_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_div.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 z_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_acos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_asin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_atan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_atn2.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_cnjg.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_cosh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_imag.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_int.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_lg10.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_sinh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_tan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 r_tanh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_acos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_asin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_atan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_atn2.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_cnjg.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_cos.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_cosh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_exp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_imag.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_int.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_lg10.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_log.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_prod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_sin.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_sinh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_sqrt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_tan.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 d_tanh.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_dnnt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_indx.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_len.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 i_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 lbitbits.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 lbitshft.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_abs.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_dim.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_dnnt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_indx.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_len.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_mod.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_nint.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 h_sign.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 l_ge.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 l_gt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 l_le.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 l_lt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 hl_ge.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 hl_gt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 hl_le.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 hl_lt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 ef1asc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 ef1cmc_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 f77_aloc.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 s_cat.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 s_cmp.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 s_copy.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 backspac.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 close.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 dfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 dolio.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 due.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 endfile.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 err.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 fmt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 fmtlib.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 ftell_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 iio.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 ilnw.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 inquire.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 lread.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 lwrite.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 open.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 rdfmt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 rewind.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 rsfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 rsli.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 rsne.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 sfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 sue.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 typesize.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 uio.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 util.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 wref.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 wrtfmt.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 wsfe.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 wsle.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 wsne.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 xwsne.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 dtime_.c
+cc -c -DSkip_f2c_Undefs -O -w -I/home/steele/git/olebole/iraf-v216/include  -g -Wall -O2 etime_.c
+ar r libf2c.a f77vers.o i77vers.o main.o s_rnge.o abort_.o exit_.o getarg_.o iargc_.o getenv_.o signal_.o s_stop.o s_paus.o system_.o cabs.o ctype.o derf_.o derfc_.o erf_.o erfc_.o sig_die.o uninit.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o lbitbits.o lbitshft.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o l_ge.o l_gt.o l_le.o l_lt.o hl_ge.o hl_gt.o hl_le.o hl_lt.o ef1asc_.o ef1cmc_.o f77_aloc.o s_cat.o s_cmp.o s_copy.o backspac.o close.o dfe.o dolio.o due.o endfile.o err.o fmt.o fmtlib.o ftell_.o iio.o ilnw.o inquire.o lread.o lwrite.o open.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o sfe.o sue.o typesize.o uio.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o dtime_.o etime_.o
+ar: creating libf2c.a
+ranlib libf2c.a
+make[1]: Leaving directory '/home/steele/git/olebole/iraf-v216/unix/f2c/libf2c'
++ mv libf2c.a ../../bin/
++ rm abort_.o backspac.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o cabs.o close.o ctype.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o derf_.o derfc_.o dfe.o dolio.o dtime_.o due.o ef1asc_.o ef1cmc_.o endfile.o erf_.o erfc_.o err.o etime_.o exit_.o f77_aloc.o f77vers.o fmt.o fmtlib.o ftell_.o getarg_.o getenv_.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o hl_ge.o hl_gt.o hl_le.o hl_lt.o i77vers.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o iargc_.o iio.o ilnw.o inquire.o l_ge.o l_gt.o l_le.o l_lt.o lbitbits.o lbitshft.o lread.o lwrite.o main.o open.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o s_cat.o s_cmp.o s_copy.o s_paus.o s_rnge.o s_stop.o sfe.o sig_die.o signal_.o sue.o system_.o typesize.o uio.o uninit.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o
++ echo ----------------------- BOOT ---------------------------
+----------------------- BOOT ---------------------------
++ echo +
++
++ echo +
++
++ cd boot
++ sh -x mkpkg.sh
++ echo ----------------------- BOOTLIB ------------------------
+----------------------- BOOTLIB ------------------------
++ cd bootlib
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 bytmov.c
+In file included from /home/steele/git/olebole/iraf-v216/include/iraf.h:98:0,
+                 from bytmov.c:6:
+/home/steele/git/olebole/iraf-v216/include/iraf/knames.h:282:17: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ #define BYTMOV  bytmov_
+                 ^
+bytmov.c:14:1: note: in expansion of macro ‘BYTMOV’
+ BYTMOV (a, aoff, b, boff, nbytes)
+ ^~~~~~
+bytmov.c: In function ‘bytmov_’:
+bytmov.c:22:6: warning: implicit declaration of function ‘memmove’ [-Wimplicit-function-declaration]
+      memmove ((char *)b + (*boff-1), (char *)a + (*aoff-1), *nbytes);
+      ^~~~~~~
+bytmov.c:22:6: warning: incompatible implicit declaration of built-in function ‘memmove’
+bytmov.c:22:6: note: include ‘<string.h>’ or provide a declaration of ‘memmove’
+bytmov.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 envinit.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osaccess.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osamovb.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 oschdir.c
+oschdir.c: In function ‘os_chdir’:
+oschdir.c:20:7: warning: variable ‘sz_dpath’ set but not used [-Wunused-but-set-variable]
+  XINT sz_dpath, sz_osdir, status, x_maxch=SZ_PATHNAME;
+       ^~~~~~~~
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osclose.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 oscmd.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 oscreatedir.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 oscrfile.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osdelete.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osdir.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osfcopy.c
+osfcopy.c: In function ‘os_fcopy’:
+osfcopy.c:22:60: warning: variable ‘nw’ set but not used [-Wunused-but-set-variable]
+  XINT status, junk, maxch = SZ_FBUF, mode = 0, in, out, n, nw;
+                                                            ^~
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osfdate.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osfiletype.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osfn2vfn.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osfpathname.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osgetenv.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osgetowner.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osopen.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osputenv.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osread.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ossetfmode.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ossetowner.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ossettime.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osstrpak.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 osstrupk.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ossubdir.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ossymlink.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ossysfile.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 ostime.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 oswrite.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 tape.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 vfn2osfn.c
++ ar rv libboot.a bytmov.o envinit.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfn2vfn.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o tape.o vfn2osfn.o
+ar: creating libboot.a
+a - bytmov.o
+a - envinit.o
+a - osaccess.o
+a - osamovb.o
+a - oschdir.o
+a - osclose.o
+a - oscmd.o
+a - oscreatedir.o
+a - oscrfile.o
+a - osdelete.o
+a - osdir.o
+a - osfcopy.o
+a - osfdate.o
+a - osfiletype.o
+a - osfn2vfn.o
+a - osfpathname.o
+a - osgetenv.o
+a - osgetowner.o
+a - osopen.o
+a - osputenv.o
+a - osread.o
+a - ossetfmode.o
+a - ossetowner.o
+a - ossettime.o
+a - osstrpak.o
+a - osstrupk.o
+a - ossubdir.o
+a - ossymlink.o
+a - ossysfile.o
+a - ostime.o
+a - oswrite.o
+a - tape.o
+a - vfn2osfn.o
++ rm bytmov.o envinit.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfn2vfn.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o tape.o vfn2osfn.o
++ ranlib libboot.a
++ mv -f libboot.a ../../bin
++ echo ----------------------- GENERIC ------------------------
+----------------------- GENERIC ------------------------
++ cd generic
++ sh -x mkpkg.sh
++ lex -o lexyy.c tok.l
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 generic.c yywrap.c lexyy.c
++ gcc generic.o lexyy.o yywrap.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o generic.e
++ mv -f generic.e ../../hlib
++ rm generic.o lexyy.o yywrap.o
++ echo ----------------------- MKPKG --------------------------
+----------------------- MKPKG --------------------------
++ cd mkpkg
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 char.c fdcache.c fncache.c host.c main.c pkg.c scanlib.c sflist.c tok.c
+fncache.c: In function ‘m_fninit’:
+fncache.c:120:23: warning: ‘>’ directive writing 1 byte into a region of size between 0 and 32 [-Wformat-overflow=]
+       sprintf (lname, "<%s>", fn->lname);
+                       ^~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from fncache.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 3 and 35 bytes into a destination of size 33
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+host.c: In function ‘h_updatelibrary’:
+host.c:94:10: warning: variable ‘lname’ set but not used [-Wunused-but-set-variable]
+  char   *lname = NULL;
+          ^~~~~
+pkg.c: In function ‘do_mkpkg’:
+pkg.c:48:25: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 512 [-Wformat-overflow=]
+      sprintf (fname, "%s%s", cx->curdir, cx->mkpkgfile);
+                         ^~
+In file included from /usr/include/stdio.h:862:0,
+                 from pkg.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 1 and 767 bytes into a destination of size 512
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+scanlib.c: In function ‘h_scanlibrary’:
+scanlib.c:69:6: warning: variable ‘len’ set but not used [-Wunused-but-set-variable]
+  int len=0, len_arfmag, nmodules;
+      ^~~
+scanlib.c:106:2: warning: ignoring return value of ‘fread’, declared with attribute warn_unused_result [-Wunused-result]
+  fread (lbuf, 1, SARMAG, fp);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc main.o char.o fdcache.o fncache.o host.o pkg.o scanlib.o sflist.o tok.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o mkpkg.e
++ mv -f mkpkg.e ../../hlib
++ rm char.o fdcache.o fncache.o host.o main.o pkg.o scanlib.o sflist.o tok.o
++ echo ----------------------- RMBIN  -------------------------
+----------------------- RMBIN  -------------------------
++ cd rmbin
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 rmbin.c
+rmbin.c: In function ‘verify_delete’:
+rmbin.c:256:2: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+  fgets   (lbuf, SZ_LINE, stdin);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc rmbin.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o rmbin.e
++ mv -f rmbin.e ../../hlib
++ rm rmbin.o
++ echo ----------------------- RMFILES  -----------------------
+----------------------- RMFILES  -----------------------
++ cd rmfiles
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 rmfiles.c
++ gcc rmfiles.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o rmfiles.e
++ mv -f rmfiles.e ../../hlib
++ rm rmfiles.o
++ echo ----------------------- RTAR  --------------------------
+----------------------- RTAR  --------------------------
++ cd rtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 rtar.c
++ gcc rtar.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o rtar.e
++ mv rtar.e ../../hlib
++ rm -f rtar.o
++ echo ----------------------- WTAR --------------------------
+----------------------- WTAR --------------------------
++ cd wtar
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 wtar.c
+wtar.c: In function ‘tarfileout’:
+wtar.c:428:33: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  sprintf (hb.dbuf.size,  "%11lo ", fh->size);
+                                 ^
+In file included from /usr/include/stdio.h:862:0,
+                 from wtar.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 13 and 24 bytes into a destination of size 12
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wtar.c:429:33: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  sprintf (hb.dbuf.mtime, "%11lo ", fh->mtime);
+                                 ^
+In file included from /usr/include/stdio.h:862:0,
+                 from wtar.c:4:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 13 and 24 bytes into a destination of size 12
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc wtar.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o wtar.e
++ mv wtar.e ../../hlib
++ rm -f wtar.o
++ echo ----------------------- SPP ----------------------------
+----------------------- SPP ----------------------------
++ cd spp
++ sh -x mkpkg.sh
++ echo ----------------------- XC  ----------------------------
+----------------------- XC  ----------------------------
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 xc.c
+xc.c: In function ‘main’:
+xc.c:786:6: warning: ignoring return value of ‘mkstemp’, declared with attribute warn_unused_result [-Wunused-result]
+      mkstemp (tempfile);
+      ^~~~~~~~~~~~~~~~~~
+xc.c:882:3: warning: ignoring return value of ‘link’, declared with attribute warn_unused_result [-Wunused-result]
+   link (tempfile, outfile);
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+xc.c: In function ‘sys’:
+xc.c:1284:3: warning: ignoring return value of ‘freopen’, declared with attribute warn_unused_result [-Wunused-result]
+   freopen (inname, "r", stdin);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xc.c:1286:3: warning: ignoring return value of ‘freopen’, declared with attribute warn_unused_result [-Wunused-result]
+   freopen (outname, (append ? "a" : "w"), stdout);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+xc.c:1411:1: warning: ‘findexe’ defined but not used [-Wunused-function]
+ findexe (
+ ^~~~~~~
++ gcc xc.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o xc.e
++ mv -f xc.e ../../hlib
++ rm -f xc.o
++ echo ----------------------- XPP ----------------------------
+----------------------- XPP ----------------------------
++ cd xpp
++ sh -x mkpkg.sh
++ [ ! -f lexyy.c -o xpp.l -nt lexyy.c ]
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 xppmain.c xppcode.c decl.c lexyy.c
++ gcc xppmain.o lexyy.o xppcode.o decl.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o xpp.e
++ mv -f xpp.e ../../../hlib
++ rm decl.o lexyy.o xppcode.o xppmain.o
++ echo ----------------------- RPP ----------------------------
+----------------------- RPP ----------------------------
++ cd rpp
++ sh -x mkpkg.sh
++ echo ----------------------- RPPFOR -------------------------
+----------------------- RPPFOR -------------------------
++ cd rppfor
++ sh -x mkpkg.sh
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 addchr.f allblk.f alldig.f baderr.f balpar.f beginc.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 brknxt.f cascod.f caslab.f declco.f deftok.f doarth.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 docode.f doif.f doincr.f domac.f dostat.f dosub.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 eatup.f elseif.f endcod.f entdef.f entdkw.f entfkw.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 entrkw.f entxkw.f errchk.f errgo.f errorc.f evalr.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 finit.f forcod.f fors.f getdef.f gettok.f gnbtok.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 gocode.f gtok.f ifcode.f iferrc.f ifgo.f ifparm.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 indent.f initkw.f labelc.f labgen.f lex.f litral.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 lndict.f ludef.f mapid.f ngetch.f ogotos.f otherc.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 outch.f outcon.f outdon.f outdwe.f outgo.f outnum.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 outstr.f outtab.f parse.f pbnum.f pbstr.f poicod.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 push.f putbak.f putchr.f puttok.f ratfor.f relate.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 repcod.f retcod.f sdupl.f skpblk.f squash.f strdcl.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 swcode.f swend.f swvar.f synerr.f thenco.f ulstal.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 uniqid.f unstak.f untils.f whilec.f whiles.f
++ ar rv librpp.a addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
+ar: creating librpp.a
+a - addchr.o
+a - allblk.o
+a - alldig.o
+a - baderr.o
+a - balpar.o
+a - beginc.o
+a - brknxt.o
+a - cascod.o
+a - caslab.o
+a - declco.o
+a - deftok.o
+a - doarth.o
+a - docode.o
+a - doif.o
+a - doincr.o
+a - domac.o
+a - dostat.o
+a - dosub.o
+a - eatup.o
+a - elseif.o
+a - endcod.o
+a - entdef.o
+a - entdkw.o
+a - entfkw.o
+a - entrkw.o
+a - entxkw.o
+a - errchk.o
+a - errgo.o
+a - errorc.o
+a - evalr.o
+a - finit.o
+a - forcod.o
+a - fors.o
+a - getdef.o
+a - gettok.o
+a - gnbtok.o
+a - gocode.o
+a - gtok.o
+a - ifcode.o
+a - iferrc.o
+a - ifgo.o
+a - ifparm.o
+a - indent.o
+a - initkw.o
+a - labelc.o
+a - labgen.o
+a - lex.o
+a - litral.o
+a - lndict.o
+a - ludef.o
+a - mapid.o
+a - ngetch.o
+a - ogotos.o
+a - otherc.o
+a - outch.o
+a - outcon.o
+a - outdon.o
+a - outdwe.o
+a - outgo.o
+a - outnum.o
+a - outstr.o
+a - outtab.o
+a - parse.o
+a - pbnum.o
+a - pbstr.o
+a - poicod.o
+a - push.o
+a - putbak.o
+a - putchr.o
+a - puttok.o
+a - ratfor.o
+a - relate.o
+a - repcod.o
+a - retcod.o
+a - sdupl.o
+a - skpblk.o
+a - squash.o
+a - strdcl.o
+a - swcode.o
+a - swend.o
+a - swvar.o
+a - synerr.o
+a - thenco.o
+a - ulstal.o
+a - uniqid.o
+a - unstak.o
+a - untils.o
+a - whilec.o
+a - whiles.o
++ ranlib librpp.a
++ mv -f librpp.a ..
++ rm addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
++ echo ----------------------- RATLIBF ------------------------
+----------------------- RATLIBF ------------------------
++ cd ratlibf
++ sh -x mkpkg.sh
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 addset.f addstr.f amatch.f catsub.f clower.f concat.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 ctoc.f ctoi.f ctomn.f cupper.f delete.f docant.f dodash.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 dsdbiu.f dsdump.f dsfree.f dsget.f dsinit.f enter.f equal.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 error.f errsub.f esc.f fcopy.f filset.f fmtdat.f fold.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 gctoi.f getc.f getccl.f getpat.f getwrd.f gfnarg.f index.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 insub.f itoc.f length.f locate.f lookup.f lower.f makpat.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 maksub.f match.f mktabl.f mntoc.f omatch.f outsub.f patsiz.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 prompt.f putc.f putdec.f putint.f putstr.f query.f rmtabl.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 scopy.f sctabl.f sdrop.f skipbl.f slstr.f stake.f stclos.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 stcopy.f stlu.f strcmp.f strim.f termin.f trmout.f type.f
++ /home/steele/git/olebole/iraf-v216/unix/hlib//f77.sh -c -g -DBLD_KERNEL -O2 upper.f wkday.f
++ ar rv libf.a addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
+ar: creating libf.a
+a - addset.o
+a - addstr.o
+a - amatch.o
+a - catsub.o
+a - clower.o
+a - concat.o
+a - ctoc.o
+a - ctoi.o
+a - ctomn.o
+a - cupper.o
+a - delete.o
+a - docant.o
+a - dodash.o
+a - dsdbiu.o
+a - dsdump.o
+a - dsfree.o
+a - dsget.o
+a - dsinit.o
+a - enter.o
+a - equal.o
+a - error.o
+a - errsub.o
+a - esc.o
+a - fcopy.o
+a - filset.o
+a - fmtdat.o
+a - fold.o
+a - gctoi.o
+a - getc.o
+a - getccl.o
+a - getpat.o
+a - getwrd.o
+a - gfnarg.o
+a - index.o
+a - insub.o
+a - itoc.o
+a - length.o
+a - locate.o
+a - lookup.o
+a - lower.o
+a - makpat.o
+a - maksub.o
+a - match.o
+a - mktabl.o
+a - mntoc.o
+a - omatch.o
+a - outsub.o
+a - patsiz.o
+a - prompt.o
+a - putc.o
+a - putdec.o
+a - putint.o
+a - putstr.o
+a - query.o
+a - rmtabl.o
+a - scopy.o
+a - sctabl.o
+a - sdrop.o
+a - skipbl.o
+a - slstr.o
+a - stake.o
+a - stclos.o
+a - stcopy.o
+a - stlu.o
+a - strcmp.o
+a - strim.o
+a - termin.o
+a - trmout.o
+a - type.o
+a - upper.o
+a - wkday.o
++ ranlib libf.a
++ mv -f libf.a ..
++ rm addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getc.o getccl.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
++ echo ----------------------- RATLIBC ------------------------
+----------------------- RATLIBC ------------------------
++ cd ratlibc
++ sh -x mkpkg.sh
++ gcc -c -g -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 cant.c close.c endst.c getarg.c getlin.c initst.c open.c putch.c putlin.c r4tocstr.c remark.c
++ ar rv libc.a cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
+ar: creating libc.a
+a - cant.o
+a - close.o
+a - endst.o
+a - getarg.o
+a - getlin.o
+a - initst.o
+a - open.o
+a - putch.o
+a - putlin.o
+a - r4tocstr.o
+a - remark.o
++ ranlib libc.a
++ mv -f libc.a ..
++ rm cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 rpp.c
++ gcc rpp.o librpp.a libf.a libc.a -o rpp.e
++ mv -f rpp.e ../../../hlib
++ rm libc.a libf.a librpp.a rpp.o
++ echo ----------------------- XYACC --------------------------
+----------------------- XYACC --------------------------
++ cd xyacc
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 y1.c y2.c y3.c y4.c
+y2.c: In function ‘setup’:
+y2.c:190:11: warning: variable ‘sym_prefix’ set but not used [-Wunused-but-set-variable]
+     char *sym_prefix = "";
+           ^~~~~~~~~~
+y2.c: In function ‘cpyact’:
+y2.c:1392:10: warning: variable ‘id_name’ set but not used [-Wunused-but-set-variable]
+     char id_name[NAMESIZE + 1];
+          ^~~~~~~
+y2.c:1391:36: warning: variable ‘argument’ set but not used [-Wunused-but-set-variable]
+     int brac, c, match, j, s, tok, argument;
+                                    ^~~~~~~~
++ gcc y1.o y2.o y3.o y4.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o xyacc.e
++ mv -f xyacc.e ../../hlib
++ cp yaccpar.x ../../../lib
++ rm -f y1.o y2.o y3.o y4.o
++ echo ----------------------- GDEV ---------------------------
+----------------------- GDEV ---------------------------
++ cd gdev
++ sh -x mkpkg.sh
++ cd sgidev
++ sh -x mkpkg.sh
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgiUtil.c
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgidispatch.c
++ gcc sgidispatch.o ../../hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgidispatch.e
++ mv -f sgidispatch.e ../../hlib
++ rm sgidispatch.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2uimp.c
++ gcc sgi2uimp.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2uimp.e
++ mv -f sgi2uimp.e ../../hlib
++ rm sgi2uimp.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2uapl.c
++ gcc sgi2uapl.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2uapl.e
++ mv -f sgi2uapl.e ../../hlib
++ rm sgi2uapl.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2uqms.c
++ gcc sgi2uqms.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2uqms.e
++ mv -f sgi2uqms.e ../../hlib
++ rm sgi2uqms.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2uptx.c
++ gcc sgi2uptx.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2uptx.e
++ mv -f sgi2uptx.e ../../hlib
++ rm sgi2uptx.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2uhplj.c
+sgi2uhplj.c: In function ‘main’:
+sgi2uhplj.c:45:18: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+ #define DEV_VECT "\033*p%03dX\033*p%03dY"/* x,y cursor posn in dots */
+                  ^
+sgi2uhplj.c:221:20: note: in expansion of macro ‘DEV_VECT’
+     sprintf (obuf, DEV_VECT, x, y);
+                    ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from sgi2uhplj.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 15 and 31 bytes into a destination of size 14
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sgi2uhplj.c:45:18: warning: ‘__builtin___sprintf_chk’ writing a terminating nul past the end of the destination [-Wformat-overflow=]
+ #define DEV_VECT "\033*p%03dX\033*p%03dY"/* x,y cursor posn in dots */
+                  ^
+sgi2uhplj.c:221:20: note: in expansion of macro ‘DEV_VECT’
+     sprintf (obuf, DEV_VECT, x, y);
+                    ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from sgi2uhplj.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 15 and 31 bytes into a destination of size 14
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sgi2uhplj.c:46:18: warning: ‘%03d’ directive writing between 3 and 11 bytes into a region of size 4 [-Wformat-overflow=]
+ #define DEV_RAST "\033*b%03dW"  /* transfer raster graphics */
+                  ^
+sgi2uhplj.c:202:25: note: in expansion of macro ‘DEV_RAST’
+      sprintf (buf_rast, DEV_RAST, n1);
+                         ^~~~~~~~
+sgi2uhplj.c:46:18: note: directive argument in the range [-2147483648, 268435455]
+ #define DEV_RAST "\033*b%03dW"  /* transfer raster graphics */
+                  ^
+sgi2uhplj.c:202:25: note: in expansion of macro ‘DEV_RAST’
+      sprintf (buf_rast, DEV_RAST, n1);
+                         ^~~~~~~~
+In file included from /usr/include/stdio.h:862:0,
+                 from sgi2uhplj.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:33:10: note: ‘__builtin___sprintf_chk’ output between 8 and 16 bytes into a destination of size 7
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ gcc sgi2uhplj.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2uhplj.e
++ mv -f sgi2uhplj.e ../../hlib
++ rm sgi2uhplj.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2uhpgl.c
++ gcc sgi2uhpgl.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2uhpgl.e
++ mv -f sgi2uhpgl.e ../../hlib
++ rm sgi2uhpgl.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2ueps.c
++ gcc sgi2ueps.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2ueps.e
++ mv -f sgi2ueps.e ../../hlib
++ rm sgi2ueps.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2gif.c
++ gcc sgi2gif.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2gif.e
++ mv -f sgi2gif.e ../../hlib
++ rm sgi2gif.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2xbm.c
++ gcc sgi2xbm.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2xbm.e
++ mv -f sgi2xbm.e ../../hlib
++ rm sgi2xbm.o
++ gcc -c -I/home/steele/git/olebole/iraf-v216/include -g -Wall -O2 sgi2svg.c
++ gcc sgi2svg.o sgiUtil.o /home/steele/git/olebole/iraf-v216/unix/hlib/libboot.a /home/steele/git/olebole/iraf-v216/lib/libsys.a /home/steele/git/olebole/iraf-v216/lib/libvops.a /home/steele/git/olebole/iraf-v216/unix/hlib/libos.a /home/steele/git/olebole/iraf-v216/unix/bin.linux64/libf2c.a -lm -o sgi2svg.e
++ mv -f sgi2svg.e ../../hlib
++ rm sgi2svg.o
++ rm sgiUtil.o
++ echo install HSI executables in /home/steele/git/olebole/iraf-v216/unix//bin.linux64
+install HSI executables in /home/steele/git/olebole/iraf-v216/unix//bin.linux64
++ mv -f hlib/alloc.e hlib/generic.e hlib/mkpkg.e hlib/rmbin.e hlib/rmfiles.e hlib/rpp.e hlib/rtar.e hlib/sgi2gif.e hlib/sgi2svg.e hlib/sgi2uapl.e hlib/sgi2ueps.e hlib/sgi2uhpgl.e hlib/sgi2uhplj.e hlib/sgi2uimp.e hlib/sgi2uptx.e hlib/sgi2uqms.e hlib/sgi2xbm.e hlib/sgidispatch.e hlib/wtar.e hlib/xc.e hlib/xpp.e hlib/xyacc.e bin.linux64
