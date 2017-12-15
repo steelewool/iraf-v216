@@ -182,6 +182,84 @@ cl> machtest
 Simple consistency check passed.
 ```
 
+On 64-bit machines, IRAF uses the ILP64 model that makes normal SPP
+`integer` 8 byte wide. `real` values however remain at 4 byte. This
+shoulod be recognized by the Fortran compiler when doing
+`equivalence`.
+
+File: `test_equiv.x`
+```
+task test_equiv = t_equiv
+procedure t_equiv ()
+real	fval, gval
+int	ival
+%	equivalence (fval, ival)
+begin
+    ival = 0
+    gval = 1.2345e06
+    call printf("Should be zero: %d\n")
+    call pargi(ival)
+
+    gval = 0.
+    ival = 998765123423
+    call printf("Should be zero: %g\n")
+    call pargr(gval)
+end
+```
+
+In that example, setting `ival` should not affect the independnetly
+defined variable `gval` and vice versa:
+
+```
+cl> softools
+cl> xc test_equiv.x
+cl> task $test_equiv = test_equiv.e
+cl> test_equiv
+Should be zero: 0
+Should be zero: 0.
+```
+
+With the original 2.16.1 release, there is a problem with loop
+optimization on "newer" platforms. A simple example task is here:
+
+File: `otest.x`
+```
+task otest = t_otest
+procedure t_otest ()
+int i
+pointer p, sp
+begin
+    call smark(sp)
+    call salloc(p, 4, TY_DOUBLE)
+    do i = 1, 4
+        memd[p+i-1] = i
+
+    do i = 1, 4 {
+        call printf("%d == %g\n")
+	    call pargi(i)
+        call pargd(memd[p+i-1])
+    }
+
+    call sfree(sp)
+end
+```
+
+All this code does is to allocate a temporary array with four
+integers, fill each position with its index, and then print out the
+integers. Compile it, declare the task in (e)cl and run it:
+
+```
+cl> softools
+cl> xc otest.x
+cl> task $otest = otest.e
+cl> otest
+1 == 1.
+2 == 2.
+3 == 3.
+4 == 4.
+```
+
+See issue #73 for the bug report.
 
 ## The `generic` preprocessor
 
