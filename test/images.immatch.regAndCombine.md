@@ -96,7 +96,6 @@ imcombineRegisteredImage.fit
 # having failed. But is working. The confirmation it worked is the directory
 # command that follows.
 
-Test options: `xfail`
 ```
 cl> noao
 cl> imred
@@ -109,6 +108,7 @@ cl> !ls combineRegisteredImage.fit
 combineRegisteredImage.fit
 ```
 
+Test options: `xfail`
 ```
 cl> !rm  $iraf/test/registrationTestFiles/outputFiles/*
 cl> !cp  * $iraf/test/registrationTestFiles/outputFiles/.
