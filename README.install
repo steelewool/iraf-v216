@@ -116,3 +116,11 @@ To Build From Sources:
 	% make sysgen
 
 
+Items observed from building branch porting on a Raspberry Pi
+
+   These items should apply to all of the platforms:
+
+   For the Raspberry Pi used the Stretch update.
+
+   Installed the packages curl, ncurses, and expat libraries
+        (libcurl4-gnutls-dev, libncurses5-dev, libexpat1-dev packages).
