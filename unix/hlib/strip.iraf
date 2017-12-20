@@ -13,10 +13,6 @@
   unix/boot		-allbut .hlp .hd
   unix/gdev		-all
   unix/os		-all
-  unix/mc68000		-all
-  unix/portkit		-all
-  unix/shlib		-all
-  unix/sun		-all
 
   dev			-only .dat
   doc			-allbut .hlp
