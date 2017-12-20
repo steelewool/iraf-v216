@@ -11,7 +11,7 @@ include	<fio.h>
 # driver subroutines must be named explicitly in the case statements in
 # each generic driver subroutine.
 
-define	DEVICES		"|iism70|iism75|imtool|"
+define	DEVICES		"|imtool|"
 define	DEF_OSDEV_1	"unix:/tmp/.IMT%d"
 define	DEF_OSDEV_2	"fifo:/dev/imt1i:/dev/imt1o"
 define	IMTDEV		"IMTDEV"
@@ -23,10 +23,8 @@ define	MAXBYTES	4000		# fifo transfer size, bytes
 define	MAXTRYS		50		# fifo timeout
 define	DELAY		10		# fifo i/o interval, msec
 
-define	IISM70		1		# IIS Model 70 image display
-define	IISM75		2		# IIS Model 75 image display
-define	IMTOOL		3		# IMTOOL-type display server
-define	NDEVICES	3
+define	IMTOOL		1		# IMTOOL-type display server
+define	NDEVICES	1
 
 
 # ZOPNGD -- Open a binary graphics device.  The format of the DEVINFO string
