@@ -17,11 +17,11 @@ os_open (
   int	type 			/* file type			*/
 )
 {
-	extern	char *vfn2osfn();
+	extern	char *vfn2osfn(char *vfn, int new);
 
 	if (mode == 0) {
 	    osfiletype = BINARY_FILE;
-	    return (open (vfn2osfn (vfn, 0), 0));
+	    return (open (vfn2osfn (vfn, 0), O_RDONLY));
 	} else if (mode == 1) {
 	    return (os_createfile (vfn, mode, type));
 	} else

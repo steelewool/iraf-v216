@@ -23,15 +23,14 @@ ZGTIME (
 )
 {
 	struct	tms t;
-	long	time();
-	time_t	gmt_to_lst();
+	time_t	gmt_to_lst(time_t gmt);
 	long	cpu, clkfreq;
 
 
 	clkfreq = CLOCKS_PER_SEC;
 
 	times (&t);
-	*clock_time = gmt_to_lst ((time_t)time(0));
+	*clock_time = gmt_to_lst (time(0));
 
 	/* We don't want any floating point in the kernel code so do the
 	 * following computation using integer arithment, taking care to

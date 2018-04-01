@@ -112,7 +112,7 @@ _envinit (void)
 	char	osfn[SZ_PATHNAME+1], *hlib;
 	char	irafarch[SZ_PATHNAME+1];
 
-	extern  void ENVINIT(), ENVRESET();
+	extern  void ENVINIT(void), ENVRESET(XCHAR *key, XCHAR *value);
 
 
 	if (initialized++)
@@ -161,7 +161,7 @@ loadenv (char *osfn)
 	FILE	*fp, *sv_fp[MAXLEV];
 	int	lev=0;
 
-	extern  void ENVRESET();
+	extern  void ENVRESET(XCHAR *key, XCHAR *value);
 
 
 	if ((fp = fopen (osfn, "r")) == NULL) {
@@ -264,6 +264,8 @@ again:		    if (fgets (lbuf, SZ_LINE, fp) == NULL)
 		ENVRESET (name, value);
 	}
 
-	fclose (fp);
+	if (fp != NULL) {
+	    fclose (fp);
+	}
 }
 #endif

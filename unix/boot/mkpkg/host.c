@@ -34,14 +34,14 @@
 #define	XC		"xc"
 #define	INTERRUPT	SYS_XINT
 
-extern	char *makeobj();
-extern	char *vfn2osfn();
-extern	char *getenv();
+extern	char *makeobj(char *fname);
+extern	char *vfn2osfn(char *, int);
+extern	char *getenv(const char *);
 
 extern  void fatals (char *fmt, char *arg);
 
-char	*resolvefname();
-char	*mkpath();
+char	*resolvefname(char *fname);
+char	*mkpath(char *module, char *directory, char *outstr);
 
 int   h_updatelibrary (char *library, char *flist[], int totfiles, 
                 char *xflags, char *irafdir);
@@ -525,7 +525,7 @@ u_fcopy (
 	/* Open the old file and create the new one with the same mode bits
 	 * as the original.
 	 */
-	if ((in  = open(old,0)) == ERR || fstat(in,&fi) == ERR) {
+	if ((in  = open(old,O_RDONLY)) == ERR || fstat(in,&fi) == ERR) {
 	    printf ("$copy: cannot open input file `%s'\n", old);
 	    fflush (stdout);
 	    return (ERR);
@@ -808,7 +808,6 @@ resolvefname (char *fname)
 {
 	static char pathname[SZ_LIBPATH];
 	char relpath[SZ_LIBPATH];
-	extern char *strrchr();
 
 	strcpy (pathname, fname);
 	while (os_symlink (pathname, relpath, SZ_LIBPATH)) {

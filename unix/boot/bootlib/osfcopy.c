@@ -21,7 +21,10 @@ os_fcopy (
 	XCHAR	buf[SZ_FBUF];
 	XINT	status,	junk, maxch = SZ_FBUF, mode = 0, in, out, n, nw;
 
-	extern  int ZOPNTX(), ZGETTX(), ZCLSTX(), ZPUTTX();
+	extern  int ZOPNTX(PKCHAR *osfn, XINT *mode, XINT *chan);
+	extern  int ZGETTX(XINT *fd, XCHAR *buf, XINT *maxchars, XINT *status);
+	extern	int ZCLSTX(XINT *fd, XINT *status);
+	extern	int ZPUTTX(XINT *fd, XCHAR *buf, XINT *nchars, XINT *status);
 
 
 	if (os_access (oldfile,0,0) == NO)
@@ -64,7 +67,7 @@ os_fcopy (
 		fprintf (stderr, "copy binary file `%s' -> `%s'\n",
 		    oldfile, newfile);
 
-	    if ((in = open (vfn2osfn(oldfile,0), 0)) == ERR)
+	    if ((in = open (vfn2osfn(oldfile,0), O_RDONLY)) == ERR)
 		return (ERR);
 	    if ((out = creat (vfn2osfn(newfile,1), 0644)) == ERR) {
 		close (in);

@@ -11,6 +11,7 @@
 #include <dirent.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "xpp.h"
 #include "../bootProto.h"
 
@@ -69,7 +70,7 @@
 #define IRAFLIB2	"libsys.a"
 #define IRAFLIB3	"libvops.a"
 #define IRAFLIB4	"libos.a"
-#define IRAFLIB5	"libVO.a"
+#define IRAFLIB5	"libVOTable.a"
 #define IRAFLIB6	"libcfitsio.a"
 #define IRAFLIB7	"liblapack.a"
 
@@ -80,11 +81,11 @@ char *fortlib[] = { "-lf2c",			/*  0  (host progs) */
 		    "-lexpat",			/*  4  */
 #if (defined (__linux__) || defined (__gnu_hurd__))
 		    "-lpthread",		/*  5  */
-		    "-lrt",			/*  6  */
 #else
 		    "",				/*  5  */
-		    "",				/*  6  */		    
 #endif
+		    "",				/*  6  */		    
+		    "",				/*  7  */
 		    "",				/*  8  */
 		    "",				/*  9  */
 		    0};				/* EOF */
@@ -1198,7 +1199,6 @@ static int
 run (char *task, char *argv[])
 {
 	int	waitpid;
-	pid_t	fork();
 	char	path[SZ_PATHNAME];
 
 	if ((waitpid = fork()) == 0) {
